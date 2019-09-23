@@ -1,0 +1,62 @@
+;
+;   File systems/testmols/methane/methane.top  was generated
+;   By user: dahahn (1000)
+;   On host: dahahn-ThinkPad-T460s
+;   At date: Mon. September  1 09:24:07 2019
+;
+;   This is a standalone topology file
+;
+;   Created by:
+;   ParmEd:       ipykernel_launcher.py, VERSION 3.2.0
+;   Executable:   ipykernel_launcher.py
+;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
+;   Command line:
+;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-f9019424-e831-453b-bdf4-8d081cfab5cf.json
+;
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             1            1           
+
+[ atomtypes ]
+; name    at.num    mass    charge ptype  sigma      epsilon
+C1             6  12.010780  0.00000000  A     0.33996695      0.4577296
+H1             1   1.007947  0.00000000  A     0.26495328      0.0656888
+
+
+[ moleculetype ]
+; Name            nrexcl
+methane          3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
+; residue    1 methane rtp methane q 0.0
+    1         C1      1 methane     C0      1 -0.10867999  12.010780   ; qtot -0.108680
+    2         H1      1 methane     H1      2 0.02717000   1.007947   ; qtot -0.081510
+    3         H1      1 methane     H2      3 0.02717000   1.007947   ; qtot -0.054340
+    4         H1      1 methane     H3      4 0.02717000   1.007947   ; qtot -0.027170
+    5         H1      1 methane     H4      5 0.02717000   1.007947   ; qtot 0.000000
+
+[ bonds ]
+;    ai     aj funct         c0         c1         c2         c3
+      1      2     1   0.10900 284512.000000
+      1      3     1   0.10900 284512.000000
+      1      4     1   0.10900 284512.000000
+      1      5     1   0.10900 284512.000000
+
+[ angles ]
+;    ai     aj     ak funct         c0         c1         c2         c3
+      2      1      3     1   109.5000000 292.880000
+      2      1      4     1   109.5000000 292.880000
+      2      1      5     1   109.5000000 292.880000
+      3      1      4     1   109.5000000 292.880000
+      3      1      5     1   109.5000000 292.880000
+      4      1      5     1   109.5000000 292.880000
+
+[ system ]
+; Name
+Generic title
+
+[ molecules ]
+; Compound       #mols
+methane              1

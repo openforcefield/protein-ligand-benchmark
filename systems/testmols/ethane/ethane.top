@@ -1,0 +1,98 @@
+;
+;   File systems/testmols/ethane/ethane.top  was generated
+;   By user: dahahn (1000)
+;   On host: dahahn-ThinkPad-T460s
+;   At date: Mon. September  1 09:24:07 2019
+;
+;   This is a standalone topology file
+;
+;   Created by:
+;   ParmEd:       ipykernel_launcher.py, VERSION 3.2.0
+;   Executable:   ipykernel_launcher.py
+;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
+;   Command line:
+;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-f9019424-e831-453b-bdf4-8d081cfab5cf.json
+;
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               no              1            0.83333     
+
+[ atomtypes ]
+; name    at.num    mass    charge ptype  sigma      epsilon
+C1             6  12.010780  0.00000000  A     0.33996695      0.4577296
+H1             1   1.007947  0.00000000  A     0.26495328      0.0656888
+
+
+[ moleculetype ]
+; Name            nrexcl
+ethane          3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
+; residue    1 ethane rtp ethane q -0.0
+    1         C1      1 ethane     C0      1 -0.09384000  12.010780   ; qtot -0.093840
+    2         C1      1 ethane     C1      2 -0.09384000  12.010780   ; qtot -0.187680
+    3         H1      1 ethane     H2      3 0.03128000   1.007947   ; qtot -0.156400
+    4         H1      1 ethane     H3      4 0.03128000   1.007947   ; qtot -0.125120
+    5         H1      1 ethane     H4      5 0.03128000   1.007947   ; qtot -0.093840
+    6         H1      1 ethane     H5      6 0.03128000   1.007947   ; qtot -0.062560
+    7         H1      1 ethane     H6      7 0.03128000   1.007947   ; qtot -0.031280
+    8         H1      1 ethane     H7      8 0.03128000   1.007947   ; qtot -0.000000
+
+[ bonds ]
+;    ai     aj funct         c0         c1         c2         c3
+      2      1     1   0.15260 259408.000000
+      1      3     1   0.10900 284512.000000
+      1      4     1   0.10900 284512.000000
+      1      5     1   0.10900 284512.000000
+      2      6     1   0.10900 284512.000000
+      2      7     1   0.10900 284512.000000
+      2      8     1   0.10900 284512.000000
+
+[ pairs ]
+;    ai     aj funct         c0         c1         c2         c3
+      3      6     1 0.264953279 0.032844400
+      4      6     1 0.264953279 0.032844400
+      5      6     1 0.264953279 0.032844400
+      3      7     1 0.264953279 0.032844400
+      4      7     1 0.264953279 0.032844400
+      5      7     1 0.264953279 0.032844400
+      3      8     1 0.264953279 0.032844400
+      4      8     1 0.264953279 0.032844400
+      5      8     1 0.264953279 0.032844400
+
+[ angles ]
+;    ai     aj     ak funct         c0         c1         c2         c3
+      1      2      6     1   109.5000000 418.400000
+      1      2      7     1   109.5000000 418.400000
+      1      2      8     1   109.5000000 418.400000
+      2      1      3     1   109.5000000 418.400000
+      2      1      4     1   109.5000000 418.400000
+      2      1      5     1   109.5000000 418.400000
+      3      1      4     1   109.5000000 292.880000
+      3      1      5     1   109.5000000 292.880000
+      4      1      5     1   109.5000000 292.880000
+      6      2      7     1   109.5000000 292.880000
+      6      2      8     1   109.5000000 292.880000
+      7      2      8     1   109.5000000 292.880000
+
+[ dihedrals ]
+;    ai     aj     ak     al funct         c0         c1         c2         c3         c4         c5
+      3      1      2      6     1  0.0000000  0.6276000  3
+      3      1      2      7     1  0.0000000  0.6276000  3
+      3      1      2      8     1  0.0000000  0.6276000  3
+      4      1      2      6     1  0.0000000  0.6276000  3
+      4      1      2      7     1  0.0000000  0.6276000  3
+      4      1      2      8     1  0.0000000  0.6276000  3
+      5      1      2      6     1  0.0000000  0.6276000  3
+      5      1      2      7     1  0.0000000  0.6276000  3
+      5      1      2      8     1  0.0000000  0.6276000  3
+
+[ system ]
+; Name
+Generic title
+
+[ molecules ]
+; Compound       #mols
+ethane               1
