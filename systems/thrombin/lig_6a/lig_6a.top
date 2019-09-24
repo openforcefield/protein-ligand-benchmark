@@ -2,7 +2,7 @@
 ;   File systems/thrombin/lig_6a/lig_6a.top  was generated
 ;   By user: dahahn (1000)
 ;   On host: dahahn-ThinkPad-T460s
-;   At date: Mon. September  1 09:27:33 2019
+;   At date: Tue. September  2 16:19:44 2019
 ;
 ;   This is a standalone topology file
 ;
@@ -11,7 +11,7 @@
 ;   Executable:   ipykernel_launcher.py
 ;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
 ;   Command line:
-;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-f9019424-e831-453b-bdf4-8d081cfab5cf.json
+;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-773b795c-d46d-499a-9092-250e5d9713ab.json
 ;
 
 [ defaults ]
@@ -34,63 +34,63 @@ Cl1           17  35.453200  0.00000000  A     0.34709414        1.10876
 
 [ moleculetype ]
 ; Name            nrexcl
-systems/thrombin/lig_6a/lig_6a.pdb          3
+6a          3
 
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
-; residue    1 systems/thrombin/lig_6a/lig_6a.pdb rtp systems/thrombin/lig_6a/lig_6a.pdb q 1.0
-    1         N1      1 systems/thrombin/lig_6a/lig_6a.pdb     N0      1 -0.42098999  14.006720   ; qtot -0.420990
-    2         C1      1 systems/thrombin/lig_6a/lig_6a.pdb     C1      2 0.03356000  12.010780   ; qtot -0.387430
-    3         C2      1 systems/thrombin/lig_6a/lig_6a.pdb     C2      3 0.65083003  12.010780   ; qtot 0.263400
-    4         O1      1 systems/thrombin/lig_6a/lig_6a.pdb     O3      4 -0.60759997  15.999430   ; qtot -0.344200
-    5         C2      1 systems/thrombin/lig_6a/lig_6a.pdb     C4      5 0.65768003  12.010780   ; qtot 0.313480
-    6         O1      1 systems/thrombin/lig_6a/lig_6a.pdb     O5      6 -0.59302998  15.999430   ; qtot -0.279550
-    7         C1      1 systems/thrombin/lig_6a/lig_6a.pdb     C6      7 -0.08528001  12.010780   ; qtot -0.364830
-    8         C1      1 systems/thrombin/lig_6a/lig_6a.pdb     C7      8 0.04888999  12.010780   ; qtot -0.315940
-    9         N1      1 systems/thrombin/lig_6a/lig_6a.pdb     N8      9 -0.53741002  14.006720   ; qtot -0.853350
-   10         C1      1 systems/thrombin/lig_6a/lig_6a.pdb     C9     10 -0.08703000  12.010780   ; qtot -0.940380
-   11         N1      1 systems/thrombin/lig_6a/lig_6a.pdb    N10     11 -0.83882999  14.006720   ; qtot -1.779210
-   12         C1      1 systems/thrombin/lig_6a/lig_6a.pdb    C11     12 -0.04319999  12.010780   ; qtot -1.822410
-   13         C1      1 systems/thrombin/lig_6a/lig_6a.pdb    C12     13 0.12489000  12.010780   ; qtot -1.697520
-   14         C1      1 systems/thrombin/lig_6a/lig_6a.pdb    C13     14 0.07504000  12.010780   ; qtot -1.622480
-   15         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C14     15 -0.13277000  12.010780   ; qtot -1.755250
-   16         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C15     16 -0.10754000  12.010780   ; qtot -1.862790
-   17         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C16     17 -0.11798000  12.010780   ; qtot -1.980770
-   18         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C17     18 0.03241000  12.010780   ; qtot -1.948360
-   19         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C18     19 -0.11981000  12.010780   ; qtot -2.068170
-   20         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C19     20 -0.12423000  12.010780   ; qtot -2.192400
-   21         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C20     21 -0.09948000  12.010780   ; qtot -2.291880
-   22         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C21     22 -0.10449000  12.010780   ; qtot -2.396370
-   23         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C22     23 -0.11981000  12.010780   ; qtot -2.516180
-   24         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C23     24 0.01572000  12.010780   ; qtot -2.500460
-   25         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C24     25 -0.11798000  12.010780   ; qtot -2.618440
-   26         C2      1 systems/thrombin/lig_6a/lig_6a.pdb    C25     26 -0.11023000  12.010780   ; qtot -2.728670
-   27         H1      1 systems/thrombin/lig_6a/lig_6a.pdb    H26     27 0.07355000   1.007947   ; qtot -2.655120
-   28         H2      1 systems/thrombin/lig_6a/lig_6a.pdb    H27     28 0.08498000   1.007947   ; qtot -2.570140
-   29         H2      1 systems/thrombin/lig_6a/lig_6a.pdb    H28     29 0.08498000   1.007947   ; qtot -2.485160
-   30         H3      1 systems/thrombin/lig_6a/lig_6a.pdb    H29     30 0.12115000   1.007947   ; qtot -2.364010
-   31         H4      1 systems/thrombin/lig_6a/lig_6a.pdb    H30     31 0.31301001   1.007947   ; qtot -2.051000
-   32         H2      1 systems/thrombin/lig_6a/lig_6a.pdb    H31     32 0.07435000   1.007947   ; qtot -1.976650
-   33         H2      1 systems/thrombin/lig_6a/lig_6a.pdb    H32     33 0.07435000   1.007947   ; qtot -1.902300
-   34         H4      1 systems/thrombin/lig_6a/lig_6a.pdb    H33     34 0.46899998   1.007947   ; qtot -1.433300
-   35         H4      1 systems/thrombin/lig_6a/lig_6a.pdb    H34     35 0.46899998   1.007947   ; qtot -0.964300
-   36         H4      1 systems/thrombin/lig_6a/lig_6a.pdb    H35     36 0.46899998   1.007947   ; qtot -0.495300
-   37         H2      1 systems/thrombin/lig_6a/lig_6a.pdb    H36     37 0.07975000   1.007947   ; qtot -0.415550
-   38         H2      1 systems/thrombin/lig_6a/lig_6a.pdb    H37     38 0.07975000   1.007947   ; qtot -0.335800
-   39         H1      1 systems/thrombin/lig_6a/lig_6a.pdb    H38     39 0.08607000   1.007947   ; qtot -0.249730
-   40         H1      1 systems/thrombin/lig_6a/lig_6a.pdb    H39     40 0.08607000   1.007947   ; qtot -0.163660
-   41         H1      1 systems/thrombin/lig_6a/lig_6a.pdb    H40     41 0.05816000   1.007947   ; qtot -0.105500
-   42         H1      1 systems/thrombin/lig_6a/lig_6a.pdb    H41     42 0.05816000   1.007947   ; qtot -0.047340
-   43         H5      1 systems/thrombin/lig_6a/lig_6a.pdb    H42     43 0.13555001   1.007947   ; qtot 0.088210
-   44        Cl1      1 systems/thrombin/lig_6a/lig_6a.pdb   Cl43     44 -0.08117000  35.453200   ; qtot 0.007040
-   45         H5      1 systems/thrombin/lig_6a/lig_6a.pdb    H44     45 0.15266000   1.007947   ; qtot 0.159700
-   46         H5      1 systems/thrombin/lig_6a/lig_6a.pdb    H45     46 0.15218000   1.007947   ; qtot 0.311880
-   47         H5      1 systems/thrombin/lig_6a/lig_6a.pdb    H46     47 0.15454000   1.007947   ; qtot 0.466420
-   48         H5      1 systems/thrombin/lig_6a/lig_6a.pdb    H47     48 0.15266000   1.007947   ; qtot 0.619080
-   49        Cl1      1 systems/thrombin/lig_6a/lig_6a.pdb   Cl48     49 -0.06691000  35.453200   ; qtot 0.552170
-   50         H5      1 systems/thrombin/lig_6a/lig_6a.pdb    H49     50 0.13555001   1.007947   ; qtot 0.687720
-   51         H5      1 systems/thrombin/lig_6a/lig_6a.pdb    H50     51 0.15239000   1.007947   ; qtot 0.840110
-   52         H5      1 systems/thrombin/lig_6a/lig_6a.pdb    H51     52 0.15989000   1.007947   ; qtot 1.000000
+; residue    1 6a rtp 6a q 1.0
+    1         N1      1     6a     N0      1 -0.42098999  14.006720   ; qtot -0.420990
+    2         C1      1     6a     C1      2 0.03356000  12.010780   ; qtot -0.387430
+    3         C2      1     6a     C2      3 0.65083003  12.010780   ; qtot 0.263400
+    4         O1      1     6a     O3      4 -0.60759997  15.999430   ; qtot -0.344200
+    5         C2      1     6a     C4      5 0.65768003  12.010780   ; qtot 0.313480
+    6         O1      1     6a     O5      6 -0.59302998  15.999430   ; qtot -0.279550
+    7         C1      1     6a     C6      7 -0.08528001  12.010780   ; qtot -0.364830
+    8         C1      1     6a     C7      8 0.04888999  12.010780   ; qtot -0.315940
+    9         N1      1     6a     N8      9 -0.53741002  14.006720   ; qtot -0.853350
+   10         C1      1     6a     C9     10 -0.08703000  12.010780   ; qtot -0.940380
+   11         N1      1     6a    N10     11 -0.83882999  14.006720   ; qtot -1.779210
+   12         C1      1     6a    C11     12 -0.04319999  12.010780   ; qtot -1.822410
+   13         C1      1     6a    C12     13 0.12489000  12.010780   ; qtot -1.697520
+   14         C1      1     6a    C13     14 0.07504000  12.010780   ; qtot -1.622480
+   15         C2      1     6a    C14     15 -0.13277000  12.010780   ; qtot -1.755250
+   16         C2      1     6a    C15     16 -0.10754000  12.010780   ; qtot -1.862790
+   17         C2      1     6a    C16     17 -0.11798000  12.010780   ; qtot -1.980770
+   18         C2      1     6a    C17     18 0.03241000  12.010780   ; qtot -1.948360
+   19         C2      1     6a    C18     19 -0.11981000  12.010780   ; qtot -2.068170
+   20         C2      1     6a    C19     20 -0.12423000  12.010780   ; qtot -2.192400
+   21         C2      1     6a    C20     21 -0.09948000  12.010780   ; qtot -2.291880
+   22         C2      1     6a    C21     22 -0.10449000  12.010780   ; qtot -2.396370
+   23         C2      1     6a    C22     23 -0.11981000  12.010780   ; qtot -2.516180
+   24         C2      1     6a    C23     24 0.01572000  12.010780   ; qtot -2.500460
+   25         C2      1     6a    C24     25 -0.11798000  12.010780   ; qtot -2.618440
+   26         C2      1     6a    C25     26 -0.11023000  12.010780   ; qtot -2.728670
+   27         H1      1     6a    H26     27 0.07355000   1.007947   ; qtot -2.655120
+   28         H2      1     6a    H27     28 0.08498000   1.007947   ; qtot -2.570140
+   29         H2      1     6a    H28     29 0.08498000   1.007947   ; qtot -2.485160
+   30         H3      1     6a    H29     30 0.12115000   1.007947   ; qtot -2.364010
+   31         H4      1     6a    H30     31 0.31301001   1.007947   ; qtot -2.051000
+   32         H2      1     6a    H31     32 0.07435000   1.007947   ; qtot -1.976650
+   33         H2      1     6a    H32     33 0.07435000   1.007947   ; qtot -1.902300
+   34         H4      1     6a    H33     34 0.46899998   1.007947   ; qtot -1.433300
+   35         H4      1     6a    H34     35 0.46899998   1.007947   ; qtot -0.964300
+   36         H4      1     6a    H35     36 0.46899998   1.007947   ; qtot -0.495300
+   37         H2      1     6a    H36     37 0.07975000   1.007947   ; qtot -0.415550
+   38         H2      1     6a    H37     38 0.07975000   1.007947   ; qtot -0.335800
+   39         H1      1     6a    H38     39 0.08607000   1.007947   ; qtot -0.249730
+   40         H1      1     6a    H39     40 0.08607000   1.007947   ; qtot -0.163660
+   41         H1      1     6a    H40     41 0.05816000   1.007947   ; qtot -0.105500
+   42         H1      1     6a    H41     42 0.05816000   1.007947   ; qtot -0.047340
+   43         H5      1     6a    H42     43 0.13555001   1.007947   ; qtot 0.088210
+   44        Cl1      1     6a   Cl43     44 -0.08117000  35.453200   ; qtot 0.007040
+   45         H5      1     6a    H44     45 0.15266000   1.007947   ; qtot 0.159700
+   46         H5      1     6a    H45     46 0.15218000   1.007947   ; qtot 0.311880
+   47         H5      1     6a    H46     47 0.15454000   1.007947   ; qtot 0.466420
+   48         H5      1     6a    H47     48 0.15266000   1.007947   ; qtot 0.619080
+   49        Cl1      1     6a   Cl48     49 -0.06691000  35.453200   ; qtot 0.552170
+   50         H5      1     6a    H49     50 0.13555001   1.007947   ; qtot 0.687720
+   51         H5      1     6a    H50     51 0.15239000   1.007947   ; qtot 0.840110
+   52         H5      1     6a    H51     52 0.15989000   1.007947   ; qtot 1.000000
 
 [ bonds ]
 ;    ai     aj funct         c0         c1         c2         c3
@@ -615,4 +615,4 @@ Generic title
 
 [ molecules ]
 ; Compound       #mols
-systems/thrombin/lig_6a/lig_6a.pdb      1
+6a                   1
