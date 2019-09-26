@@ -1,0 +1,98 @@
+REMARK   1 CREATED WITH OPENMM 7.3.1, 2019-09-24
+CRYST1   20.999   22.022   23.883  90.00  90.00  90.00 P 1           1 
+HETATM    1  O0  sys A   1      24.221  12.059  28.282  1.00  0.00           O  
+HETATM    2  C1  sys A   1      23.558  12.262  29.518  1.00  0.00           C  
+HETATM    3  C2  sys A   1      22.984  10.943  30.040  1.00  0.00           C  
+HETATM    4  O3  sys A   1      21.899  11.200  30.858  1.00  0.00           O  
+HETATM    5  C4  sys A   1      21.259  10.201  31.464  1.00  0.00           C  
+HETATM    6  N5  sys A   1      21.680   8.934  31.294  1.00  0.00           N  
+HETATM    7  C6  sys A   1      21.060   7.917  31.877  1.00  0.00           C  
+HETATM    8  C7  sys A   1      19.975   8.119  32.727  1.00  0.00           C  
+HETATM    9  C8  sys A   1      19.511   9.412  32.920  1.00  0.00           C  
+HETATM   10  N9  sys A   1      18.438   9.606  33.747  1.00  0.00           N  
+HETATM   11  C10 sys A   1      20.153  10.476  32.282  1.00  0.00           C  
+HETATM   12  C11 sys A   1      19.702  11.831  32.464  1.00  0.00           C  
+HETATM   13  N12 sys A   1      19.314  12.939  32.628  1.00  0.00           N  
+HETATM   14  N13 sys A   1      21.654   6.720  31.672  1.00  0.00           N  
+HETATM   15  C14 sys A   1      20.980   5.685  31.192  1.00  0.00           C  
+HETATM   16  O15 sys A   1      19.896   5.367  31.669  1.00  0.00           O  
+HETATM   17  C16 sys A   1      21.671   4.730  30.227  1.00  0.00           C  
+HETATM   18  C17 sys A   1      23.053   4.334  30.737  1.00  0.00           C  
+HETATM   19  C18 sys A   1      24.169   5.176  30.524  1.00  0.00           C  
+HETATM   20  O19 sys A   1      23.977   6.328  29.872  1.00  0.00           O  
+HETATM   21  C20 sys A   1      24.939   7.317  29.808  1.00  0.00           C  
+HETATM   22  C21 sys A   1      25.428   4.782  31.029  1.00  0.00           C  
+HETATM   23  C22 sys A   1      25.560   3.578  31.745  1.00  0.00           C  
+HETATM   24  C23 sys A   1      24.449   2.752  31.979  1.00  0.00           C  
+HETATM   25  C24 sys A   1      23.193   3.136  31.464  1.00  0.00           C  
+HETATM   26  O25 sys A   1      24.652   1.638  32.687  1.00  0.00           O  
+HETATM   27  C26 sys A   1      23.604   0.873  33.156  1.00  0.00           C  
+HETATM   28  H27 sys A   1      23.621  11.926  27.542  1.00  0.00           H  
+HETATM   29  H28 sys A   1      24.259  12.659  30.252  1.00  0.00           H  
+HETATM   30  H29 sys A   1      22.749  12.981  29.378  1.00  0.00           H  
+HETATM   31  H30 sys A   1      22.660  10.329  29.199  1.00  0.00           H  
+HETATM   32  H31 sys A   1      23.762  10.415  30.595  1.00  0.00           H  
+HETATM   33  H32 sys A   1      19.516   7.282  33.224  1.00  0.00           H  
+HETATM   34  H33 sys A   1      17.943   8.816  34.125  1.00  0.00           H  
+HETATM   35  H34 sys A   1      18.110  10.547  33.912  1.00  0.00           H  
+HETATM   36  H35 sys A   1      22.574   6.819  31.284  1.00  0.00           H  
+HETATM   37  H36 sys A   1      21.051   3.843  30.103  1.00  0.00           H  
+HETATM   38  H37 sys A   1      21.760   5.218  29.259  1.00  0.00           H  
+HETATM   39  H38 sys A   1      25.818   6.954  29.274  1.00  0.00           H  
+HETATM   40  H39 sys A   1      24.535   8.174  29.269  1.00  0.00           H  
+HETATM   41  H40 sys A   1      25.217   7.634  30.814  1.00  0.00           H  
+HETATM   42  H41 sys A   1      26.303   5.394  30.880  1.00  0.00           H  
+HETATM   43  H42 sys A   1      26.523   3.285  32.137  1.00  0.00           H  
+HETATM   44  H43 sys A   1      22.322   2.521  31.628  1.00  0.00           H  
+HETATM   45  H44 sys A   1      23.999   0.059  33.763  1.00  0.00           H  
+HETATM   46  H45 sys A   1      22.943   1.483  33.774  1.00  0.00           H  
+HETATM   47  H46 sys A   1      23.045   0.447  32.323  1.00  0.00           H  
+TER      48      sys A   1
+CONECT    1    2   28
+CONECT    2    1    3   29   30
+CONECT    3    2    4   31   32
+CONECT    4    3    5
+CONECT    5    4   11    6
+CONECT    6    5    7
+CONECT    7    6    8   14
+CONECT    8    7    9   33
+CONECT    9    8   10   11
+CONECT   10    9   34   35
+CONECT   11    5    9   12
+CONECT   12   11   13
+CONECT   13   12
+CONECT   14    7   15   36
+CONECT   15   14   16   17
+CONECT   16   15
+CONECT   17   15   18   37   38
+CONECT   18   17   25   19
+CONECT   19   18   20   22
+CONECT   20   19   21
+CONECT   21   20   39   40   41
+CONECT   22   19   23   42
+CONECT   23   22   24   43
+CONECT   24   23   25   26
+CONECT   25   18   24   44
+CONECT   26   24   27
+CONECT   27   26   45   46   47
+CONECT   28    1
+CONECT   29    2
+CONECT   30    2
+CONECT   31    3
+CONECT   32    3
+CONECT   33    8
+CONECT   34   10
+CONECT   35   10
+CONECT   36   14
+CONECT   37   17
+CONECT   38   17
+CONECT   39   21
+CONECT   40   21
+CONECT   41   21
+CONECT   42   22
+CONECT   43   23
+CONECT   44   25
+CONECT   45   27
+CONECT   46   27
+CONECT   47   27
+END

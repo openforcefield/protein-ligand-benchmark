@@ -1,0 +1,80 @@
+REMARK   1 CREATED WITH OPENMM 7.3.1, 2019-09-24
+CRYST1   23.033   24.613   25.119  90.00  90.00  90.00 P 1           1 
+HETATM    1  C0  sys A   1      23.998  12.006  30.207  1.00  0.00           C  
+HETATM    2  C1  sys A   1      23.326  10.706  30.646  1.00  0.00           C  
+HETATM    3  O2  sys A   1      22.178  11.010  31.349  1.00  0.00           O  
+HETATM    4  C3  sys A   1      21.391  10.040  31.814  1.00  0.00           C  
+HETATM    5  N4  sys A   1      21.739   8.750  31.641  1.00  0.00           N  
+HETATM    6  C5  sys A   1      20.967   7.764  32.078  1.00  0.00           C  
+HETATM    7  C6  sys A   1      19.786   8.020  32.773  1.00  0.00           C  
+HETATM    8  C7  sys A   1      19.394   9.337  32.961  1.00  0.00           C  
+HETATM    9  N8  sys A   1      18.223   9.588  33.624  1.00  0.00           N  
+HETATM   10  C9  sys A   1      20.201  10.370  32.480  1.00  0.00           C  
+HETATM   11  C10 sys A   1      19.831  11.748  32.670  1.00  0.00           C  
+HETATM   12  N11 sys A   1      19.507  12.876  32.837  1.00  0.00           N  
+HETATM   13  N12 sys A   1      21.494   6.529  31.898  1.00  0.00           N  
+HETATM   14  C13 sys A   1      20.822   5.576  31.265  1.00  0.00           C  
+HETATM   15  O14 sys A   1      19.637   5.383  31.508  1.00  0.00           O  
+HETATM   16  C15 sys A   1      21.570   4.519  30.458  1.00  0.00           C  
+HETATM   17  C16 sys A   1      23.083   4.688  30.480  1.00  0.00           C  
+HETATM   18  C17 sys A   1      23.732   5.397  29.451  1.00  0.00           C  
+HETATM   19  C18 sys A   1      25.131   5.542  29.469  1.00  0.00           C  
+HETATM   20  C19 sys A   1      25.883   4.988  30.519  1.00  0.00           C  
+HETATM   21 Cl20 sys A   1      27.601   5.169  30.541  1.00  0.00          Cl  
+HETATM   22  C21 sys A   1      25.237   4.287  31.551  1.00  0.00           C  
+HETATM   23  C22 sys A   1      23.838   4.136  31.533  1.00  0.00           C  
+HETATM   24  H23 sys A   1      24.868  11.774  29.593  1.00  0.00           H  
+HETATM   25  H24 sys A   1      23.295  12.604  29.625  1.00  0.00           H  
+HETATM   26  H25 sys A   1      24.315  12.569  31.085  1.00  0.00           H  
+HETATM   27  H26 sys A   1      23.074  10.117  29.762  1.00  0.00           H  
+HETATM   28  H27 sys A   1      24.012  10.139  31.277  1.00  0.00           H  
+HETATM   29  H28 sys A   1      19.194   7.204  33.151  1.00  0.00           H  
+HETATM   30  H29 sys A   1      17.626   8.825  33.896  1.00  0.00           H  
+HETATM   31  H30 sys A   1      17.920  10.545  33.741  1.00  0.00           H  
+HETATM   32  H31 sys A   1      22.472   6.565  31.688  1.00  0.00           H  
+HETATM   33  H32 sys A   1      21.310   3.540  30.860  1.00  0.00           H  
+HETATM   34  H33 sys A   1      21.214   4.569  29.430  1.00  0.00           H  
+HETATM   35  H34 sys A   1      23.162   5.827  28.638  1.00  0.00           H  
+HETATM   36  H35 sys A   1      25.632   6.078  28.676  1.00  0.00           H  
+HETATM   37  H36 sys A   1      25.819   3.860  32.355  1.00  0.00           H  
+HETATM   38  H37 sys A   1      23.349   3.593  32.330  1.00  0.00           H  
+TER      39      sys A   1
+CONECT    1    2   24   25   26
+CONECT    2    1    3   27   28
+CONECT    3    2    4
+CONECT    4    3   10    5
+CONECT    5    4    6
+CONECT    6    5    7   13
+CONECT    7    6    8   29
+CONECT    8    7    9   10
+CONECT    9    8   30   31
+CONECT   10    4    8   11
+CONECT   11   10   12
+CONECT   12   11
+CONECT   13    6   14   32
+CONECT   14   13   15   16
+CONECT   15   14
+CONECT   16   14   17   33   34
+CONECT   17   16   23   18
+CONECT   18   17   19   35
+CONECT   19   18   20   36
+CONECT   20   19   21   22
+CONECT   21   20
+CONECT   22   20   23   37
+CONECT   23   17   22   38
+CONECT   24    1
+CONECT   25    1
+CONECT   26    1
+CONECT   27    2
+CONECT   28    2
+CONECT   29    7
+CONECT   30    9
+CONECT   31    9
+CONECT   32   13
+CONECT   33   16
+CONECT   34   16
+CONECT   35   18
+CONECT   36   19
+CONECT   37   22
+CONECT   38   23
+END

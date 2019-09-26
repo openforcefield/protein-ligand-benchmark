@@ -1,0 +1,108 @@
+REMARK   1 CREATED WITH OPENMM 7.3.1, 2019-09-24
+CRYST1   39.947   37.973   41.376  90.00  90.00  90.00 P 1           1 
+HETATM    1  N0  sys A   1      18.714 -12.211  21.818  1.00  0.00           N  
+HETATM    2  C1  sys A   1      18.270 -11.467  20.635  1.00  0.00           C  
+HETATM    3  C2  sys A   1      17.947 -12.347  22.907  1.00  0.00           C  
+HETATM    4  O3  sys A   1      17.280 -11.368  23.242  1.00  0.00           O  
+HETATM    5  C4  sys A   1      16.790 -11.679  20.248  1.00  0.00           C  
+HETATM    6  O5  sys A   1      16.319 -12.821  20.243  1.00  0.00           O  
+HETATM    7  C6  sys A   1      19.254 -11.976  19.572  1.00  0.00           C  
+HETATM    8  C7  sys A   1      17.268 -13.715  23.144  1.00  0.00           C  
+HETATM    9  N8  sys A   1      15.959 -10.633  20.217  1.00  0.00           N  
+HETATM   10  C9  sys A   1      20.518 -12.316  20.370  1.00  0.00           C  
+HETATM   11  N10 sys A   1      15.810 -13.649  22.815  1.00  0.00           N  
+HETATM   12  C11 sys A   1      17.482 -14.160  24.597  1.00  0.00           C  
+HETATM   13  C12 sys A   1      14.510 -10.769  20.097  1.00  0.00           C  
+HETATM   14  C13 sys A   1      19.994 -12.882  21.689  1.00  0.00           C  
+HETATM   15  C14 sys A   1      18.963 -14.397  24.824  1.00  0.00           C  
+HETATM   16  C15 sys A   1      13.896 -11.368  21.355  1.00  0.00           C  
+HETATM   17  C16 sys A   1      19.767 -13.381  25.379  1.00  0.00           C  
+HETATM   18  C17 sys A   1      13.039 -12.482  21.255  1.00  0.00           C  
+HETATM   19  C18 sys A   1      21.143 -13.595  25.571  1.00  0.00           C  
+HETATM   20  C19 sys A   1      12.443 -13.024  22.408  1.00  0.00           C  
+HETATM   21  C20 sys A   1      21.720 -14.827  25.216  1.00  0.00           C  
+HETATM   22  C21 sys A   1      12.702 -12.452  23.667  1.00  0.00           C  
+HETATM   23  C22 sys A   1      20.920 -15.845  24.668  1.00  0.00           C  
+HETATM   24  C23 sys A   1      13.553 -11.339  23.772  1.00  0.00           C  
+HETATM   25  C24 sys A   1      19.544 -15.631  24.470  1.00  0.00           C  
+HETATM   26  C25 sys A   1      14.151 -10.800  22.621  1.00  0.00           C  
+HETATM   27  H26 sys A   1      18.448 -10.404  20.808  1.00  0.00           H  
+HETATM   28  H27 sys A   1      18.866 -12.886  19.109  1.00  0.00           H  
+HETATM   29  H28 sys A   1      19.450 -11.221  18.809  1.00  0.00           H  
+HETATM   30  H29 sys A   1      17.766 -14.437  22.493  1.00  0.00           H  
+HETATM   31  H30 sys A   1      16.358  -9.712  20.314  1.00  0.00           H  
+HETATM   32  H31 sys A   1      21.148 -13.037  19.846  1.00  0.00           H  
+HETATM   33  H32 sys A   1      21.081 -11.401  20.569  1.00  0.00           H  
+HETATM   34  H33 sys A   1      15.293 -14.474  23.071  1.00  0.00           H  
+HETATM   35  H34 sys A   1      15.414 -12.824  23.259  1.00  0.00           H  
+HETATM   36  H35 sys A   1      15.718 -13.481  21.806  1.00  0.00           H  
+HETATM   37  H36 sys A   1      17.114 -13.397  25.287  1.00  0.00           H  
+HETATM   38  H37 sys A   1      16.943 -15.089  24.788  1.00  0.00           H  
+HETATM   39  H38 sys A   1      14.064  -9.787  19.926  1.00  0.00           H  
+HETATM   40  H39 sys A   1      14.274 -11.399  19.236  1.00  0.00           H  
+HETATM   41  H40 sys A   1      20.667 -12.639  22.514  1.00  0.00           H  
+HETATM   42  H41 sys A   1      19.852 -13.961  21.609  1.00  0.00           H  
+HETATM   43  H42 sys A   1      19.331 -12.432  25.665  1.00  0.00           H  
+HETATM   44  H43 sys A   1      12.815 -12.911  20.287  1.00  0.00           H  
+HETATM   45  H44 sys A   1      21.757 -12.817  26.004  1.00  0.00           H  
+HETATM   46  H45 sys A   1      11.760 -13.860  22.323  1.00  0.00           H  
+HETATM   47  H46 sys A   1      22.777 -14.997  25.376  1.00  0.00           H  
+HETATM   48  H47 sys A   1      21.364 -16.798  24.409  1.00  0.00           H  
+HETATM   49  F48 sys A   1      13.815 -10.801  24.990  1.00  0.00           F  
+HETATM   50  H49 sys A   1      18.938 -16.426  24.058  1.00  0.00           H  
+HETATM   51  H50 sys A   1      14.801  -9.941  22.718  1.00  0.00           H  
+HETATM   52  H51 sys A   1      12.227 -12.847  24.555  1.00  0.00           H  
+TER      53      sys A   1
+CONECT    1    2   14    3
+CONECT    2    1    5    7   27
+CONECT    3    1    8    4
+CONECT    4    3
+CONECT    5    2    6    9
+CONECT    6    5
+CONECT    7    2   10   28   29
+CONECT    8    3   11   12   30
+CONECT    9    5   13   31
+CONECT   10    7   14   32   33
+CONECT   11    8   34   35   36
+CONECT   12    8   15   37   38
+CONECT   13    9   16   39   40
+CONECT   14    1   10   41   42
+CONECT   15   12   17   25
+CONECT   16   13   18   26
+CONECT   17   15   19   43
+CONECT   18   16   20   44
+CONECT   19   17   21   45
+CONECT   20   18   22   46
+CONECT   21   19   23   47
+CONECT   22   20   24   52
+CONECT   23   21   25   48
+CONECT   24   22   26   49
+CONECT   25   15   23   50
+CONECT   26   16   24   51
+CONECT   27    2
+CONECT   28    7
+CONECT   29    7
+CONECT   30    8
+CONECT   31    9
+CONECT   32   10
+CONECT   33   10
+CONECT   34   11
+CONECT   35   11
+CONECT   36   11
+CONECT   37   12
+CONECT   38   12
+CONECT   39   13
+CONECT   40   13
+CONECT   41   14
+CONECT   42   14
+CONECT   43   17
+CONECT   44   18
+CONECT   45   19
+CONECT   46   20
+CONECT   47   21
+CONECT   48   23
+CONECT   49   24
+CONECT   50   25
+CONECT   51   26
+CONECT   52   22
+END
