@@ -1,0 +1,13 @@
+recomputing energies with Cartesian restraints
+&cntrl
+    imin=1, 
+    irest=0,
+    ntx=1,
+    maxcyc=1,
+    ntb=0,
+    igb=6,
+    extdiel=1.0,
+    intdiel=1.0,
+    cut=999.0
+/
+
