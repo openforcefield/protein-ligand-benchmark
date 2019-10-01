@@ -5,6 +5,7 @@ recomputing energies with Cartesian restraints
     ntx=1,
     maxcyc=1,
     ntb=0,
+    ntc=1,ntf=1
     igb=6,
     extdiel=1.0,
     intdiel=1.0,

@@ -1,17 +1,17 @@
 ;
 ;   File systems/testmols/phenol/phenol.top  was generated
-;   By user: dahahn (1000)
-;   On host: dahahn-ThinkPad-T460s
-;   At date: Thu. September  4 17:11:09 2019
+;   By user: dhahn3 (52128)
+;   On host: wrhels4acwzv
+;   At date: Mon. September  1 18:34:27 2019
 ;
 ;   This is a standalone topology file
 ;
 ;   Created by:
 ;   ParmEd:       ipykernel_launcher.py, VERSION 3.2.0
 ;   Executable:   ipykernel_launcher.py
-;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
+;   Library dir:  /users/home/dhahn3/miniconda3/envs/off/share/gromacs/top
 ;   Command line:
-;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-773b795c-d46d-499a-9092-250e5d9713ab.json
+;     /home/dhahn3/miniconda3/envs/off/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/52128/jupyter/kernel-ac038bf9-1cad-4603-b860-7d79731e0f53.json
 ;
 
 [ defaults ]
@@ -32,30 +32,30 @@ phenol          3
 
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
-; residue    1 phenol rtp phenol q 0.0
-    1         C1      1 phenol     C0      1 -0.18511000  12.010780   ; qtot -0.185110
-    2         C1      1 phenol     C1      2 -0.09428000  12.010780   ; qtot -0.279390
-    3         C1      1 phenol     C2      3 -0.16553999  12.010780   ; qtot -0.444930
-    4         C1      1 phenol     C3      4 -0.09428000  12.010780   ; qtot -0.539210
-    5         C1      1 phenol     C4      5 -0.18511000  12.010780   ; qtot -0.724320
-    6         C1      1 phenol     C5      6 0.12277000  12.010780   ; qtot -0.601550
-    7         O1      1 phenol     O6      7 -0.49812001  15.999430   ; qtot -1.099670
-    8         H1      1 phenol     H7      8 0.14055000   1.007947   ; qtot -0.959120
-    9         H1      1 phenol     H8      9 0.13343000   1.007947   ; qtot -0.825690
-   10         H1      1 phenol     H9     10 0.13326000   1.007947   ; qtot -0.692430
-   11         H1      1 phenol    H10     11 0.13343000   1.007947   ; qtot -0.559000
-   12         H1      1 phenol    H11     12 0.14055000   1.007947   ; qtot -0.418450
-   13         H2      1 phenol    H12     13 0.41845000   1.007947   ; qtot 0.000000
+; residue    1 phenol rtp phenol q -0.0
+    1         C1      1 phenol     C0      1 -0.18500000  12.010780   ; qtot -0.185000
+    2         C1      1 phenol     C1      2 -0.09450000  12.010780   ; qtot -0.279500
+    3         C1      1 phenol     C2      3 -0.16600000  12.010780   ; qtot -0.445500
+    4         C1      1 phenol     C3      4 -0.09450000  12.010780   ; qtot -0.540000
+    5         C1      1 phenol     C4      5 -0.18500000  12.010780   ; qtot -0.725000
+    6         C1      1 phenol     C5      6 0.12310000  12.010780   ; qtot -0.601900
+    7         O1      1 phenol     O6      7 -0.49910000  15.999430   ; qtot -1.101000
+    8         H1      1 phenol     H7      8 0.14150000   1.007947   ; qtot -0.959500
+    9         H1      1 phenol     H8      9 0.13300000   1.007947   ; qtot -0.826500
+   10         H1      1 phenol     H9     10 0.13300000   1.007947   ; qtot -0.693500
+   11         H1      1 phenol    H10     11 0.13300000   1.007947   ; qtot -0.560500
+   12         H1      1 phenol    H11     12 0.14150000   1.007947   ; qtot -0.419000
+   13         H2      1 phenol    H12     13 0.41800000   1.007947   ; qtot -0.001000
 
 [ bonds ]
 ;    ai     aj funct         c0         c1         c2         c3
-      1      6     1   0.14000 392459.200000
       1      2     1   0.14000 392459.200000
       2      3     1   0.14000 392459.200000
       3      4     1   0.14000 392459.200000
       4      5     1   0.14000 392459.200000
       5      6     1   0.14000 392459.200000
       6      7     1   0.13640 376560.000000
+      6      1     1   0.14000 392459.200000
       1      8     1   0.10800 307105.600000
       2      9     1   0.10800 307105.600000
       3     10     1   0.10800 307105.600000

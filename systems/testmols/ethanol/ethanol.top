@@ -1,17 +1,17 @@
 ;
 ;   File systems/testmols/ethanol/ethanol.top  was generated
-;   By user: dahahn (1000)
-;   On host: dahahn-ThinkPad-T460s
-;   At date: Thu. September  4 17:11:08 2019
+;   By user: dhahn3 (52128)
+;   On host: wrhels4acwzv
+;   At date: Mon. September  1 18:34:21 2019
 ;
 ;   This is a standalone topology file
 ;
 ;   Created by:
 ;   ParmEd:       ipykernel_launcher.py, VERSION 3.2.0
 ;   Executable:   ipykernel_launcher.py
-;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
+;   Library dir:  /users/home/dhahn3/miniconda3/envs/off/share/gromacs/top
 ;   Command line:
-;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-773b795c-d46d-499a-9092-250e5d9713ab.json
+;     /home/dhahn3/miniconda3/envs/off/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/52128/jupyter/kernel-ac038bf9-1cad-4603-b860-7d79731e0f53.json
 ;
 
 [ defaults ]
@@ -34,15 +34,15 @@ ethanol          3
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
 ; residue    1 ethanol rtp ethanol q 0.0
-    1         C1      1 ethanol     C0      1 -0.09709001  12.010780   ; qtot -0.097090
-    2         C1      1 ethanol     C1      2 0.13141000  12.010780   ; qtot 0.034320
-    3         O1      1 ethanol     O2      3 -0.60134000  15.999430   ; qtot -0.567020
-    4         H1      1 ethanol     H3      4 0.04476000   1.007947   ; qtot -0.522260
-    5         H1      1 ethanol     H4      5 0.04476000   1.007947   ; qtot -0.477500
-    6         H1      1 ethanol     H5      6 0.04476000   1.007947   ; qtot -0.432740
-    7         H2      1 ethanol     H6      7 0.01732000   1.007947   ; qtot -0.415420
-    8         H2      1 ethanol     H7      8 0.01732000   1.007947   ; qtot -0.398100
-    9         H3      1 ethanol     H8      9 0.39810002   1.007947   ; qtot 0.000000
+    1         C1      1 ethanol     C0      1 -0.13610000  12.010780   ; qtot -0.136100
+    2         C1      1 ethanol     C1      2 0.12640000  12.010780   ; qtot -0.009700
+    3         O1      1 ethanol     O2      3 -0.59980000  15.999430   ; qtot -0.609500
+    4         H1      1 ethanol     H3      4 0.04236700   1.007947   ; qtot -0.567133
+    5         H1      1 ethanol     H4      5 0.04236700   1.007947   ; qtot -0.524766
+    6         H1      1 ethanol     H5      6 0.04236700   1.007947   ; qtot -0.482399
+    7         H2      1 ethanol     H6      7 0.04320000   1.007947   ; qtot -0.439199
+    8         H2      1 ethanol     H7      8 0.04320000   1.007947   ; qtot -0.395999
+    9         H3      1 ethanol     H8      9 0.39600000   1.007947   ; qtot 0.000001
 
 [ bonds ]
 ;    ai     aj funct         c0         c1         c2         c3

@@ -4,7 +4,7 @@ GROningen MAchine for Chemical Simulation
     1syste   C1    2  -0.463   2.286   1.835
     1syste   O2    3  -0.329   2.245   1.805
     1syste   C3    4  -0.238   2.226   1.907
-    1syste   C4    5  -0.108   2.190   1.872
+    1syste   C4    5  -0.107   2.190   1.872
     1syste   C5    6  -0.010   2.164   1.962
     1syste   C6    7  -0.041   2.173   2.094
     1syste   C7    8  -0.267   2.237   2.044
@@ -16,14 +16,14 @@ GROningen MAchine for Chemical Simulation
     1syste  C13   14  -0.147   2.258   2.629
     1syste  C14   15  -0.199   2.206   2.762
     1syste  N15   16  -0.044   2.346   2.640
-    1syste  N16   17  -0.137   2.274   2.390
+    1syste  N16   17  -0.137   2.274   2.389
     1syste  C17   18  -0.039   2.368   2.396
     1syste  C18   19   0.015   2.438   2.284
     1syste  C19   20   0.116   2.533   2.302
     1syste  C20   21   0.163   2.561   2.430
     1syste  C21   22   0.110   2.497   2.542
     1syste  C22   23   0.008   2.401   2.527
-    1syste  C23   24   0.176   2.613   2.185
+    1syste  C23   24   0.176   2.613   2.186
     1syste  N24   25   0.258   2.539   2.087
     1syste  C25   26   0.315   2.414   2.137
     1syste  C26   27   0.404   2.347   2.029
@@ -47,7 +47,7 @@ GROningen MAchine for Chemical Simulation
     1syste  H44   45   0.094   2.660   2.132
     1syste  H45   46   0.234   2.345   2.159
     1syste  H46   47   0.372   2.429   2.229
-    1syste  H47   48   0.343   2.317   1.943
+    1syste  H47   48   0.344   2.317   1.943
     1syste  H48   49   0.447   2.256   2.069
     1syste  H49   50   0.405   2.542   1.842
     1syste  H50   51   0.541   2.624   1.913

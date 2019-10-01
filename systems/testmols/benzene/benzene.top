@@ -1,17 +1,17 @@
 ;
 ;   File systems/testmols/benzene/benzene.top  was generated
-;   By user: dahahn (1000)
-;   On host: dahahn-ThinkPad-T460s
-;   At date: Thu. September  4 17:11:09 2019
+;   By user: dhahn3 (52128)
+;   On host: wrhels4acwzv
+;   At date: Mon. September  1 18:34:26 2019
 ;
 ;   This is a standalone topology file
 ;
 ;   Created by:
 ;   ParmEd:       ipykernel_launcher.py, VERSION 3.2.0
 ;   Executable:   ipykernel_launcher.py
-;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
+;   Library dir:  /users/home/dhahn3/miniconda3/envs/off/share/gromacs/top
 ;   Command line:
-;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-773b795c-d46d-499a-9092-250e5d9713ab.json
+;     /home/dhahn3/miniconda3/envs/off/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/52128/jupyter/kernel-ac038bf9-1cad-4603-b860-7d79731e0f53.json
 ;
 
 [ defaults ]
@@ -31,27 +31,27 @@ benzene          3
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
 ; residue    1 benzene rtp benzene q 0.0
-    1         C1      1 benzene     C0      1 -0.13012999  12.010780   ; qtot -0.130130
-    2         C1      1 benzene     C1      2 -0.13007000  12.010780   ; qtot -0.260200
-    3         C1      1 benzene     C2      3 -0.13007000  12.010780   ; qtot -0.390270
-    4         C1      1 benzene     C3      4 -0.13007000  12.010780   ; qtot -0.520340
-    5         C1      1 benzene     C4      5 -0.13007000  12.010780   ; qtot -0.650410
-    6         C1      1 benzene     C5      6 -0.13007000  12.010780   ; qtot -0.780480
-    7         H1      1 benzene     H6      7 0.13008000   1.007947   ; qtot -0.650400
-    8         H1      1 benzene     H7      8 0.13008000   1.007947   ; qtot -0.520320
-    9         H1      1 benzene     H8      9 0.13008000   1.007947   ; qtot -0.390240
-   10         H1      1 benzene     H9     10 0.13008000   1.007947   ; qtot -0.260160
-   11         H1      1 benzene    H10     11 0.13008000   1.007947   ; qtot -0.130080
-   12         H1      1 benzene    H11     12 0.13008000   1.007947   ; qtot 0.000000
+    1         C1      1 benzene     C0      1 -0.13000000  12.010780   ; qtot -0.130000
+    2         C1      1 benzene     C1      2 -0.13000000  12.010780   ; qtot -0.260000
+    3         C1      1 benzene     C2      3 -0.13000000  12.010780   ; qtot -0.390000
+    4         C1      1 benzene     C3      4 -0.13000000  12.010780   ; qtot -0.520000
+    5         C1      1 benzene     C4      5 -0.13000000  12.010780   ; qtot -0.650000
+    6         C1      1 benzene     C5      6 -0.13000000  12.010780   ; qtot -0.780000
+    7         H1      1 benzene     H6      7 0.13000000   1.007947   ; qtot -0.650000
+    8         H1      1 benzene     H7      8 0.13000000   1.007947   ; qtot -0.520000
+    9         H1      1 benzene     H8      9 0.13000000   1.007947   ; qtot -0.390000
+   10         H1      1 benzene     H9     10 0.13000000   1.007947   ; qtot -0.260000
+   11         H1      1 benzene    H10     11 0.13000000   1.007947   ; qtot -0.130000
+   12         H1      1 benzene    H11     12 0.13000000   1.007947   ; qtot 0.000000
 
 [ bonds ]
 ;    ai     aj funct         c0         c1         c2         c3
-      1      6     1   0.14000 392459.200000
       1      2     1   0.14000 392459.200000
       2      3     1   0.14000 392459.200000
       3      4     1   0.14000 392459.200000
       4      5     1   0.14000 392459.200000
       5      6     1   0.14000 392459.200000
+      6      1     1   0.14000 392459.200000
       1      7     1   0.10800 307105.600000
       2      8     1   0.10800 307105.600000
       3      9     1   0.10800 307105.600000

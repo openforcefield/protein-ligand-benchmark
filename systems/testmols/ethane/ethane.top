@@ -1,17 +1,17 @@
 ;
 ;   File systems/testmols/ethane/ethane.top  was generated
-;   By user: dahahn (1000)
-;   On host: dahahn-ThinkPad-T460s
-;   At date: Thu. September  4 17:11:08 2019
+;   By user: dhahn3 (52128)
+;   On host: wrhels4acwzv
+;   At date: Mon. September  1 18:34:20 2019
 ;
 ;   This is a standalone topology file
 ;
 ;   Created by:
 ;   ParmEd:       ipykernel_launcher.py, VERSION 3.2.0
 ;   Executable:   ipykernel_launcher.py
-;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
+;   Library dir:  /users/home/dhahn3/miniconda3/envs/off/share/gromacs/top
 ;   Command line:
-;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-773b795c-d46d-499a-9092-250e5d9713ab.json
+;     /home/dhahn3/miniconda3/envs/off/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/52128/jupyter/kernel-ac038bf9-1cad-4603-b860-7d79731e0f53.json
 ;
 
 [ defaults ]
@@ -30,15 +30,15 @@ ethane          3
 
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
-; residue    1 ethane rtp ethane q -0.0
-    1         C1      1 ethane     C0      1 -0.09384000  12.010780   ; qtot -0.093840
-    2         C1      1 ethane     C1      2 -0.09384000  12.010780   ; qtot -0.187680
-    3         H1      1 ethane     H2      3 0.03128000   1.007947   ; qtot -0.156400
-    4         H1      1 ethane     H3      4 0.03128000   1.007947   ; qtot -0.125120
-    5         H1      1 ethane     H4      5 0.03128000   1.007947   ; qtot -0.093840
-    6         H1      1 ethane     H5      6 0.03128000   1.007947   ; qtot -0.062560
-    7         H1      1 ethane     H6      7 0.03128000   1.007947   ; qtot -0.031280
-    8         H1      1 ethane     H7      8 0.03128000   1.007947   ; qtot -0.000000
+; residue    1 ethane rtp ethane q 0.0
+    1         C1      1 ethane     C0      1 -0.09410000  12.010780   ; qtot -0.094100
+    2         C1      1 ethane     C1      2 -0.09410000  12.010780   ; qtot -0.188200
+    3         H1      1 ethane     H2      3 0.03170000   1.007947   ; qtot -0.156500
+    4         H1      1 ethane     H3      4 0.03170000   1.007947   ; qtot -0.124800
+    5         H1      1 ethane     H4      5 0.03170000   1.007947   ; qtot -0.093100
+    6         H1      1 ethane     H5      6 0.03170000   1.007947   ; qtot -0.061400
+    7         H1      1 ethane     H6      7 0.03170000   1.007947   ; qtot -0.029700
+    8         H1      1 ethane     H7      8 0.03170000   1.007947   ; qtot 0.002000
 
 [ bonds ]
 ;    ai     aj funct         c0         c1         c2         c3

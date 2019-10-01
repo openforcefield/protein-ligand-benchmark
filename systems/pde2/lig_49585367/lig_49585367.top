@@ -1,17 +1,17 @@
 ;
 ;   File systems/pde2/lig_49585367/lig_49585367.top  was generated
-;   By user: dahahn (1000)
-;   On host: dahahn-ThinkPad-T460s
-;   At date: Thu. September  4 17:13:39 2019
+;   By user: dhahn3 (52128)
+;   On host: wrhels4acwzv
+;   At date: Mon. September  1 19:53:35 2019
 ;
 ;   This is a standalone topology file
 ;
 ;   Created by:
 ;   ParmEd:       ipykernel_launcher.py, VERSION 3.2.0
 ;   Executable:   ipykernel_launcher.py
-;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
+;   Library dir:  /users/home/dhahn3/miniconda3/envs/off/share/gromacs/top
 ;   Command line:
-;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-773b795c-d46d-499a-9092-250e5d9713ab.json
+;     /home/dhahn3/miniconda3/envs/off/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/52128/jupyter/kernel-ac038bf9-1cad-4603-b860-7d79731e0f53.json
 ;
 
 [ defaults ]
@@ -37,64 +37,64 @@ systems/pde2/lig_49585367/lig_49585367.pdb          3
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
 ; residue    1 systems/pde2/lig_49585367/lig_49585367.pdb rtp systems/pde2/lig_49585367/lig_49585367.pdb q 0.0
-    1         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb     C0      1 0.11373001  12.010780   ; qtot 0.113730
-    2         O1      1 systems/pde2/lig_49585367/lig_49585367.pdb     O1      2 -0.41325998  15.999430   ; qtot -0.299530
-    3         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb     C2      3 0.08947000  12.010780   ; qtot -0.210060
-    4         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb     C3      4 0.12190000  12.010780   ; qtot -0.088160
-    5         O1      1 systems/pde2/lig_49585367/lig_49585367.pdb     O4      5 -0.31918001  15.999430   ; qtot -0.407340
-    6         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb     C5      6 0.00660000  12.010780   ; qtot -0.400740
-    7         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb     C6      7 0.38970000  12.010780   ; qtot -0.011040
-    8         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb     N7      8 -0.63665003  14.006720   ; qtot -0.647690
-    9         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb     C8      9 0.37867001  12.010780   ; qtot -0.269020
-   10         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb     C9     10 -0.12853000  12.010780   ; qtot -0.397550
-   11         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C10     11 -0.21008000  12.010780   ; qtot -0.607630
-   12         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C11     12 0.41690999  12.010780   ; qtot -0.190720
-   13         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N12     13 -0.31840003  14.006720   ; qtot -0.509120
-   14         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N13     14 -0.30902001  14.006720   ; qtot -0.818140
-   15         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C14     15 0.26417997  12.010780   ; qtot -0.553960
-   16         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C15     16 0.42074999  12.010780   ; qtot -0.133210
-   17         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C16     17 -0.13552999  12.010780   ; qtot -0.268740
-   18         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N17     18 -0.56474000  14.006720   ; qtot -0.833480
-   19         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N18     19 -0.20795000  14.006720   ; qtot -1.041430
-   20         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C19     20 -0.02637000  12.010780   ; qtot -1.067800
-   21         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C20     21 -0.12060000  12.010780   ; qtot -1.188400
-   22         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C21     22 -0.06804000  12.010780   ; qtot -1.256440
-   23         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C22     23 -0.12781000  12.010780   ; qtot -1.384250
-   24         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C23     24 -0.08053000  12.010780   ; qtot -1.464780
-   25         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C24     25 0.12089001  12.010780   ; qtot -1.343890
-   26         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C25     26 0.21427001  12.010780   ; qtot -1.129620
-   27         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N26     27 -0.72933996  14.006720   ; qtot -1.858960
-   28         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C27     28 0.13376001  12.010780   ; qtot -1.725200
-   29         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C28     29 0.12691000  12.010780   ; qtot -1.598290
-   30         O1      1 systems/pde2/lig_49585367/lig_49585367.pdb    O29     30 -0.41592997  15.999430   ; qtot -2.014220
-   31         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C30     31 0.12691000  12.010780   ; qtot -1.887310
-   32         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C31     32 0.13376001  12.010780   ; qtot -1.753550
-   33         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H32     33 0.03781000   1.007947   ; qtot -1.715740
-   34         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H33     34 0.03781000   1.007947   ; qtot -1.677930
-   35         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H34     35 0.03781000   1.007947   ; qtot -1.640120
-   36         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H35     36 0.04061000   1.007947   ; qtot -1.599510
-   37         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H36     37 0.04061000   1.007947   ; qtot -1.558900
-   38         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H37     38 0.07577001   1.007947   ; qtot -1.483130
-   39         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H38     39 0.07577001   1.007947   ; qtot -1.407360
-   40         H2      1 systems/pde2/lig_49585367/lig_49585367.pdb    H39     40 0.04345001   1.007947   ; qtot -1.363910
-   41         H2      1 systems/pde2/lig_49585367/lig_49585367.pdb    H40     41 0.03143001   1.007947   ; qtot -1.332480
-   42         H3      1 systems/pde2/lig_49585367/lig_49585367.pdb    H41     42 0.16520999   1.007947   ; qtot -1.167270
-   43         H4      1 systems/pde2/lig_49585367/lig_49585367.pdb    H42     43 0.07086000   1.007947   ; qtot -1.096410
-   44         H4      1 systems/pde2/lig_49585367/lig_49585367.pdb    H43     44 0.07086000   1.007947   ; qtot -1.025550
-   45         H4      1 systems/pde2/lig_49585367/lig_49585367.pdb    H44     45 0.07086000   1.007947   ; qtot -0.954690
-   46         H3      1 systems/pde2/lig_49585367/lig_49585367.pdb    H45     46 0.16230001   1.007947   ; qtot -0.792390
-   47         H3      1 systems/pde2/lig_49585367/lig_49585367.pdb    H46     47 0.14476000   1.007947   ; qtot -0.647630
-   48         H3      1 systems/pde2/lig_49585367/lig_49585367.pdb    H47     48 0.16113000   1.007947   ; qtot -0.486500
-   49         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H48     49 0.04647001   1.007947   ; qtot -0.440030
-   50         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H49     50 0.04647001   1.007947   ; qtot -0.393560
-   51         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H50     51 0.04134000   1.007947   ; qtot -0.352220
-   52         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H51     52 0.04134000   1.007947   ; qtot -0.310880
-   53         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H52     53 0.05705000   1.007947   ; qtot -0.253830
-   54         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H53     54 0.05705000   1.007947   ; qtot -0.196780
-   55         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H54     55 0.05705000   1.007947   ; qtot -0.139730
-   56         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H55     56 0.05705000   1.007947   ; qtot -0.082680
-   57         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H56     57 0.04134000   1.007947   ; qtot -0.041340
-   58         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H57     58 0.04134000   1.007947   ; qtot 0.000000
+    1         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb     C0      1 0.11670000  12.010780   ; qtot 0.116700
+    2         O1      1 systems/pde2/lig_49585367/lig_49585367.pdb     O1      2 -0.43260000  15.999430   ; qtot -0.315900
+    3         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb     C2      3 0.09440000  12.010780   ; qtot -0.221500
+    4         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb     C3      4 0.12240000  12.010780   ; qtot -0.099100
+    5         O1      1 systems/pde2/lig_49585367/lig_49585367.pdb     O4      5 -0.32590000  15.999430   ; qtot -0.425000
+    6         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb     C5      6 -0.00120000  12.010780   ; qtot -0.426200
+    7         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb     C6      7 0.39020000  12.010780   ; qtot -0.036000
+    8         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb     N7      8 -0.64200000  14.006720   ; qtot -0.678000
+    9         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb     C8      9 0.39320000  12.010780   ; qtot -0.284800
+   10         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb     C9     10 -0.12200000  12.010780   ; qtot -0.406800
+   11         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C10     11 -0.19520000  12.010780   ; qtot -0.602000
+   12         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C11     12 0.37140000  12.010780   ; qtot -0.230600
+   13         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N12     13 -0.34270000  14.006720   ; qtot -0.573300
+   14         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N13     14 -0.05200000  14.006720   ; qtot -0.625300
+   15         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C14     15 -0.21360000  12.010780   ; qtot -0.838900
+   16         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C15     16 0.50560000  12.010780   ; qtot -0.333300
+   17         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C16     17 -0.15240000  12.010780   ; qtot -0.485700
+   18         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N17     18 -0.65700000  14.006720   ; qtot -1.142700
+   19         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N18     19 -0.06420000  14.006720   ; qtot -1.206900
+   20         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C19     20 -0.07060000  12.010780   ; qtot -1.277500
+   21         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C20     21 -0.11300000  12.010780   ; qtot -1.390500
+   22         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C21     22 -0.06130000  12.010780   ; qtot -1.451800
+   23         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C22     23 -0.13100000  12.010780   ; qtot -1.582800
+   24         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C23     24 -0.14830000  12.010780   ; qtot -1.731100
+   25         C2      1 systems/pde2/lig_49585367/lig_49585367.pdb    C24     25 0.37060000  12.010780   ; qtot -1.360500
+   26         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C25     26 0.21210000  12.010780   ; qtot -1.148400
+   27         N1      1 systems/pde2/lig_49585367/lig_49585367.pdb    N26     27 -0.72560000  14.006720   ; qtot -1.874000
+   28         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C27     28 0.13180000  12.010780   ; qtot -1.742200
+   29         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C28     29 0.12590000  12.010780   ; qtot -1.616300
+   30         O1      1 systems/pde2/lig_49585367/lig_49585367.pdb    O29     30 -0.41460000  15.999430   ; qtot -2.030900
+   31         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C30     31 0.12590000  12.010780   ; qtot -1.905000
+   32         C1      1 systems/pde2/lig_49585367/lig_49585367.pdb    C31     32 0.13180000  12.010780   ; qtot -1.773200
+   33         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H32     33 0.03703300   1.007947   ; qtot -1.736167
+   34         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H33     34 0.03703300   1.007947   ; qtot -1.699134
+   35         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H34     35 0.03703300   1.007947   ; qtot -1.662101
+   36         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H35     36 0.04520000   1.007947   ; qtot -1.616901
+   37         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H36     37 0.04520000   1.007947   ; qtot -1.571701
+   38         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H37     38 0.07670000   1.007947   ; qtot -1.495001
+   39         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H38     39 0.07670000   1.007947   ; qtot -1.418301
+   40         H2      1 systems/pde2/lig_49585367/lig_49585367.pdb    H39     40 0.03910000   1.007947   ; qtot -1.379201
+   41         H2      1 systems/pde2/lig_49585367/lig_49585367.pdb    H40     41 0.03410000   1.007947   ; qtot -1.345101
+   42         H3      1 systems/pde2/lig_49585367/lig_49585367.pdb    H41     42 0.18300000   1.007947   ; qtot -1.162101
+   43         H4      1 systems/pde2/lig_49585367/lig_49585367.pdb    H42     43 0.06970000   1.007947   ; qtot -1.092401
+   44         H4      1 systems/pde2/lig_49585367/lig_49585367.pdb    H43     44 0.06970000   1.007947   ; qtot -1.022701
+   45         H4      1 systems/pde2/lig_49585367/lig_49585367.pdb    H44     45 0.06970000   1.007947   ; qtot -0.953001
+   46         H3      1 systems/pde2/lig_49585367/lig_49585367.pdb    H45     46 0.16900000   1.007947   ; qtot -0.784001
+   47         H3      1 systems/pde2/lig_49585367/lig_49585367.pdb    H46     47 0.14300000   1.007947   ; qtot -0.641001
+   48         H3      1 systems/pde2/lig_49585367/lig_49585367.pdb    H47     48 0.15800000   1.007947   ; qtot -0.483001
+   49         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H48     49 0.04520000   1.007947   ; qtot -0.437801
+   50         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H49     50 0.04520000   1.007947   ; qtot -0.392601
+   51         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H50     51 0.04145000   1.007947   ; qtot -0.351151
+   52         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H51     52 0.04145000   1.007947   ; qtot -0.309701
+   53         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H52     53 0.05820000   1.007947   ; qtot -0.251501
+   54         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H53     54 0.05820000   1.007947   ; qtot -0.193301
+   55         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H54     55 0.05820000   1.007947   ; qtot -0.135101
+   56         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H55     56 0.05820000   1.007947   ; qtot -0.076901
+   57         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H56     57 0.04145000   1.007947   ; qtot -0.035451
+   58         H1      1 systems/pde2/lig_49585367/lig_49585367.pdb    H57     58 0.04145000   1.007947   ; qtot 0.005999
 
 [ bonds ]
 ;    ai     aj funct         c0         c1         c2         c3

@@ -1,17 +1,17 @@
 ;
 ;   File systems/testmols/methane/methane.top  was generated
-;   By user: dahahn (1000)
-;   On host: dahahn-ThinkPad-T460s
-;   At date: Thu. September  4 17:11:07 2019
+;   By user: dhahn3 (52128)
+;   On host: wrhels4acwzv
+;   At date: Mon. September  1 18:34:20 2019
 ;
 ;   This is a standalone topology file
 ;
 ;   Created by:
 ;   ParmEd:       ipykernel_launcher.py, VERSION 3.2.0
 ;   Executable:   ipykernel_launcher.py
-;   Library dir:  /opt/anaconda3/envs/off-demo/share/gromacs/top
+;   Library dir:  /users/home/dhahn3/miniconda3/envs/off/share/gromacs/top
 ;   Command line:
-;     /opt/anaconda3/envs/off-demo/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/1000/jupyter/kernel-773b795c-d46d-499a-9092-250e5d9713ab.json
+;     /home/dhahn3/miniconda3/envs/off/lib/python3.7/site-packages/ipykernel_launcher.py -f /run/user/52128/jupyter/kernel-ac038bf9-1cad-4603-b860-7d79731e0f53.json
 ;
 
 [ defaults ]
@@ -30,12 +30,12 @@ methane          3
 
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
-; residue    1 methane rtp methane q 0.0
-    1         C1      1 methane     C0      1 -0.10867999  12.010780   ; qtot -0.108680
-    2         H1      1 methane     H1      2 0.02717000   1.007947   ; qtot -0.081510
-    3         H1      1 methane     H2      3 0.02717000   1.007947   ; qtot -0.054340
-    4         H1      1 methane     H3      4 0.02717000   1.007947   ; qtot -0.027170
-    5         H1      1 methane     H4      5 0.02717000   1.007947   ; qtot 0.000000
+; residue    1 methane rtp methane q -0.0
+    1         C1      1 methane     C0      1 -0.10880000  12.010780   ; qtot -0.108800
+    2         H1      1 methane     H1      2 0.02670000   1.007947   ; qtot -0.082100
+    3         H1      1 methane     H2      3 0.02670000   1.007947   ; qtot -0.055400
+    4         H1      1 methane     H3      4 0.02670000   1.007947   ; qtot -0.028700
+    5         H1      1 methane     H4      5 0.02670000   1.007947   ; qtot -0.002000
 
 [ bonds ]
 ;    ai     aj funct         c0         c1         c2         c3
