@@ -1,0 +1,77 @@
+---
+name:     lig_1a              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)F)[NH3+]
+docked:   
+    - 03_docked/lig_1a/lig_1a.sdf
+    - 03_docked/lig_1a/lig_1a.pdb
+...
+---
+name:     lig_1b              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Cl)[NH3+]
+docked:   
+    - 03_docked/lig_1b/lig_1b.sdf
+    - 03_docked/lig_1b/lig_1b.pdb
+...
+---
+name:     lig_1c              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Br)[NH3+]
+docked:   
+    - 03_docked/lig_1c/lig_1c.sdf
+    - 03_docked/lig_1c/lig_1c.pdb
+...
+---
+name:     lig_1d              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)I)[NH3+]
+docked:   
+    - 03_docked/lig_1d/lig_1d.sdf
+    - 03_docked/lig_1d/lig_1d.pdb
+...
+---
+name:     lig_3a              
+smiles:   Cc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+]
+docked:   
+    - 03_docked/lig_3a/lig_3a.sdf
+    - 03_docked/lig_3a/lig_3a.pdb
+...
+---
+name:     lig_3b              
+smiles:   CCc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+]
+docked:   
+    - 03_docked/lig_3b/lig_3b.sdf
+    - 03_docked/lig_3b/lig_3b.pdb
+...
+---
+name:     lig_5               
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3ccccc3)[NH3+]
+docked:   
+    - 03_docked/lig_5/lig_5.sdf
+    - 03_docked/lig_5/lig_5.pdb
+...
+---
+name:     lig_6a              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3Cl)Cl)[NH3+]
+docked:   
+    - 03_docked/lig_6a/lig_6a.sdf
+    - 03_docked/lig_6a/lig_6a.pdb
+...
+---
+name:     lig_6b              
+smiles:   Cc1ccc(cc1CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])Cl
+docked:   
+    - 03_docked/lig_6b/lig_6b.sdf
+    - 03_docked/lig_6b/lig_6b.pdb
+...
+---
+name:     lig_6e              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3F)Cl)[NH3+]
+docked:   
+    - 03_docked/lig_6e/lig_6e.sdf
+    - 03_docked/lig_6e/lig_6e.pdb
+...
+---
+name:     lig_7a              
+smiles:   Cc1ccc(c(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])C
+docked:   
+    - 03_docked/lig_7a/lig_7a.sdf
+    - 03_docked/lig_7a/lig_7a.pdb
+...
