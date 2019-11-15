@@ -5,7 +5,7 @@ include                  =
 define                   = 
 
 ; RUN CONTROL PARAMETERS
-integrator               = md
+integrator               = sd
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
@@ -117,7 +117,7 @@ tcoupl                   = v-rescale
 ; Groups to couple separately
 tc-grps                  = System
 ; Time constant (ps) and reference temperature (K)
-tau-t                    = 0.1
+tau-t                    = 2.0
 ref-t                    = 298
 ; Pressure coupling     
 Pcoupl                   = Parrinello-Rahman
