@@ -2,25 +2,26 @@
 ; VARIOUS PREPROCESSING OPTIONS
 title                    = 
 include                  = 
-define                   = 
+define                   =
 
 ; RUN CONTROL PARAMETERS
-integrator               = sd
+integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 3000000
-;6 ns
+nsteps                   = 25000
+;50 ps
 
 ld_seed = -1
 ; For exact run continuation or redoing part of a run
 init_step                = 0
+continuation = no
 ; mode for center of mass motion removal
 comm-mode                = Linear
 ; number of steps for center of mass motion removal
 nstcomm                  = 100
-nstcalcenergy		 = 100
-nstdhdl			= 10000
+nstcalcenergy		 = 1
+nstdhdl = 1
 ; group(s) for center of mass motion removal
 comm-grps                = 
 
@@ -38,16 +39,16 @@ nbfgscorr                = 10
 
 ; OUTPUT CONTROL OPTIONS
 ; Output frequency for coords (x), velocities (v) and forces (f)
-nstxout                  = 23500
-nstvout                  = 23500
+nstxout                  = 0
+nstvout                  = 0
 nstfout                  = 0
 ; Checkpointing helps you continue after crashes
-nstcheckpoint            = 1000
+nstcheckpoint            = 100000
 ; Output frequency for energies to log file and energy file
 nstlog                   = 10000
-nstenergy                = 23500
+nstenergy                = 50000
 ; Output frequency and precision for xtc file
-nstxtcout                = 23500
+nstxtcout                = 50000
 xtc-precision            = 1000
 ; This selects the subset of atoms for the xtc file. You can
 ; select multiple groups. By default all atoms will be written.
@@ -117,7 +118,7 @@ tcoupl                   = v-rescale
 ; Groups to couple separately
 tc-grps                  = System
 ; Time constant (ps) and reference temperature (K)
-tau-t                    = 2.0
+tau-t                    = 0.1
 ref-t                    = 298
 ; Pressure coupling     
 Pcoupl                   = Parrinello-Rahman
@@ -198,8 +199,8 @@ nstdihreout              = 100
 
 ; Free energy control stuff
 free-energy              = yes
-init-lambda              = 1
-delta-lambda             = 0
+init-lambda              = 0
+delta-lambda             = 4e-5
 sc-alpha                 = 0.3
 sc-sigma                 = 0.25
 sc-power                 = 1

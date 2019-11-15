@@ -2,15 +2,15 @@
 ; VARIOUS PREPROCESSING OPTIONS
 title                    = 
 include                  = 
-define                   = 
+define                   = -DFLEXIBLE ;-DPOSRES
 
 ; RUN CONTROL PARAMETERS
-integrator               = sd
+integrator               = steep;lbfgs;steep
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 3000000
-;6 ns
+nsteps                   = 10000
+;
 
 ld_seed = -1
 ; For exact run continuation or redoing part of a run
@@ -18,16 +18,15 @@ init_step                = 0
 ; mode for center of mass motion removal
 comm-mode                = Linear
 ; number of steps for center of mass motion removal
-nstcomm                  = 100
-nstcalcenergy		 = 100
-nstdhdl			= 10000
+nstcomm                  = 1
+nstcalcenergy		 = 1
 ; group(s) for center of mass motion removal
 comm-grps                = 
 
 ; ENERGY MINIMIZATION OPTIONS
 ; Force tolerance and initial step-size
 emtol                    = 100
-emstep                   = 0.01
+emstep                   = 0.001
 ; Max number of iterations in relax_shells
 niter                    = 0
 ; Step size (1/ps^2) for minimization of flexible constraints
@@ -38,16 +37,16 @@ nbfgscorr                = 10
 
 ; OUTPUT CONTROL OPTIONS
 ; Output frequency for coords (x), velocities (v) and forces (f)
-nstxout                  = 23500
-nstvout                  = 23500
+nstxout                  = 0
+nstvout                  = 0
 nstfout                  = 0
 ; Checkpointing helps you continue after crashes
 nstcheckpoint            = 1000
 ; Output frequency for energies to log file and energy file
 nstlog                   = 10000
-nstenergy                = 23500
+nstenergy                = 50000
 ; Output frequency and precision for xtc file
-nstxtcout                = 23500
+nstxtcout                = 50000
 xtc-precision            = 1000
 ; This selects the subset of atoms for the xtc file. You can
 ; select multiple groups. By default all atoms will be written.
@@ -117,7 +116,7 @@ tcoupl                   = v-rescale
 ; Groups to couple separately
 tc-grps                  = System
 ; Time constant (ps) and reference temperature (K)
-tau-t                    = 2.0
+tau-t                    = 0.1
 ref-t                    = 298
 ; Pressure coupling     
 Pcoupl                   = Parrinello-Rahman
@@ -137,7 +136,7 @@ annealing_npoints        = 2
 ; List of times at the annealing points for each group
 annealing_time           = 0 250
 ; Temp. at each annealing point, for each group.
-annealing_temp           = 0 298
+annealing_temp           = 0 300
 
 ; GENERATE VELOCITIES FOR STARTUP RUN
 gen-vel                  = no
@@ -145,7 +144,7 @@ gen-temp                 = 298
 gen-seed                 = 173529
 
 ; OPTIONS FOR BONDS    
-constraints              = all-bonds
+constraints              = none;all-bonds
 ; Type of constraint algorithm
 constraint-algorithm     = Lincs
 ; Do not constrain the start configuration
@@ -155,7 +154,7 @@ Shake-SOR                = no
 ; Relative tolerance of shake
 shake-tol                = 1e-04
 ; Highest order in the expansion of the constraint coupling matrix
-lincs-order              = 4
+lincs-order              = 6
 ; Number of iterations in the final step of LINCS. 1 is fine for
 ; normal simulations, but use 2 to conserve energy in NVE runs.
 ; For energy minimization with constraints it should be 4 to 8.
@@ -197,25 +196,7 @@ dihre-tau                = 0
 nstdihreout              = 100
 
 ; Free energy control stuff
-free-energy              = yes
-init-lambda              = 1
-delta-lambda             = 0
-sc-alpha                 = 0.3
-sc-sigma                 = 0.25
-sc-power                 = 1
-sc-coul = yes
-;alpha_Q = 0.3
-;sigma_Q = 1.0
-
-refcoord-scaling = all
-
-
-; Non-equilibrium MD stuff
-acc-grps                 = 
-accelerate               = 
-freezegrps               = 
-freezedim                = 
-cos-acceleration         = 0
+free-energy              = no
 
 ; Electric fields      
 ; Format is number of terms (int) and for all terms an amplitude (real)
