@@ -1,9 +1,9 @@
 """
-ProteinLigandBenchmarks
+targets.py
 Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.
+Target Data handling
 """
 
-# Add imports here
 import yaml
 try:
     from importlib.resources import open_text
@@ -11,12 +11,14 @@ except ImportError:
     # Python 2.x backport
     from importlib_resources import open_text
 
-# Handle versioneer
-from ._version import get_versions
-versions = get_versions()
-__version__ = versions['version']
-__git_revision__ = versions['full-revisionid']
-del get_versions, versions
 
 file = open_text('PLBenchmarks.systems', 'targets.yml')
 target_list = yaml.full_load(file)
+
+def getTargetDir(target):
+    for td in target_list:
+        if td['name'] == target:
+            return td['dir']
+            break
+    else:
+        print('Directory for target {target} not found.')
