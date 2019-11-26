@@ -90,7 +90,7 @@ def findDoiUrl(doi):
         desc_string='{} et al., {} {}'.format(aut, tit, dat)#, obj['journal-issue']['published-online']['date-parts'][0][0])
         result = f'REP1{obj["URL"]}REP2{desc_string}REP3'
     except urllib.error.HTTPError as e:
-        request = urllib.request.Request(str(d))
+        request = urllib.request.Request(str(doi))
         try:
             response = urllib.request.urlopen(request)
             result = f'REP1{d}REP2{d}REP3'
