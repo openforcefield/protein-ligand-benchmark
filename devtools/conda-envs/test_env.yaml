@@ -12,6 +12,6 @@ dependencies:
 
   - yaml
     # Pip-only installs
-  #- pip:
+  - pip:
   #  - codecov
-
+     - pyaml
