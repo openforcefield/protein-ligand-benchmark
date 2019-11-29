@@ -11,6 +11,7 @@ from simtk import unit
 
 import pandas as pd
 
+
 def findPdbUrl(pdb):
     """
     Finds the links to a pdb or a list of pdb codes.
@@ -38,16 +39,16 @@ def findPdbUrl(pdb):
 </orgPdbCompositeQuery>
 """
     request = urllib.request.Request(url, data=query_text.encode())
-    try:
-        response = urllib.request.urlopen(request)
-        page = response.read()
-        #plTable['PDB'].at[i]=page.decode("utf-8")
-        page = page.decode("utf-8").split()
-        res = []
-        for p in page:
-             res.append('REP1http://www.rcsb.org/structure/{}REP2{}REP3'.format(p, p))
-    except urllib.error.HTTPError as e:
-        print(f"PDB error...")
+    response = urllib.request.urlopen(request)
+    page = response.read()
+    page = page.decode("utf-8").split()
+    res = []
+    pdbs = pdb.split()
+    for p in page:
+        res.append('REP1http://www.rcsb.org/structure/{}REP2{}REP3'.format(p, p))
+    for p in pdbs:
+        if p not in page:
+            raise ValueError(f'PDB {p} not found')
     return ('\n').join(res)
 
 
@@ -90,13 +91,7 @@ def findDoiUrl(doi):
         desc_string='{} et al., {} {}'.format(aut, tit, dat)#, obj['journal-issue']['published-online']['date-parts'][0][0])
         result = f'REP1{obj["URL"]}REP2{desc_string}REP3'
     except urllib.error.HTTPError as e:
-        request = urllib.request.Request(str(doi))
-        try:
-            response = urllib.request.urlopen(request)
-            result = f'REP1{d}REP2{d}REP3'
-        except urllib.error.HTTPError as e:
-            print(f"HTTPError...")
-            result = d
+        result = doi
     return result
 
 
