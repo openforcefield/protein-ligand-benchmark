@@ -21,7 +21,7 @@ except:
 
 setup(
     # Self-descriptive entries which should always be present
-    name='plbenchmarks',
+    name='PLBenchmarks',
     author='David F. Hahn',
     author_email='davidfriedrichhahn@gmail.com',
     description=short_description[0],
