@@ -11,6 +11,11 @@ dependencies:
   - codecov
 
   - yaml
+  - numpy
+  - simtk
+  - urllib
+  - json
+  
     # Pip-only installs
   - pip:
   #  - codecov
