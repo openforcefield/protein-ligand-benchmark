@@ -1,5 +1,5 @@
 """
-util.py
+utils.py
 Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.
 Utility functions
 """
@@ -95,7 +95,7 @@ def findDoiUrl(doi):
     return result
 
 
-def convertValue(val, originalObs, finalObs, energyUnit=unit.kilocalories_per_mole):
+def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
     """
     Converts an experimental value into another derived quantity with specified unit.
     Parameters
@@ -103,53 +103,66 @@ def convertValue(val, originalObs, finalObs, energyUnit=unit.kilocalories_per_mo
     val: float, numerical value
     originalObs: str, code for the original observable. Can be 'dg', 'ki', 'ic50', 'pic50'
     finalObs: str, code for the desired derived quantity. Can be 'dg', 'ki', 'ic50', 'pic50'
-    energyUnit: type simtk.unit
+    temperature: float, temperature in kelvin
+    outUnit: type simtk.unit, output unit of finalObs, needs to fit to the requested finalObs
     Returns
     -------
-    quantity : simtk.quantity with desired unit
+    quantity : simtk.unit.quantity with desired unit
 
     """
+
+    # define default units
+    if outUnit is None:
+        if finalObs == 'dg':
+            outUnit = unit.kilocalories_per_mole
+        elif finalObs == 'ki':
+            outUnit = unit.nano * unit.molar
+        elif finalObs == 'ic50':
+            outUnit = unit.nano * unit.molar
+        elif finalObs == 'pic50':
+            outUnit = unit.dimensionless
+            
     if originalObs == 'dg':
         if finalObs == 'dg':
-            return val.in_units_of(energyUnit).format('%.2f')
+            return val.in_units_of(outUnit)
         elif finalObs == 'ki':
-            raise NotImplementedError
+            return unit.Quantity(np.exp(-val/(unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin))), unit.molar)
         elif finalObs == 'ic50':
-            raise NotImplementedError
+            return unit.Quantity(np.exp(-val/(unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin))), unit.molar)
         elif finalObs == 'pic50':
-            raise NotImplementedError
+            return unit.Quantity(val/(unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin))/np.log(10), unit.dimensionless)
         else:
             raise NotImplementedError
     elif originalObs == 'ki':
         if finalObs == 'dg':
-            return (unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(300.0, unit.kelvin) * np.log(val.value_in_unit(unit.molar))).in_units_of(energyUnit).format('%.2f')
+            return (unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin) * np.log(val.value_in_unit(unit.molar))).in_units_of(outUnit)
         elif finalObs == 'ki':
-            return val.in_units_of(unit.nano * unit.molar).format('%.2f')
+            return val.in_units_of(outUnit)
         elif finalObs == 'ic50':
-            raise NotImplementedError
+            return val.in_units_of(outUnit)
         elif finalObs == 'pic50':
-            raise NotImplementedError   
+            return unit.Quantity(-np.log(val.value_in_unit(unit.molar))/np.log(10), unit.dimensionless)
         else:
             raise NotImplementedError 
     elif originalObs == 'ic50':
         if finalObs == 'dg':
-            return (unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(300.0, unit.kelvin) * np.log(val.value_in_unit(unit.molar))).in_units_of(energyUnit).format('%.2f')
+            return (unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin) * np.log(val.value_in_unit(unit.molar))).in_units_of(outUnit)
         elif finalObs == 'ki':
-            raise NotImplementedError    
+            return val.in_units_of(outUnit)
         elif finalObs == 'ic50':
-            return val.in_units_of(unit.nano * unit.molar).format('%.2f')
+            return val.in_units_of(outUnit)
         elif finalObs == 'pic50':
-            raise NotImplementedError    
+            return unit.Quantity(-np.log(val.value_in_unit(unit.molar))/np.log(10), unit.dimensionless)
         else:
             raise NotImplementedError
     elif originalObs == 'pic50':
         if finalObs == 'dg':
-            return (-unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(300.0, unit.kelvin) * val.value_in_unit(unit.dimensionless)*np.log(10)).in_units_of(energyUnit).format('%.2f')
+            return (-unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin) * val.value_in_unit(unit.dimensionless)*np.log(10)).in_units_of(outUnit)
         elif finalObs == 'ki':
-            raise NotImplementedError
+            return unit.Quantity(10**(-val.value_in_unit(unit.dimensionless)), unit.molar).in_units_of(outUnit)
         elif finalObs == 'ic50':
-            raise NotImplementedError
+            return unit.Quantity(10**(-val.value_in_unit(unit.dimensionless)), unit.molar).in_units_of(outUnit)
         elif finalObs == 'pic50':
-            return val.in_units_of(unit.nano * unit.molar).format('%.2f')     
+            return val
         else:
             raise NotImplementedError     

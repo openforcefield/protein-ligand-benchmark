@@ -4,7 +4,7 @@ Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Ener
 Handles the ligand data
 """
 
-from .util import *
+from .utils import *
 
 import re
 import yaml
