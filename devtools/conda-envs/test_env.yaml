@@ -12,9 +12,8 @@ dependencies:
 
   - yaml
   - numpy
-  - simtk
-  - urllib
-  - json
+  - openmm
+  - pandas
   
     # Pip-only installs
   - pip:
