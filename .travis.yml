@@ -37,6 +37,7 @@ install:
   - python devtools/scripts/create_conda_env.py -n=test -p=$PYTHON_VER devtools/conda-envs/test_env.yaml
     # Activate the test environment
   - conda activate test
+  - conda list --show-channel-urls
     # Build and install package
   - python setup.py develop --no-deps
 
