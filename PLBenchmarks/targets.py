@@ -12,7 +12,7 @@ except ImportError:
     from importlib_resources import open_text
 
 
-file = open_text('PLBenchmarks.systems', 'targets.yml')
+file = open_text('PLBenchmarks.data', 'targets.yml')
 target_list = yaml.full_load(file)
 
 def getTargetDir(target):
@@ -22,3 +22,11 @@ def getTargetDir(target):
             break
     else:
         print('Directory for target {target} not found.')
+
+def getTargetDataPath(target):
+    for td in target_list:
+        if td['name'] == target:
+            return ['PLBenchmarks', 'data', td['dir'], '00_data']
+            break
+    else:
+        print('Path for target {target} not found.')

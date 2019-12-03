@@ -18,5 +18,5 @@ __version__ = versions['version']
 __git_revision__ = versions['full-revisionid']
 del get_versions, versions
 
-file = open_text('PLBenchmarks.systems', 'targets.yml')
+file = open_text('PLBenchmarks.data', 'targets.yml')
 target_list = yaml.full_load(file)
