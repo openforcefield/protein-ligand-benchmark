@@ -10,3 +10,6 @@ path_classifiers:
     - devtools/*
   generated:
     - plbenchmarks/_version.py
+queries:
+    - exclude: scriptpath/acpype.py
+    
