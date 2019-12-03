@@ -9,7 +9,6 @@ import urllib
 import json
 from simtk import unit
 
-import pandas as pd
 
 
 def findPdbUrl(pdb):
