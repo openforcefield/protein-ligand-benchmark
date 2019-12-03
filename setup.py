@@ -44,6 +44,11 @@ setup(
     # Allows `setup.py test` to work correctly with pytest
     setup_requires=[] + pytest_runner,
 
+    package_data={
+        # If any package contains *.txt or *.rst files, include them:
+        '': ['*.yml', '*.pdb', '*.sdf']
+    },
+
     # Additional entries you may want simply uncomment the lines you want and fill in the data
     # url='http://www.my_package.com',  # Website
     # install_requires=[],              # Required packages, pulls from pip if needed; do not use for Conda deployment
