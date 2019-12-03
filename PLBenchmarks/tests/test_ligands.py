@@ -18,7 +18,7 @@ except ImportError:
 
 
 def test_ligand():
-    file = open_text('PLBenchmarks.systems.01_jnk1.00_data', 'ligands.yml')    
+    file = open_text('PLBenchmarks.data.01_jnk1.00_data', 'ligands.yml')    
     data = yaml.full_load_all(file)
     dfs=[]
     for d in data:
