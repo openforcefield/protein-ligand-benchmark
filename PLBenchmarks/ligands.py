@@ -4,10 +4,9 @@ Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Ener
 Handles the ligand data
 """
 
-from .utils import *
+from PLBenchmarks import utils 
 
 import re
-import yaml
 import pandas as pd
 from simtk import unit
 from rdkit.Chem import PandasTools
@@ -59,8 +58,8 @@ class ligand:
         assert derivedObs in self._observables, 'Observable to be derived not known. Should be any of dg, ki, ic50, or pic50'
         for obs in self._observables:
             if ('measurement', obs) in list(self.data.index):
-                self.data = self.data.append(pd.Series([convertValue(self.data[('measurement', obs)], obs, derivedObs), 
-                                                        convertValue(self.data[('measurement', f'e_{obs}')], obs, derivedObs)], 
+                self.data = self.data.append(pd.Series([utils.convertValue(self.data[('measurement', obs)], obs, derivedObs), 
+                                                        utils.convertValue(self.data[('measurement', f'e_{obs}')], obs, derivedObs)], 
                                                        index=pd.MultiIndex.from_tuples([(dest, derivedObs), (dest, f'e_{derivedObs}')])
                                                       )
                                             )
@@ -80,11 +79,11 @@ class ligand:
             if str(doi) != 'nan':
                 res = []
                 for ddoi in re.split(r'[; ]+', str(doi)):
-                    res.append(findDoiUrl(ddoi))
+                    res.append(utils.findDoiUrl(ddoi))
             self.data['measurement', 'doi_html'] = (r'\n').join(res)
         if ('pdb') in list(self.data.index):
-            doi = self.data['pdb']            
-            self.data['pdb_html'] = findPdbUrl(pdb)
+            pdb = self.data['pdb']            
+            self.data['pdb_html'] = utils.findPdbUrl(pdb)
     
     def addMolToFrame(self):
         PandasTools.AddMoleculeColumnToFrame(self.data, smilesCol='smiles', molCol='ROMol', includeFingerprints=False)
