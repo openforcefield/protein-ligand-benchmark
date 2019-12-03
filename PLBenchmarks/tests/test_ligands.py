@@ -23,7 +23,7 @@ def test_ligand():
     dfs=[]
     for d in data:
         l = ligands.ligand(d)
-        l.deriveObservables(derivedObs='dg')
+        l.deriveObservables(derivedObs='dg', outUnit=unit.kilocalories_per_mole, fmt='%.3f')
         l.addMolToFrame()
         dfs.append(l.getDF(['name', 'ROMol', 'DerivedMeasurement']))
     df = pd.DataFrame(dfs)
@@ -79,4 +79,4 @@ def test_ligand():
 
     eps = 0.01
     for key, item in jacs_data.items():
-        assert pytest.approx(item, eps) == df[df.name == key][('DerivedMeasurement', 'dg')].values[0].value_in_unit(unit.kilocalories_per_mole)
+        assert pytest.approx(item, eps) == float(df[df.name == key][('DerivedMeasurement', 'dg')].values[0].split()[0])
