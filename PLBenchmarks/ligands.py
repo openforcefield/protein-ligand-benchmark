@@ -4,12 +4,19 @@ Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Ener
 Handles the ligand data
 """
 
-from PLBenchmarks import utils 
+from PLBenchmarks import utils, targets
 
 import re
 import pandas as pd
 from simtk import unit
 from rdkit.Chem import PandasTools
+
+import yaml
+try:
+    from importlib.resources import open_text
+except ImportError:
+    # Python 2.x backport
+    from importlib_resources import open_text
 
 class ligand:
     
@@ -51,15 +58,15 @@ class ligand:
                     self.data[('measurement', f'e_{obs}')] = unit.quantity.Quantity(vals[1], u)
                     self.data[('measurement', obs)] = unit.quantity.Quantity(vals[0], u)
                 
-    def deriveObservables(self, derivedObs='dg', dest='DerivedMeasurement'):
+    def deriveObservables(self, derivedObs='dg', dest='DerivedMeasurement', fmt='%.2f'):
         """
             Calculate 
         """
         assert derivedObs in self._observables, 'Observable to be derived not known. Should be any of dg, ki, ic50, or pic50'
         for obs in self._observables:
             if ('measurement', obs) in list(self.data.index):
-                self.data = self.data.append(pd.Series([utils.convertValue(self.data[('measurement', obs)], obs, derivedObs), 
-                                                        utils.convertValue(self.data[('measurement', f'e_{obs}')], obs, derivedObs)], 
+                self.data = self.data.append(pd.Series([utils.convertValue(self.data[('measurement', obs)], obs, derivedObs).format(fmt), 
+                                                        utils.convertValue(self.data[('measurement', f'e_{obs}')], obs, derivedObs).format(fmt)], 
                                                        index=pd.MultiIndex.from_tuples([(dest, derivedObs), (dest, f'e_{derivedObs}')])
                                                       )
                                             )
@@ -97,3 +104,44 @@ class ligand:
         html = html.replace("\\n","<br>")
         return html
 
+
+
+
+def getLigandSet(target, cols=None):
+
+    """
+        Convenience function which returns all available ligands of one target in a `pandas` `dataframe`
+    """
+
+    tp = targets.getTargetDataPath(target)
+    file = open_text('.'.join(tp), 'ligands.yml')
+    data = yaml.full_load_all(file)    
+    dfs=[]
+    for d in data:
+        l = ligand(d)
+        l.deriveObservables(derivedObs='dg')
+        l.findLinks()
+        l.addMolToFrame()
+        dfs.append(l.getDF(cols))
+    if cols:
+        df = pd.DataFrame(dfs)[cols]
+    else:
+        df = pd.DataFrame(dfs)
+    file.close()
+    return df
+
+
+def getLigandSetHTML(target, cols=None):
+
+    """
+        Convenience function which returns all available ligands of one target in an html string
+    """
+
+    df = getLigandSet(target, cols=cols)
+
+    html = df.to_html()
+    html = html.replace('REP1', '<a target="_blank" href="')
+    html = html.replace('REP2', '">')
+    html = html.replace('REP3', '</a>')
+    html = html.replace("\\n","<br>")
+    return html

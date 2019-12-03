@@ -22,3 +22,11 @@ def getTargetDir(target):
             break
     else:
         print('Directory for target {target} not found.')
+
+def getTargetDataPath(target):
+    for td in target_list:
+        if td['name'] == target:
+            return ['PLBenchmarks', 'data', td['dir'], '00_data']
+            break
+    else:
+        print('Path for target {target} not found.')
