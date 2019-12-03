@@ -2,11 +2,13 @@ ProteinLigandBenchmarks
 ==============================
 [//]: # (Badges)
 [![Travis Build Status](https://travis-ci.org/openforcefield/PLBenchmarks.svg?branch=master)](https://travis-ci.org/openforcefield/PLBenchmarks)
-[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/REPLACE_WITH_APPVEYOR_LINK/branch/master?svg=true)](https://ci.appveyor.com/project/REPLACE_WITH_OWNER_ACCOUNT/ProteinLigandBenchmarks/branch/master)
-[![codecov](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/ProteinLigandBenchmarks/branch/master/graph/badge.svg)](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/ProteinLigandBenchmarks/branch/master)
+[![codecov](https://codecov.io/gh/openforcefield/PLBenchmarks/branch/master/graph/badge.svg)](https://codecov.io/gh/openforcefield/PLBenchmarks)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/openforcefield/PLBenchmarks.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/openforcefield/PLBenchmarks/context:python)
 
 Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.
+
+### Documentation
+[Documentation for the openforcefield toolkit is hosted at readthedocs.](https://plbenchmarks.readthedocs.io/en/latest/)
 
 ### Copyright
 
