@@ -117,7 +117,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'plbenchmarksdoc'
+htmlhelp_basename = 'PLBenchmarksdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -144,8 +144,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'plbenchmarks.tex', 'ProteinLigandBenchmarks Documentation',
-     'plbenchmarks', 'manual'),
+    (master_doc, 'PLBenchmarks.tex', 'ProteinLigandBenchmarks Documentation',
+     'PLBenchmarks', 'manual'),
 ]
 
 
@@ -154,7 +154,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'plbenchmarks', 'ProteinLigandBenchmarks Documentation',
+    (master_doc, 'PLBenchmarks', 'ProteinLigandBenchmarks Documentation',
      [author], 1)
 ]
 
@@ -165,8 +165,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'plbenchmarks', 'ProteinLigandBenchmarks Documentation',
-     author, 'plbenchmarks', 'Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.',
+    (master_doc, 'PLBenchmarks', 'ProteinLigandBenchmarks Documentation',
+     author, 'PLBenchmarks', 'Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.',
      'Miscellaneous'),
 ]
 

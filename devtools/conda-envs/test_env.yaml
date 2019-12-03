@@ -10,7 +10,14 @@ dependencies:
   - pytest-cov
   - codecov
 
+  - pyyaml
+  - numpy
+  - openmm
+  - pandas
+  - importlib_resources
+  - rdkit
+  
     # Pip-only installs
   #- pip:
   #  - codecov
-
+  #   - pyaml

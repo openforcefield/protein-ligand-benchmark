@@ -1,0 +1,121 @@
+---
+name:     lig_1a              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)F)[NH3+]
+docked:   03_docked/lig_1a/lig_1a.sdf
+measurement:
+    dg:         [-31.3, 0.2, kj/mol]
+    dh:         [-13.1, 0.9, kj/mol]
+    tds:        [-18.2, 0.7, kj/mol]    
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 1a"
+...
+---
+name:     lig_1b              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Cl)[NH3+]
+docked:   03_docked/lig_1b/lig_1b.sdf
+measurement:
+    dg:         [-35.4, 0.8, kj/mol]
+    dh:         [-37.1, 1.1, kj/mol]
+    tds:        [1.7, 0.3, kj/mol]      
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 1b"
+...
+---
+name:     lig_1c              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Br)[NH3+]
+docked:   03_docked/lig_1c/lig_1c.sdf
+measurement:
+    dg:         [-35.8, 0.7, kj/mol]
+    dh:         [-34.5, 0.4, kj/mol]
+    tds:        [-1.3, 0.3, kj/mol]     
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 1c"
+...
+---
+name:     lig_1d              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)I)[NH3+]
+docked:   03_docked/lig_1d/lig_1d.sdf
+measurement:
+    dg:         [-34.5, 0.3, kj/mol]
+    dh:         [-38.0, 1.1, kj/mol]
+    tds:        [-3.5, 0.8, kj/mol]     
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 1d"
+...
+---
+name:     lig_3a              
+smiles:   Cc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+]
+docked:   03_docked/lig_3a/lig_3a.sdf
+measurement:
+    dg:         [-34.8, 0.6, kj/mol]
+    dh:         [-28.5, 0.7, kj/mol]
+    tds:        [-6.3, 1.1, kj/mol]     
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 3a"
+...
+---
+name:     lig_3b              
+smiles:   CCc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+]
+docked:   03_docked/lig_3b/lig_3b.sdf
+measurement:
+    dg:         [-32.9, 0.5, kj/mol]
+    dh:         [-16.5, 0.9, kj/mol]
+    tds:        [-16.4, 0.4, kj/mol]    
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 3b"
+...
+---
+name:     lig_5               
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3ccccc3)[NH3+]
+docked:   03_docked/lig_5/lig_5.sdf
+measurement:
+    dg:         [-31.7, 0.0, kj/mol]
+    dh:         [-13.6, 0.0, kj/mol]
+    tds:        [-18.1, 0.0, kj/mol]    
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 5"
+...
+---
+name:     lig_6a              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3Cl)Cl)[NH3+]
+docked:   03_docked/lig_6a/lig_6a.sdf
+measurement:
+    dg:         [-38.4, 0.2, kj/mol]
+    dh:         [-41.3, 0.4, kj/mol]
+    tds:        [  2.9, 0.3, kj/mol]    
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 6a"
+...
+---
+name:     lig_6b              
+smiles:   Cc1ccc(cc1CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])Cl
+docked:   03_docked/lig_6b/lig_6b.sdf
+measurement:
+    dg:         [-37.2, 0.5, kj/mol]
+    dh:         [-33.5, 1.7, kj/mol]
+    tds:        [ -3.7, 2.2, kj/mol]    
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 6b"
+...
+---
+name:     lig_6e              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3F)Cl)[NH3+]
+docked:   03_docked/lig_6e/lig_6e.sdf
+measurement:
+    dg:         [-37.3, 0.3, kj/mol]
+    dh:         [-41.0, 2.1, kj/mol]
+    tds:        [  3.8, 2.2, kj/mol]    
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 6e"
+...
+---
+name:     lig_7a              
+smiles:   Cc1ccc(c(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])C
+docked:   03_docked/lig_7a/lig_7a.sdf
+measurement:
+    dg:         [-34.4, 0.1, kj/mol]
+    dh:         [-31.9, 1.3, kj/mol]
+    tds:        [ -2.5, 1.3, kj/mol]    
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 7a"
+...
