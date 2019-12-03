@@ -18,6 +18,6 @@ formats: all
 
 python:
   version: 3.7
-  
+
 conda:
   environment: docs/environment.yml
