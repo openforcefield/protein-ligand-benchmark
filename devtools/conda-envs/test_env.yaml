@@ -15,6 +15,7 @@ dependencies:
   - openmm
   - pandas
   - importlib_resources
+  - rdkit
   
     # Pip-only installs
   #- pip:
