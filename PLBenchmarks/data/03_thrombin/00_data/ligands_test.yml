@@ -1,0 +1,11 @@
+---
+name:     lig_1a              
+smiles:   c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)F)[NH3+]
+docked:   03_docked/lig_1a/lig_1a.sdf
+measurement:
+    dg:         [-31.3, 0.2, kj/mol]
+    dh:         [-13.1, 0.9, kj/mol]
+    tds:        [-18.2, 0.7, kj/mol]    
+    doi:        10.1016/j.jmb.2009.04.051
+    comment:    "Table 1 cmpd 1a"
+...
