@@ -12,7 +12,7 @@ except ImportError:
     from importlib_resources import open_text
 
 
-file = open_text('PLBenchmarks.systems', 'targets.yml')
+file = open_text('PLBenchmarks.data', 'targets.yml')
 target_list = yaml.full_load(file)
 
 def getTargetDir(target):
