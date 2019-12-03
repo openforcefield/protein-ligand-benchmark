@@ -2,5 +2,5 @@ include LICENSE
 include MANIFEST.in
 include versioneer.py
 
-graft plbenchmarks
+graft PLBenchmarks
 global-exclude *.py[cod] __pycache__ *.so

@@ -18,7 +18,6 @@ formats: all
 
 python:
   version: 3.7
-  setup_py_install: true 
-  
+
 conda:
-  file: docs/environment.yml
+  environment: docs/environment.yml

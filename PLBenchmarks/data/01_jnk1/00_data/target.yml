@@ -1,0 +1,35 @@
+id:        1
+name:      jnk1
+fullname:  c-Jun N-terminal kinase 1
+netcharge: xx
+pdb:       2GMX
+ligands:
+    - lig_17124-1
+    - lig_18624-1
+    - lig_18625-1
+    - lig_18626-1
+    - lig_18627-1
+    - lig_18628-1
+    - lig_18629-1
+    - lig_18630-1
+    - lig_18631-1
+    - lig_18632-1
+    - lig_18633-1
+    - lig_18634-1
+    - lig_18635-1
+    - lig_18636-1
+    - lig_18637-1
+    - lig_18638-1
+    - lig_18639-1
+    - lig_18652-1
+    - lig_18658-1
+    - lig_18659-1
+    - lig_18660-1
+references:
+    - measurement:
+    - calculation:
+        - 10.1021/ja512751q
+        - acs.jcim.9b00105
+comments:
+associated_sets:
+    - Schrodinger JACS

@@ -21,7 +21,7 @@ except:
 
 setup(
     # Self-descriptive entries which should always be present
-    name='plbenchmarks',
+    name='PLBenchmarks',
     author='David F. Hahn',
     author_email='davidfriedrichhahn@gmail.com',
     description=short_description[0],
@@ -35,6 +35,7 @@ setup(
     # Handled automatically by setuptools. Use 'exclude' to prevent some specific
     # subpackage(s) from being added, if needed
     packages=find_packages(),
+    package_data={'': ['*.yml', '*.sdf']},
 
     # Optional include package data to ship with your package
     # Customize MANIFEST.in if the general case does not suit your needs
