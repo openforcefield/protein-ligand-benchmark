@@ -35,7 +35,7 @@ setup(
     # Handled automatically by setuptools. Use 'exclude' to prevent some specific
     # subpackage(s) from being added, if needed
     packages=find_packages(),
-    package_data={'': ['*.yml', '*.sdf']},
+    package_data={'': ['*.yml', '*.pdb', '*.sdf']},
 
     # Optional include package data to ship with your package
     # Customize MANIFEST.in if the general case does not suit your needs
@@ -44,11 +44,6 @@ setup(
 
     # Allows `setup.py test` to work correctly with pytest
     setup_requires=[] + pytest_runner,
-
-    package_data={
-        # If any package contains *.txt or *.rst files, include them:
-        '': ['*.yml', '*.pdb', '*.sdf']
-    },
 
     # Additional entries you may want simply uncomment the lines you want and fill in the data
     # url='http://www.my_package.com',  # Website
