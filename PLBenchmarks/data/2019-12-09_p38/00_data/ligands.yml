@@ -1,0 +1,306 @@
+---
+name:     lig_p38a_2aa
+smiles:   xxx
+docked:   03_docked/lig_p38a_2aa/lig_p38a_2aa.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2bb
+smiles:   xxx
+docked:   03_docked/lig_p38a_2bb/lig_p38a_2bb.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2c
+smiles:   xxx
+docked:   03_docked/lig_p38a_2c/lig_p38a_2c.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2e
+smiles:   xxx
+docked:   03_docked/lig_p38a_2e/lig_p38a_2e.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2ee
+smiles:   xxx
+docked:   03_docked/lig_p38a_2ee/lig_p38a_2ee.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2f
+smiles:   xxx
+docked:   03_docked/lig_p38a_2f/lig_p38a_2f.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2ff
+smiles:   xxx
+docked:   03_docked/lig_p38a_2ff/lig_p38a_2ff.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2g
+smiles:   xxx
+docked:   03_docked/lig_p38a_2g/lig_p38a_2g.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2gg
+smiles:   xxx
+docked:   03_docked/lig_p38a_2gg/lig_p38a_2gg.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2h
+smiles:   xxx
+docked:   03_docked/lig_p38a_2h/lig_p38a_2h.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2i
+smiles:   xxx
+docked:   03_docked/lig_p38a_2i/lig_p38a_2i.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2j
+smiles:   xxx
+docked:   03_docked/lig_p38a_2j/lig_p38a_2j.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2k
+smiles:   xxx
+docked:   03_docked/lig_p38a_2k/lig_p38a_2k.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2l
+smiles:   xxx
+docked:   03_docked/lig_p38a_2l/lig_p38a_2l.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2m
+smiles:   xxx
+docked:   03_docked/lig_p38a_2m/lig_p38a_2m.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2n
+smiles:   xxx
+docked:   03_docked/lig_p38a_2n/lig_p38a_2n.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2o
+smiles:   xxx
+docked:   03_docked/lig_p38a_2o/lig_p38a_2o.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2p
+smiles:   xxx
+docked:   03_docked/lig_p38a_2p/lig_p38a_2p.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2q
+smiles:   xxx
+docked:   03_docked/lig_p38a_2q/lig_p38a_2q.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2r
+smiles:   xxx
+docked:   03_docked/lig_p38a_2r/lig_p38a_2r.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2s
+smiles:   xxx
+docked:   03_docked/lig_p38a_2s/lig_p38a_2s.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2t
+smiles:   xxx
+docked:   03_docked/lig_p38a_2t/lig_p38a_2t.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2u
+smiles:   xxx
+docked:   03_docked/lig_p38a_2u/lig_p38a_2u.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2v
+smiles:   xxx
+docked:   03_docked/lig_p38a_2v/lig_p38a_2v.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2x
+smiles:   xxx
+docked:   03_docked/lig_p38a_2x/lig_p38a_2x.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2y
+smiles:   xxx
+docked:   03_docked/lig_p38a_2y/lig_p38a_2y.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_2z
+smiles:   xxx
+docked:   03_docked/lig_p38a_2z/lig_p38a_2z.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_3fln
+smiles:   xxx
+docked:   03_docked/lig_p38a_3fln/lig_p38a_3fln.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_3flq
+smiles:   xxx
+docked:   03_docked/lig_p38a_3flq/lig_p38a_3flq.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_3flw
+smiles:   xxx
+docked:   03_docked/lig_p38a_3flw/lig_p38a_3flw.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_3fly
+smiles:   xxx
+docked:   03_docked/lig_p38a_3fly/lig_p38a_3fly.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_3flz
+smiles:   xxx
+docked:   03_docked/lig_p38a_3flz/lig_p38a_3flz.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_3fmh
+smiles:   xxx
+docked:   03_docked/lig_p38a_3fmh/lig_p38a_3fmh.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_p38a_3fmk
+smiles:   xxx
+docked:   03_docked/lig_p38a_3fmk/lig_p38a_3fmk.sdf
+measurement:
+    ic50:       [ 99, 99, nM]
+    doi:        yyy
+    comment:    aaa
+...
