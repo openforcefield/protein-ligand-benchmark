@@ -40,7 +40,7 @@ ligands:
     - lig_p38a_3fmh
     - lig_p38a_3fmk
 references:
-    - measurement:
+    - measurement: 10.1021/jm101423y
     - calculation: 10.1021/ja512751q, 10.1021/acs.jcim.9b00105
 comments: inversion of a stereocenter in one mutation
 associated_sets:
