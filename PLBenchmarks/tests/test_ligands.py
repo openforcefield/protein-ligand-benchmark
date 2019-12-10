@@ -8,7 +8,8 @@ from simtk import unit
 import pytest
 import pandas as pd
 import yaml
-from rdkit import Chem
+from rdkit import Chem, DataStructs
+from rdkit.Chem import rdFMCS
 try:
     from importlib.resources import open_text
 except ImportError:
@@ -83,7 +84,6 @@ def test_ligand():
         assert pytest.approx(item, eps) == float(df[df.name == key][('DerivedMeasurement', 'dg')].values[0].split()[0])
 
 
-
 def testLigandData():
     for target in targets.target_list:
         if target['name'] != 'p38':
@@ -94,3 +94,11 @@ def testLigandData():
             m1 = Chem.MolFromSmiles(lig['smiles'][0])
             m2 = Chem.SDMolSupplier(f'PLBenchmarks/data/{target["dir"]}/03_docked/{lig["name"][0]}/{lig["name"][0]}.sdf')[0]
             assert m1.GetNumAtoms() == m2.GetNumAtoms()
+            m1.RemoveAllConformers()
+            m2.RemoveAllConformers()
+            assert pytest.approx(1.0, 1e-9) == DataStructs.FingerprintSimilarity(Chem.RDKFingerprint(m1), Chem.RDKFingerprint(m2))
+#            assert Chem.MolToMolBlock(m1) == Chem.MolToMolBlock(m2)
+            res = rdFMCS.FindMCS([m1,m2])
+            assert res.numAtoms == m1.GetNumAtoms()
+            assert res.numBonds == m1.GetNumBonds()
+                                
