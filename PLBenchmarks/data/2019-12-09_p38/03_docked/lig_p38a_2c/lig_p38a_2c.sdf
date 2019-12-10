@@ -29,7 +29,7 @@ lig_p38a_2c
    35.7100   34.9000   16.4900 C   0  0  0  0  0  0
    36.9200   33.3100   15.7100 H   0  0  0  0  0  0
    37.6400   32.5100   17.9400 H   0  0  0  0  0  0
-   37.0100   33.4500   20.5500 C   0  0  0  0  0  0
+   37.0132   33.4465   20.5599 Cl  0  0  0  0  0  0
    34.5800   36.3900   17.5500 H   0  0  0  0  0  0
    35.3900   35.2400   15.5200 H   0  0  0  0  0  0
    31.3000   38.3600   27.6500 C   0  0  0  0  0  0
@@ -97,7 +97,7 @@ lig_p38a_2c
  35 45  1  0  0  0
 M  END
 > <s_m_entry_id>
-34
+1
 
 > <s_m_entry_name>
 lig_p38a_2c.1
@@ -139,9 +139,15 @@ P 1
 /users/home/dhahn3/projects/PLBenchmarks/PLBenchmarks/data/2019-12-09_p38/03_docked/lig_p38a_2c
 
 > <s_m_Source_File>
-lig_p38a_2c.pdb
+lig_p38a_2c.sdf
 
 > <i_m_Source_File_Index>
 1
+
+> <chiral flag>
+1
+
+> <version>
+0
 
 $$$$
