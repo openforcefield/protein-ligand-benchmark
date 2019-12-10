@@ -3,11 +3,12 @@ Unit and regression test for the PLBenchmarks package.
 """
 
 # Import package, test suite, and other packages as needed
-from PLBenchmarks import ligands
+from PLBenchmarks import ligands, targets
 from simtk import unit
 import pytest
 import pandas as pd
 import yaml
+from rdkit import Chem
 try:
     from importlib.resources import open_text
 except ImportError:
@@ -80,3 +81,16 @@ def test_ligand():
     eps = 0.01
     for key, item in jacs_data.items():
         assert pytest.approx(item, eps) == float(df[df.name == key][('DerivedMeasurement', 'dg')].values[0].split()[0])
+
+
+
+def testLigandData():
+    for target in targets.target_list:
+        if target['name'] != 'p38':
+            continue
+        print('=== ' + target['name'] + ' ===')
+        ligSet = ligands.getLigandSet(target['name'], cols=['name', 'smiles', 'docked'])
+        for index, lig in ligSet.iterrows():
+            m1 = Chem.MolFromSmiles(lig['smiles'][0])
+            m2 = Chem.SDMolSupplier(f'PLBenchmarks/data/{target["dir"]}/03_docked/{lig["name"][0]}/{lig["name"][0]}.sdf')[0]
+            assert m1.GetNumAtoms() == m2.GetNumAtoms()
