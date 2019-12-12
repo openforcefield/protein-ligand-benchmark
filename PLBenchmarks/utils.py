@@ -125,33 +125,45 @@ def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
         if finalObs == 'dg':
             return val.in_units_of(outUnit)
         elif finalObs == 'ki':
-            return unit.Quantity(np.exp(-val/(unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin))), unit.molar)
+            return unit.Quantity(np.exp(-val/(unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin))), unit.molar).in_units_of(outUnit)
         elif finalObs == 'ic50':
-            return unit.Quantity(np.exp(-val/(unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin))), unit.molar)
+            return unit.Quantity(np.exp(-val/(unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin))), unit.molar).in_units_of(outUnit)
         elif finalObs == 'pic50':
             return unit.Quantity(val/(unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin))/np.log(10), unit.dimensionless)
         else:
             raise NotImplementedError
     elif originalObs == 'ki':
         if finalObs == 'dg':
-            return (unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin) * np.log(val.value_in_unit(unit.molar))).in_units_of(outUnit)
+            if val.value_in_unit(unit.molar) < 1e-15:
+                return unit.Quantity(0.0, outUnit)
+            else:
+                return (unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin) * np.log(val.value_in_unit(unit.molar))).in_units_of(outUnit)
         elif finalObs == 'ki':
             return val.in_units_of(outUnit)
         elif finalObs == 'ic50':
             return val.in_units_of(outUnit)
         elif finalObs == 'pic50':
-            return unit.Quantity(-np.log(val.value_in_unit(unit.molar))/np.log(10), unit.dimensionless)
+            if val.value_in_unit(unit.molar) < 1e-15:
+                return unit.Quantity(-1e15, outUnit)
+            else:
+                return unit.Quantity(-np.log(val.value_in_unit(unit.molar))/np.log(10), unit.dimensionless)
         else:
             raise NotImplementedError 
     elif originalObs == 'ic50':
         if finalObs == 'dg':
-            return (unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin) * np.log(val.value_in_unit(unit.molar))).in_units_of(outUnit)
+            if val.value_in_unit(unit.molar) < 1e-15:
+                return unit.Quantity(0.0, outUnit)
+            else:
+                return (unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature, unit.kelvin) * np.log(val.value_in_unit(unit.molar))).in_units_of(outUnit)
         elif finalObs == 'ki':
             return val.in_units_of(outUnit)
         elif finalObs == 'ic50':
             return val.in_units_of(outUnit)
         elif finalObs == 'pic50':
-            return unit.Quantity(-np.log(val.value_in_unit(unit.molar))/np.log(10), unit.dimensionless)
+            if val.value_in_unit(unit.molar) < 1e-15:
+                return unit.Quantity(-1e15, outUnit)
+            else:
+                return unit.Quantity(-np.log(val.value_in_unit(unit.molar))/np.log(10), unit.dimensionless)
         else:
             raise NotImplementedError
     elif originalObs == 'pic50':

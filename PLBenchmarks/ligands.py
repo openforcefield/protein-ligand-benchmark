@@ -91,7 +91,12 @@ class ligand:
         if ('pdb') in list(self.data.index):
             pdb = self.data['pdb']            
             self.data['pdb_html'] = utils.findPdbUrl(pdb)
-    
+            
+    def getMol(self):
+        fname = self.data['docked'][0]
+        print(fname)
+        return fname
+
     def addMolToFrame(self):
         PandasTools.AddMoleculeColumnToFrame(self.data, smilesCol='smiles', molCol='ROMol', includeFingerprints=False)
 
