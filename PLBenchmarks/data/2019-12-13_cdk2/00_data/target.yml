@@ -1,0 +1,29 @@
+id:        7
+date:   2019-12-13
+name:      cdk2
+fullname:  cyclin-dependent kinase 2
+netcharge: xx
+pdb:       1H1Q, 2WEV
+ligands:
+    - lig_17
+    - lig_1h1q
+    - lig_1h1r
+    - lig_1h1s
+    - lig_1oi9
+    - lig_1oiu
+    - lig_1oiy
+    - lig_20
+    - lig_21
+    - lig_22
+    - lig_26
+    - lig_28
+    - lig_29
+    - lig_30
+    - lig_31
+    - lig_32
+references:
+    - measurement: 10.1021/ci5004027
+    - calculation: 10.1021/ja512751q, 10.1021/acs.jcim.9b00105
+comments:  ""
+associated_sets:
+    - Schrodinger JACS

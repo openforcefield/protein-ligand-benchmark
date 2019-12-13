@@ -1,0 +1,108 @@
+---
+name:     lig_CHEMBL3402744_300_4
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402744_300_4/lig_CHEMBL3402744_300_4.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402745_200_5
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402745_200_5/lig_CHEMBL3402745_200_5.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402747_3400_7
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402747_3400_7/lig_CHEMBL3402747_3400_7.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402748_5300_8
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402748_5300_8/lig_CHEMBL3402748_5300_8.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402749_500_9
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402749_500_9/lig_CHEMBL3402749_500_9.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402750_400_10
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402750_400_10/lig_CHEMBL3402750_400_10.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402751_2100_11
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402751_2100_11/lig_CHEMBL3402751_2100_11.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402752_30000_12
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402752_30000_12/lig_CHEMBL3402752_30000_12.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402753_200_13
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402753_200_13/lig_CHEMBL3402753_200_13.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402754_40_14
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402754_40_14/lig_CHEMBL3402754_40_14.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402755_4200_15
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402755_4200_15/lig_CHEMBL3402755_4200_15.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CHEMBL3402761_1_21
+smiles:   xxx
+docked:   03_docked/lig_CHEMBL3402761_1_21/lig_CHEMBL3402761_1_21.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
