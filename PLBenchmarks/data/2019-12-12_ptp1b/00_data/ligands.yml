@@ -1,0 +1,207 @@
+---
+name:     lig_20667_2qbp
+smiles:   xxx
+docked:   03_docked/lig_20667_2qbp/lig_20667_2qbp.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_20669_2qbr
+smiles:   xxx
+docked:   03_docked/lig_20669_2qbr/lig_20669_2qbr.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_20670_2qbs
+smiles:   xxx
+docked:   03_docked/lig_20670_2qbs/lig_20670_2qbs.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23330_2qbq
+smiles:   xxx
+docked:   03_docked/lig_23330_2qbq/lig_23330_2qbq.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23466
+smiles:   xxx
+docked:   03_docked/lig_23466/lig_23466.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23467
+smiles:   xxx
+docked:   03_docked/lig_23467/lig_23467.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23468
+smiles:   xxx
+docked:   03_docked/lig_23468/lig_23468.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23469
+smiles:   xxx
+docked:   03_docked/lig_23469/lig_23469.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23470
+smiles:   xxx
+docked:   03_docked/lig_23470/lig_23470.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23471
+smiles:   xxx
+docked:   03_docked/lig_23471/lig_23471.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23472
+smiles:   xxx
+docked:   03_docked/lig_23472/lig_23472.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23473
+smiles:   xxx
+docked:   03_docked/lig_23473/lig_23473.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23474
+smiles:   xxx
+docked:   03_docked/lig_23474/lig_23474.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23475
+smiles:   xxx
+docked:   03_docked/lig_23475/lig_23475.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23476
+smiles:   xxx
+docked:   03_docked/lig_23476/lig_23476.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23477
+smiles:   xxx
+docked:   03_docked/lig_23477/lig_23477.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23479
+smiles:   xxx
+docked:   03_docked/lig_23479/lig_23479.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23480
+smiles:   xxx
+docked:   03_docked/lig_23480/lig_23480.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23482
+smiles:   xxx
+docked:   03_docked/lig_23482/lig_23482.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23483
+smiles:   xxx
+docked:   03_docked/lig_23483/lig_23483.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23484
+smiles:   xxx
+docked:   03_docked/lig_23484/lig_23484.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23485
+smiles:   xxx
+docked:   03_docked/lig_23485/lig_23485.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_23486
+smiles:   xxx
+docked:   03_docked/lig_23486/lig_23486.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
