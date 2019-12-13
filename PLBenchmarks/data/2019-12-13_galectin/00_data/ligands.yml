@@ -1,0 +1,72 @@
+---
+name:     lig_01_ligF
+smiles:   xxx
+docked:   03_docked/lig_01_ligF/lig_01_ligF.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_02_ligOMe
+smiles:   xxx
+docked:   03_docked/lig_02_ligOMe/lig_02_ligOMe.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_03_ligNHMe
+smiles:   xxx
+docked:   03_docked/lig_03_ligNHMe/lig_03_ligNHMe.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_04_ligNMe2
+smiles:   xxx
+docked:   03_docked/lig_04_ligNMe2/lig_04_ligNMe2.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_05_ligOEt
+smiles:   xxx
+docked:   03_docked/lig_05_ligOEt/lig_05_ligOEt.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_06_ligPyr
+smiles:   xxx
+docked:   03_docked/lig_06_ligPyr/lig_06_ligPyr.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_07_ligOH
+smiles:   xxx
+docked:   03_docked/lig_07_ligOH/lig_07_ligOH.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_08_ligNH2
+smiles:   xxx
+docked:   03_docked/lig_08_ligNH2/lig_08_ligNH2.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
