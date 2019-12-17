@@ -106,11 +106,12 @@ def testLigandData():
 
 def testLigandData():
     for target in targets.target_list: 
-        if target['name'] != 'jnk1' or target['name'] != 'pde2' or target['name']  != 'thrombin':
+        if target['name'] != 'jnk1' or target['name'] != 'pde2' or target['name']  != 'thrombin' or target['name']  != 'ptp1b':
             continue
         print('=== ' + target['name'] + ' ===')
         ligSet = ligands.getLigandSetDF(target['name'], cols=['name', 'smiles', 'docked'])
         for index, lig in ligSet.iterrows():
+            print(lig['name'][0])
             m1 = Chem.MolFromSmiles(lig['smiles'][0])
             m2 = Chem.SDMolSupplier(f'PLBenchmarks/data/{target["dir"]}/03_docked/{lig["name"][0]}/{lig["name"][0]}.sdf')[0]
             assert m1.GetNumAtoms() == m2.GetNumAtoms()
@@ -125,7 +126,7 @@ def testLigandData():
 
 def test_ligand_class():
     for target in targets.target_list:
-        if target['name'] != 'jnk1' or target['name'] != 'pde2' or target['name']  != 'thrombin':
+        if target['name'] != 'jnk1' or target['name'] != 'pde2' or target['name']  != 'thrombin' or target['name']  != 'ptp1b':
             continue
         print('=== ' + target['name'] + ' ===')
         ligSet = ligands.getLigandSet(target['name'])
