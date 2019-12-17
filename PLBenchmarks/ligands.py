@@ -9,7 +9,12 @@ from PLBenchmarks import utils, targets
 import re
 import pandas as pd
 from simtk import unit
-from rdkit.Chem import PandasTools
+from rdkit import Chem
+from rdkit.Chem import Draw, PandasTools
+
+from PIL import Image
+
+import io
 
 import yaml
 try:
@@ -74,6 +79,9 @@ class ligand:
         else:
             print(f'Conversion to observable {derivedObs} not possible.')
     
+    def getName(self):
+        return self.data['name'][0]
+
     def getDF(self, cols=None):
         if cols:
             return self.data[cols]
@@ -109,10 +117,27 @@ class ligand:
         html = html.replace("\\n","<br>")
         return html
 
+    def getImg(self):
+        dr = Draw.MolDraw2DCairo(200,200)
+        opts = dr.drawOptions()
+        opts.clearBackground=True
+        mol = Chem.MolFromSmiles(self.data['smiles'][0])
+        Chem.rdDepictor.Compute2DCoords(mol)
+        dr.DrawMolecule(mol, legend=self.data['name'][0])
+        img = Image.open(io.BytesIO(dr.GetDrawingText())).convert('RGBA')
+        datas = img.getdata()
+        
+        newData = []
+        for item in datas:
+            if item[0] == 255 and item[1] == 255 and item[2] == 255:
+                newData.append((255, 255, 255, 0))
+            else:
+                newData.append(item)
+        img.putdata(newData)
+        return img
 
 
-
-def getLigandSet(target, cols=None):
+def getLigandSet(target):
 
     """
         Convenience function which returns all available ligands of one target in a `pandas` `dataframe`
@@ -121,20 +146,22 @@ def getLigandSet(target, cols=None):
     tp = targets.getTargetDataPath(target)
     file = open_text('.'.join(tp), 'ligands.yml')
     data = yaml.full_load_all(file)    
-    dfs=[]
+    ligs=[]
     for d in data:
         l = ligand(d)
         l.deriveObservables(derivedObs='dg')
         l.findLinks()
         l.addMolToFrame()
-        dfs.append(l.getDF(cols))
-    if cols:
-        df = pd.DataFrame(dfs)[cols]
-    else:
-        df = pd.DataFrame(dfs)
+        ligs.append(l)
     file.close()
-    return df
+    return ligs
 
+def getLigandSetDF(target, cols=None):
+    ligs = getLigandSet(target)
+    dfs = []
+    for lig in ligs:
+        dfs.append(lig.getDF(cols))
+    return pd.DataFrame(dfs)
 
 def getLigandSetHTML(target, cols=None):
 
