@@ -69,25 +69,26 @@ def decide_on_resources( wp, simType ):
     return(simtime,simcpu)
 
 
-def create_SGE_jobscript( fname, simpath, jobname, runtype, run, simtime=4, simcpu=1 ):
+def create_SGE_jobscript( fname, gromppline, simpath, jobname, runtype, run, simtime=4, simcpu=1 ):
     fp = open(fname,'w')
     fullsimpath = os.path.abspath(simpath)
 
     jobline = f'#! /usr/bin/bash\n\
 #$ -N {jobname}\n\
-#$ -cwd\n
-#$ -q all.q\n
-#$ -j yes\n
-#$ -l slot_type=gromacs,affinity_group=default\n\n
+#$ -cwd\n\
+#$ -q all.q\n\
+#$ -j yes\n\
+#$ -l slot_type=gromacs,affinity_group=default\n\n\
 source /home/dhahn3/bin/gromacs-patched/bin/GMXRC\n\n\
-
-gmx mdrun -ntmpi 1 -ntomp ${simcpu} -pme gpu -pin on -s {runtype}{run}.tpr -deffnm {runtype}{run}\n\n'
+\n\
+{gromppline}\n\n\
+gmx mdrun -ntmpi 1 -ntomp {simcpu} -pme gpu -pin on -s {runtype}{run}.tpr -deffnm {runtype}{run}\n\n'
     fp.write(jobline)    
     fp.close()
     
     
     
-def create_SLURM_jobscript( fname, simpath, jobname, runtype, run, simtime=4, simcpu=1 ):
+def create_SLURM_jobscript( fname, gromppline, simpath, jobname, runtype, run, simtime=4, simcpu=1 ):
     fp = open(fname,'w')
     fullsimpath = os.path.abspath(simpath)
 
@@ -116,7 +117,7 @@ WORKDIR=$(pwd)\n\
 mkdir -p $TMPDIR/$SLURM_JOB_NAME\n\
 cd $TMPDIR/$SLURM_JOB_NAME\n\
 \n\
-cp $WORKDIR/{runtype}{run}.tpr .\n\
+{gromppline} \n\n\
 gmx mdrun -ntomp 8 -ntmpi 1 -s {runtype}{run}.tpr -deffnm {runtype}{run}\n\
 rsync -avzui ./ $WORKDIR/\n\
 }}\n\
@@ -213,7 +214,7 @@ def prepareSimulations(target, forcefield, runtype, queueType='sge', verbose=Fal
         edgesToUse = testedges
     #----- TEST ------    
 
-    bDeleteRunFiles = True
+    bDeleteRunFiles = False
     
     for edge in edgesToUse.keys():
         for wp in waterProtein:
@@ -225,7 +226,7 @@ def prepareSimulations(target, forcefield, runtype, queueType='sge', verbose=Fal
                     # create folder
                     create_folder( f'{runpath[runtype]}/{wp}/{edge}/{state}/', f'{runtype}{run}/' )
                 
-                    if bDeleteRunFiles:
+                    if bDeleteRunFiles or wp == 'protein':
                         # everything is deleted!
                         toclean = glob.glob(f'{runpath[runtype]}/{wp}/{edge}/{state}/{runtype}{run}/*.*')
                         for clean in toclean:
@@ -241,30 +242,38 @@ def prepareSimulations(target, forcefield, runtype, queueType='sge', verbose=Fal
                                 os.remove(clean)
 
                     # specify input files
-                    mdp = f'{mdppath}/{runtype}_{state}.mdp'
-                    topology = f'{hybPath}/{wp}/{edge}/topol{run}.top'
-                    coord = getRunCoord(runtype, run=run, target=target, edge=edge, wp=wp, state=state)
+                    mdp = os.path.abspath(f'{mdppath}/{runtype}_{state}.mdp')
+                    topology = os.path.abspath(f'{hybPath}/{wp}/{edge}/topol{run}.top')
+                    coord = os.path.abspath(getRunCoord(runtype, run=run, target=target, edge=edge, wp=wp, state=state))
                     
                     # specify output files
-                    tprfile = f'{runpath[runtype]}/{wp}/{edge}/{state}/{runtype}{run}/{runtype}{run}.tpr' # temporary tpr file  
-                    mdout = f'{runpath[runtype]}/{wp}/{edge}/{state}/{runtype}{run}/mdout.mdp'
+                    tprfile = f'{runtype}{run}.tpr' # temporary tpr file  
+                    mdout = f'mdout.mdp'
                 
                     # call to gmx grompp
-                    process = subprocess.Popen(['gmx','grompp',
-                                                '-p',topology,
-                                                '-c',coord,
-                                                '-o',tprfile,
-                                                '-f',mdp,
-                                                '-po',mdout,
-                                                '-maxwarn',str(3)],
-                                               stdout=subprocess.PIPE, 
-                                               stderr=subprocess.PIPE)
-                    process.wait()    
+                    # process = subprocess.Popen(['gmx','grompp',
+                    #                             '-p',topology,
+                    #                             '-c',coord,
+                    #                             '-o',tprfile,
+                    #                             '-f',mdp,
+                    #                             '-po',mdout,
+                    #                             '-maxwarn',str(3)],
+                    #                            stdout=subprocess.PIPE, 
+                    #                            stderr=subprocess.PIPE)
+                    # process.wait()    
             
-                    if verbose:
-                        out = process.communicate()
-                        print('STDOUT{} '.format(out[0].decode("utf-8")))
-                        print('STDERR{} '.format(out[1].decode("utf-8")))
+                    # if verbose:
+                    #     out = process.communicate()
+                    #     print('STDOUT{} '.format(out[0].decode("utf-8")))
+                    #     print('STDERR{} '.format(out[1].decode("utf-8")))
+
+                    gromppline = f'gmx grompp -p {topology} '\
+                                              f'-c {coord} '\
+                                              f'-o {tprfile} '\
+                                              f'-f {mdp} '\
+                                              f'-po {mdout} '\
+                                              f'-maxwarn 3'
+                    print(gromppline)
             
                     # set variables
                     jobscriptFile = f'{runpath[runtype]}/{wp}/{edge}/{state}/{runtype}{run}/{runtype}{run}.sh'
@@ -275,9 +284,9 @@ def prepareSimulations(target, forcefield, runtype, queueType='sge', verbose=Fal
                     simtime,simcpu = decide_on_resources( wp, runtype )
 
                     if queueType == 'sge':
-                        create_SGE_jobscript( jobscriptFile, simpath, jobname, runtype, run, simtime=simtime, simcpu=simcpu )
+                        create_SGE_jobscript( jobscriptFile, gromppline, simpath, jobname, runtype, run, simtime=simtime, simcpu=simcpu )
                     elif queueType == 'slurm':
-                        create_SLURM_jobscript( jobscriptFile, simpath, jobname, runtype, run, simtime=simtime, simcpu=simcpu )
+                        create_SLURM_jobscript( jobscriptFile, gromppline, simpath, jobname, runtype, run, simtime=simtime, simcpu=simcpu )
 
 
 def checkSimulations(targetID, target, forcefield, runtype, verbose=False):
