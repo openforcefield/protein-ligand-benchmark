@@ -169,7 +169,7 @@ def getLigandSetHTML(target, cols=None):
         Convenience function which returns all available ligands of one target in an html string
     """
 
-    df = getLigandSet(target, cols=cols)
+    df = getLigandSetDF(target, cols=cols)
 
     html = df.to_html()
     html = html.replace('REP1', '<a target="_blank" href="')
