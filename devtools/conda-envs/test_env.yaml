@@ -12,12 +12,14 @@ dependencies:
 
   - pyyaml
   - numpy
+  - matplotlib
   - openmm
   - pandas
   - importlib_resources
   - rdkit
+  - networkx
   
-    # Pip-only installs
+  # Pip-only installs
   #- pip:
   #  - codecov
   #   - pyaml
