@@ -39,3 +39,7 @@ def test_target_class():
         tgt = targets.target(target['name'])
         tgt.getGraph()
         assert tgt.getName() == target['name']
+
+
+def test_targetSet():
+    df = targets.getTargetsDF()

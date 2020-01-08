@@ -82,7 +82,7 @@ def testLigand():
 
     eps = 0.01
     for key, item in jacs_data.items():
-        assert pytest.approx(item, eps) == float(df[df.name == key][('DerivedMeasurement', 'dg')].values[0].split()[0])
+        assert pytest.approx(item, eps) == float(df[df.name == key][('DerivedMeasurement', 'dg')].values[0].value_in_unit(unit.kilocalories_per_mole))
 
 
 def testLigandData():
