@@ -38,7 +38,10 @@ class edge:
         else:
             return self.data
 
-def getEdgesSet(target, cols=None):
+    def getDict(self):
+        return {f'edge_{self.data[0]}_{self.data[1]}': [f'lig_{self.data[0]}', f'lig_{self.data[1]}']}
+        
+def getEdgesDF(target, cols=None):
 
     """
         Convenience function which returns all available ligands of one target in a `pandas` `dataframe`
@@ -57,3 +60,15 @@ def getEdgesSet(target, cols=None):
         df = pd.DataFrame(dfs)
     file.close()
     return df
+
+
+def getEdgesDict( target ):
+    tp = targets.getTargetDataPath(target)
+    file = open_text('.'.join(tp), 'edges.yml')
+    data = yaml.full_load_all(file)
+    print(data)
+    res = {}
+    for d in data:
+        e = edge(d)
+        res.update(e.getDict())
+    return res
