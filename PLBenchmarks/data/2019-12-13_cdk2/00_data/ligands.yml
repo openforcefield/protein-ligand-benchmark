@@ -126,12 +126,12 @@ measurement:
 ...
 ---
 name:     lig_31
-smiles:   "[H]c1c(c(c(c(c1N([H])c2nc3c(c(n2)OC([H])([H])C4(C(C(C(C(C4([H])[H])([H])[H])([H])[H])([H])[H])([H])[H])[H])N=C(N3[H])[H])[H])[H])S(=O)C([H])([H])[H])[H]"
+smiles:   "[H]c1c(c(c(c(c1N([H])c2nc3c(c(n2)OC([H])([H])C4(C(C(C(C(C4([H])[H])([H])[H])([H])[H])([H])[H])([H])[H])[H])N=C(N3[H])[H])[H])[H])[S@@](=O)C([H])([H])[H])[H]"
 docked:   03_docked/lig_31/lig_31.sdf
 measurement:
     ic50:       [ 0.10, 0.01, uM]
     doi:        10.1021/jm0311442
-    comment:    "Table 3, entry 31"
+    comment:    "Table 3, entry 31; stereochemistry of sulfoxide not given in reference, the configuration was manually specified as in DOI 10.1039/C9SC03754C"
 ...
 ---
 name:     lig_32
