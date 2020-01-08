@@ -64,13 +64,13 @@ class target:
         return self._name
 
     def getLigands(self):
-        if self._ligands == None:
+        if self._ligands is None:
             self._ligands = ligands.getLigandSet(self._name)
         return self._ligands
 
     def getEdges(self):
-        if self._edges == None:
-            self._edges = edges.getEdgesSet(self._name)
+        if self._edges is None:
+            self._edges = edges.getEdgesDF(self._name)
         return self._edges
             
     def getDF(self, cols=None):
@@ -115,3 +115,10 @@ class target:
             a.set_aspect('equal')
         a.axis('off')
         return fig
+
+
+def getTargetsDF():
+    dfs = []
+    for td in target_list:
+        dfs.append(target(td['name']).getDF())
+    return pd.DataFrame(dfs)    

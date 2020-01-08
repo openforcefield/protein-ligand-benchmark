@@ -16,6 +16,7 @@ except ImportError:
 
 
 def test_edges():
-    df = edges.getEdgesSet('jnk1')
+    df = edges.getEdgesDF('jnk1')
     assert df.shape[0] > 0
     assert df.shape[1] == 2
+    res = edges.getEdgesDict('jnk1')

@@ -70,8 +70,8 @@ class ligand:
         assert derivedObs in self._observables, 'Observable to be derived not known. Should be any of dg, ki, ic50, or pic50'
         for obs in self._observables:
             if ('measurement', obs) in list(self.data.index):
-                self.data = self.data.append(pd.Series([utils.convertValue(self.data[('measurement', obs)], obs, derivedObs, outUnit=outUnit).format(fmt), 
-                                                        utils.convertValue(self.data[('measurement', f'e_{obs}')], obs, derivedObs, outUnit=outUnit).format(fmt)], 
+                self.data = self.data.append(pd.Series([utils.convertValue(self.data[('measurement', obs)], obs, derivedObs, outUnit=outUnit), 
+                                                        utils.convertValue(self.data[('measurement', f'e_{obs}')], obs, derivedObs, outUnit=outUnit)], 
                                                        index=pd.MultiIndex.from_tuples([(dest, derivedObs), (dest, f'e_{derivedObs}')])
                                                       )
                                             )
