@@ -1,0 +1,18 @@
+#include "amber99sb-star-ildn-mut.ff/forcefield.itp"
+#include "ffMOL.itp"
+#include "merged.itp"
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_B.itp"
+#include "amber99sb-star-ildn-mut.ff/tip3p.itp"
+#include "amber99sb-star-ildn-mut.ff/ions.itp"
+
+[ system ]
+simulation system in water
+
+[ molecules ]
+Protein_chain_A 1
+Protein_chain_B 1
+MOL 1
+SOL         32538
+NaJ              99
+ClJ              97
