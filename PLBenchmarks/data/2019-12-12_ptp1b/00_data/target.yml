@@ -1,5 +1,5 @@
 id:        5
-date:	   2019-12-12
+date:      2019-12-12
 name:      ptp1b
 fullname:  protein-tyrosine phosphatase 1B
 netcharge: xx
@@ -33,4 +33,4 @@ references:
     - calculation: 10.1021/ja512751q, 10.1021/acs.jcim.9b00105
 comments:  "Charges in binding site; electrostatic interactions contribute to binding"
 associated_sets:
-	- Schrodinger JACS
+        - Schrodinger JACS
