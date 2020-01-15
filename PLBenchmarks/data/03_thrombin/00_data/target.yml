@@ -2,7 +2,7 @@ id:        3
 name:      thrombin
 fullname:  thrombin
 netcharge: 
-pdb:       [2ZFF]
+pdb:       2ZFF
 ligands:
     - lig_1a
     - lig_1b

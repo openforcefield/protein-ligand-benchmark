@@ -3,7 +3,7 @@ date:      2019-12-13
 name:      galectin
 fullname:  galectin-3C
 netcharge: xx
-pdb:       PDBP
+pdb:       5E89,5E8A,5E88
 ligands:
     - lig_01_ligF
     - lig_02_ligOMe     
