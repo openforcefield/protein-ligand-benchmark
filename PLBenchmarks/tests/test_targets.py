@@ -43,3 +43,6 @@ def test_target_class():
 
 def test_targetSet():
     df = targets.getTargetsDF()
+
+def test_targetHTML():
+    html = targets.getTargetsHTML()
