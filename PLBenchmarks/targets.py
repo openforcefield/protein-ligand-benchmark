@@ -5,7 +5,7 @@ Target Data handling
 """
 
 import yaml
-from PLBenchmarks import ligands, edges
+from PLBenchmarks import ligands, edges, utils
 
 import matplotlib.pyplot as plt
 
@@ -38,7 +38,6 @@ def getTargetDir(target):
         print('Directory for target {target} not found.')
 
 def getTargetDataPath(target):
-    print(target_list)
     for td in target_list:
         if td['name'] == target:
             return ['PLBenchmarks', 'data', td['dir'], '00_data']
@@ -68,26 +67,84 @@ class target:
             self._ligands = ligands.getLigandSet(self._name)
         return self._ligands
 
+    def addLigandData(self):
+        lgs = self.getLigands()
+        self.data['numLigands'] = len(lgs)
+        affinities = []
+        for l in lgs:
+            affinities.append(l.data[('DerivedMeasurement', 'dg')])
+        self.data['maxDG'] = max(affinities)
+        self.data['minDG'] = min(affinities)        
+
+    def getLigandsDF(self, cols=None):
+        dfs = []
+        for lig in self.getLigands():
+            lig.deriveObservables(derivedObs='dg')
+            lig.findLinks()
+            lig.addMolToFrame()
+            dfs.append(lig.getDF(cols))
+        return pd.DataFrame(dfs)
+
+    def getLigandsHTML(self, cols=None):
+        df = self.getLigandsDF(cols)
+        html = df.to_html()
+        html = html.replace('REP1', '<a target="_blank" href="')
+        html = html.replace('REP2', '">')
+        html = html.replace('REP3', '</a>')
+        html = html.replace("\\n","<br>")
+        return html
+
+        
     def getEdges(self):
         if self._edges is None:
-            self._edges = edges.getEdgesDF(self._name)
+            self._edges = edges.getEdgesSet(self._name)
         return self._edges
-            
+
+    def getEdgesDF(self, cols=None):
+        dfs = []
+        for edg in self.getEdges():
+            edg.addLigData(ligs)
+            dfs.append(edg.getDF(cols))
+        return pd.DataFrame(dfs)
+
+    def getEdgesHTML(self, cols=None):
+        df = self.getEdgesDF(cols)
+        html = df.to_html()
+        html = html.replace('REP1', '<a target="_blank" href="')
+        html = html.replace('REP2', '">')
+        html = html.replace('REP3', '</a>')
+        html = html.replace("\\n","<br>")
+        return html
+    
     def getDF(self, cols=None):
         if cols:
             return self.data[cols]
         else:
             return self.data
 
+    def findLinks(self):
+        if ('measurement', 'doi') in list(self.data.index):
+            doi = self.data['measurement', 'doi']
+            if str(doi) != 'nan':
+                res = []
+                for ddoi in re.split(r'[; ]+', str(doi)):
+                    res.append(utils.findDoiUrl(ddoi))
+            self.data['measurement', 'doi_html'] = (r'\n').join(res)
+        if ('pdb') in list(self.data.index):
+            pdb = self.data['pdb']
+            self.data['pdb_html'] = utils.findPdbUrl(' '.join(pdb.split(',')))
+        self.data.drop(columns=['pdb'], inplace=True)
+        self.data.rename(columns={'pdb_html': 'pdb'}, inplace=True)
+        
     def getGraph(self):
         ligs = self.getLigands()
-        edgs = self.getEdges()
+        edgs = self.getEdgesDF()
         
         G = nx.Graph()
 
         for i, item in enumerate(ligs):
             G.add_node(item.getName().split('_')[1], image=item.getImg())
-        G.add_edges_from(edgs.values)
+        G.add_edges_from(edgs[[0,1]].values)
 
         pos=nx.circular_layout(G)
 
@@ -117,8 +174,25 @@ class target:
         return fig
 
 
-def getTargetsDF():
+def getTargetsDF(cols=None):
     dfs = []
     for td in target_list:
-        dfs.append(target(td['name']).getDF())
+        dfs.append(target(td['name']).getDF(cols=cols))
     return pd.DataFrame(dfs)    
+
+
+def getTargetsHTML(cols=None):
+    dfs = []
+    for td in target_list:
+        df = target(td['name'])
+        df.findLinks()
+        df.addLigandData()
+        dfs.append(df.getDF(cols=cols))
+    df = pd.DataFrame(dfs)
+
+    html = df.to_html()
+    html = html.replace('REP1', '<a target="_blank" href="')
+    html = html.replace('REP2', '">')
+    html = html.replace('REP3', '</a>')
+    html = html.replace("\\n","<br>")
+    return html
