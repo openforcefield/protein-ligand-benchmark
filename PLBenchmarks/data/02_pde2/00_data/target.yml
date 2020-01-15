@@ -2,7 +2,7 @@ id:        2
 name:      pde2
 fullname:  phosphodiesterase 2
 netcharge: 
-pdb:       [4D08,4D09,6EZF]
+pdb:       4D08,4D09,6EZF
 ligands:
     - lig_43249674
     - lig_48009208
