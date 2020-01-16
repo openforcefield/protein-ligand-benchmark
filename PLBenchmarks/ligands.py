@@ -137,43 +137,52 @@ class ligand:
         return img
 
 
-def getLigandSet(target):
-
+class ligandSet(dict):
     """
-        Convenience function which returns all available ligands of one target in a `pandas` `dataframe`
+        Class inherited from dict to store all available ligands of one target.
     """
+    
+    def __init__(self, target, *arg,**kw):
+        """
+        Init function.
+        """
+        super(ligandSet, self).__init__(*arg, **kw)
+        tp = targets.getTargetDataPath(target)      
+        file = open_text('.'.join(tp), 'ligands.yml')
+        data = yaml.full_load_all(file)    
+        for d in data:
+            l = ligand(d)
+            l.deriveObservables(derivedObs='dg')
+            l.findLinks()
+            l.addMolToFrame()
+            self[l.getName()] = l
+        file.close()
+          
+    def getLigand(self, name):
+        """
+        Returns a ligand class of ligand with name name.
+        """
+        for key in self.keys():
+            if key == name:
+                return self[key]
+        else:
+            raise ValueError(f'Ligand {name} is not part of set.')
 
-    tp = targets.getTargetDataPath(target)
-    file = open_text('.'.join(tp), 'ligands.yml')
-    data = yaml.full_load_all(file)    
-    ligs=[]
-    for d in data:
-        l = ligand(d)
-        l.deriveObservables(derivedObs='dg')
-        l.findLinks()
-        l.addMolToFrame()
-        ligs.append(l)
-    file.close()
-    return ligs
+    def getDF(self, columns=None):
+        """
+        Convert ligandSet class to pandas dataframe
+        """
+        dfs=[]
+        for key, item in self.items():
+            dfs.append(item.getDF(columns))
+        df = pd.DataFrame(dfs)
+        return df
 
-def getLigandSetDF(target, cols=None):
-    ligs = getLigandSet(target)
-    dfs = []
-    for lig in ligs:
-        dfs.append(lig.getDF(cols))
-    return pd.DataFrame(dfs)
+    def getHTML(self, columns=None):
+        """
+        Returns the ligands of ligandSet in an html string
+        """
+        df = self.getDF(columns)
+        html = df.to_html()
+        return html
 
-def getLigandSetHTML(target, cols=None):
-
-    """
-        Convenience function which returns all available ligands of one target in an html string
-    """
-
-    df = getLigandSetDF(target, cols=cols)
-
-    html = df.to_html()
-    html = html.replace('REP1', '<a target="_blank" href="')
-    html = html.replace('REP2', '">')
-    html = html.replace('REP3', '</a>')
-    html = html.replace("\\n","<br>")
-    return html

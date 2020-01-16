@@ -42,7 +42,7 @@ def test_target_class():
 
 
 def test_targetSet():
-    df = targets.getTargetsDF()
+    tgts = targets.targetSet()
+    tgts.getDF()
+    tgts.getHTML()
 
-def test_targetHTML():
-    html = targets.getTargetsHTML()
