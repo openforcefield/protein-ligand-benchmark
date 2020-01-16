@@ -30,16 +30,17 @@ class edge:
             Initialize edge class from dictionary
         """
         self.data = pd.Series(d)
+        self._name = None
 
 
     def addLigData(self, ligs):
-        for l in ligs:
-            if l.data['name'][0] == 'lig_' + self.data[0]:
-                l0 = l.data['ROMol'][0][0]
-                dg0 = l.data[('DerivedMeasurement', 'dg')]
-            if l.data['name'][0] == 'lig_' + self.data[1]:
-                l1 = l.data['ROMol'][0][0]
-                dg1 = l.data[('DerivedMeasurement', 'dg')]
+        for key, item in ligs.items():
+            if key == 'lig_' + str(self.data[0]):
+                l0 = item.data['ROMol'][0][0]
+                dg0 = item.data[('DerivedMeasurement', 'dg')]
+            if key == 'lig_' + str(self.data[1]):
+                l1 = item.data['ROMol'][0][0]
+                dg1 = item.data[('DerivedMeasurement', 'dg')]
         self.data['Mol1'] = l0
         self.data['Mol2'] = l1
         self.data['exp. DeltaG [kcal/mol]'] = (dg1-dg0).value_in_unit(unit.kilocalories_per_mole).round(2)
@@ -53,66 +54,57 @@ class edge:
     def getDict(self):
         return {f'edge_{self.data[0]}_{self.data[1]}': [f'lig_{self.data[0]}', f'lig_{self.data[1]}']}
 
+    def getName(self):
+        if self._name is not None:
+            return self._name
+        else:
+            return f'edge_{self.data[0]}_{self.data[1]}'
+    
 
-def getEdgesSet(target):
-
+class edgeSet(dict):
     """
-        Convenience function which returns all available edges of one target in a list
+        Class inherited from dict to store all available edges of one target.
     """
+    
+    def __init__(self, target, *arg,**kw):
+        """
+        Init function.
+        """
+        super(edgeSet, self).__init__(*arg, **kw)
+        tp = targets.getTargetDataPath(target)      
+        ligs = ligands.ligandSet(target)    
+        file = open_text('.'.join(tp), 'edges.yml')
+        data = yaml.full_load_all(file)
+        for d in data:
+            e = edge(d)
+            e.addLigData(ligs)
+            self[e.getName()] = e
+          
+    def getEdge(self, name):
+        for key in self.keys():
+            if key == name:
+                return self[key]
+        else:
+            raise ValueError(f'Edge {name} not part of set.')
 
-    tp = targets.getTargetDataPath(target)
-    ligs = ligands.getLigandSet(target)    
-    file = open_text('.'.join(tp), 'edges.yml')
-    data = yaml.full_load_all(file)
-    edgs = []
-    for d in data:
-        e = edge(d)
-        e.addLigData(ligs)
-        edgs.append(e)
-    file.close()
-    return edgs
-
-def getEdgesSetDF(target, cols=None):
-
-    """
-        Convenience function which returns all available ligands of one target in a `pandas` `dataframe`
-    """
-
-    tp = targets.getTargetDataPath(target)
-    ligs = ligands.getLigandSet(target)
-    file = open_text('.'.join(tp), 'edges.yml')
-    data = yaml.full_load_all(file)    
-    dfs=[]
-    for d in data:
-        e = edge(d)
-        e.addLigData(ligs)
-        dfs.append(e.getDF(cols))
-    if cols:
-        df = pd.DataFrame(dfs)[cols]
-    else:
+    def getDF(self, columns=None):
+        """
+        Convert edgeSet class to pandas dataframe
+        """
+        dfs=[]
+        for key, item in self.items():
+            dfs.append(item.getDF(columns))
         df = pd.DataFrame(dfs)
-    file.close()
-    return df
+        return df
 
+    def getHTML(self, columns=None):
+        df = self.getDF(columns)
+        html = df.to_html()
+        return html
 
-def getEdgesSetHTML(target, cols=None):
-
-    """
-        Convenience function which returns all edges of one target in an html string
-    """
-
-    df = getEdgesSetDF(target, cols=cols)
-
-    html = df.to_html()
-    return html
-
-def getEdgesDict( target ):
-    tp = targets.getTargetDataPath(target)
-    file = open_text('.'.join(tp), 'edges.yml')
-    data = yaml.full_load_all(file)
-    print(data)
-    res = {}
-    for d in data:
-        e = edge(d)
-        res.update(e.getDict())
-    return res
+    def getDict(self):
+        res = {}
+        for key, item in self.items():
+            res.update(item.getDict())
+        return res
+        

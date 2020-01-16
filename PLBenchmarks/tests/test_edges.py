@@ -15,8 +15,9 @@ except ImportError:
     from importlib_resources import open_text
 
 
-def test_edges():
-    df = edges.getEdgesSetDF('jnk1')
-    assert df.shape[0] > 0
-#    assert df.shape[1] == 2
-    res = edges.getEdgesDict('jnk1')
+def test_edgeSet():
+    edg = edges.edgeSet('jnk1')
+    df = edg.getDF()
+    html = edg.getHTML()
+    d = edg.getDict()
+

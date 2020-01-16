@@ -132,3 +132,8 @@ def test_ligand_class():
         ligSet = ligands.getLigandSet(target['name'])
         for lig in ligSet:
             lig.getImg()
+
+def test_ligandSet():
+    ligs = ligands.ligandSet('jnk1')
+    ligs.getDF()
+    ligs.getHTML()
