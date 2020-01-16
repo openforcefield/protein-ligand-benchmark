@@ -9,12 +9,6 @@ from PLBenchmarks import ligands, edges, utils
 
 import matplotlib.pyplot as plt
 
-from rdkit import Chem
-from rdkit.Chem import Draw
-from rdkit.Chem import PandasTools
-
-from PIL import Image
-
 import pandas as pd
 
 import networkx as nx
@@ -43,7 +37,7 @@ def getTargetDataPath(target):
             return ['PLBenchmarks', 'data', td['dir'], '00_data']
             break
     else:
-        print(f'Path for target {target} not found.')
+        ValueError(f'Path for target {target} not found.')
 
 class target:
     def __init__(self, name: str):
@@ -62,63 +56,40 @@ class target:
     def getName(self):
         return self._name
 
-    def getLigands(self):
+    def getLigandSet(self):
         if self._ligands is None:
-            self._ligands = ligands.getLigandSet(self._name)
+            self._ligands = ligands.ligandSet(self._name)
         return self._ligands
 
     def addLigandData(self):
-        lgs = self.getLigands()
+        lgs = self.getLigandSet()
         self.data['numLigands'] = len(lgs)
         affinities = []
-        for l in lgs:
-            affinities.append(l.data[('DerivedMeasurement', 'dg')])
+        for key, item in lgs.items():
+            affinities.append(item.data[('DerivedMeasurement', 'dg')])
         self.data['maxDG'] = max(affinities)
         self.data['minDG'] = min(affinities)        
 
-    def getLigandsDF(self, cols=None):
-        dfs = []
-        for lig in self.getLigands():
-            lig.deriveObservables(derivedObs='dg')
-            lig.findLinks()
-            lig.addMolToFrame()
-            dfs.append(lig.getDF(cols))
-        return pd.DataFrame(dfs)
+    def getLigandSetDF(self, columns=None):
+        return self.getLigandSet().getDF(columns)
 
-    def getLigandsHTML(self, cols=None):
-        df = self.getLigandsDF(cols)
-        html = df.to_html()
-        html = html.replace('REP1', '<a target="_blank" href="')
-        html = html.replace('REP2', '">')
-        html = html.replace('REP3', '</a>')
-        html = html.replace("\\n","<br>")
-        return html
-
-        
-    def getEdges(self):
+    def getLigandSetHTML(self, columns=None):
+        return self.getLigandSet().getHTML(columns)
+    
+    def getEdgeSet(self):
         if self._edges is None:
-            self._edges = edges.getEdgesSet(self._name)
+            self._edges = edges.edgeSet(self._name)
         return self._edges
 
-    def getEdgesDF(self, cols=None):
-        dfs = []
-        for edg in self.getEdges():
-            edg.addLigData(ligs)
-            dfs.append(edg.getDF(cols))
-        return pd.DataFrame(dfs)
+    def getEdgeSetDF(self, columns=None):
+        return self.getEdgeSet().getDF(columns)
 
-    def getEdgesHTML(self, cols=None):
-        df = self.getEdgesDF(cols)
-        html = df.to_html()
-        html = html.replace('REP1', '<a target="_blank" href="')
-        html = html.replace('REP2', '">')
-        html = html.replace('REP3', '</a>')
-        html = html.replace("\\n","<br>")
-        return html
+    def getEdgeSetHTML(self, columns=None):
+        return self.getEdgeSet().getHTML(columns)        
     
-    def getDF(self, cols=None):
-        if cols:
-            return self.data[cols]
+    def getDF(self, columns=None):
+        if columns:
+            return self.data[columns]
         else:
             return self.data
 
@@ -137,22 +108,19 @@ class target:
         self.data.rename(columns={'pdb_html': 'pdb'}, inplace=True)
         
     def getGraph(self):
-        ligs = self.getLigands()
-        edgs = self.getEdgesDF()
+        ligs = self.getLigandSet()
         
         G = nx.Graph()
 
-        for i, item in enumerate(ligs):
-            G.add_node(item.getName().split('_')[1], image=item.getImg())
-        G.add_edges_from(edgs[[0,1]].values)
-
+        for key, item in self.getLigandSet().items():
+            G.add_node(key.split('_')[1], image=item.getImg())
+        G.add_edges_from([[item[0].split('_')[1], item[1].split('_')[1]] for key, item in self.getEdgeSet().getDict().items()])
         pos=nx.circular_layout(G)
 
         fig = plt.figure(figsize=(40,20))
         ax = fig.gca()
-        nx.draw(G,pos, node_size=35000, ax=ax, node_color=[[1,1,1,0]])
+        nx.draw(G, pos, node_size=35000, ax=ax, node_color=[[1,1,1,0]])
 
-        label_pos = 0.5 # middle of edge, halfway between nodes
         trans = ax.transData.transform
         trans2 = fig.transFigure.inverted().transform
         imsize = 0.15 # this is the image size
@@ -174,25 +142,50 @@ class target:
         return fig
 
 
-def getTargetsDF(cols=None):
-    dfs = []
-    for td in target_list:
-        dfs.append(target(td['name']).getDF(cols=cols))
-    return pd.DataFrame(dfs)    
+class targetSet(dict):
+    """
+        Class inherited from dict to store all available targets in PLBenchmarks.
+    """
+    
+    def __init__(self, *arg,**kw):
+        """
+        Init function.
+        """
+        super(targetSet, self).__init__(*arg, **kw)
+        tp = getTargetDataPath(target)      
+        for td in target_list:
+            tgt = target(td['name'])
+            tgt.findLinks()
+            tgt.addLigandData()
+            self[tgt.getName()] = tgt
+          
+    def getTarget(self, name):
+        for key in self.keys():
+            if key == name:
+                return self[key]
+        else:
+            raise ValueError(f'Target {name} not part of set.')
+
+    def getDF(self, columns=None):
+        """
+        Convert edgesSet class to pandas dataframe
+        """
+        dfs=[]
+        for key, item in self.items():
+            dfs.append(item.getDF(columns=columns))
+        df = pd.DataFrame(dfs)
+        return df
+
+    def getHTML(self, columns=None):
+        df = self.getDF(columns)
+        html = df.to_html()
+        html = html.replace('REP1', '<a target="_blank" href="')
+        html = html.replace('REP2', '">')
+        html = html.replace('REP3', '</a>')
+        html = html.replace("\\n","<br>")
+        return html
+
+    def getNames(self):
+        return [key for key in self.keys()]
 
 
-def getTargetsHTML(cols=None):
-    dfs = []
-    for td in target_list:
-        df = target(td['name'])
-        df.findLinks()
-        df.addLigandData()
-        dfs.append(df.getDF(cols=cols))
-    df = pd.DataFrame(dfs)
-
-    html = df.to_html()
-    html = html.replace('REP1', '<a target="_blank" href="')
-    html = html.replace('REP2', '">')
-    html = html.replace('REP3', '</a>')
-    html = html.replace("\\n","<br>")
-    return html
