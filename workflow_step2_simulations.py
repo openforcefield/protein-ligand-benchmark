@@ -4,11 +4,8 @@
 # In[21]:
 
 
-import sys
-import numpy as np
-import os, shutil
+import os
 import re
-import subprocess
 import glob
 import argparse
 from PLBenchmarks import targets, edges
@@ -39,7 +36,7 @@ def printInfo(runtype='em', run=1, target='xxx', edge='yyy_zzz', wp='water', sta
 
 # read edges from a file
 def read_edges( target ):
-    df = edges.getEdgesSet(target)
+    df = edges.edgesSet(target).getDict()
     ed = {}
     for i, e in df.iterrows():
         print(e[0])
@@ -71,7 +68,6 @@ def decide_on_resources( wp, simType ):
 
 def create_SGE_jobscript( fname, gromppline, simpath, jobname, runtype, run, simtime=4, simcpu=1 ):
     fp = open(fname,'w')
-    fullsimpath = os.path.abspath(simpath)
 
     jobline = f'#! /usr/bin/bash\n\
 #$ -N {jobname}\n\
@@ -90,7 +86,6 @@ gmx mdrun -ntmpi 1 -ntomp {simcpu} -pme gpu -pin on -s {runtype}{run}.tpr -deffn
     
 def create_SLURM_jobscript( fname, gromppline, simpath, jobname, runtype, run, simtime=4, simcpu=1 ):
     fp = open(fname,'w')
-    fullsimpath = os.path.abspath(simpath)
 
     jobline = f'#! /usr/bin/bash\n\
 #SBATCH --job-name={jobname}\n\
@@ -165,12 +160,11 @@ def prepareSimulations(target, forcefield, runtype, queueType='sge', verbose=Fal
         return 0
 
     # set paths relative to base
-    inputpath = './input'
     mdppath = './PLBenchmarks/workflow/mdp'
 
     # path where to find coordinates, topologies, hybrid topologies, simulations...
-    ligPath = f'PLBenchmarks/data/{targetDir}/03_docked/'
-    topPath = f'PLBenchmarks/data/{targetDir}/04_topo/{forcefield}/'
+#    ligPath = f'PLBenchmarks/data/{targetDir}/03_docked/'
+#    topPath = f'PLBenchmarks/data/{targetDir}/04_topo/{forcefield}/'
     hybPath = f'PLBenchmarks/data/{targetDir}/05_hybrid/{forcefield}'
 
     runpath =  {'em' : f'PLBenchmarks/data/{targetDir}/06_em/{forcefield}',
@@ -289,55 +283,55 @@ def prepareSimulations(target, forcefield, runtype, queueType='sge', verbose=Fal
                         create_SLURM_jobscript( jobscriptFile, gromppline, simpath, jobname, runtype, run, simtime=simtime, simcpu=simcpu )
 
 
-def checkSimulations(targetID, target, forcefield, runtype, verbose=False):
-    # for testing set this variable to True
-    bTest = False
+# def checkSimulations(targetID, target, forcefield, runtype, verbose=False):
+#     # for testing set this variable to True
+#     bTest = False
     
-    #----- TEST ------
-    edgesToUse = edges
-    if bTest==True:
-        edgesToUse = testedges
-        #----- TEST ------    
+#     #----- TEST ------
+#     edgesToUse = edges
+#     if bTest==True:
+#         edgesToUse = testedges
+#         #----- TEST ------    
     
-    # set paths relative to base
-    inputpath = './input'
-    mdppath = './mdppath'
+#     # set paths relative to base
+#     inputpath = './input'
+#     mdppath = './mdppath'
 
-    # path where to find coordinates, topologies, hybrid topologies, simulations...
-    ligPath = f'PLBenchmarks/data/{targetDir}/03_docked/'
-    topPath = f'PLBenchmarks/data/{targetDir}/04_topo/{forcefield}/'
-    hybPath = f'PLBenchmarks/data/{targetDir}/05_hybrid/{forcefield}'
+#     # path where to find coordinates, topologies, hybrid topologies, simulations...
+#     ligPath = f'PLBenchmarks/data/{targetDir}/03_docked/'
+#     topPath = f'PLBenchmarks/data/{targetDir}/04_topo/{forcefield}/'
+#     hybPath = f'PLBenchmarks/data/{targetDir}/05_hybrid/{forcefield}'
 
-    runpath =  {'em' : f'PLBenchmarks/data/{targetDir}/06_em/{forcefield}',
-                'nvt': f'PLBenchmarks/data/{targetDir}/07_nvt/{forcefield}',
-                'eq' : f'PLBenchmarks/data/{targetDir}/08_eq/{forcefield}',
-                'morphes': f'PLBenchmarks/data/{targetDir}/09_morphes/{forcefield}'
-            }
+#     runpath =  {'em' : f'PLBenchmarks/data/{targetDir}/06_em/{forcefield}',
+#                 'nvt': f'PLBenchmarks/data/{targetDir}/07_nvt/{forcefield}',
+#                 'eq' : f'PLBenchmarks/data/{targetDir}/08_eq/{forcefield}',
+#                 'morphes': f'PLBenchmarks/data/{targetDir}/09_morphes/{forcefield}'
+#             }
     
 
 
-    # workpath/[water|protein]/edge* - every edge has its own folder
-    waterProtein = ['water','protein']
-    # workpath/[water|protein]/edge*/state[A|B] - two states will be considered for every edge
-    states = ['stateA','stateB']
+#     # workpath/[water|protein]/edge* - every edge has its own folder
+#     waterProtein = ['water','protein']
+#     # workpath/[water|protein]/edge*/state[A|B] - two states will be considered for every edge
+#     states = ['stateA','stateB']
 
-    for edge in edgesToUse.keys():
-        for wp in waterProtein:
-            for state in states:
-                # 3 replicas
-                for run in range(1,replicas+1):
-                    printInfo(runtype=runtype, run=run, target=target, edge=edge, wp=wp, state=state)
+#     for edge in edgesToUse.keys():
+#         for wp in waterProtein:
+#             for state in states:
+#                 # 3 replicas
+#                 for run in range(1,replicas+1):
+#                     printInfo(runtype=runtype, run=run, target=target, edge=edge, wp=wp, state=state)
                 
-                    if os.path.isfile(f'{runpath[runtype]}/{wp}/{edge}/{state}/{runtype}{run}/{runtype}{run}.log'):
-                        with open(f'{runpath[runtype]}/{wp}/{edge}/{state}/{runtype}{run}/{runtype}{run}.log') as f:
-                            for line in f.readlines():
-                                if re.search('Steepest Descents converged', line):
-                                    print(line.strip())
-                                    break
-                            else:
-                                print('\33[31mSimulation not (yet) converged.\33[0m')
-                    else:
-                        print('\33[31mNo log file available, simulation probably not finished\33[0m')
+#                     if os.path.isfile(f'{runpath[runtype]}/{wp}/{edge}/{state}/{runtype}{run}/{runtype}{run}.log'):
+#                         with open(f'{runpath[runtype]}/{wp}/{edge}/{state}/{runtype}{run}/{runtype}{run}.log') as f:
+#                             for line in f.readlines():
+#                                 if re.search('Steepest Descents converged', line):
+#                                     print(line.strip())
+#                                     break
+#                             else:
+#                                 print('\33[31mSimulation not (yet) converged.\33[0m')
+#                     else:
+#                         print('\33[31mNo log file available, simulation probably not finished\33[0m')
 
 
 if __name__ == '__main__':
