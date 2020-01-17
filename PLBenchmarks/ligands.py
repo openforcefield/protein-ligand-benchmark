@@ -24,16 +24,17 @@ except ImportError:
     from importlib_resources import open_text
 
 class ligand:
-    
     """
-        Store and convert the data of one ligand in a pandas Series.
+    Store and convert the data of one ligand in a 'pandas.Series'.
     """
     
     _observables = ['dg', 'dh', 'tds', 'ki', 'ic50', 'pic50']
    
     def __init__(self, d: dict):
         """
-            Initialize ligand class from dictionary
+        Store and convert the data of one ligand in a `pandas.Series`.
+        :param d: dict with the ligand data
+        :return None
         """
         self.data = pd.Series(d)
         # Expand measurement dict into single fields
@@ -63,9 +64,13 @@ class ligand:
                     self.data[('measurement', f'e_{obs}')] = unit.quantity.Quantity(vals[1], u)
                     self.data[('measurement', obs)] = unit.quantity.Quantity(vals[0], u)
                 
-    def deriveObservables(self, derivedObs='dg', dest='DerivedMeasurement', outUnit=unit.kilocalories_per_mole, fmt='%.2f'):
+    def deriveObservables(self, derivedObs='dg', dest='DerivedMeasurement', outUnit=unit.kilocalories_per_mole):
         """
-            Calculate 
+        Derive observables from (stored) primary data, which is then stored in the 'pandas.DataFrame'
+        :param derivedObs: type of derived observable, can be any of 'dg' 'ki', 'ic50' or 'pic50'
+        :param dest: string with column name for 'pandas.DataFrame' where the derived observable should be stored.
+        :param outUnit: 'simtk.unit' unit of derived coordinate
+        :return: None
         """
         assert derivedObs in self._observables, 'Observable to be derived not known. Should be any of dg, ki, ic50, or pic50'
         for obs in self._observables:
@@ -80,15 +85,28 @@ class ligand:
             print(f'Conversion to observable {derivedObs} not possible.')
     
     def getName(self):
+        """
+        Access the name of the ligand.
+        :return: name: string
+        """
         return self.data['name'][0]
 
     def getDF(self, cols=None):
+        """
+        Access the ligand data as a `pandas.DataFrame`
+        :param cols: list of columns which should be returned in the `pandas.DataFrame`
+        :return: data: `pandas.DataFrame`
+        """
         if cols:
             return self.data[cols]
         else:
             return self.data
     
     def findLinks(self):
+        """
+        Processes primary data to have links in the html string of the ligand data
+        :return: None
+        """
         if ('measurement', 'doi') in list(self.data.index):
             doi = self.data['measurement', 'doi']
             if str(doi) != 'nan':
@@ -101,16 +119,33 @@ class ligand:
             self.data['pdb_html'] = utils.findPdbUrl(pdb)
             
     def getMol(self):
+        """
+        Get file path relative to the PLBenchmarks repository of the SDF coordinate file of the docked ligand
+        :return: fname: string with file path
+        """
         fname = self.data['docked'][0]
         print(fname)
         return fname
 
     def addMolToFrame(self):
+        """
+        Adds a image file of the ligand to the `pandas.DataFrame`
+        :return: None
+        """
         PandasTools.AddMoleculeColumnToFrame(self.data, smilesCol='smiles', molCol='ROMol', includeFingerprints=False)
 
-    def getHTML(self):
+    def getHTML(self, columns=None):
+        """
+        Access the ligand as a HTML string
+        :param columns: list of columns which should be returned in the `pandas.DataFrame`
+        :return: html: HTML string
+        """
         self.findLinks()
-        html = pd.DataFrame(self.data).to_html()
+        if columns:
+            html = pd.DataFrame(self.data[columns]).to_html()
+        else:
+
+            html = pd.DataFrame(self.data).to_html()
         html = html.replace('REP1', '<a target="_blank" href="')
         html = html.replace('REP2', '">')
         html = html.replace('REP3', '</a>')
@@ -118,6 +153,10 @@ class ligand:
         return html
 
     def getImg(self):
+        """
+        Creates a molecule image.
+        :return: img: a PIL.Image object
+        """
         dr = Draw.MolDraw2DCairo(200,200)
         opts = dr.drawOptions()
         opts.clearBackground=True
@@ -144,7 +183,10 @@ class ligandSet(dict):
     
     def __init__(self, target, *arg,**kw):
         """
-        Init function.
+        Initializes ligandSet class
+        :param target: string name of target
+        :param arg: arguments for dict (base class)
+        :param kw: keywords for dict (base class)
         """
         super(ligandSet, self).__init__(*arg, **kw)
         tp = targets.getTargetDataPath(target)      
@@ -160,17 +202,22 @@ class ligandSet(dict):
           
     def getLigand(self, name):
         """
-        Returns a ligand class of ligand with name name.
+        Accesses one ligand of the ligandSet
+        :param name: string name of the ligand
+        :return: ligand: ligand class
         """
         for key in self.keys():
             if key == name:
                 return self[key]
+                break
         else:
             raise ValueError(f'Ligand {name} is not part of set.')
 
     def getDF(self, columns=None):
         """
-        Convert ligandSet class to pandas dataframe
+        Access the ligandSet as a 'pandas.DataFrame'
+        :param columns: list of columns which should be returned in the `pandas.DataFrame`
+        :return: df: `pandas.DataFrame`
         """
         dfs=[]
         for key, item in self.items():
@@ -180,7 +227,9 @@ class ligandSet(dict):
 
     def getHTML(self, columns=None):
         """
-        Returns the ligands of ligandSet in an html string
+        Access the ligandSet as a HTML string
+        :param cols: list of columns which should be returned in the `pandas.DataFrame`
+        :return: html: HTML string
         """
         df = self.getDF(columns)
         html = df.to_html()

@@ -14,14 +14,8 @@ from simtk import unit
 def findPdbUrl(pdb):
     """
     Finds the links to a pdb or a list of pdb codes.
-    Parameters
-    ----------
-    pdb: str
-    Returns
-    -------
-    links : str
-        Compiled string including the urls to the pdb entries
-
+    :param pdb: str
+    :return links : str compiled string including the urls to the pdb entries
     """
 
     url = "http://www.rcsb.org/pdb/rest/search"
@@ -55,14 +49,8 @@ def findPdbUrl(pdb):
 def findDoiUrl(doi):
     """
     Finds the links to a digital object identifier (doi).
-    Parameters
-    ----------
-    doi: str
-    Returns
-    -------
-    link : str
-        Compiled string including the urls to the publication
-
+    :param doi: str
+    :return link : str compiled string including the urls to the publication
     """
 
     url = 'https://api.crossref.org/works/' + str(doi)
@@ -97,17 +85,12 @@ def findDoiUrl(doi):
 def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
     """
     Converts an experimental value into another derived quantity with specified unit.
-    Parameters
-    ----------
-    val: float, numerical value
-    originalObs: str, code for the original observable. Can be 'dg', 'ki', 'ic50', 'pic50'
-    finalObs: str, code for the desired derived quantity. Can be 'dg', 'ki', 'ic50', 'pic50'
-    temperature: float, temperature in kelvin
-    outUnit: type simtk.unit, output unit of finalObs, needs to fit to the requested finalObs
-    Returns
-    -------
-    quantity : simtk.unit.quantity with desired unit
-
+    :param val: float, numerical value
+    :param originalObs: str, code for the original observable. Can be 'dg', 'ki', 'ic50', 'pic50'
+    :param finalObs: str, code for the desired derived quantity. Can be 'dg', 'ki', 'ic50', 'pic50'
+    :param temperature: float, temperature in kelvin
+    :param outUnit: type simtk.unit, output unit of finalObs, needs to fit to the requested finalObs
+    :return quantity : simtk.unit.quantity with desired unit
     """
 
     # define default units
