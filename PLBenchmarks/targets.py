@@ -24,6 +24,11 @@ file = open_text('PLBenchmarks.data', 'targets.yml')
 target_list = yaml.full_load(file)
 
 def getTargetDir(target):
+    """
+    Gets the directory name of the target
+    :param target: string with target name
+    :return: dirname: string with  directory name
+    """
     for td in target_list:
         if td['name'] == target:
             return td['dir']
@@ -32,17 +37,29 @@ def getTargetDir(target):
         print('Directory for target {target} not found.')
 
 def getTargetDataPath(target):
+    """
+     Gets the file path of the target data
+    :param target: string with target name
+    :return: path: list of directories (have to be joined with '/' to get the file path relative to the PLBenchmarks repository)
+
+    """
     for td in target_list:
         if td['name'] == target:
             return ['PLBenchmarks', 'data', td['dir'], '00_data']
             break
     else:
-        ValueError(f'Path for target {target} not found.')
+        raise ValueError(f'Path for target {target} not found.')
 
 class target:
+    """
+    Class to store the data of one target.
+    """
+
     def __init__(self, name: str):
         """
-            Initialize edge class from dictionary
+        Store and convert the data of one target in a `pandas.Series`.
+        :param name: string with target name
+        :return None
         """
         self._name = name
         path = getTargetDataPath(self._name)
@@ -54,14 +71,26 @@ class target:
         
 
     def getName(self):
+        """
+        Access the name of the edge.
+        :return: name: string
+        """
         return self._name
 
     def getLigandSet(self):
+        """
+        Get ligandSet associated with the target
+        :return: ligandSet object
+        """
         if self._ligands is None:
             self._ligands = ligands.ligandSet(self._name)
         return self._ligands
 
     def addLigandData(self):
+        """
+        Adds data from ligands to `target`. Molecule images and the minimum and maximum affinity are added.
+        :return: None
+        """
         lgs = self.getLigandSet()
         self.data['numLigands'] = len(lgs)
         affinities = []
@@ -71,29 +100,62 @@ class target:
         self.data['minDG'] = min(affinities)        
 
     def getLigandSetDF(self, columns=None):
+        """
+        Get ligandSet associated with the target in a 'pandas.DataFrame'
+        :param columns: list of columns which should be returned in the `pandas.DataFrame`
+        :return: pandas.DataFrame
+        """
         return self.getLigandSet().getDF(columns)
 
     def getLigandSetHTML(self, columns=None):
+        """
+        Get ligandSet associated with the target in a html string
+        :param columns: list of columns which should be returned
+        :return: html string
+        """
         return self.getLigandSet().getHTML(columns)
     
     def getEdgeSet(self):
+        """
+        Get edgeSet associated with the target
+        :return: edgeSet object
+        """
         if self._edges is None:
             self._edges = edges.edgeSet(self._name)
         return self._edges
 
     def getEdgeSetDF(self, columns=None):
+        """
+        Get edgeSet associated with the target as a 'pandas.DataFrame'
+        :param columns: list of columns which should be returned in the `pandas.DataFrame`
+        :return: edgeSet object
+        """
         return self.getEdgeSet().getDF(columns)
 
     def getEdgeSetHTML(self, columns=None):
+        """
+        Get edgeSet associated with the target in a html string
+        :param columns: list of edge which should be returned
+        :return: html string
+        """
         return self.getEdgeSet().getHTML(columns)        
     
     def getDF(self, columns=None):
+        """
+        Access the target data as a `pandas.DataFrame`
+        :param cols: list of columns which should be returned in the `pandas.DataFrame`
+        :return: data: `pandas.DataFrame`
+        """
         if columns:
             return self.data[columns]
         else:
             return self.data
 
     def findLinks(self):
+        """
+        Processes primary data to have links in the html string of the target data
+        :return: None
+        """
         if ('measurement', 'doi') in list(self.data.index):
             doi = self.data['measurement', 'doi']
             if str(doi) != 'nan':
@@ -108,7 +170,10 @@ class target:
         self.data.rename(columns={'pdb_html': 'pdb'}, inplace=True)
         
     def getGraph(self):
-        ligs = self.getLigandSet()
+        """
+        Get a graph representation of the ligand perturbations associated with the target in a matplotlib figure
+        :return: fig: matplotlib.figure
+        """
         
         G = nx.Graph()
 
@@ -144,15 +209,17 @@ class target:
 
 class targetSet(dict):
     """
-        Class inherited from dict to store all available targets in PLBenchmarks.
+    Class inherited from dict to store all available targets in PLBenchmarks.
     """
     
     def __init__(self, *arg,**kw):
         """
-        Init function.
+        Initializes targetSet class
+        :param target: string name of target
+        :param arg: arguments for dict (base class)
+        :param kw: keywords for dict (base class)
         """
         super(targetSet, self).__init__(*arg, **kw)
-        tp = getTargetDataPath(target)      
         for td in target_list:
             tgt = target(td['name'])
             tgt.findLinks()
@@ -160,15 +227,23 @@ class targetSet(dict):
             self[tgt.getName()] = tgt
           
     def getTarget(self, name):
+        """
+        Accesses one target of the targetSet
+        :param name: string name of the target
+        :return: target: target class
+        """
         for key in self.keys():
             if key == name:
                 return self[key]
+                break
         else:
             raise ValueError(f'Target {name} not part of set.')
 
     def getDF(self, columns=None):
         """
-        Convert edgesSet class to pandas dataframe
+        Convert targetSet class to pandas.DataFrame
+        :param columns: list of columns which should be returned in the `pandas.DataFrame`
+        :return: df: `pandas.DataFrame`
         """
         dfs=[]
         for key, item in self.items():
@@ -177,6 +252,11 @@ class targetSet(dict):
         return df
 
     def getHTML(self, columns=None):
+        """
+        Access the targetSet as a HTML string
+        :param cols: list of columns which should be returned in the `pandas.DataFrame`
+        :return: html: HTML string
+        """
         df = self.getDF(columns)
         html = df.to_html()
         html = html.replace('REP1', '<a target="_blank" href="')
@@ -186,6 +266,10 @@ class targetSet(dict):
         return html
 
     def getNames(self):
+        """
+        Get a list of available target names
+        :return: list of strings
+        """
         return [key for key in self.keys()]
 
 

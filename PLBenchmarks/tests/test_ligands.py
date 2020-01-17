@@ -25,7 +25,7 @@ def testLigand():
     dfs=[]
     for d in data:
         l = ligands.ligand(d)
-        l.deriveObservables(derivedObs='dg', outUnit=unit.kilocalories_per_mole, fmt='%.3f')
+        l.deriveObservables(derivedObs='dg', outUnit=unit.kilocalories_per_mole)
         l.addMolToFrame()
         l.getImg()
         dfs.append(l.getDF(['name', 'ROMol', 'DerivedMeasurement']))
