@@ -3,4 +3,5 @@ include MANIFEST.in
 include versioneer.py
 
 graft PLBenchmarks
+prune PLBenchmarks/data
 global-exclude *.py[cod] __pycache__ *.so
