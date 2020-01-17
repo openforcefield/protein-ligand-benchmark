@@ -9,6 +9,7 @@ dependencies:
   - pytest
   - pytest-cov
   - codecov
+  - nbval
 
   - pyyaml
   - numpy
