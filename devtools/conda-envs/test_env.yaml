@@ -10,6 +10,7 @@ dependencies:
   - pytest-cov
   - codecov
   - nbval
+  - coverage < 5.0
 
   - pyyaml
   - numpy
