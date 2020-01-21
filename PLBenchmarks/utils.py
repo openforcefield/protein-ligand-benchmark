@@ -91,8 +91,8 @@ def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
     :param originalObs: string, code for the original observable. Can be `dg`, `ki`, `ic50`, `pic50`
     :param finalObs: string, code for the desired derived quantity. Can be `dg`, `ki`, `ic50`, `pic50`
     :param temperature: float, temperature in kelvin
-    :param outUnit: type :func:`simtk.unit`, output unit of finalObs, needs to fit to the requested finalObs
-    :return: :func:`simtk.unit.quantity` with desired unit
+    :param outUnit: type :py:class:`simtk.unit`, output unit of finalObs, needs to fit to the requested finalObs
+    :return: :py:class:`simtk.unit.quantity` with desired unit
     """
 
     # define default units

@@ -20,9 +20,9 @@ except ImportError:
 
 class edge:
     """
-    Store and convert the data of one perturbation ("edge") in a :func:`pandas.Series`.
+    Store and convert the data of one perturbation ("edge") in a :py:class:`pandas.Series`.
     
-    :param d: :func:`dict` with the edge data
+    :param d: :py:class:`dict` with the edge data
     :return: None
     """
     
@@ -30,7 +30,7 @@ class edge:
         """
         Initialize edge class from a dictionary
         
-        :param d: :func:`dict` with the edge data
+        :param d: :py:class:`dict` with the edge data
         :return: None
         """
         self.data = pd.Series(d)
@@ -39,9 +39,9 @@ class edge:
 
     def addLigData(self, ligs):
         """
-        Adds data from ligands to :func:`~PLBenchmarks:edges.edge`. Molecule images and the affinity difference are added.
+        Adds data from ligands to :py:class:`~PLBenchmarks:edges.edge`. Molecule images and the affinity difference are added.
         
-        :param ligs: :func:`PLBenchmarks:ligands:ligandSet` class of the same target
+        :param ligs: :py:class:`PLBenchmarks:ligands:ligandSet` class of the same target
         :return: None
         """
         l0 = None
@@ -61,10 +61,10 @@ class edge:
 
     def getDF(self, cols=None):
         """
-        Access the edge data as a :func:`pandas.DataFrame`
+        Access the edge data as a :py:class:`pandas.DataFrame`
 
-        :param cols: list of columns which should be returned in the :func:`pandas.DataFrame`
-        :return: :func:`pandas.DataFrame`
+        :param cols: list of columns which should be returned in the :py:class:`pandas.DataFrame`
+        :return: :py:class:`pandas.DataFrame`
         """
         if cols:
             return self.data[cols]
@@ -73,9 +73,9 @@ class edge:
 
     def getDict(self):
         """
-        Access the edge data as a :func:`dict` which contains the name of the edge as key and the names of the two ligands as :func:`list`.
+        Access the edge data as a :py:class:`dict` which contains the name of the edge as key and the names of the two ligands as :py:class:`list`.
         
-        :return: :func:`dict`
+        :return: :py:class:`dict`
         """
         return {f'edge_{self.data[0]}_{self.data[1]}': [f'lig_{self.data[0]}', f'lig_{self.data[1]}']}
 
@@ -101,8 +101,8 @@ class edgeSet(dict):
         Initializes edgeSet class
         
         :param target: string name of target
-        :param arg: arguments for :func:`dict` (base class)
-        :param kw: keywords for :func:`dict` (base class)
+        :param arg: arguments for :py:class:`dict` (base class)
+        :param kw: keywords for :py:class:`dict` (base class)
         """
         super(edgeSet, self).__init__(*arg, **kw)
         tp = targets.getTargetDataPath(target)
@@ -116,10 +116,10 @@ class edgeSet(dict):
 
     def getEdge(self, name):
         """
-        Accesses one edge of the :func:`PLBenchmarks.edges.edgeSet`
+        Accesses one edge of the :py:class:`PLBenchmarks.edges.edgeSet`
         
         :param name: string name of the edge
-        :return: :func:`PLBenchmarks:edges:edge` class
+        :return: :py:class:`PLBenchmarks:edges:edge` class
         """
         for key in self.keys():
             if key == name:
@@ -130,10 +130,10 @@ class edgeSet(dict):
 
     def getDF(self, columns=None):
         """
-        Access the :func:`PLBenchmarks:edges.edgeSet` as a :func:`pandas.DataFrame`
+        Access the :py:class:`PLBenchmarks:edges.edgeSet` as a :py:class:`pandas.DataFrame`
         
-        :param cols: :func:`list` of columns which should be returned in the :func:`pandas.DataFrame`
-        :return: :func:`pandas.DataFrame`
+        :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
+        :return: :py:class:`pandas.DataFrame`
         """
         dfs=[]
         for key, item in self.items():
@@ -143,9 +143,9 @@ class edgeSet(dict):
 
     def getHTML(self, columns=None):
         """
-        Access the :func:`PLBenchmarks:edges.edgeSet` as a HTML string
+        Access the :py:class:`PLBenchmarks:edges.edgeSet` as a HTML string
         
-        :param cols: :func:`list` of columns which should be returned in the :func:`pandas.DataFrame`
+        :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: HTML string
         """
         df = self.getDF(columns)
@@ -154,9 +154,9 @@ class edgeSet(dict):
 
     def getDict(self):
         """
-        Access the :func:`PLBenchmarks:edges.edgeSet` as a dict which contains the name of the edges as key and the names of the two ligands in a list as items.
+        Access the :py:class:`PLBenchmarks:edges.edgeSet` as a dict which contains the name of the edges as key and the names of the two ligands in a list as items.
 
-        :return: :func:`dict`
+        :return: :py:class:`dict`
         """
         res = {}
         for key, item in self.items():
