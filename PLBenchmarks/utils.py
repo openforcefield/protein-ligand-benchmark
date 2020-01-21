@@ -1,7 +1,6 @@
 """
 utils.py
-Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.
-Utility functions
+Contains utility functions
 """
 
 import numpy as np
@@ -14,23 +13,24 @@ from simtk import unit
 def findPdbUrl(pdb):
     """
     Finds the links to a pdb or a list of pdb codes.
-    :param pdb: str
-    :return links : str compiled string including the urls to the pdb entries
+
+    :param pdb: string
+    :return: string compiled string including the urls to the pdb entries
     """
 
     url = "http://www.rcsb.org/pdb/rest/search"
-    query_text = f"""
-<orgPdbCompositeQuery version="1.0">
- <queryRefinement>
-   <queryRefinementLevel>0</queryRefinementLevel>
-      <orgPdbQuery>
-        <version>head</version>
-        <queryType>org.pdb.query.simple.StructureIdQuery</queryType>
-        <structureIdList>{pdb}</structureIdList>
-      </orgPdbQuery>
- </queryRefinement>
-</orgPdbCompositeQuery>
-"""
+    query_text = f'\
+<orgPdbCompositeQuery version="1.0">\
+ <queryRefinement>\
+   <queryRefinementLevel>0</queryRefinementLevel>\
+      <orgPdbQuery>\
+        <version>head</version>\
+        <queryType>org.pdb.query.simple.StructureIdQuery</queryType>\
+        <structureIdList>{pdb}</structureIdList>\
+      </orgPdbQuery>\
+ </queryRefinement>\
+</orgPdbCompositeQuery>\
+'
     request = urllib.request.Request(url, data=query_text.encode())
     response = urllib.request.urlopen(request)
     page = response.read()
@@ -49,8 +49,9 @@ def findPdbUrl(pdb):
 def findDoiUrl(doi):
     """
     Finds the links to a digital object identifier (doi).
-    :param doi: str
-    :return link : str compiled string including the urls to the publication
+
+    :param doi: string
+    :return: string compiled string including the urls to the publication
     """
 
     url = 'https://api.crossref.org/works/' + str(doi)
@@ -85,12 +86,13 @@ def findDoiUrl(doi):
 def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
     """
     Converts an experimental value into another derived quantity with specified unit.
+ 
     :param val: float, numerical value
-    :param originalObs: str, code for the original observable. Can be 'dg', 'ki', 'ic50', 'pic50'
-    :param finalObs: str, code for the desired derived quantity. Can be 'dg', 'ki', 'ic50', 'pic50'
+    :param originalObs: string, code for the original observable. Can be `dg`, `ki`, `ic50`, `pic50`
+    :param finalObs: string, code for the desired derived quantity. Can be `dg`, `ki`, `ic50`, `pic50`
     :param temperature: float, temperature in kelvin
-    :param outUnit: type simtk.unit, output unit of finalObs, needs to fit to the requested finalObs
-    :return quantity : simtk.unit.quantity with desired unit
+    :param outUnit: type :func:`simtk.unit`, output unit of finalObs, needs to fit to the requested finalObs
+    :return: :func:`simtk.unit.quantity` with desired unit
     """
 
     # define default units
