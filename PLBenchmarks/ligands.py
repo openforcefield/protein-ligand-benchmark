@@ -1,7 +1,6 @@
 """
 ligands.py
-Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.
-Handles the ligand data
+Functions and classes for handling the ligand data.
 """
 
 from PLBenchmarks import utils, targets
@@ -25,15 +24,17 @@ except ImportError:
 
 class ligand:
     """
-    Store and convert the data of one ligand in a 'pandas.Series'.
+    Store and convert the data of one ligand in a :func:`pandas.Series`.
+
     """
     
     _observables = ['dg', 'dh', 'tds', 'ki', 'ic50', 'pic50']
    
     def __init__(self, d: dict):
         """
-        Store and convert the data of one ligand in a `pandas.Series`.
-        :param d: dict with the ligand data
+        Initialize :func:`PLBenchmarks.ligands.ligand` object from :func:`dict` and store data in a :func:`pandas.Series`.
+
+        :param d: :func:`dict` with the ligand data
         :return None
         """
         self.data = pd.Series(d)
@@ -66,10 +67,11 @@ class ligand:
                 
     def deriveObservables(self, derivedObs='dg', dest='DerivedMeasurement', outUnit=unit.kilocalories_per_mole):
         """
-        Derive observables from (stored) primary data, which is then stored in the 'pandas.DataFrame'
+        Derive observables from (stored) primary data, which is then stored in the :func:`pandas.DataFrame`
+        
         :param derivedObs: type of derived observable, can be any of 'dg' 'ki', 'ic50' or 'pic50'
         :param dest: string with column name for 'pandas.DataFrame' where the derived observable should be stored.
-        :param outUnit: 'simtk.unit' unit of derived coordinate
+        :param outUnit: :func:`simtk.unit` unit of derived coordinate
         :return: None
         """
         assert derivedObs in self._observables, 'Observable to be derived not known. Should be any of dg, ki, ic50, or pic50'
@@ -87,15 +89,17 @@ class ligand:
     def getName(self):
         """
         Access the name of the ligand.
+        
         :return: name: string
         """
         return self.data['name'][0]
 
     def getDF(self, cols=None):
         """
-        Access the ligand data as a `pandas.DataFrame`
-        :param cols: list of columns which should be returned in the `pandas.DataFrame`
-        :return: data: `pandas.DataFrame`
+        Access the ligand data as a :func:`pandas.DataFrame`
+        
+        :param cols: list of columns which should be returned in the :func:`pandas.DataFrame`
+        :return: :func:`pandas.DataFrame`
         """
         if cols:
             return self.data[cols]
@@ -105,6 +109,7 @@ class ligand:
     def findLinks(self):
         """
         Processes primary data to have links in the html string of the ligand data
+        
         :return: None
         """
         if ('measurement', 'doi') in list(self.data.index):
@@ -114,14 +119,19 @@ class ligand:
                 for ddoi in re.split(r'[; ]+', str(doi)):
                     res.append(utils.findDoiUrl(ddoi))
             self.data['measurement', 'doi_html'] = (r'\n').join(res)
+        self.data.drop(columns=['measurement', 'doi'], inplace=True)
+        self.data.rename(columns={'doi_html':'Reference'}, level=1, inplace=True)
         if ('pdb') in list(self.data.index):
             pdb = self.data['pdb']            
             self.data['pdb_html'] = utils.findPdbUrl(pdb)
+        self.data.drop(columns=['pdb'], inplace=True)
+        self.data.rename(columns={'pdb_html': 'pdb'}, inplace=True)
             
     def getMol(self):
         """
         Get file path relative to the PLBenchmarks repository of the SDF coordinate file of the docked ligand
-        :return: fname: string with file path
+        
+        :return: file path as string
         """
         fname = self.data['docked'][0]
         print(fname)
@@ -129,7 +139,8 @@ class ligand:
 
     def addMolToFrame(self):
         """
-        Adds a image file of the ligand to the `pandas.DataFrame`
+        Adds a image file of the ligand to the :func:`pandas.DataFrame`
+        
         :return: None
         """
         PandasTools.AddMoleculeColumnToFrame(self.data, smilesCol='smiles', molCol='ROMol', includeFingerprints=False)
@@ -137,8 +148,9 @@ class ligand:
     def getHTML(self, columns=None):
         """
         Access the ligand as a HTML string
-        :param columns: list of columns which should be returned in the `pandas.DataFrame`
-        :return: html: HTML string
+        
+        :param columns: list of columns which should be returned in the :func:`pandas.DataFrame`
+        :return: HTML string
         """
         self.findLinks()
         if columns:
@@ -155,7 +167,8 @@ class ligand:
     def getImg(self):
         """
         Creates a molecule image.
-        :return: img: a PIL.Image object
+
+        :return: :func:`PIL.Image` object
         """
         dr = Draw.MolDraw2DCairo(200,200)
         opts = dr.drawOptions()
@@ -178,15 +191,17 @@ class ligand:
 
 class ligandSet(dict):
     """
-        Class inherited from dict to store all available ligands of one target.
+    Class inherited from dict to store all available ligands of one target.
+
     """
     
     def __init__(self, target, *arg,**kw):
         """
-        Initializes ligandSet class
+        Initializes :func:`~PLBenchmarks.ligands.ligandSet` class
+
         :param target: string name of target
-        :param arg: arguments for dict (base class)
-        :param kw: keywords for dict (base class)
+        :param arg: arguments for :func:`dict` (base class)
+        :param kw: keywords for :func:`dict` (base class)
         """
         super(ligandSet, self).__init__(*arg, **kw)
         tp = targets.getTargetDataPath(target)      
@@ -202,9 +217,10 @@ class ligandSet(dict):
           
     def getLigand(self, name):
         """
-        Accesses one ligand of the ligandSet
+        Accesses one ligand of the :func:`~PLBenchmarks:ligands.ligandSet`
+
         :param name: string name of the ligand
-        :return: ligand: ligand class
+        :return: :func:`PLBenchmarks.ligands.ligand` class
         """
         for key in self.keys():
             if key == name:
@@ -215,9 +231,10 @@ class ligandSet(dict):
 
     def getDF(self, columns=None):
         """
-        Access the ligandSet as a 'pandas.DataFrame'
-        :param columns: list of columns which should be returned in the `pandas.DataFrame`
-        :return: df: `pandas.DataFrame`
+        Access the :func:`~PLBenchmarks:ligands.ligandSet` as a :func:`pandas.DataFrame`
+
+        :param columns: :func:`list` of columns which should be returned in the :func:`pandas.DataFrame`
+        :return: :func:`pandas.DataFrame`
         """
         dfs=[]
         for key, item in self.items():
@@ -227,11 +244,16 @@ class ligandSet(dict):
 
     def getHTML(self, columns=None):
         """
-        Access the ligandSet as a HTML string
-        :param cols: list of columns which should be returned in the `pandas.DataFrame`
-        :return: html: HTML string
+        Access the :func:`PLBenchmarks:ligands.ligandSet` as a HTML string
+
+        :param cols: :func:`list` of columns which should be returned in the :func:`pandas.DataFrame`
+        :return: HTML string
         """
         df = self.getDF(columns)
         html = df.to_html()
+        html = html.replace('REP1', '<a target="_blank" href="')
+        html = html.replace('REP2', '">')
+        html = html.replace('REP3', '</a>')
+        html = html.replace("\\n","<br>")
         return html
 
