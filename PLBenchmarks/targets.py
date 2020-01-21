@@ -24,7 +24,8 @@ target_list = yaml.full_load(file)
 
 def getTargetDir(target):
     """
-        Gets the directory name of the target
+    Gets the directory name of the target
+
     :param target: string with target name
     :return: string with  directory name
     """
@@ -37,7 +38,8 @@ def getTargetDir(target):
 
 def getTargetDataPath(target):
     """
-     Gets the file path of the target data
+    Gets the file path of the target data
+
     :param target: string with target name
     :return: list of directories (have to be joined with '/' to get the file path relative to the PLBenchmarks repository)
 
@@ -52,11 +54,13 @@ def getTargetDataPath(target):
 class target:
     """
     Class to store the data of one target.
+
     """
 
     def __init__(self, name: str):
         """
-            Store and convert the data of one target in a :func:`pandas.Series`.
+        Store and convert the data of one target in a :func:`pandas.Series`.
+
         :param name: string with target name
         :return: None
         """
@@ -72,14 +76,16 @@ class target:
 
     def getName(self):
         """
-         Access the name of the target.
+        Access the name of the target.
+
         :return: name as a string
         """
         return self._name
 
     def getLigandSet(self):
         """
-         Get :func:`~PLBenchmarks.ligands.ligandSet` associated with the target
+        Get :func:`~PLBenchmarks.ligands.ligandSet` associated with the target
+
         :return: :func:`PLBenchmarks.ligands.ligandSet` object
         """
         if self._ligands is None:
@@ -88,7 +94,8 @@ class target:
 
     def addLigandData(self):
         """
-         Adds data from ligands to :func:`PLBenchmarks.targets.target`. Molecule images and the minimum and maximum affinity are added.
+        Adds data from ligands to :func:`PLBenchmarks.targets.target`. Molecule images and the minimum and maximum affinity are added.
+
         :return: None
         """
         lgs = self.getLigandSet()
@@ -101,7 +108,8 @@ class target:
 
     def getLigandSetDF(self, columns=None):
         """
-         Get :func:`~PLBenchmarks.ligands.ligandSet` associated with the target in a :func:`pandas.DataFrame`
+        Get :func:`~PLBenchmarks.ligands.ligandSet` associated with the target in a :func:`pandas.DataFrame`
+
         :param columns: :func:`list` of columns which should be returned in the :func:`pandas.DataFrame`
         :return: :func:`pandas.DataFrame`
         """
@@ -109,7 +117,8 @@ class target:
 
     def getLigandSetHTML(self, columns=None):
         """
-         Get :func:`~PLBenchmarks.ligands.ligandSet` associated with the target in a html string
+        Get :func:`~PLBenchmarks.ligands.ligandSet` associated with the target in a html string
+
         :param columns: list of columns which should be returned
         :return: html string
         """
@@ -117,7 +126,8 @@ class target:
     
     def getEdgeSet(self):
         """
-         Get :func:`~PLBenchmarks:edges:edgeSet` associated with the target
+        Get :func:`~PLBenchmarks:edges:edgeSet` associated with the target
+
         :return: :func:`PLBenchmarks:edges:edgeSet` object
         """
         if self._edges is None:
@@ -126,7 +136,8 @@ class target:
 
     def getEdgeSetDF(self, columns=None):
         """
-         Get :func:`~PLBenchmarks:edges:edgeSet` associated with the target as a :func:`pandas.DataFrame`
+        Get :func:`~PLBenchmarks:edges:edgeSet` associated with the target as a :func:`pandas.DataFrame`
+
         :param columns: list of columns which should be returned in the :func:`pandas.DataFrame`
         :return: :func:`PLBenchmarks:edges:edgeSet` object
         """
@@ -134,7 +145,8 @@ class target:
 
     def getEdgeSetHTML(self, columns=None):
         """
-         Get :func:`~PLBenchmarks:edges:edgeSet` associated with the target in a html string
+        Get :func:`~PLBenchmarks:edges:edgeSet` associated with the target in a html string
+
         :param columns: :func:`list` of edge which should be returned
         :return: html string
         """
@@ -142,7 +154,8 @@ class target:
     
     def getDF(self, columns=None):
         """
-         Access the target data as a :func:`pandas.DataFrame`
+        Access the target data as a :func:`pandas.DataFrame`
+
         :param cols: :func:`list` of columns which should be returned in the :func:`pandas.DataFrame`
         :return:  :func:`pandas.DataFrame`
         """
@@ -153,7 +166,8 @@ class target:
 
     def findLinks(self):
         """
-         Processes primary data to have links in the html string of the target data
+        Processes primary data to have links in the html string of the target data
+
         :return: None
         """
         if ('measurement', 'doi') in list(self.data.index):
@@ -171,7 +185,8 @@ class target:
         
     def getGraph(self):
         """
-         Get a graph representation of the ligand perturbations associated with the target in a :func:`matplotlib.figure`
+        Get a graph representation of the ligand perturbations associated with the target in a :func:`matplotlib.figure`
+
         :return: :func:`matplotlib.figure`
         """
         
@@ -214,7 +229,8 @@ class targetSet(dict):
     
     def __init__(self, *arg,**kw):
         """
-         Initializes the :func:`~targets.targetSet` class
+        Initializes the :func:`~targets.targetSet` class
+
         :param target: string name of target
         :param arg: arguments for :func:`dict` (base class)
         :param kw: keywords for :func:`dict` (base class)
@@ -228,7 +244,8 @@ class targetSet(dict):
           
     def getTarget(self, name):
         """
-         Accesses one target of the targetSet
+        Accesses one target of the targetSet
+
         :param name: string name of the target
         :return: :func:`PLBenchmarks.targets.target` class
         """
@@ -241,7 +258,8 @@ class targetSet(dict):
 
     def getDF(self, columns=None):
         """
-         Convert targetSet class to :func:`pandas.DataFrame`
+        Convert targetSet class to :func:`pandas.DataFrame`
+
         :param columns: :func:`list` of columns which should be returned in the :func:`pandas.DataFrame`
         :return: :func:`pandas.DataFrame`
         """
@@ -253,7 +271,8 @@ class targetSet(dict):
 
     def getHTML(self, columns=None):
         """
-         Access the :func:`~PLBenchmarks:targets:targetSet` as a HTML string
+        Access the :func:`~PLBenchmarks:targets:targetSet` as a HTML string
+
         :param cols: :func:`list` of columns which should be returned in the :func:`pandas.DataFrame`
         :return: HTML string
         """
@@ -267,7 +286,8 @@ class targetSet(dict):
 
     def getNames(self):
         """
-         Get a list of available target names
+        Get a list of available target names
+
         :return: :func:`list` of strings
         """
         return [key for key in self.keys()]
