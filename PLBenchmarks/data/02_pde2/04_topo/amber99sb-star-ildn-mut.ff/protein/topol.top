@@ -1,0 +1,23 @@
+; Include forcefield parameters
+#include "amber99sb-star-ildn-mut.ff/forcefield.itp"
+#include "ffMOL.itp"
+#include "prot.itp"
+#include "merged.itp"
+
+; Include water topology
+#include "amber99sb-star-ildn-mut.ff/tip3p.itp"
+
+; Include topology for ions
+#include "amber99sb-star-ildn-mut.ff/ions.itp"
+
+[ system ]
+; Name
+protein ligand in water
+
+[ molecules ]
+; Compound        #mols
+protein         1
+MG              1
+ZN              1
+MOL             1
+SOL            347
