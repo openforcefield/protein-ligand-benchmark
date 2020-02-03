@@ -7,6 +7,7 @@ from PLBenchmarks import utils, targets, ligands
 
 import re
 import pandas as pd
+import numpy as np
 from simtk import unit
 from rdkit.Chem import PandasTools
 import yaml
@@ -47,17 +48,22 @@ class edge:
         l0 = None
         l1 = None
         dg0 = 0
-        dg1 = 1
+        dg1 = 0
+        err0 = 0
+        err1 = 0
         for key, item in ligs.items():
             if key == 'lig_' + str(self.data[0]):
                 l0 = item.data['ROMol'][0][0]
-                dg0 = item.data[('DerivedMeasurement', 'dg')]
+                dg0 = item.data[('DerivedMeasurement', 'dg')].value_in_unit(unit.kilocalories_per_mole)
+                err0 = item.data[('DerivedMeasurement', 'e_dg')].value_in_unit(unit.kilocalories_per_mole)
             if key == 'lig_' + str(self.data[1]):
                 l1 = item.data['ROMol'][0][0]
-                dg1 = item.data[('DerivedMeasurement', 'dg')]
+                dg1 = item.data[('DerivedMeasurement', 'dg')].value_in_unit(unit.kilocalories_per_mole)
+                err1 = item.data[('DerivedMeasurement', 'e_dg')].value_in_unit(unit.kilocalories_per_mole)
         self.data['Mol1'] = l0
         self.data['Mol2'] = l1
-        self.data['exp. DeltaG [kcal/mol]'] = round((dg1-dg0).value_in_unit(unit.kilocalories_per_mole), 2)
+        self.data['exp. DeltaG [kcal/mol]'] = round(dg1-dg0, 2)
+        self.data['exp. Error [kcal/mol]'] = round(np.sqrt(np.power(err0, 2.0)+ np.power(err1, 2.0)), 2)
 
     def getDF(self, cols=None):
         """
