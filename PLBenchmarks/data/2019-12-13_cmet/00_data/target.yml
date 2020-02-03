@@ -18,8 +18,9 @@ ligands:
     - lig_CHEMBL3402755_4200_15
     - lig_CHEMBL3402761_1_21
 references:
-    - measurement: 10.1016/j.bmcl.2015.02.002
-    - calculation: 
+    measurement:
+        - 10.1016/j.bmcl.2015.02.002
+    calculation: 
 comments:  ""
 associated_sets:
     - Merck KGaA FEP Benchmarks

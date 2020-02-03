@@ -26,10 +26,10 @@ ligands:
     - lig_50107616
     - lig_50181001
 references:
-    - measurement:
+    measurement:
         - 10.1021/ml500262u
         - 10.1021/ja404449g
-    - calculation:
+    calculation:
         - 10.1038/s41598-018-23039-5
 comments:
 associated_sets:

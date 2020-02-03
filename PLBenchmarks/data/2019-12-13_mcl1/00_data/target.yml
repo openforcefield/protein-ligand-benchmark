@@ -48,8 +48,10 @@ ligands:
     - lig_67
     - lig_68
 references:
-    - measurement:
-    - calculation: 10.1021/ja512751q, 10.1021/acs.jcim.9b00105
+    measurement:
+    calculation:
+        - 10.1021/ja512751q
+        - 10.1021/acs.jcim.9b00105
 comments:  "hydrophobic interactions contributing to binding"
 associated_sets:
     - Schrodinger JACS

@@ -14,8 +14,10 @@ ligands:
     - lig_07_ligOH
     - lig_08_ligNH2
 references:
-    - measurement: 10.1002/cbic.201600285
-    - calculation: 10.1007/s10822-018-0110-5
+    measurement:
+        - 10.1002/cbic.201600285
+    calculation:
+        - 10.1007/s10822-018-0110-5
 comments:  ""
 associated_sets:
 
