@@ -6,6 +6,9 @@ Functions and classes for handling the target data.
 import yaml
 from PLBenchmarks import ligands, edges, utils
 
+from simtk import unit
+import numpy as np
+
 import matplotlib.pyplot as plt
 
 import pandas as pd
@@ -70,6 +73,8 @@ class target:
         file = open_text('.'.join(path), 'target.yml')
         data = yaml.full_load(file)
         self.data = pd.Series(data)
+        self.ligData = None
+        self.htmlData = None
         self._ligands = None
         self._edges = None
         
@@ -99,12 +104,21 @@ class target:
         :return: None
         """
         lgs = self.getLigandSet()
-        self.data['numLigands'] = len(lgs)
+        self.ligData = pd.Series({'numLigands': len(lgs)})
         affinities = []
         for key, item in lgs.items():
-            affinities.append(item.data[('DerivedMeasurement', 'dg')])
-        self.data['maxDG'] = max(affinities)
-        self.data['minDG'] = min(affinities)        
+            affinities.append(item.data[('DerivedMeasurement', 'dg')].value_in_unit(unit.kilocalories_per_mole))
+        self.ligData['maxDG'] = round(max(affinities), 1)
+        self.ligData['minDG'] = round(min(affinities), 1)
+        # calculation of the mean absolute deviation
+        mean = np.mean(affinities)
+        mad = np.average(np.fabs(affinities - mean))
+        self.ligData['MAD(DG)'] = round(mad, 1)
+
+    def getLigData(self):
+        if self.ligData is None:
+            self.addLigandData()
+        return self.ligData
 
     def getLigandSetDF(self, columns=None):
         """
@@ -159,10 +173,15 @@ class target:
         :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return:  :py:class:`pandas.DataFrame`
         """
+        df = self.data
+        print(df)
+        df = df.append(self.getLigData())
+        df = df.append(self.getHtmlData())
+        print(df['pdb'])
         if columns:
-            return self.data[columns]
+            return df[columns]
         else:
-            return self.data
+            return df
 
     def findLinks(self):
         """
@@ -170,19 +189,27 @@ class target:
 
         :return: None
         """
-        if ('measurement', 'doi') in list(self.data.index):
-            doi = self.data['measurement', 'doi']
-            if str(doi) != 'nan':
+        self.htmlData = pd.Series()
+        if 'references' in list(self.data.index):
+#            self.data.index = pd.MultiIndex.from_arrays([list(self.data.index), ['' for i in self.data.index]])
+            refs = self.data['references']
+            for key, item in refs.items():
                 res = []
-                for ddoi in re.split(r'[; ]+', str(doi)):
-                    res.append(utils.findDoiUrl(ddoi))
-            self.data['measurement', 'doi_html'] = (r'\n').join(res)
+                if item is None:
+                    continue
+                for doi in item:
+                    if str(doi) != 'nan':
+                        res.append(utils.findDoiUrl(doi))
+                self.htmlData[key] = (r'\n').join(res)
         if ('pdb') in list(self.data.index):
             pdb = self.data['pdb']
-            self.data['pdb_html'] = utils.findPdbUrl(' '.join(pdb.split(',')))
-        self.data.drop(columns=['pdb'], inplace=True)
-        self.data.rename(columns={'pdb_html': 'pdb'}, inplace=True)
-        
+            self.htmlData['pdblinks'] = utils.findPdbUrl(' '.join(pdb.split(',')))
+
+    def getHtmlData(self):
+        if self.htmlData is None:
+            self.findLinks()
+        return self.htmlData
+
     def getGraph(self):
         """
         Get a graph representation of the ligand perturbations associated with the target in a :py:class:`matplotlib.figure`
@@ -238,9 +265,8 @@ class targetSet(dict):
         super(targetSet, self).__init__(*arg, **kw)
         for td in target_list:
             tgt = target(td['name'])
-            tgt.findLinks()
-            tgt.addLigandData()
             self[tgt.getName()] = tgt
+        self._df = None
           
     def getTarget(self, name):
         """
@@ -249,12 +275,14 @@ class targetSet(dict):
         :param name: string name of the target
         :return: :py:class:`PLBenchmarks.targets.target` class
         """
+        tgt = None
         for key in self.keys():
             if key == name:
-                return self[key]
+                tgt = self[key]
                 break
         else:
             raise ValueError(f'Target {name} not part of set.')
+        return tgt
 
     def getDF(self, columns=None):
         """
@@ -263,11 +291,23 @@ class targetSet(dict):
         :param columns: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: :py:class:`pandas.DataFrame`
         """
-        dfs=[]
-        for key, item in self.items():
-            dfs.append(item.getDF(columns=columns))
-        df = pd.DataFrame(dfs)
-        return df
+        if self._df is None:
+            dfs=[]
+            for key in self.keys():
+                self[key].addLigandData()
+                self[key].findLinks()
+                dfs.append(self[key].getDF())
+            df = pd.DataFrame(dfs)
+            self._df =df
+
+        if columns is None:
+            return self._df
+        elif all(item in list(self._df.index) for item in columns):
+            return self._df[columns]
+        else:
+            for item in columns:
+                if item not in list(self._df.columns):
+                    raise ValueError(f'Column {item} is not known and cannot be generated.')
 
     def getHTML(self, columns=None):
         """
@@ -276,7 +316,7 @@ class targetSet(dict):
         :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: HTML string
         """
-        df = self.getDF(columns)
+        df = self.getDF(columns=columns)
         html = df.to_html()
         html = html.replace('REP1', '<a target="_blank" href="')
         html = html.replace('REP2', '">')
