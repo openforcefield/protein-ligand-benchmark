@@ -22,8 +22,10 @@ ligands:
     - lig_31
     - lig_32
 references:
-    - measurement: 10.1021/ci5004027
-    - calculation: 10.1021/ja512751q, 10.1021/acs.jcim.9b00105
+    measurement:
+        - 10.1021/ci5004027
+    calculation:
+        - 10.1021/ja512751q, 10.1021/acs.jcim.9b00105
 comments:  ""
 associated_sets:
     - Schrodinger JACS

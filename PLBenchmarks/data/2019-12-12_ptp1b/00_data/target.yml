@@ -29,8 +29,10 @@ ligands:
     - lig_23485
     - lig_23486
 references:
-    - measurement:
-    - calculation: 10.1021/ja512751q, 10.1021/acs.jcim.9b00105
+    measurement:
+    calculation:
+        - 10.1021/ja512751q
+        - 10.1021/acs.jcim.9b00105
 comments:  "Charges in binding site; electrostatic interactions contribute to binding"
 associated_sets:
         - Schrodinger JACS
