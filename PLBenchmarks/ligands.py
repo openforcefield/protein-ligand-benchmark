@@ -7,7 +7,6 @@ from PLBenchmarks import utils, targets
 
 import re
 import pandas as pd
-from simtk import unit
 from rdkit import Chem
 from rdkit.Chem import Draw, PandasTools
 
@@ -53,39 +52,47 @@ class ligand:
                                              )
                                 )
                     vals = self.data[('measurement', f'{obs}')]
-                    u = unit.dimensionless
+                    u = utils.ureg('')
                     if vals[2] == 'nM':
-                        u = unit.nano*unit.molar
+                        u = utils.ureg('nanomolar')
                     elif vals[2] == 'uM':
-                        u = unit.micro*unit.molar
+                        u = utils.ureg('micromolar')
                     elif vals[2] == 'kj/mol':
-                        u = unit.kilojoules_per_mole
+                        u = utils.ureg('kJ / mole')
                     elif vals[2] == 'kcal/mol':
-                        u = unit.kilocalories_per_mole
-                    self.data[('measurement', f'e_{obs}')] = unit.quantity.Quantity(vals[1], u)
-                    self.data[('measurement', obs)] = unit.quantity.Quantity(vals[0], u)
-                
-    def deriveObservables(self, derivedObs='dg', dest='DerivedMeasurement', outUnit=unit.kilocalories_per_mole):
+                        u = utils.ureg('kcal / mole')
+                    else:
+                        # let pint figure out what the unit means
+                        u = utils.ureg(vals[2])
+                    self.data[('measurement', f'e_{obs}')] = vals[1] * u
+                    self.data[('measurement', obs)] = vals[0] * u
+
+    def deriveObservables(self, derivedObs='dg', dest='DerivedMeasurement', outUnit=utils.ureg('kcal / mole')):
         """
         Derive observables from (stored) primary data, which is then stored in the :py:class:`pandas.DataFrame`
         
         :param derivedObs: type of derived observable, can be any of 'dg' 'ki', 'ic50' or 'pic50'
         :param dest: string with column name for 'pandas.DataFrame' where the derived observable should be stored.
-        :param outUnit: :py:class:`simtk.unit` unit of derived coordinate
+        :param outUnit: unit of type :py:class:`pint` unit of derived coordinate
         :return: None
         """
         assert derivedObs in self._observables, 'Observable to be derived not known. Should be any of dg, ki, ic50, or pic50'
         for obs in self._observables:
             if ('measurement', obs) in list(self.data.index):
                 self.data = self.data.append(pd.Series([utils.convertValue(self.data[('measurement', obs)], obs, derivedObs, outUnit=outUnit), 
-                                                        utils.convertValue(self.data[('measurement', f'e_{obs}')], obs, derivedObs, outUnit=outUnit)], 
+                                                        utils.convertError(self.data[('measurement', f'e_{obs}')], self.data[('measurement', obs)], obs, derivedObs, outUnit=outUnit)],
                                                        index=pd.MultiIndex.from_tuples([(dest, derivedObs), (dest, f'e_{derivedObs}')])
                                                       )
                                             )
+
+                # decimals = pd.Series([2, 2], index=pd.MultiIndex.from_tuples(
+                #     [('measurement', obs), ('measurement', f'e_{obs}')]))
+                # self.data.round(decimals)
                 break
         else:
             print(f'Conversion to observable {derivedObs} not possible.')
-    
+
+
     def getName(self):
         """
         Access the name of the ligand.
@@ -127,14 +134,28 @@ class ligand:
         self.data.drop(columns=['pdb'], inplace=True)
         self.data.rename(columns={'pdb_html': 'pdb'}, inplace=True)
             
-    def getMol(self):
+    def getCoordFilePath(self):
         """
         Get file path relative to the PLBenchmarks repository of the SDF coordinate file of the docked ligand
         
         :return: file path as string
         """
         fname = self.data['docked'][0]
-        print(fname)
+        return fname
+
+    def getRDKitMol(self):
+        """
+        Get molecule object with coordinates of the docked ligand
+
+        :return: file path as string
+        """
+        fname = self.getCoordFilePath()
+
+        # file = open_text('PLBenchmarks.data.01_jnk1.03_docked.lig_17124-1', 'lig_17124-1.sdf')
+        # sdfile = Chem.SDMolSupplier(file)
+        # return sdfile.next()
+
+        fname = self.data['docked'][0]
         return fname
 
     def addMolToFrame(self):
@@ -210,7 +231,7 @@ class ligandSet(dict):
         for d in data:
             l = ligand(d)
             l.deriveObservables(derivedObs='dg')
-            l.findLinks()
+            #l.findLinks()
             l.addMolToFrame()
             self[l.getName()] = l
         file.close()

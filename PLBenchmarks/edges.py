@@ -5,11 +5,8 @@ Functions and classes for handling the perturbation edges.
 
 from PLBenchmarks import utils, targets, ligands
 
-import re
 import pandas as pd
 import numpy as np
-from simtk import unit
-from rdkit.Chem import PandasTools
 import yaml
 try:
     from importlib.resources import open_text
@@ -54,12 +51,12 @@ class edge:
         for key, item in ligs.items():
             if key == 'lig_' + str(self.data[0]):
                 l0 = item.data['ROMol'][0][0]
-                dg0 = item.data[('DerivedMeasurement', 'dg')].value_in_unit(unit.kilocalories_per_mole)
-                err0 = item.data[('DerivedMeasurement', 'e_dg')].value_in_unit(unit.kilocalories_per_mole)
+                dg0 = item.data[('DerivedMeasurement', 'dg')]
+                err0 = item.data[('DerivedMeasurement', 'e_dg')]
             if key == 'lig_' + str(self.data[1]):
                 l1 = item.data['ROMol'][0][0]
-                dg1 = item.data[('DerivedMeasurement', 'dg')].value_in_unit(unit.kilocalories_per_mole)
-                err1 = item.data[('DerivedMeasurement', 'e_dg')].value_in_unit(unit.kilocalories_per_mole)
+                dg1 = item.data[('DerivedMeasurement', 'dg')]
+                err1 = item.data[('DerivedMeasurement', 'e_dg')]
         self.data['Mol1'] = l0
         self.data['Mol2'] = l1
         self.data['exp. DeltaG [kcal/mol]'] = round(dg1-dg0, 2)

@@ -5,9 +5,6 @@ Unit and regression test for the PLBenchmarks package.
 # Import package, test suite, and other packages as needed
 from PLBenchmarks import utils
 import pytest
-from simtk import unit
-import urllib
-import sys
 
 def test_findPdbUrl():
     """tests the findPdbUrl function"""
@@ -37,46 +34,46 @@ def test_convertValue():
     ##############################################
     # ORIGINAL = 'dg'
     ##############################################    
-    dg = unit.Quantity(1, unit.kilojoules_per_mole)
-    assert pytest.approx(1.0, eps) == utils.convertValue(dg, 'dg', 'dg', outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
-    assert pytest.approx(1.0, eps)  == utils.convertValue(dg, 'dg', 'dg', temperature=273, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
-    assert pytest.approx(0.239, eps) == utils.convertValue(dg, 'dg', 'dg', temperature=273, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilocalories_per_mole)
-    assert pytest.approx(0.6697, eps) == utils.convertValue(dg, 'dg', 'ki').value_in_unit(unit.molar)
-    assert pytest.approx(0.6697, eps) == utils.convertValue(dg, 'dg', 'ic50').value_in_unit(unit.molar)
-    assert pytest.approx(0.1741, eps) == utils.convertValue(dg, 'dg', 'pic50').value_in_unit(unit.dimensionless)
+    dg = utils.ureg.Quantity(1, utils.ureg('kJ / mole'))
+    assert pytest.approx(1.0, eps) == utils.convertValue(dg, 'dg', 'dg', outUnit=utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(1.0, eps)  == utils.convertValue(dg, 'dg', 'dg', temperature=273, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(0.239, eps) == utils.convertValue(dg, 'dg', 'dg', temperature=273, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kcal / mole')).magnitude
+    assert pytest.approx(0.6697, eps) == utils.convertValue(dg, 'dg', 'ki').to(utils.ureg.molar).magnitude
+    assert pytest.approx(0.6697, eps) == utils.convertValue(dg, 'dg', 'ic50').to(utils.ureg.molar).magnitude
+    assert pytest.approx(0.1741, eps) == utils.convertValue(dg, 'dg', 'pic50').magnitude
     with pytest.raises(NotImplementedError):
         assert '0.24 kcal/mol' == utils.convertValue(dg, 'dg', 'fakeObs')
 
     ##############################################
     # ORIGINAL = 'ki'
     ##############################################    
-    ki = unit.Quantity(1, unit.molar)
-    assert pytest.approx(0.0, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=300, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
-    assert pytest.approx(0.0, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=273, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
-    assert pytest.approx(0.0, eps) == utils.convertValue(ki, 'ki', 'dg', outUnit=unit.kilocalories_per_mole).value_in_unit(unit.kilojoules_per_mole)
-    assert pytest.approx(1.0, eps) == utils.convertValue(ki, 'ki', 'ki', outUnit=unit.molar).value_in_unit(unit.molar)
-    assert pytest.approx(1.0, eps) == utils.convertValue(ki, 'ki', 'ic50').value_in_unit(unit.molar)
+    ki = utils.ureg.Quantity(1, utils.ureg.molar)
+    assert pytest.approx(0.0, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=300, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(0.0, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=273, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(0.0, eps) == utils.convertValue(ki, 'ki', 'dg', outUnit=utils.ureg('kcal / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(1.0, eps) == utils.convertValue(ki, 'ki', 'ki', outUnit=utils.ureg.molar).to(utils.ureg.molar).magnitude
+    assert pytest.approx(1.0, eps) == utils.convertValue(ki, 'ki', 'ic50').to(utils.ureg.molar).magnitude
 
-    assert pytest.approx(0.0, eps) == utils.convertValue(ki, 'ki', 'pic50').value_in_unit(unit.dimensionless)
+    assert pytest.approx(0.0, eps) == utils.convertValue(ki, 'ki', 'pic50').magnitude
 
     with pytest.raises(NotImplementedError):
         assert 'xxx' == utils.convertValue(ki, 'ki', 'fakeObs')
 
-    ki = unit.Quantity(1, unit.nano * unit.molar)
-    assert pytest.approx(-51.69, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=300, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
+    ki = utils.ureg.Quantity(1, utils.ureg('nanomolar'))
+    assert pytest.approx(-51.69, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=300, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
 
-    assert pytest.approx(-12.35, eps) == utils.convertValue(ki, 'ki', 'dg').value_in_unit(unit.kilocalories_per_mole)
-    assert pytest.approx(-12.35, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=300).value_in_unit(unit.kilocalories_per_mole)
-    assert pytest.approx(-12.35, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=300, outUnit=unit.kilocalories_per_mole).value_in_unit(unit.kilocalories_per_mole)
+    assert pytest.approx(-12.35, eps) == utils.convertValue(ki, 'ki', 'dg').to(utils.ureg('kcal / mole')).magnitude
+    assert pytest.approx(-12.35, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=300).to(utils.ureg('kcal / mole')).magnitude
+    assert pytest.approx(-12.35, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=300, outUnit=utils.ureg('kcal / mole')).to(utils.ureg('kcal / mole')).magnitude
 
-    assert pytest.approx(-47.04, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=273, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
+    assert pytest.approx(-47.04, eps) == utils.convertValue(ki, 'ki', 'dg', temperature=273, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
 
-    assert pytest.approx(1.00, eps) == utils.convertValue(ki, 'ki', 'ki').value_in_unit(unit.nano*unit.molar)
-    assert pytest.approx(1.00, eps) == utils.convertValue(ki, 'ki', 'ki', outUnit=unit.nano*unit.molar).value_in_unit(unit.nano*unit.molar)
+    assert pytest.approx(1.00, eps) == utils.convertValue(ki, 'ki', 'ki').to(utils.ureg('nanomolar')).magnitude
+    assert pytest.approx(1.00, eps) == utils.convertValue(ki, 'ki', 'ki', outUnit=utils.ureg('nanomolar')).to(utils.ureg('nanomolar')).magnitude
 
-    assert pytest.approx(1.0, eps) == utils.convertValue(ki, 'ki', 'ic50').value_in_unit(unit.nano * unit.molar)
+    assert pytest.approx(1.0, eps) == utils.convertValue(ki, 'ki', 'ic50').to(utils.ureg('nanomolar')).magnitude
 
-    assert pytest.approx(9, eps) == utils.convertValue(ki, 'ki', 'pic50').value_in_unit(unit.dimensionless)
+    assert pytest.approx(9, eps) == utils.convertValue(ki, 'ki', 'pic50').magnitude
 
     with pytest.raises(NotImplementedError):
         assert 'xxx' == utils.convertValue(ki, 'ki', 'fakeObs')
@@ -86,35 +83,35 @@ def test_convertValue():
     ##############################################
     # ORIGINAL = 'ic50'
     ##############################################    
-    ic50 = unit.Quantity(1, unit.molar)
-    assert pytest.approx(0.0, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=300, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
-    assert pytest.approx(0.0, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=273, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
-    assert pytest.approx(0.0, eps) == utils.convertValue(ic50, 'ic50', 'dg', outUnit=unit.kilocalories_per_mole).value_in_unit(unit.kilojoules_per_mole)
+    ic50 = utils.ureg.Quantity(1, utils.ureg.molar)
+    assert pytest.approx(0.0, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=300, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(0.0, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=273, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(0.0, eps) == utils.convertValue(ic50, 'ic50', 'dg', outUnit=utils.ureg('kcal / mole')).to(utils.ureg('kJ / mole')).magnitude
 
-    assert pytest.approx(1.0, eps) == utils.convertValue(ic50, 'ic50', 'ki', outUnit=unit.molar).value_in_unit(unit.molar)
+    assert pytest.approx(1.0, eps) == utils.convertValue(ic50, 'ic50', 'ki', outUnit=utils.ureg.molar).to(utils.ureg.molar).magnitude
 
-    assert pytest.approx(1.0, eps) == utils.convertValue(ic50, 'ic50', 'ic50', outUnit=unit.nano*unit.molar).value_in_unit(unit.molar)
+    assert pytest.approx(1.0, eps) == utils.convertValue(ic50, 'ic50', 'ic50', outUnit=utils.ureg('nanomolar')).to(utils.ureg.molar).magnitude
 
-    assert pytest.approx(0.0, eps) == utils.convertValue(ic50, 'ic50', 'pic50').value_in_unit(unit.dimensionless)
+    assert pytest.approx(0.0, eps) == utils.convertValue(ic50, 'ic50', 'pic50').magnitude
 
     with pytest.raises(NotImplementedError):
         utils.convertValue(ic50, 'ic50', 'fakeObs')
 
 
-    ic50 = unit.Quantity(1, unit.nano * unit.molar)
-    assert pytest.approx(-51.69, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=300, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
-    assert pytest.approx(-12.35, eps) == utils.convertValue(ic50, 'ic50', 'dg').value_in_unit(unit.kilocalories_per_mole)
-    assert pytest.approx(-12.35, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=300).value_in_unit(unit.kilocalories_per_mole)
-    assert pytest.approx(-12.35, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=300, outUnit=unit.kilocalories_per_mole).value_in_unit(unit.kilocalories_per_mole)
-    assert pytest.approx(-47.04, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=273, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole)
+    ic50 = utils.ureg.Quantity(1, utils.ureg('nanomolar'))
+    assert pytest.approx(-51.69, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=300, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(-12.35, eps) == utils.convertValue(ic50, 'ic50', 'dg').to(utils.ureg('kcal / mole')).magnitude
+    assert pytest.approx(-12.35, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=300).to(utils.ureg('kcal / mole')).magnitude
+    assert pytest.approx(-12.35, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=300, outUnit=utils.ureg('kcal / mole')).to(utils.ureg('kcal / mole')).magnitude
+    assert pytest.approx(-47.04, eps) == utils.convertValue(ic50, 'ic50', 'dg', temperature=273, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
 
-    assert pytest.approx(1.00, eps) == utils.convertValue(ic50, 'ic50', 'ki').value_in_unit(unit.nano*unit.molar)
-    assert pytest.approx(1.00, eps) == utils.convertValue(ic50, 'ic50', 'ki', outUnit=unit.nano*unit.molar).value_in_unit(unit.nano*unit.molar)
+    assert pytest.approx(1.00, eps) == utils.convertValue(ic50, 'ic50', 'ki').to(utils.ureg('nanomolar')).magnitude
+    assert pytest.approx(1.00, eps) == utils.convertValue(ic50, 'ic50', 'ki', outUnit=utils.ureg('nanomolar')).to(utils.ureg('nanomolar')).magnitude
 
-    assert pytest.approx(1.00, eps) == utils.convertValue(ic50, 'ic50', 'ic50').value_in_unit(unit.nano*unit.molar)
-    assert pytest.approx(1.00, eps) == utils.convertValue(ic50, 'ic50', 'ic50', outUnit=unit.nano*unit.molar).value_in_unit(unit.nano*unit.molar)
+    assert pytest.approx(1.00, eps) == utils.convertValue(ic50, 'ic50', 'ic50').to(utils.ureg('nanomolar')).magnitude
+    assert pytest.approx(1.00, eps) == utils.convertValue(ic50, 'ic50', 'ic50', outUnit=utils.ureg('nanomolar')).to(utils.ureg('nanomolar')).magnitude
 
-    assert pytest.approx(9.00, eps) == utils.convertValue(ic50, 'ic50', 'pic50').value_in_unit(unit.dimensionless)
+    assert pytest.approx(9.00, eps) == utils.convertValue(ic50, 'ic50', 'pic50').magnitude
 
     with pytest.raises(NotImplementedError):
         utils.convertValue(ic50, 'ic50', 'fakeObs')
@@ -124,34 +121,34 @@ def test_convertValue():
     ##############################################
     # ORIGINAL = 'pic50'
     ##############################################    
-    pic50 = unit.Quantity(0, unit.dimensionless)
-    assert pytest.approx(0.0, eps)   == utils.convertValue(pic50, 'pic50', 'dg', temperature = 300.0, outUnit = unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole) 
-    assert pytest.approx(0.0, eps)   == utils.convertValue(pic50, 'pic50', 'dg', temperature = 273.0, outUnit = unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole) 
-    assert pytest.approx(0.0, eps)   == utils.convertValue(pic50, 'pic50', 'dg', outUnit=unit.kilocalories_per_mole).value_in_unit(unit.kilojoules_per_mole) 
+    pic50 = utils.ureg.Quantity(0, '')
+    assert pytest.approx(0.0, eps)   == utils.convertValue(pic50, 'pic50', 'dg', temperature = 300.0, outUnit = utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(0.0, eps)   == utils.convertValue(pic50, 'pic50', 'dg', temperature = 273.0, outUnit = utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
+    assert pytest.approx(0.0, eps)   == utils.convertValue(pic50, 'pic50', 'dg', outUnit=utils.ureg('kcal / mole')).to(utils.ureg('kJ / mole')).magnitude
 
-    assert pytest.approx(1.0, eps)   == utils.convertValue(pic50, 'pic50', 'ki', outUnit=unit.molar).value_in_unit(unit.molar) 
+    assert pytest.approx(1.0, eps)   == utils.convertValue(pic50, 'pic50', 'ki', outUnit=utils.ureg.molar).to(utils.ureg.molar).magnitude
 
-    assert pytest.approx(1.0, eps)   == utils.convertValue(pic50, 'pic50', 'ic50', outUnit=unit.molar).value_in_unit(unit.molar) 
+    assert pytest.approx(1.0, eps)   == utils.convertValue(pic50, 'pic50', 'ic50', outUnit=utils.ureg.molar).to(utils.ureg.molar).magnitude
 
-    assert pytest.approx(0.0, eps)      == utils.convertValue(pic50, 'pic50', 'pic50').value_in_unit(unit.dimensionless)
+    assert pytest.approx(0.0, eps)      == utils.convertValue(pic50, 'pic50', 'pic50').magnitude
 
     with pytest.raises(NotImplementedError):
         utils.convertValue(pic50, 'pic50', 'fakeObs')
 
-    pic50 = unit.Quantity(9, unit.dimensionless)
-    assert pytest.approx(-51.69, eps) == utils.convertValue(pic50, 'pic50', 'dg', temperature=300, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole) 
+    pic50 = utils.ureg.Quantity(9, '')
+    assert pytest.approx(-51.69, eps) == utils.convertValue(pic50, 'pic50', 'dg', temperature=300, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
 
-    assert pytest.approx(-12.35, eps) == utils.convertValue(pic50, 'pic50', 'dg').value_in_unit(unit.kilocalories_per_mole) 
-    assert pytest.approx(-12.35, eps) == utils.convertValue(pic50, 'pic50', 'dg', temperature=300).value_in_unit(unit.kilocalories_per_mole) 
-    assert pytest.approx(-12.35, eps) == utils.convertValue(pic50, 'pic50', 'dg', temperature=300, outUnit=unit.kilocalories_per_mole).value_in_unit(unit.kilocalories_per_mole) 
+    assert pytest.approx(-12.35, eps) == utils.convertValue(pic50, 'pic50', 'dg').to(utils.ureg('kcal / mole')).magnitude
+    assert pytest.approx(-12.35, eps) == utils.convertValue(pic50, 'pic50', 'dg', temperature=300).to(utils.ureg('kcal / mole')).magnitude
+    assert pytest.approx(-12.35, eps) == utils.convertValue(pic50, 'pic50', 'dg', temperature=300, outUnit=utils.ureg('kcal / mole')).to(utils.ureg('kcal / mole')).magnitude
 
-    assert pytest.approx(-47.04, eps) == utils.convertValue(pic50, 'pic50', 'dg', temperature=273, outUnit=unit.kilojoules_per_mole).value_in_unit(unit.kilojoules_per_mole) 
+    assert pytest.approx(-47.04, eps) == utils.convertValue(pic50, 'pic50', 'dg', temperature=273, outUnit=utils.ureg('kJ / mole')).to(utils.ureg('kJ / mole')).magnitude
 
-    assert pytest.approx(1.00, eps)   == utils.convertValue(pic50, 'pic50', 'ki').value_in_unit(unit.nano*unit.molar) 
+    assert pytest.approx(1.00, eps)   == utils.convertValue(pic50, 'pic50', 'ki').to(utils.ureg('nanomolar')).magnitude
 
-    assert pytest.approx(1.00, eps)   == utils.convertValue(pic50, 'pic50', 'ic50').value_in_unit(unit.nano * unit.molar) 
-    assert pytest.approx(1.00, eps)   == utils.convertValue(pic50, 'pic50', 'ic50', outUnit=unit.nano*unit.molar).value_in_unit(unit.nano * unit.molar) 
+    assert pytest.approx(1.00, eps)   == utils.convertValue(pic50, 'pic50', 'ic50').to(utils.ureg('nanomolar')).magnitude
+    assert pytest.approx(1.00, eps)   == utils.convertValue(pic50, 'pic50', 'ic50', outUnit=utils.ureg('nanomolar')).to(utils.ureg('nanomolar')).magnitude
 
-    assert pytest.approx(9, eps)      == utils.convertValue(pic50, 'pic50', 'pic50').value_in_unit(unit.dimensionless) 
+    assert pytest.approx(9, eps)      == utils.convertValue(pic50, 'pic50', 'pic50').magnitude
     with pytest.raises(NotImplementedError):
         utils.convertValue(pic50, 'pic50', 'fakeObs')

@@ -3,8 +3,7 @@ Unit and regression test for the PLBenchmarks package.
 """
 
 # Import package, test suite, and other packages as needed
-from PLBenchmarks import ligands, targets
-from simtk import unit
+from PLBenchmarks import ligands, targets, utils
 import pytest
 import pandas as pd
 import yaml
@@ -25,7 +24,7 @@ def testLigand():
     dfs=[]
     for d in data:
         l = ligands.ligand(d)
-        l.deriveObservables(derivedObs='dg', outUnit=unit.kilocalories_per_mole)
+        l.deriveObservables(derivedObs='dg', outUnit=utils.ureg('kcal / mole'))
         l.addMolToFrame()
         l.getImg()
         dfs.append(l.getDF(['name', 'ROMol', 'DerivedMeasurement']))
@@ -82,7 +81,7 @@ def testLigand():
 
     eps = 0.01
     for key, item in jacs_data.items():
-        assert pytest.approx(item, eps) == float(df[df.name == key][('DerivedMeasurement', 'dg')].values[0].value_in_unit(unit.kilocalories_per_mole))
+        assert pytest.approx(item, eps) == df[df.name == key][('DerivedMeasurement', 'dg')].values[0].to(utils.ureg('kcal / mole')).magnitude
 
 
 def testLigandData():
