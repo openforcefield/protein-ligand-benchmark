@@ -6,7 +6,6 @@ Functions and classes for handling the target data.
 import yaml
 from PLBenchmarks import ligands, edges, utils
 
-from simtk import unit
 import numpy as np
 
 import matplotlib.pyplot as plt
@@ -107,12 +106,12 @@ class target:
         self.ligData = pd.Series({'numLigands': len(lgs)})
         affinities = []
         for key, item in lgs.items():
-            affinities.append(item.data[('DerivedMeasurement', 'dg')].value_in_unit(unit.kilocalories_per_mole))
-        self.ligData['maxDG'] = round(max(affinities), 1)
-        self.ligData['minDG'] = round(min(affinities), 1)
+            affinities.append(item.data[('DerivedMeasurement', 'dg')].to_base_units().magnitude)
+        self.ligData['maxDG'] = round(max(affinities), 1) * utils.ureg('kJ / mole')
+        self.ligData['minDG'] = round(min(affinities), 1) * utils.ureg('kJ / mole')
         # calculation of the mean absolute deviation
-        mean = np.mean(affinities)
-        mad = np.average(np.fabs(affinities - mean))
+        mean = np.average(affinities)
+        mad = np.average(np.fabs(affinities - mean)) * utils.ureg('kJ / mole')
         self.ligData['MAD(DG)'] = round(mad, 1)
 
     def getLigData(self):
@@ -174,10 +173,8 @@ class target:
         :return:  :py:class:`pandas.DataFrame`
         """
         df = self.data
-        print(df)
         df = df.append(self.getLigData())
         df = df.append(self.getHtmlData())
-        print(df['pdb'])
         if columns:
             return df[columns]
         else:

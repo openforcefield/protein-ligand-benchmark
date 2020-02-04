@@ -15,11 +15,11 @@ dependencies:
   - pyyaml
   - numpy
   - matplotlib
-  - openmm
   - pandas
   - importlib_resources
   - rdkit
   - networkx
+  - pint
   
   # Pip-only installs
   #- pip:

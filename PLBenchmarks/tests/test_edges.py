@@ -4,10 +4,7 @@ Unit and regression test for the PLBenchmarks package.
 
 # Import package, test suite, and other packages as needed
 from PLBenchmarks import edges
-from simtk import unit
-import pytest
-import pandas as pd
-import yaml
+
 try:
     from importlib.resources import open_text
 except ImportError:
