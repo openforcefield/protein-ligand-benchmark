@@ -20,6 +20,7 @@ dependencies:
   - rdkit
   - networkx
   - pint
+  - scipy
   
   # Pip-only installs
   #- pip:
