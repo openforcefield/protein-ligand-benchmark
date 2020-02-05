@@ -1,0 +1,48 @@
+id:        10
+date:      2020-02-04
+name:      bace
+fullname:  bace
+netcharge: xx
+pdb:       4DJW
+ligands:
+    - lig_CAT-13a
+    - lig_CAT-13b
+    - lig_CAT-13c
+    - lig_CAT-13d
+    - lig_CAT-13e
+    - lig_CAT-13f
+    - lig_CAT-13g
+    - lig_CAT-13h
+    - lig_CAT-13i
+    - lig_CAT-13j
+    - lig_CAT-13k
+    - lig_CAT-13m
+    - lig_CAT-13n
+    - lig_CAT-13o
+    - lig_CAT-17a
+    - lig_CAT-17b
+    - lig_CAT-17c
+    - lig_CAT-17d
+    - lig_CAT-17e
+    - lig_CAT-17f
+    - lig_CAT-17g
+    - lig_CAT-17h
+    - lig_CAT-17i
+    - lig_CAT-24
+    - lig_CAT-4a
+    - lig_CAT-4b
+    - lig_CAT-4c
+    - lig_CAT-4d
+    - lig_CAT-4i
+    - lig_CAT-4j
+    - lig_CAT-4k
+    - lig_CAT-4l
+    - lig_CAT-4m
+    - lig_CAT-4n
+    - lig_CAT-4o
+    - lig_CAT-4p
+references:
+    - measurement: doi
+    - calculation: doi
+comments:  ""
+associated_sets:

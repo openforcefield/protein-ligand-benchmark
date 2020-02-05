@@ -1,0 +1,324 @@
+---
+name:     lig_CAT-13a
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C([H])([H])[H])[H])c3c(c(c(c(c3[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13a/lig_CAT-13a.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13b
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C([H])([H])C([H])([H])[H])[H])c3c(c(c(c(c3[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13b/lig_CAT-13b.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13c
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C([H])(C([H])([H])[H])C([H])([H])[H])[H])c3c(c(c(c(c3[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13c/lig_CAT-13c.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13d
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13d/lig_CAT-13d.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13e
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C(C3([H])[H])([H])[H])([H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13e/lig_CAT-13e.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13f
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C(C(C3([H])[H])([H])[H])([H])[H])([H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13f/lig_CAT-13f.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13g
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C(C(C(C3([H])[H])([H])[H])([H])[H])([H])[H])([H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13g/lig_CAT-13g.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13h
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])C([H])([H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13h/lig_CAT-13h.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13i
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C([H])([H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13i/lig_CAT-13i.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13j
+smiles:   "[H]c1c(c(nc(c1[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13j/lig_CAT-13j.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13k
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(nc3[H])[H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13k/lig_CAT-13k.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13m
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(nc(nc3[H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13m/lig_CAT-13m.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13n
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3nc(c(c(n3)[H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13n/lig_CAT-13n.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-13o
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3=NC(=C(S3)[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-13o/lig_CAT-13o.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17a
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(c(c4[H])Cl)[H])Cl)[H])[H]"
+docked:   03_docked/lig_CAT-17a/lig_CAT-17a.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17b
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(c(c4[H])OC([H])([H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-17b/lig_CAT-17b.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17c
+smiles:   "[H]c1c(c(c(c(c1[H])c2c(c(c(c(c2[H])[C@@]3(C(=O)N(C(N3[H])([H])N([H])[H])C([H])([H])[H])C4(C(C4([H])[H])([H])[H])[H])[H])[H])[H])[H])C#N)[H]"
+docked:   03_docked/lig_CAT-17c/lig_CAT-17c.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17d
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(nc4[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-17d/lig_CAT-17d.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17e
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(nc4[H])[H])OC([H])([H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-17e/lig_CAT-17e.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17f
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(nc4[H])[H])C#N)[H])[H]"
+docked:   03_docked/lig_CAT-17f/lig_CAT-17f.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17g
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(nc4[H])[H])F)[H])[H]"
+docked:   03_docked/lig_CAT-17g/lig_CAT-17g.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17h
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(nc4[H])[H])Cl)[H])[H]"
+docked:   03_docked/lig_CAT-17h/lig_CAT-17h.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-17i
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(nc4[H])[H])C([H])([H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-17i/lig_CAT-17i.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-24
+smiles:   "[H]c1c(c(c(c(c1[H])[C@@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])C3(C(C3([H])[H])([H])[H])[H])[H])c4c(c(c(nc4[H])[H])C#CC([H])([H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-24/lig_CAT-24.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4a
+smiles:   "[H]c1c(c(c(c(c1[H])[H])c2c(c(c(c(c2[H])[C@@]3(C(=O)N(C(N3[H])([H])N([H])[H])C([H])([H])[H])c4c(c(c(c(c4[H])[H])[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4a/lig_CAT-4a.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4b
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(c(c4[H])OC([H])([H])[H])[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4b/lig_CAT-4b.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4c
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(c(c4[H])[H])OC([H])([H])[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4c/lig_CAT-4c.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4d
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(c(c4[H])OC([H])([H])C([H])([H])[H])[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4d/lig_CAT-4d.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4i
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(c(n4)[H])[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4i/lig_CAT-4i.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4j
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(nc4[H])[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4j/lig_CAT-4j.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4k
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(nc(c4[H])[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4k/lig_CAT-4k.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4l
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(nc(c(n4)[H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4l/lig_CAT-4l.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4m
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(nc4[H])[H])C([H])([H])[H])[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4m/lig_CAT-4m.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4n
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(nc4[H])[H])C#N)[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4n/lig_CAT-4n.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4o
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(nc4[H])[H])F)[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4o/lig_CAT-4o.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
+---
+name:     lig_CAT-4p
+smiles:   "[H]c1c(c(c(c(c1[H])[H])[C@]2(C(=O)N(C(N2[H])([H])N([H])[H])C([H])([H])[H])c3c(c(c(c(c3[H])c4c(c(c(nc4[H])[H])Cl)[H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_CAT-4p/lig_CAT-4p.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        yyy
+    comment:    aaa
+...
