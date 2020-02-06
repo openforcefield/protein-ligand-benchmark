@@ -42,7 +42,7 @@ ligands:
     - lig_CAT-4o
     - lig_CAT-4p
 references:
-    - measurement: doi
-    - calculation: doi
+    measurement:
+    calculation:
 comments:  ""
 associated_sets:
