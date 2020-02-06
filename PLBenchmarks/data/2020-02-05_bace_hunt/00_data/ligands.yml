@@ -1,0 +1,288 @@
+---
+name:     lig_11
+smiles:   "[H]c1c(c(c(c(c1[H])[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_11/lig_11.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_12
+smiles:   "[H]c1c(c(c(c(c1[H])Cl)[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_12/lig_12.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_13
+smiles:   "[H]c1c(c(c(c(c1[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H])C#N)[H]"
+docked:   03_docked/lig_13/lig_13.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_14
+smiles:   "[H]c1c(c(c(c(c1[H])OC([H])([H])[H])[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_14/lig_14.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_15
+smiles:   "[H]c1c(c(c(c(c1[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])OC([H])([H])[H])[H])[H]"
+docked:   03_docked/lig_15/lig_15.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_16
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(c(c3[H])[H])OC([H])([H])[H])[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_16/lig_16.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_17
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(c(c3[H])Cl)[H])Cl)[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_17/lig_17.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_18
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(c(c3[H])F)[H])OC([H])([H])[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_18/lig_18.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_19
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(c(c3F)[H])[H])OC([H])([H])[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_19/lig_19.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_1a
+smiles:   "[H]c1c(c(c(c2c1OC(C([C@]23C(=O)N(C(N3[H])([H])N([H])[H])C([H])([H])[H])([H])[H])(C([H])([H])[H])C([H])([H])[H])[H])Br)[H]"
+docked:   03_docked/lig_1a/lig_1a.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_20
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(c(c3[H])Cl)[H])F)[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_20/lig_20.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_21
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(c(c3F)[H])[H])Cl)[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_21/lig_21.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_22
+smiles:   "[H]c1c(c(c(c(c1[H])OC([H])(C([H])([H])[H])C([H])([H])[H])[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_22/lig_22.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_23
+smiles:   "[H]c1c(c(c(c(c1[H])OC([H])([H])C([H])([H])[H])[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_23/lig_23.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_24
+smiles:   "[H]c1c(c(c(c(c1[H])C(F)(F)F)[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_24/lig_24.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_25
+smiles:   "[H]c1c(c(c(c(c1[H])SC([H])([H])[H])[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_25/lig_25.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_26
+smiles:   "[H]c1c(c(c(c(c1[H])OC([H])(F)F)[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_26/lig_26.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_27
+smiles:   "[H]c1c(c(c(c(c1[H])F)[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_27/lig_27.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_28
+smiles:   "[H]c1c(c2c(c(c1C3(C(C(C(C(C3([H])[H])([H])[H])([H])[H])([H])[H])([H])[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_28/lig_28.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_29
+smiles:   "[H]c1c(c(c(c2c1OC(C([C@]23C(=O)N(C(N3[H])([H])N([H])[H])C([H])([H])[H])([H])[H])(C([H])([H])[H])C([H])([H])[H])[H])OC([H])([H])C([H])(C([H])([H])[H])C([H])([H])[H])[H]"
+docked:   03_docked/lig_29/lig_29.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_30
+smiles:   "[H]c1c(c2c(c(c1N3C(C(C(C(C3([H])[H])([H])[H])([H])[H])([H])[H])([H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_30/lig_30.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_31
+smiles:   "[H]c1c(c(c(nc1[H])[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_31/lig_31.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_32
+smiles:   "[H]c1c(c(nc(c1[H])c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H])[H]"
+docked:   03_docked/lig_32/lig_32.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_33
+smiles:   "[H]c1c(c2c(c(c1c3c(c(nc(c3[H])[H])[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_33/lig_33.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_34
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(nc3[H])[H])Cl)[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_34/lig_34.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_35
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(nc3[H])[H])C(F)(F)F)[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_35/lig_35.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_36
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(nc3[H])[H])C#CC([H])([H])[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_36/lig_36.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_37
+smiles:   "[H]c1c(c(c(nc1[H])F)c2c(c(c3c(c2[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O3)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H])[H])[H]"
+docked:   03_docked/lig_37/lig_37.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_38
+smiles:   "[H]c1c(c2c(c(c1c3c(c(c(nc3[H])[H])F)[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_38/lig_38.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_39
+smiles:   "[H]c1c(c2c(c(c1c3c(nc(nc3[H])[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_39/lig_39.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_40
+smiles:   "[H]c1c(c2c(c(c1C3=C(C(=NS3)[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_40/lig_40.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...
+---
+name:     lig_41
+smiles:   "[H]c1c(c2c(c(c1N([H])C(=O)C3=C(C(=C(O3)C([H])([H])[H])[H])[H])[H])[C@@]4(C(=O)N(C(N4[H])([H])N([H])[H])C([H])([H])[H])C(C(O2)(C([H])([H])[H])C([H])([H])[H])([H])[H])[H]"
+docked:   03_docked/lig_41/lig_41.sdf
+measurement:
+    ic50:       [ 00, 00, nM]
+    doi:        10.1021/jm4002154
+    comment:    aaa
+...

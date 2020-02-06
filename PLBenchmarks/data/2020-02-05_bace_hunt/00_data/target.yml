@@ -1,0 +1,44 @@
+id:        X
+date:   2019-12-13
+name:      bace_hunt
+fullname:  bace_hunt
+netcharge: xx
+pdb:       PDBP
+ligands:
+    - lig_11
+    - lig_12
+    - lig_13
+    - lig_14
+    - lig_15
+    - lig_16
+    - lig_17
+    - lig_18
+    - lig_19
+    - lig_1a
+    - lig_20
+    - lig_21
+    - lig_22
+    - lig_23
+    - lig_24
+    - lig_25
+    - lig_26
+    - lig_27
+    - lig_28
+    - lig_29
+    - lig_30
+    - lig_31
+    - lig_32
+    - lig_33
+    - lig_34
+    - lig_35
+    - lig_36
+    - lig_37
+    - lig_38
+    - lig_39
+    - lig_40
+    - lig_41
+references:
+    measurement:
+    calculation:
+comments:  ""
+associated_sets:
