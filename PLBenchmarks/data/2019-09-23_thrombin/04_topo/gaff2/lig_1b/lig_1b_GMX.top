@@ -1,0 +1,15 @@
+; lig_1b_GMX.top created by acpype (Rev: 0) on Tue Oct 29 18:25:38 2019
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333
+
+; Include lig_1b_GMX.itp topology
+#include "lig_1b_GMX.itp"
+
+[ system ]
+ lig_1b
+
+[ molecules ]
+; Compound        nmols
+ lig_1b           1     
