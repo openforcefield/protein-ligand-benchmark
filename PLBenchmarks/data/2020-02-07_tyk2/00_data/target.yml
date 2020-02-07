@@ -1,0 +1,29 @@
+id:        X
+date:   2019-12-13
+name:      tyk2
+fullname:  tyk2
+netcharge: xx
+pdb:       PDBP
+ligands:
+    - lig_ejm_31
+    - lig_ejm_42
+    - lig_ejm_43
+    - lig_ejm_44
+    - lig_ejm_45
+    - lig_ejm_46
+    - lig_ejm_47
+    - lig_ejm_48
+    - lig_ejm_49
+    - lig_ejm_50
+    - lig_ejm_54
+    - lig_ejm_55
+    - lig_jmc_23
+    - lig_jmc_27
+    - lig_jmc_28
+    - lig_jmc_30
+    - target_tyk2.yml
+references:
+    - measurement: doi
+    - calculation: doi
+comments:  ""
+associated_sets:
