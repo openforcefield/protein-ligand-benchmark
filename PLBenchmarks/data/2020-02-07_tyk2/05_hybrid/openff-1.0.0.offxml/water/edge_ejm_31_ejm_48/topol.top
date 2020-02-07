@@ -1,0 +1,12 @@
+#include "amber99sb-star-ildn-mut.ff/forcefield.itp"
+#include "ffMOL.itp"
+#include "merged.itp"
+#include "amber99sb-star-ildn-mut.ff/tip3p.itp"
+#include "amber99sb-star-ildn-mut.ff/ions.itp"
+
+[ system ]
+simulation system in water
+
+[ molecules ]
+MOL 1
+SOL              1978
