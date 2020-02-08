@@ -9,6 +9,6 @@ simulation system in water
 
 [ molecules ]
 MOL 1
-SOL         2060
+SOL         2058
 NaJ              6
-ClJ              6
+ClJ              7
