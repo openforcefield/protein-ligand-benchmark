@@ -9,15 +9,20 @@ dependencies:
   - pytest
   - pytest-cov
   - codecov
+  - nbval
+  - coverage < 5.0
 
   - pyyaml
   - numpy
-  - openmm
+  - matplotlib
   - pandas
   - importlib_resources
   - rdkit
+  - networkx
+  - pint
+  - scipy
   
-    # Pip-only installs
+  # Pip-only installs
   #- pip:
   #  - codecov
   #   - pyaml

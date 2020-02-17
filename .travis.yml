@@ -43,7 +43,7 @@ install:
 
 
 script:
-  - pytest -v --cov=PLBenchmarks PLBenchmarks/tests/
+  - pytest -v --nbval-lax --cov=PLBenchmarks PLBenchmarks/tests/ examples/
 
 notifications:
     email: false
