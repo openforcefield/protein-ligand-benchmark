@@ -3,7 +3,7 @@ date:   2019-12-13
 name:      bace_hunt
 fullname:  bace_hunt
 netcharge: xx
-pdb:       PDBP
+pdb:       
 ligands:
     - lig_11
     - lig_12

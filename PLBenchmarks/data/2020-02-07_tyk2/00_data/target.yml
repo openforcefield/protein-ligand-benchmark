@@ -3,7 +3,7 @@ date:   2019-12-13
 name:      tyk2
 fullname:  tyk2
 netcharge: xx
-pdb:       PDBP
+pdb:       
 ligands:
     - lig_ejm_31
     - lig_ejm_42
@@ -23,7 +23,7 @@ ligands:
     - lig_jmc_30
     - target_tyk2.yml
 references:
-    - measurement: doi
-    - calculation: doi
+    measurement: doi
+    calculation: doi
 comments:  ""
 associated_sets:
