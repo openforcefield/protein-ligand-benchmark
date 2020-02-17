@@ -1,7 +1,41 @@
 API Documentation
 =================
 
-.. autosummary::
-   :toctree: autosummary
+.. toctree::
+   :maxdepth: 1
 
-   plbenchmarks.canvas
+Targets
+-----------------
+
+.. toctree::
+   :maxdepth: 1
+
+.. automodule::  PLBenchmarks.targets
+		 :members:
+
+Ligands
+-----------------
+.. toctree::
+   :maxdepth: 1
+
+.. automodule::  PLBenchmarks.ligands
+		 :members:
+
+Edges
+-----------------
+.. toctree::
+   :maxdepth: 1
+
+.. automodule::  PLBenchmarks.edges
+		 :members:
+
+Utils
+-----------------
+.. toctree::
+   :maxdepth: 1
+
+.. automodule::  PLBenchmarks.utils	      
+		:members:
+
+   
+

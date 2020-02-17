@@ -1,0 +1,19 @@
+#include "amber99sb-star-ildn-mut.ff/forcefield.itp"
+#include "ffMOL.itp"
+#include "merged.itp"
+#include "prot.itp"
+#include "amber99sb-star-ildn-mut.ff/tip3p.itp"
+#include "amber99sb-star-ildn-mut.ff/ions.itp"
+
+[ system ]
+simulation system in water
+
+[ molecules ]
+protein 1
+MG 1
+ZN 1
+MOL 1
+SOL 345
+SOL         19059
+NaJ              62
+ClJ              58

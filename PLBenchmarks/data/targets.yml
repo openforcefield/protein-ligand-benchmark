@@ -7,4 +7,28 @@
 -
     name:     thrombin
     dir:      03_thrombin
+-
+    name:     p38
+    date:     2019-12-09
+    dir:      2019-12-09_p38
+-
+    name:     ptp1b
+    date:     2019-12-12
+    dir:      2019-12-12_ptp1b
+-
+    name:     galectin
+    date:     2019-12-13
+    dir:      2019-12-13_galectin
+-
+    name:     cdk2
+    date:     2019-12-13
+    dir:      2019-12-13_cdk2
+-
+    name:     cmet
+    date:     2019-12-13
+    dir:      2019-12-13_cmet
+-
+    name:     mcl1
+    date:     2019-12-13
+    dir:      2019-12-13_mcl1
 

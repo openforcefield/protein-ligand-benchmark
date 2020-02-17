@@ -1,0 +1,50 @@
+id:        4
+date:      2019-12-09
+name:      p38
+fullname:  p38 alpha MAP kinase
+netcharge: xx
+pdb:       1OUY, 3FLY
+ligands:
+    - lig_p38a_2aa
+    - lig_p38a_2bb
+    - lig_p38a_2c
+    - lig_p38a_2e
+    - lig_p38a_2ee
+    - lig_p38a_2f
+    - lig_p38a_2ff
+    - lig_p38a_2g
+    - lig_p38a_2gg
+    - lig_p38a_2h
+    - lig_p38a_2i
+    - lig_p38a_2j
+    - lig_p38a_2k
+    - lig_p38a_2l
+    - lig_p38a_2m
+    - lig_p38a_2n
+    - lig_p38a_2o
+    - lig_p38a_2p
+    - lig_p38a_2q
+    - lig_p38a_2r
+    - lig_p38a_2s
+    - lig_p38a_2t
+    - lig_p38a_2u
+    - lig_p38a_2v
+    - lig_p38a_2x
+    - lig_p38a_2y
+    - lig_p38a_2z
+    - lig_p38a_3fln
+    - lig_p38a_3flq
+    - lig_p38a_3flw
+    - lig_p38a_3fly
+    - lig_p38a_3flz
+    - lig_p38a_3fmh
+    - lig_p38a_3fmk
+references:
+    measurement:
+        - 10.1021/jm101423y
+    calculation:
+        - 10.1021/ja512751q
+        - 10.1021/acs.jcim.9b00105
+comments: inversion of a stereocenter in one mutation
+associated_sets:
+    - Schrodinger JACS

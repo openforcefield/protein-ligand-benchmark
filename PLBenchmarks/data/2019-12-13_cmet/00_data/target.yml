@@ -1,0 +1,27 @@
+id:       8
+date:   2019-12-13
+name:      cmet
+fullname:  tyrosine-protein kinase Met; hepatocyte growth factor receptor (HGFR)
+netcharge: xx
+pdb:       4R1Y
+ligands:
+    - lig_CHEMBL3402744_300_4
+    - lig_CHEMBL3402745_200_5
+    - lig_CHEMBL3402747_3400_7
+    - lig_CHEMBL3402748_5300_8
+    - lig_CHEMBL3402749_500_9
+    - lig_CHEMBL3402750_400_10
+    - lig_CHEMBL3402751_2100_11
+    - lig_CHEMBL3402752_30000_12
+    - lig_CHEMBL3402753_200_13
+    - lig_CHEMBL3402754_40_14
+    - lig_CHEMBL3402755_4200_15
+    - lig_CHEMBL3402761_1_21
+references:
+    measurement:
+        - 10.1016/j.bmcl.2015.02.002
+    calculation: 
+comments:  ""
+associated_sets:
+    - Merck KGaA FEP Benchmarks
+    - YANK Benchmarks

@@ -26,10 +26,10 @@ ligands:
     - lig_18659-1
     - lig_18660-1
 references:
-    - measurement:
-    - calculation:
+    measurement:
+    calculation:
         - 10.1021/ja512751q
-        - acs.jcim.9b00105
+        - 10.1021/acs.jcim.9b00105
 comments:
 associated_sets:
     - Schrodinger JACS

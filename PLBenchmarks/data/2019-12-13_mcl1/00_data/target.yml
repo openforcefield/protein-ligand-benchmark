@@ -1,0 +1,57 @@
+id:        9
+date:   2019-12-13
+name:      mcl1
+fullname:  Induced myeloid leukemia cell differentiation protein Mcl-1
+netcharge: xx
+pdb:       4HW3
+ligands:
+    - lig_23
+    - lig_26
+    - lig_27
+    - lig_28
+    - lig_29
+    - lig_30
+    - lig_31
+    - lig_32
+    - lig_33
+    - lig_34
+    - lig_35
+    - lig_36
+    - lig_37
+    - lig_38
+    - lig_39
+    - lig_40
+    - lig_41
+    - lig_42
+    - lig_43
+    - lig_44
+    - lig_45
+    - lig_46
+    - lig_47
+    - lig_48
+    - lig_49
+    - lig_50
+    - lig_51
+    - lig_52
+    - lig_53
+    - lig_54
+    - lig_56
+    - lig_57
+    - lig_58
+    - lig_60
+    - lig_61
+    - lig_62
+    - lig_63
+    - lig_64
+    - lig_65
+    - lig_66
+    - lig_67
+    - lig_68
+references:
+    measurement:
+    calculation:
+        - 10.1021/ja512751q
+        - 10.1021/acs.jcim.9b00105
+comments:  "hydrophobic interactions contributing to binding"
+associated_sets:
+    - Schrodinger JACS

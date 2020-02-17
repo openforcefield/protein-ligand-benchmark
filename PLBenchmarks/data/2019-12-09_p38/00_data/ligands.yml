@@ -1,0 +1,306 @@
+---
+name:     lig_p38a_2aa
+smiles:   "[H][O][C]([H])([H])[C]([H])([N]([H])[C]1=[N][C]2=[C]([C]([H])=[N]1)[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H])[C]([H])([H])[O][H]"
+docked:   03_docked/lig_p38a_2aa/lig_p38a_2aa.sdf
+measurement:
+    ic50:       [ 158, 67, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2aa"
+...
+---
+name:     lig_p38a_2bb
+smiles:   "[H][C]1=[N][C]([N]([H])[C]([H])([H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2bb/lig_p38a_2bb.sdf
+measurement:
+    ic50:       [ 223, 74, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2bb"
+...
+---
+name:     lig_p38a_2c
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([C]1=[C]([Cl])[C]([H])=[C]([H])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2c/lig_p38a_2c.sdf
+measurement:
+    ic50:       [ 21, 10, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2c"
+...
+---
+name:     lig_p38a_2e
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([H])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2e/lig_p38a_2e.sdf
+measurement:
+    ic50:       [ 14, 6, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2e"
+...
+---
+name:     lig_p38a_2ee
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[N]([C](=[O])[C]([H])([H])[H])[C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2ee/lig_p38a_2ee.sdf
+measurement:
+    ic50:       [ 1, 0.6, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2ee"
+...
+---
+name:     lig_p38a_2f
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([H])[C]([H])=[C]([H])[C]([F])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2f/lig_p38a_2f.sdf
+measurement:
+    ic50:       [ 594, 211, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2f"
+...
+---
+name:     lig_p38a_2ff
+smiles:   "[H][O][C]1([H])[C]([H])([H])[C]([H])([H])[C]([H])([N]([H])[C]2=[N][C]3=[C]([C]([H])=[N]2)[C]([H])=[C]([O][C]2=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]2[H])[C](=[O])[N]3[C]([H])([H])[H])[C]([H])([H])[C]1([H])[H]"
+docked:   03_docked/lig_p38a_2ff/lig_p38a_2ff.sdf
+measurement:
+    ic50:       [ 4, 0.6, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2ff"
+...
+---
+name:     lig_p38a_2g
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([H])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2g/lig_p38a_2g.sdf
+measurement:
+    ic50:       [ 15, 6, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2g"
+...
+---
+name:     lig_p38a_2gg
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2gg/lig_p38a_2gg.sdf
+measurement:
+    ic50:       [ 15, 2, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2gg"
+...
+---
+name:     lig_p38a_2h
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([S][C]1=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]1[F])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2h/lig_p38a_2h.sdf
+measurement:
+    ic50:       [ 111, 35, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2h"
+...
+---
+name:     lig_p38a_2i
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([C]([H])([H])[C]1=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]1[F])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2i/lig_p38a_2i.sdf
+measurement:
+    ic50:       [ 42, 15, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2i"
+...
+---
+name:     lig_p38a_2j
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([C]([H])([H])[C]1=[C]([H])[C]([H])=[C]([F])[C]([H])=[C]1[F])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2j/lig_p38a_2j.sdf
+measurement:
+    ic50:       [ 40, 11, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2j"
+...
+---
+name:     lig_p38a_2k
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[H]"
+docked:   03_docked/lig_p38a_2k/lig_p38a_2k.sdf
+measurement:
+    ic50:       [ 18, 3, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2k"
+...
+---
+name:     lig_p38a_2l
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2l/lig_p38a_2l.sdf
+measurement:
+    ic50:       [ 1, 0.1, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2l"
+...
+---
+name:     lig_p38a_2m
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]1([H])[C]([H])([H])[C]1([H])[H]"
+docked:   03_docked/lig_p38a_2m/lig_p38a_2m.sdf
+measurement:
+    ic50:       [  9,  1, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2m"
+...
+---
+name:     lig_p38a_2n
+smiles:   "[H][O][C]([H])([H])[C]([H])([H])[C]([H])([H])[N]1[C](=[O])[C]([O][C]2=[C]([H])[C]([H])=[C]([F])[C]([H])=[C]2[F])=[C]([H])[C]2=[C]1[N]=[C]([N]([H])[C]1([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]1([H])[H])[N]=[C]2[H]"
+docked:   03_docked/lig_p38a_2n/lig_p38a_2n.sdf
+measurement:
+    ic50:       [  2, 0.5, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2n"
+...
+---
+name:     lig_p38a_2o
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2o/lig_p38a_2o.sdf
+measurement:
+    ic50:       [ 20,  4, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2o"
+...
+---
+name:     lig_p38a_2p
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[C]([H])([H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2p/lig_p38a_2p.sdf
+measurement:
+    ic50:       [ 6, 0.5, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2p"
+...
+---
+name:     lig_p38a_2q
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]1([H])[C]([H])([H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[C]1([H])[H]"
+docked:   03_docked/lig_p38a_2q/lig_p38a_2q.sdf
+measurement:
+    ic50:       [ 1, 0.2, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2q"
+...
+---
+name:     lig_p38a_2r
+smiles:   "[H][O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[N]1[C](=[O])[C]([O][C]2=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]2[H])=[C]([H])[C]2=[C]1[N]=[C]([N]([H])[C]1([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]1([H])[H])[N]=[C]2[H]"
+docked:   03_docked/lig_p38a_2r/lig_p38a_2r.sdf
+measurement:
+    ic50:       [ 12, 2, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2r"
+...
+---
+name:     lig_p38a_2s
+smiles:   "[H][O][C]([H])([H])[C@@]([H])([O][H])[C]([H])([H])[N]1[C](=[O])[C]([O][C]2=[C]([H])[C]([H])=[C]([F])[C]([H])=[C]2[F])=[C]([H])[C]2=[C]1[N]=[C]([N]([H])[C]1([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]1([H])[H])[N]=[C]2[H]"
+docked:   03_docked/lig_p38a_2s/lig_p38a_2s.sdf
+measurement:
+    ic50:       [ 7, 1, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2s"
+...
+---
+name:     lig_p38a_2t
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[C]#[N]"
+docked:   03_docked/lig_p38a_2t/lig_p38a_2t.sdf
+measurement:
+    ic50:       [ 2, 0.3, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2t"
+...
+---
+name:     lig_p38a_2u
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]1([H])[C]([H])([H])[C]([H])([H])[N]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])([H])[C]1([H])[H]"
+docked:   03_docked/lig_p38a_2u/lig_p38a_2u.sdf
+measurement:
+    ic50:       [ 1, 0.1, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 3, entry 2u"
+...
+---
+name:     lig_p38a_2v
+smiles:   "[H][C]1=[N][C]([N]([H])[C]([H])([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2v/lig_p38a_2v.sdf
+measurement:
+    ic50:       [ 260, 75, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2v"
+...
+---
+name:     lig_p38a_2x
+smiles:   "[H][C]1=[N][C]([N]([H])[C@@]2([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2x/lig_p38a_2x.sdf
+measurement:
+    ic50:       [ 31, 8, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2x"
+...
+---
+name:     lig_p38a_2y
+smiles:   "[H][O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[N]([H])[C]1=[N][C]2=[C]([C]([H])=[N]1)[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2y/lig_p38a_2y.sdf
+measurement:
+    ic50:       [ 67, 26, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2y"
+...
+---
+name:     lig_p38a_2z
+smiles:   "[H][O][C]([H])([H])[C]([N]([H])[C]1=[N][C]2=[C]([C]([H])=[N]1)[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_2z/lig_p38a_2z.sdf
+measurement:
+    ic50:       [ 25,  8, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2z"
+...
+---
+name:     lig_p38a_3fln
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_3fln/lig_p38a_3fln.sdf
+measurement:
+    ic50:       [ 10, 4, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2a"
+...
+---
+name:     lig_p38a_3flq
+smiles:   "[H][C]1=[C]2[C](=[N][C]([N]([H])[C@@]([H])([C]([H])([H])[H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[H])=[N]1)[N]([C]([H])([H])[H])[C](=[O])[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])=[C]2[H]"
+docked:   03_docked/lig_p38a_3flq/lig_p38a_3flq.sdf
+measurement:
+    ic50:       [ 50, 20, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2dd"
+...
+---
+name:     lig_p38a_3flw
+smiles:   "[H][O][C]([H])([H])[C]([H])([H])[C]([H])([N]([H])[C]1=[N][C]([H])=[C]2[C](=[N]1)[N]([C]([H])([H])[H])[C](=[O])[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])=[C]2[H])[C]([H])([H])[C]([H])([H])[O][H]"
+docked:   03_docked/lig_p38a_3flw/lig_p38a_3flw.sdf
+measurement:
+    ic50:       [ 14, 2, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2b"
+...
+---
+name:     lig_p38a_3fly
+smiles:   "[H][C]1=[N][C]([N]([H])[C]([H])([C]([H])([H])[H])[C]([H])([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_3fly/lig_p38a_3fly.sdf
+measurement:
+    ic50:       [ 4, 0.3, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2w"
+...
+---
+name:     lig_p38a_3flz
+smiles:   "[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]"
+docked:   03_docked/lig_p38a_3flz/lig_p38a_3flz.sdf
+measurement:
+    ic50:       [ 106, 36, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 2, entry 2d"
+...
+---
+name:     lig_p38a_3fmh
+smiles:   "[H][C]1=[N][N]([C]([H])([H])[C@]([H])([N]([H])[C]2=[N][C]([H])=[C]3[C](=[N]2)[N]([C]([H])([H])[H])[C](=[O])[C]([O][C]2=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]2[H])=[C]3[H])[C]([H])([H])[H])[N]=[N]1"
+docked:   03_docked/lig_p38a_3fmh/lig_p38a_3fmh.sdf
+measurement:
+    ic50:       [ 11, 0, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2ii; no error given"
+...
+---
+name:     lig_p38a_3fmk
+smiles:   "[H][C]1=[N][N]([C]([H])([H])[C@@]([H])([N]([H])[C]2=[N][C]([H])=[C]3[C](=[N]2)[N]([C]([H])([H])[H])[C](=[O])[C]([O][C]2=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]2[H])=[C]3[H])[C]([H])([H])[H])[N]=[N]1"
+docked:   03_docked/lig_p38a_3fmk/lig_p38a_3fmk.sdf
+measurement:
+    ic50:       [ 2, 0.7, nM]
+    doi:        10.1021/jm101423y
+    comment:    "Table 4, entry 2hh"
+...

@@ -1,0 +1,23 @@
+id:        6
+date:      2019-12-13
+name:      galectin
+fullname:  galectin-3C
+netcharge: xx
+pdb:       5E89,5E8A,5E88
+ligands:
+    - lig_01_ligF
+    - lig_02_ligOMe     
+    - lig_03_ligNHMe
+    - lig_04_ligNMe2
+    - lig_05_ligOEt
+    - lig_06_ligPyr
+    - lig_07_ligOH
+    - lig_08_ligNH2
+references:
+    measurement:
+        - 10.1002/cbic.201600285
+    calculation:
+        - 10.1007/s10822-018-0110-5
+comments:  ""
+associated_sets:
+

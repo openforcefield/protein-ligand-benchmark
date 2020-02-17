@@ -1,0 +1,72 @@
+---
+name:     lig_01_ligF
+smiles:   "[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)F)F)F)[H])([H])O[H])[H])[H]"
+docked:   03_docked/lig_01_ligF/lig_01_ligF.sdf
+measurement:
+    ki:         [ 3.4, 0.21, uM]
+    doi:        10.1039/C8OB02888E
+    comment:    "Table 1, entry 3"
+...
+---
+name:     lig_02_ligOMe
+smiles:   "[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)OC([H])([H])[H])F)F)[H])([H])O[H])[H])[H]"
+docked:   03_docked/lig_02_ligOMe/lig_02_ligOMe.sdf
+measurement:
+    ki:         [ 18, 2.1, uM]
+    doi:        10.1039/C8OB02888E
+    comment:    "Table 1, entry 3"
+...
+---
+name:     lig_03_ligNHMe
+smiles:   "[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)N([H])C([H])([H])[H])F)F)[H])([H])O[H])[H])[H]"
+docked:   03_docked/lig_03_ligNHMe/lig_03_ligNHMe.sdf
+measurement:
+    ki:         [ 18, 0.9, uM]
+    doi:        10.1039/C8OB02888E
+    comment:    "Table 1, entry 8"
+...
+---
+name:     lig_04_ligNMe2
+smiles:   "[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)N(C([H])([H])[H])C([H])([H])[H])F)F)[H])([H])O[H])[H])[H]"
+docked:   03_docked/lig_04_ligNMe2/lig_04_ligNMe2.sdf
+measurement:
+    ki:         [ 40, 3.3, uM]
+    doi:        10.1039/C8OB02888E
+    comment:    "Table 1, entry 9"
+...
+---
+name:     lig_05_ligOEt
+smiles:   "[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)OC([H])([H])C([H])([H])[H])F)F)[H])([H])O[H])[H])[H]"
+docked:   03_docked/lig_05_ligOEt/lig_05_ligOEt.sdf
+measurement:
+    ki:         [ 88, 12, uM]
+    doi:        10.1039/C8OB02888E
+    comment:    "Table 1, entry 7"
+...
+---
+name:     lig_06_ligPyr
+smiles:   "[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)N5C(C(C(C5([H])[H])([H])[H])([H])[H])([H])[H])F)F)[H])([H])O[H])[H])[H]"
+docked:   03_docked/lig_06_ligPyr/lig_06_ligPyr.sdf
+measurement:
+    ki:         [ 300, 00, uM]
+    doi:        10.1039/C8OB02888E
+    comment:    "Table 1, entry 10, ki > 300; no error given"
+...
+---
+name:     lig_07_ligOH
+smiles:   "[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)O[H])F)F)[H])([H])O[H])[H])[H]"
+docked:   03_docked/lig_07_ligOH/lig_07_ligOH.sdf
+measurement:
+    ki:         [ 23, 1.7, uM]
+    doi:        10.1039/C8OB02888E
+    comment:    "Table 1, entry 2"
+...
+---
+name:     lig_08_ligNH2
+smiles:   "[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)N([H])[H])F)F)[H])([H])O[H])[H])[H]"
+docked:   03_docked/lig_08_ligNH2/lig_08_ligNH2.sdf
+measurement:
+    ki:         [ 11, 0.6, uM]
+    doi:        10.1039/C8OB02888E
+    comment:    "Table 1, entry 5"
+...

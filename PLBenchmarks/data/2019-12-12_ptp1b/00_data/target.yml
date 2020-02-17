@@ -1,0 +1,38 @@
+id:        5
+date:      2019-12-12
+name:      ptp1b
+fullname:  protein-tyrosine phosphatase 1B
+netcharge: xx
+pdb:       2QBS
+ligands:
+    - lig_20667_2qbp
+    - lig_20669_2qbr
+    - lig_20670_2qbs
+    - lig_23330_2qbq
+    - lig_23466
+    - lig_23467
+    - lig_23468
+    - lig_23469
+    - lig_23470
+    - lig_23471
+    - lig_23472
+    - lig_23473
+    - lig_23474
+    - lig_23475
+    - lig_23476
+    - lig_23477
+    - lig_23479
+    - lig_23480
+    - lig_23482
+    - lig_23483
+    - lig_23484
+    - lig_23485
+    - lig_23486
+references:
+    measurement:
+    calculation:
+        - 10.1021/ja512751q
+        - 10.1021/acs.jcim.9b00105
+comments:  "Charges in binding site; electrostatic interactions contribute to binding"
+associated_sets:
+        - Schrodinger JACS
