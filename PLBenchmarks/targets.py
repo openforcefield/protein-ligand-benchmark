@@ -21,8 +21,9 @@ except ImportError:
     from importlib_resources import open_text
 
 
-file = open_text('PLBenchmarks.data', 'targets.yml')
+file = open_text("PLBenchmarks.data", "targets.yml")
 target_list = yaml.full_load(file)
+
 
 def getTargetDir(target):
     """
@@ -32,11 +33,12 @@ def getTargetDir(target):
     :return: string with  directory name
     """
     for td in target_list:
-        if td['name'] == target:
-            return td['dir']
+        if td["name"] == target:
+            return td["dir"]
             break
     else:
-        print('Directory for target {target} not found.')
+        print("Directory for target {target} not found.")
+
 
 def getTargetDataPath(target):
     """
@@ -47,11 +49,12 @@ def getTargetDataPath(target):
 
     """
     for td in target_list:
-        if td['name'] == target:
-            return ['PLBenchmarks', 'data', td['dir'], '00_data']
+        if td["name"] == target:
+            return ["PLBenchmarks", "data", td["dir"], "00_data"]
             break
     else:
-        raise ValueError(f'Path for target {target} not found.')
+        raise ValueError(f"Path for target {target} not found.")
+
 
 class target:
     """
@@ -66,17 +69,16 @@ class target:
         :param name: string with target name
         :return: None
         """
-        
+
         self._name = name
         path = getTargetDataPath(self._name)
-        file = open_text('.'.join(path), 'target.yml')
+        file = open_text(".".join(path), "target.yml")
         data = yaml.full_load(file)
         self.data = pd.Series(data)
         self.ligData = None
         self.htmlData = None
         self._ligands = None
         self._edges = None
-        
 
     def getName(self):
         """
@@ -103,16 +105,18 @@ class target:
         :return: None
         """
         lgs = self.getLigandSet()
-        self.ligData = pd.Series({'numLigands': len(lgs)})
+        self.ligData = pd.Series({"numLigands": len(lgs)})
         affinities = []
         for key, item in lgs.items():
-            affinities.append(item.data[('DerivedMeasurement', 'dg')].to_base_units().magnitude)
-        self.ligData['maxDG'] = round(max(affinities), 1) * utils.ureg('kJ / mole')
-        self.ligData['minDG'] = round(min(affinities), 1) * utils.ureg('kJ / mole')
+            affinities.append(
+                item.data[("DerivedMeasurement", "dg")].to_base_units().magnitude
+            )
+        self.ligData["maxDG"] = round(max(affinities), 1) * utils.ureg("kJ / mole")
+        self.ligData["minDG"] = round(min(affinities), 1) * utils.ureg("kJ / mole")
         # calculation of the mean absolute deviation
         mean = np.average(affinities)
-        mad = np.average(np.fabs(affinities - mean)) * utils.ureg('kJ / mole')
-        self.ligData['MAD(DG)'] = round(mad, 1)
+        mad = np.average(np.fabs(affinities - mean)) * utils.ureg("kJ / mole")
+        self.ligData["MAD(DG)"] = round(mad, 1)
 
     def getLigData(self):
         if self.ligData is None:
@@ -136,7 +140,7 @@ class target:
         :return: html string
         """
         return self.getLigandSet().getHTML(columns)
-    
+
     def getEdgeSet(self):
         """
         Get :py:class:`~PLBenchmarks:edges:edgeSet` associated with the target
@@ -163,8 +167,8 @@ class target:
         :param columns: :py:class:`list` of edge which should be returned
         :return: html string
         """
-        return self.getEdgeSet().getHTML(columns)        
-    
+        return self.getEdgeSet().getHTML(columns)
+
     def getDF(self, columns=None):
         """
         Access the target data as a :py:class:`pandas.DataFrame`
@@ -187,20 +191,20 @@ class target:
         :return: None
         """
         self.htmlData = pd.Series()
-        if 'references' in list(self.data.index):
-#            self.data.index = pd.MultiIndex.from_arrays([list(self.data.index), ['' for i in self.data.index]])
-            refs = self.data['references']
+        if "references" in list(self.data.index):
+            #            self.data.index = pd.MultiIndex.from_arrays([list(self.data.index), ['' for i in self.data.index]])
+            refs = self.data["references"]
             for key, item in refs.items():
                 res = []
                 if item is None:
                     continue
                 for doi in item:
-                    if str(doi) != 'nan':
+                    if str(doi) != "nan":
                         res.append(utils.findDoiUrl(doi))
-                self.htmlData[key] = (r'\n').join(res)
-        if ('pdb') in list(self.data.index):
-            pdb = self.data['pdb']
-            self.htmlData['pdblinks'] = utils.findPdbUrl(' '.join(pdb.split(',')))
+                self.htmlData[key] = (r"\n").join(res)
+        if ("pdb") in list(self.data.index):
+            pdb = self.data["pdb"]
+            self.htmlData["pdblinks"] = utils.findPdbUrl(" ".join(pdb.split(",")))
 
     def getHtmlData(self):
         if self.htmlData is None:
@@ -213,36 +217,44 @@ class target:
 
         :return: :py:class:`matplotlib.figure`
         """
-        
+
         G = nx.Graph()
 
         for key, item in self.getLigandSet().items():
-            G.add_node(key.split('_')[1], image=item.getImg())
-        G.add_edges_from([[item[0].split('_')[1], item[1].split('_')[1]] for key, item in self.getEdgeSet().getDict().items()])
-        pos=nx.circular_layout(G)
+            G.add_node(key.split("_")[1], image=item.getImg())
+        G.add_edges_from(
+            [
+                [item[0].split("_")[1], item[1].split("_")[1]]
+                for key, item in self.getEdgeSet().getDict().items()
+            ]
+        )
+        pos = nx.circular_layout(G)
 
-        fig = plt.figure(figsize=(40,20))
+        fig = plt.figure(figsize=(40, 20))
         ax = fig.gca()
-        nx.draw(G, pos, node_size=35000, ax=ax, node_color=[[1,1,1,0]])
+        nx.draw(G, pos, node_size=35000, ax=ax, node_color=[[1, 1, 1, 0]])
 
         trans = ax.transData.transform
         trans2 = fig.transFigure.inverted().transform
-        imsize = 0.15 # this is the image size
+        imsize = 0.15  # this is the image size
         for n in G.nodes():
-            (x,y) = pos[n]
-            xx,yy = trans((x,y)) # figure coordinates
-            xa,ya = trans2((xx,yy)) # axes coordinates
-            img =  G.nodes[n]['image']
-            a = plt.axes([xa-imsize/2.0,ya-imsize/2.0, imsize, imsize ], fc=(1,1,1,0.0))
-            a.set_xticks([]) 
-            a.set_yticks([]) 
-            a.spines['right'].set_visible(False)
-            a.spines['top'].set_visible(False)
-            a.spines['bottom'].set_visible(False)
-            a.spines['left'].set_visible(False)
+            (x, y) = pos[n]
+            xx, yy = trans((x, y))  # figure coordinates
+            xa, ya = trans2((xx, yy))  # axes coordinates
+            img = G.nodes[n]["image"]
+            a = plt.axes(
+                [xa - imsize / 2.0, ya - imsize / 2.0, imsize, imsize],
+                fc=(1, 1, 1, 0.0),
+            )
+            a.set_xticks([])
+            a.set_yticks([])
+            a.spines["right"].set_visible(False)
+            a.spines["top"].set_visible(False)
+            a.spines["bottom"].set_visible(False)
+            a.spines["left"].set_visible(False)
             a.imshow(img, alpha=1)
-            a.set_aspect('equal')
-        a.axis('off')
+            a.set_aspect("equal")
+        a.axis("off")
         return fig
 
 
@@ -250,8 +262,8 @@ class targetSet(dict):
     """
     Class inherited from dict to store all available targets in PLBenchmarks.
     """
-    
-    def __init__(self, *arg,**kw):
+
+    def __init__(self, *arg, **kw):
         """
         Initializes the :py:class:`~targets.targetSet` class
 
@@ -261,10 +273,10 @@ class targetSet(dict):
         """
         super(targetSet, self).__init__(*arg, **kw)
         for td in target_list:
-            tgt = target(td['name'])
+            tgt = target(td["name"])
             self[tgt.getName()] = tgt
         self._df = None
-          
+
     def getTarget(self, name):
         """
         Accesses one target of the targetSet
@@ -278,7 +290,7 @@ class targetSet(dict):
                 tgt = self[key]
                 break
         else:
-            raise ValueError(f'Target {name} not part of set.')
+            raise ValueError(f"Target {name} not part of set.")
         return tgt
 
     def getDF(self, columns=None):
@@ -289,13 +301,13 @@ class targetSet(dict):
         :return: :py:class:`pandas.DataFrame`
         """
         if self._df is None:
-            dfs=[]
+            dfs = []
             for key in self.keys():
                 self[key].addLigandData()
                 self[key].findLinks()
                 dfs.append(self[key].getDF())
             df = pd.DataFrame(dfs)
-            self._df =df
+            self._df = df
 
         if columns is None:
             return self._df
@@ -304,7 +316,9 @@ class targetSet(dict):
         else:
             for item in columns:
                 if item not in list(self._df.columns):
-                    raise ValueError(f'Column {item} is not known and cannot be generated.')
+                    raise ValueError(
+                        f"Column {item} is not known and cannot be generated."
+                    )
 
     def getHTML(self, columns=None):
         """
@@ -315,10 +329,10 @@ class targetSet(dict):
         """
         df = self.getDF(columns=columns)
         html = df.to_html()
-        html = html.replace('REP1', '<a target="_blank" href="')
-        html = html.replace('REP2', '">')
-        html = html.replace('REP3', '</a>')
-        html = html.replace("\\n","<br>")
+        html = html.replace("REP1", '<a target="_blank" href="')
+        html = html.replace("REP2", '">')
+        html = html.replace("REP3", "</a>")
+        html = html.replace("\\n", "<br>")
         return html
 
     def getNames(self):
@@ -328,5 +342,3 @@ class targetSet(dict):
         :return: :py:class:`list` of strings
         """
         return [key for key in self.keys()]
-
-

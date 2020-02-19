@@ -13,8 +13,7 @@ except ImportError:
 
 
 def test_edgeSet():
-    edg = edges.edgeSet('jnk1')
+    edg = edges.edgeSet("jnk1")
     df = edg.getDF()
     html = edg.getHTML()
     d = edg.getDict()
-
