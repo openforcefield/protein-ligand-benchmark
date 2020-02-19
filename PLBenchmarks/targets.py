@@ -190,7 +190,7 @@ class target:
 
         :return: None
         """
-        self.htmlData = pd.Series()
+        self.htmlData = pd.Series(dtype=object)
         if "references" in list(self.data.index):
             #            self.data.index = pd.MultiIndex.from_arrays([list(self.data.index), ['' for i in self.data.index]])
             refs = self.data["references"]
