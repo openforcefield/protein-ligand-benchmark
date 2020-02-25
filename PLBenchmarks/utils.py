@@ -133,7 +133,7 @@ def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
                 result = (
                     BOLTZMANN * temperature * ureg.kelvin * np.log(val / ureg.molar)
                 )
-                return result.to(outUnit)
+                return result.to(outUnit).round(2)
         elif finalObs == "ki":
             return val.to(outUnit)
         elif finalObs == "ic50":
@@ -157,7 +157,7 @@ def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
                     * ureg.kelvin
                     * np.log(val.to("molar") / ureg.molar)
                 )
-                return result.to(outUnit)
+                return result.to(outUnit).round(2)
         elif finalObs == "ki":
             return val.to(outUnit)
         elif finalObs == "ic50":
@@ -173,7 +173,7 @@ def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
     elif originalObs == "pic50":
         if finalObs == "dg":
             result = -BOLTZMANN * temperature * ureg.kelvin * val * np.log(10)
-            return result.to(outUnit)
+            return result.to(outUnit).round(2)
         elif finalObs == "ki":
             result = 10 ** (-val) * ureg("molar")
             return result.to(outUnit)
@@ -243,7 +243,7 @@ def convertError(eVal, val, originalObs, finalObs, temperature=300.0, outUnit=No
                 return 0.0 * outUnit
             else:
                 error = BOLTZMANN * temperature * ureg.kelvin / val * eVal
-                return error.to(outUnit)
+                return error.to(outUnit).round(2)
         elif finalObs == "ki":
             return eVal.to(outUnit)
         elif finalObs == "ic50":
@@ -262,7 +262,7 @@ def convertError(eVal, val, originalObs, finalObs, temperature=300.0, outUnit=No
                 return 0.0 * outUnit
             else:
                 error = BOLTZMANN * temperature * ureg.kelvin / val * eVal
-                return error.to(outUnit)
+                return error.to(outUnit).round(2)
         elif finalObs == "ki":
             return eVal.to(outUnit)
         elif finalObs == "ic50":
@@ -278,7 +278,7 @@ def convertError(eVal, val, originalObs, finalObs, temperature=300.0, outUnit=No
     elif originalObs == "pic50":
         if finalObs == "dg":
             error = -BOLTZMANN * temperature * ureg.kelvin * np.log(10) * eVal
-            return error.to(outUnit)
+            return error.to(outUnit).round(2)
         elif finalObs == "ki":
             raise NotImplementedError
         #            return unit.Quantity(10 ** (-val.value_in_unit(unit.dimensionless)), utils.ureg.molar).in_units_of(outUnit)

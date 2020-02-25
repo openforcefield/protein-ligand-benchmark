@@ -49,11 +49,11 @@ class edge:
         err1 = 0
         for key, item in ligs.items():
             if key == "lig_" + str(self.data[0]):
-                l0 = item.data["ROMol"][0][0]
+                l0 = item.data["ROMol"][0]
                 dg0 = item.data[("DerivedMeasurement", "dg")]
                 err0 = item.data[("DerivedMeasurement", "e_dg")]
             if key == "lig_" + str(self.data[1]):
-                l1 = item.data["ROMol"][0][0]
+                l1 = item.data["ROMol"][0]
                 dg1 = item.data[("DerivedMeasurement", "dg")]
                 err1 = item.data[("DerivedMeasurement", "e_dg")]
         self.data["Mol1"] = l0

@@ -116,10 +116,6 @@ class ligand:
                         ),
                     )
                 )
-
-                # decimals = pd.Series([2, 2], index=pd.MultiIndex.from_tuples(
-                #     [('measurement', obs), ('measurement', f'e_{obs}')]))
-                # self.data.round(decimals)
                 break
         else:
             print(f"Conversion to observable {derivedObs} not possible.")
@@ -157,13 +153,13 @@ class ligand:
                 for ddoi in re.split(r"[; ]+", str(doi)):
                     res.append(utils.findDoiUrl(ddoi))
             self.data["measurement", "doi_html"] = (r"\n").join(res)
-        self.data.drop(columns=["measurement", "doi"], inplace=True)
-        self.data.rename(columns={"doi_html": "Reference"}, level=1, inplace=True)
+            self.data.drop([("measurement", "doi")], inplace=True)
+            self.data.rename({"doi_html": "Reference"}, level=1, inplace=True)
         if ("pdb") in list(self.data.index):
             pdb = self.data["pdb"]
             self.data["pdb_html"] = utils.findPdbUrl(pdb)
-        self.data.drop(columns=["pdb"], inplace=True)
-        self.data.rename(columns={"pdb_html": "pdb"}, inplace=True)
+            self.data.drop(["pdb"], inplace=True)
+            self.data.rename({"pdb_html": "pdb"}, inplace=True)
 
     def getCoordFilePath(self):
         """
@@ -198,6 +194,7 @@ class ligand:
         PandasTools.AddMoleculeColumnToFrame(
             self.data, smilesCol="smiles", molCol="ROMol", includeFingerprints=False
         )
+        self.data["ROMol"].apply(lambda x: x[0])
 
     def getHTML(self, columns=None):
         """
@@ -210,7 +207,6 @@ class ligand:
         if columns:
             html = pd.DataFrame(self.data[columns]).to_html()
         else:
-
             html = pd.DataFrame(self.data).to_html()
         html = html.replace("REP1", '<a target="_blank" href="')
         html = html.replace("REP2", '">')
@@ -293,7 +289,7 @@ class ligandSet(dict):
         dfs = []
         for key, item in self.items():
             dfs.append(item.getDF(columns))
-        df = pd.DataFrame(dfs)
+        df = pd.concat(dfs, axis=1).T
         return df
 
     def getHTML(self, columns=None):
@@ -303,6 +299,8 @@ class ligandSet(dict):
         :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: HTML string
         """
+        for key, item in self.items():
+            item.findLinks()
         df = self.getDF(columns)
         html = df.to_html()
         html = html.replace("REP1", '<a target="_blank" href="')

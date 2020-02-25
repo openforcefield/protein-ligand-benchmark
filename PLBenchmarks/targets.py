@@ -109,13 +109,14 @@ class target:
         affinities = []
         for key, item in lgs.items():
             affinities.append(
-                item.data[("DerivedMeasurement", "dg")].to_base_units().magnitude
+                item.data[("DerivedMeasurement", "dg")].to("kcal/mole").magnitude
             )
-        self.ligData["maxDG"] = round(max(affinities), 1) * utils.ureg("kJ / mole")
-        self.ligData["minDG"] = round(min(affinities), 1) * utils.ureg("kJ / mole")
+        self.ligData["maxDG"] = round(max(affinities) * utils.ureg("kcal / mole"), 1)
+        self.ligData["minDG"] = round(min(affinities) * utils.ureg("kcal / mole"), 1)
         # calculation of the mean absolute deviation
         mean = np.average(affinities)
-        mad = np.average(np.fabs(affinities - mean)) * utils.ureg("kJ / mole")
+        mad = np.average(np.fabs(affinities - mean)) * utils.ureg("kcal / mole")
+        mad = mad.to("kcal/mole")
         self.ligData["MAD(DG)"] = round(mad, 1)
 
     def getLigData(self):
@@ -311,7 +312,7 @@ class targetSet(dict):
 
         if columns is None:
             return self._df
-        elif all(item in list(self._df.index) for item in columns):
+        elif all(item in list(self._df.columns) for item in columns):
             return self._df[columns]
         else:
             for item in columns:
