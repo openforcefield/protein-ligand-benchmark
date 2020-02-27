@@ -9,6 +9,7 @@ import re
 import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import Draw, PandasTools
+from openforcefield.topology import Molecule
 
 from PIL import Image
 
@@ -31,27 +32,30 @@ class ligand:
 
     _observables = ["dg", "dh", "tds", "ki", "ic50", "pic50"]
 
-    def __init__(self, d: dict):
+    def __init__(self, d: dict, target: str):
         """
         Initialize :py:class:`PLBenchmarks.ligands.ligand` object from :py:class:`dict` and store data in a :py:class:`pandas.Series`.
 
         :param d: :py:class:`dict` with the ligand data
         :return None
         """
-        self.data = pd.Series(d)
+        self._target = target
+        self._data = pd.Series(d)
+        self._molecule = None
+        self._name = self._data["name"][0]
         # Expand measurement dict into single fields
-        if "measurement" in list(self.data.index):
-            meas = pd.Series(self.data["measurement"])
+        if "measurement" in list(self._data.index):
+            meas = pd.Series(self._data["measurement"])
             meas.index = ["measurement:" + c for c in meas.index]
-            self.data.drop(["measurement"], inplace=True)
-            self.data = pd.concat([self.data, meas])
-            index = self.data.index.to_series().str.split(":", expand=True).fillna("")
-            self.data.index = pd.MultiIndex.from_arrays(
+            self._data.drop(["measurement"], inplace=True)
+            self._data = pd.concat([self._data, meas])
+            index = self._data.index.to_series().str.split(":", expand=True).fillna("")
+            self._data.index = pd.MultiIndex.from_arrays(
                 [index[0].tolist(), index[1].tolist()]
             )
             for obs in self._observables:
-                if ("measurement", obs) in list(self.data.index):
-                    self.data = self.data.append(
+                if ("measurement", obs) in list(self._data.index):
+                    self._data = self._data.append(
                         pd.Series(
                             [0],
                             index=pd.MultiIndex.from_tuples(
@@ -59,7 +63,7 @@ class ligand:
                             ),
                         )
                     )
-                    vals = self.data[("measurement", f"{obs}")]
+                    vals = self._data[("measurement", f"{obs}")]
                     u = utils.ureg("")
                     if vals[2] == "nM":
                         u = utils.ureg("nanomolar")
@@ -72,8 +76,8 @@ class ligand:
                     else:
                         # let pint figure out what the unit means
                         u = utils.ureg(vals[2])
-                    self.data[("measurement", f"e_{obs}")] = vals[1] * u
-                    self.data[("measurement", obs)] = vals[0] * u
+                    self._data[("measurement", f"e_{obs}")] = vals[1] * u
+                    self._data[("measurement", obs)] = vals[0] * u
 
     def deriveObservables(
         self,
@@ -93,19 +97,19 @@ class ligand:
             derivedObs in self._observables
         ), "Observable to be derived not known. Should be any of dg, ki, ic50, or pic50"
         for obs in self._observables:
-            if ("measurement", obs) in list(self.data.index):
-                self.data = self.data.append(
+            if ("measurement", obs) in list(self._data.index):
+                self._data = self._data.append(
                     pd.Series(
                         [
                             utils.convertValue(
-                                self.data[("measurement", obs)],
+                                self._data[("measurement", obs)],
                                 obs,
                                 derivedObs,
                                 outUnit=outUnit,
                             ),
                             utils.convertError(
-                                self.data[("measurement", f"e_{obs}")],
-                                self.data[("measurement", obs)],
+                                self._data[("measurement", f"e_{obs}")],
+                                self._data[("measurement", obs)],
                                 obs,
                                 derivedObs,
                                 outUnit=outUnit,
@@ -126,19 +130,19 @@ class ligand:
 
         :return: name: string
         """
-        return self.data["name"][0]
+        return self._data["name"][0]
 
     def getDF(self, cols=None):
         """
-        Access the ligand data as a :py:class:`pandas.DataFrame`
+        Access the ligand data as a :py:class:`pandas.Dataframe`
 
-        :param cols: list of columns which should be returned in the :py:class:`pandas.DataFrame`
-        :return: :py:class:`pandas.DataFrame`
+        :param cols: list of columns which should be returned in the :py:class:`pandas.Dataframe`
+        :return: :py:class:`pandas.Dataframe`
         """
         if cols:
-            return self.data[cols]
+            return self._data[cols]
         else:
-            return self.data
+            return self._data
 
     def findLinks(self):
         """
@@ -146,20 +150,20 @@ class ligand:
 
         :return: None
         """
-        if ("measurement", "doi") in list(self.data.index):
-            doi = self.data["measurement", "doi"]
+        if ("measurement", "doi") in list(self._data.index):
+            doi = self._data["measurement", "doi"]
             if str(doi) != "nan":
                 res = []
                 for ddoi in re.split(r"[; ]+", str(doi)):
                     res.append(utils.findDoiUrl(ddoi))
-            self.data["measurement", "doi_html"] = (r"\n").join(res)
-            self.data.drop([("measurement", "doi")], inplace=True)
-            self.data.rename({"doi_html": "Reference"}, level=1, inplace=True)
-        if ("pdb") in list(self.data.index):
-            pdb = self.data["pdb"]
-            self.data["pdb_html"] = utils.findPdbUrl(pdb)
-            self.data.drop(["pdb"], inplace=True)
-            self.data.rename({"pdb_html": "pdb"}, inplace=True)
+            self._data["measurement", "doi_html"] = (r"\n").join(res)
+            self._data.drop([("measurement", "doi")], inplace=True)
+            self._data.rename({"doi_html": "Reference"}, level=1, inplace=True)
+        if ("pdb") in list(self._data.index):
+            pdb = self._data["pdb"]
+            self._data["pdb_html"] = utils.findPdbUrl(pdb)
+            self._data.drop(["pdb"], inplace=True)
+            self._data.rename({"pdb_html": "pdb"}, inplace=True)
 
     def getCoordFilePath(self):
         """
@@ -167,47 +171,52 @@ class ligand:
 
         :return: file path as string
         """
-        fname = self.data["docked"][0]
+        fname = self._data["docked"][0]
         return fname
 
-    def getRDKitMol(self):
+    def getMol(self):
         """
         Get molecule object with coordinates of the docked ligand
 
         :return: file path as string
         """
-        fname = self.getCoordFilePath()
+        if self._molecule is not None:
+            fname = self.getCoordFilePath()
 
-        # file = open_text('PLBenchmarks.data.01_jnk1.03_docked.lig_17124-1', 'lig_17124-1.sdf')
-        # sdfile = Chem.SDMolSupplier(file)
-        # return sdfile.next()
+            for td in target_list:
+                if td["name"] == self._target:
+                    sdfpath = ["PLBenchmarks", "data", td["dir"]] + fname.split("/")
+                    break
+            else:
+                raise ValueError(f"Path for ligand {self._name} not found.")
 
-        fname = self.data["docked"][0]
-        return fname
+            file = open_text(".".join(sdfpath[:-1]), sdfpath[-1])
+            self._molecule = Molecule.from_file(file, "sdf")
+        return self._molecule
 
     def addMolToFrame(self):
         """
-        Adds a image file of the ligand to the :py:class:`pandas.DataFrame`
+        Adds a image file of the ligand to the :py:class:`pandas.Dataframe`
 
         :return: None
         """
         PandasTools.AddMoleculeColumnToFrame(
-            self.data, smilesCol="smiles", molCol="ROMol", includeFingerprints=False
+            self._data, smilesCol="smiles", molCol="ROMol", includeFingerprints=False
         )
-        self.data["ROMol"].apply(lambda x: x[0])
+        self._data["ROMol"].apply(lambda x: x[0])
 
     def getHTML(self, columns=None):
         """
         Access the ligand as a HTML string
 
-        :param columns: list of columns which should be returned in the :py:class:`pandas.DataFrame`
+        :param columns: list of columns which should be returned in the :py:class:`pandas.Dataframe`
         :return: HTML string
         """
         self.findLinks()
         if columns:
-            html = pd.DataFrame(self.data[columns]).to_html()
+            html = pd.Dataframe(self._data[columns]).to_html()
         else:
-            html = pd.DataFrame(self.data).to_html()
+            html = pd.Dataframe(self._data).to_html()
         html = html.replace("REP1", '<a target="_blank" href="')
         html = html.replace("REP2", '">')
         html = html.replace("REP3", "</a>")
@@ -223,9 +232,9 @@ class ligand:
         dr = Draw.MolDraw2DCairo(200, 200)
         opts = dr.drawOptions()
         opts.clearBackground = True
-        mol = Chem.MolFromSmiles(self.data["smiles"][0])
+        mol = Chem.MolFromSmiles(self._data["smiles"][0])
         Chem.rdDepictor.Compute2DCoords(mol)
-        dr.DrawMolecule(mol, legend=self.data["name"][0])
+        dr.DrawMolecule(mol, legend=self._data["name"][0])
         img = Image.open(io.BytesIO(dr.GetDrawingText())).convert("RGBA")
         datas = img.getdata()
 
@@ -258,7 +267,7 @@ class ligandSet(dict):
         file = open_text(".".join(tp), "ligands.yml")
         data = yaml.full_load_all(file)
         for d in data:
-            l = ligand(d)
+            l = ligand(d, target)
             l.deriveObservables(derivedObs="dg")
             # l.findLinks()
             l.addMolToFrame()
@@ -281,10 +290,10 @@ class ligandSet(dict):
 
     def getDF(self, columns=None):
         """
-        Access the :py:class:`~PLBenchmarks:ligands.ligandSet` as a :py:class:`pandas.DataFrame`
+        Access the :py:class:`~PLBenchmarks:ligands.ligandSet` as a :py:class:`pandas.Dataframe`
 
-        :param columns: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
-        :return: :py:class:`pandas.DataFrame`
+        :param columns: :py:class:`list` of columns which should be returned in the :py:class:`pandas.Dataframe`
+        :return: :py:class:`pandas.Dataframe`
         """
         dfs = []
         for key, item in self.items():
@@ -296,7 +305,7 @@ class ligandSet(dict):
         """
         Access the :py:class:`PLBenchmarks:ligands.ligandSet` as a HTML string
 
-        :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
+        :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.Dataframe`
         :return: HTML string
         """
         for key, item in self.items():

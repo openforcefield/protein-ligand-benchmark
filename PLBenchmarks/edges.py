@@ -31,7 +31,7 @@ class edge:
         :param d: :py:class:`dict` with the edge data
         :return: None
         """
-        self.data = pd.Series(d)
+        self._data = pd.Series(d)
         self._name = None
 
     def addLigData(self, ligs):
@@ -48,18 +48,18 @@ class edge:
         err0 = 0
         err1 = 0
         for key, item in ligs.items():
-            if key == "lig_" + str(self.data[0]):
-                l0 = item.data["ROMol"][0]
-                dg0 = item.data[("DerivedMeasurement", "dg")]
-                err0 = item.data[("DerivedMeasurement", "e_dg")]
-            if key == "lig_" + str(self.data[1]):
-                l1 = item.data["ROMol"][0]
-                dg1 = item.data[("DerivedMeasurement", "dg")]
-                err1 = item.data[("DerivedMeasurement", "e_dg")]
-        self.data["Mol1"] = l0
-        self.data["Mol2"] = l1
-        self.data["exp. DeltaG [kcal/mol]"] = round(dg1 - dg0, 2)
-        self.data["exp. Error [kcal/mol]"] = round(
+            if key == "lig_" + str(self._data[0]):
+                l0 = item._data["ROMol"][0]
+                dg0 = item._data[("DerivedMeasurement", "dg")]
+                err0 = item._data[("DerivedMeasurement", "e_dg")]
+            if key == "lig_" + str(self._data[1]):
+                l1 = item._data["ROMol"][0]
+                dg1 = item._data[("DerivedMeasurement", "dg")]
+                err1 = item._data[("DerivedMeasurement", "e_dg")]
+        self._data["Mol1"] = l0
+        self._data["Mol2"] = l1
+        self._data["exp. DeltaG [kcal/mol]"] = round(dg1 - dg0, 2)
+        self._data["exp. Error [kcal/mol]"] = round(
             np.sqrt(np.power(err0, 2.0) + np.power(err1, 2.0)), 2
         )
 
@@ -71,9 +71,9 @@ class edge:
         :return: :py:class:`pandas.DataFrame`
         """
         if cols:
-            return self.data[cols]
+            return self._data[cols]
         else:
-            return self.data
+            return self._data
 
     def getDict(self):
         """
@@ -82,9 +82,9 @@ class edge:
         :return: :py:class:`dict`
         """
         return {
-            f"edge_{self.data[0]}_{self.data[1]}": [
-                f"lig_{self.data[0]}",
-                f"lig_{self.data[1]}",
+            f"edge_{self._data[0]}_{self._data[1]}": [
+                f"lig_{self._data[0]}",
+                f"lig_{self._data[1]}",
             ]
         }
 
@@ -97,7 +97,7 @@ class edge:
         if self._name is not None:
             return self._name
         else:
-            return f"edge_{self.data[0]}_{self.data[1]}"
+            return f"edge_{self._data[0]}_{self._data[1]}"
 
 
 class edgeSet(dict):

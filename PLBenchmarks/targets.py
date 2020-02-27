@@ -74,7 +74,7 @@ class target:
         path = getTargetDataPath(self._name)
         file = open_text(".".join(path), "target.yml")
         data = yaml.full_load(file)
-        self.data = pd.Series(data)
+        self._data = pd.Series(data)
         self.ligData = None
         self.htmlData = None
         self._ligands = None
@@ -109,7 +109,7 @@ class target:
         affinities = []
         for key, item in lgs.items():
             affinities.append(
-                item.data[("DerivedMeasurement", "dg")].to("kcal/mole").magnitude
+                item._data[("DerivedMeasurement", "dg")].to("kcal/mole").magnitude
             )
         self.ligData["maxDG"] = round(max(affinities) * utils.ureg("kcal / mole"), 1)
         self.ligData["minDG"] = round(min(affinities) * utils.ureg("kcal / mole"), 1)
@@ -177,7 +177,7 @@ class target:
         :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return:  :py:class:`pandas.DataFrame`
         """
-        df = self.data
+        df = self._data
         df = df.append(self.getLigData())
         df = df.append(self.getHtmlData())
         if columns:
@@ -192,9 +192,9 @@ class target:
         :return: None
         """
         self.htmlData = pd.Series(dtype=object)
-        if "references" in list(self.data.index):
-            #            self.data.index = pd.MultiIndex.from_arrays([list(self.data.index), ['' for i in self.data.index]])
-            refs = self.data["references"]
+        if "references" in list(self._data.index):
+            #            self._data.index = pd.MultiIndex.from_arrays([list(self._data.index), ['' for i in self._data.index]])
+            refs = self._data["references"]
             for key, item in refs.items():
                 res = []
                 if item is None:
@@ -203,8 +203,8 @@ class target:
                     if str(doi) != "nan":
                         res.append(utils.findDoiUrl(doi))
                 self.htmlData[key] = (r"\n").join(res)
-        if ("pdb") in list(self.data.index):
-            pdb = self.data["pdb"]
+        if ("pdb") in list(self._data.index):
+            pdb = self._data["pdb"]
             self.htmlData["pdblinks"] = utils.findPdbUrl(" ".join(pdb.split(",")))
 
     def getHtmlData(self):
