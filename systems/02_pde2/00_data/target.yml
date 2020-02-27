@@ -1,0 +1,35 @@
+id:        2
+name:      pde2
+fullname:  phosphodiesterase 2
+netcharge: 
+pdb:       [4D08,4D09,6EZF]
+ligands:
+    - lig_43249674
+    - lig_48009208
+    - lig_48022468
+    - lig_48168913
+    - lig_48271249
+    - lig_49072088
+    - lig_49137374
+    - lig_49137530
+    - lig_49175789
+    - lig_49175828
+    - lig_49220392
+    - lig_49220548
+    - lig_49396360
+    - lig_49580115
+    - lig_49582390
+    - lig_49582468
+    - lig_49585367
+    - lig_49932129
+    - lig_49932714
+    - lig_50107616
+    - lig_50181001
+references:
+    - measurement:
+        - 10.1021/ml500262u
+	- 10.1021/ja404449g
+    - calculation:
+        - 10.1038/s41598-018-23039-5
+comments:
+associated_sets:

@@ -1,0 +1,188 @@
+---
+name:     lig_17124-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cc(c(cc2OC)Br)OC)N)C#N
+docked:   03_docked/lig_17124-1/lig_17124-1.sdf
+measurement:
+    ic50:       [ 77, 38, nM]
+    doi:        10.1021/jm060199b
+    comment:    "table 1 cmpd 6t"
+...
+---
+name:     lig_18624-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2ccccc2)N)C#N
+docked:   03_docked/lig_18624-1/lig_18624-1.sdf
+measurement:
+    ic50:       [ 570, 140, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6e"
+...
+---
+name:     lig_18625-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2ccccc2Cl)N)C#N
+docked:   03_docked/lig_18625-1/lig_18625-1.sdf
+measurement:
+    ic50:       [1100, 300, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6f"
+...
+---
+name:     lig_18626-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cccc(c2)Cl)N)C#N
+docked:   03_docked/lig_18626-1/lig_18626-1.sdf
+measurement:
+    ic50:       [ 300, 70, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6g"
+...
+---
+name:     lig_18627-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2ccc(cc2)Cl)N)C#N
+docked:   03_docked/lig_18627-1/lig_18627-1.sdf
+measurement:
+    ic50:       [ 580, 170, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6h"
+...
+---
+name:     lig_18628-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2ccccc2C)N)C#N
+docked:   03_docked/lig_18628-1/lig_18628-1.sdf
+measurement:
+    ic50:       [ 400, 120, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6i"
+...
+---
+name:     lig_18629-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cccc(c2)C)N)C#N
+docked:   03_docked/lig_18629-1/lig_18629-1.sdf
+measurement:
+    ic50:       [ 420, 56, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6j"
+...
+---
+name:     lig_18630-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2ccc(cc2)C)N)C#N
+docked:   03_docked/lig_18630-1/lig_18630-1.sdf
+measurement:
+    ic50:       [ 190,  4, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6k"
+...
+---
+name:     lig_18631-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2ccccc2OC)N)C#N
+docked:   03_docked/lig_18631-1/lig_18631-1.sdf
+measurement:
+    ic50:       [ 120, 47, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6l"
+---
+name:     lig_18632-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cccc(c2)OC)N)C#N
+docked:   03_docked/lig_18632-1/lig_18632-1.sdf
+measurement:
+    ic50:       [ 210, 95, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6m"
+...
+---
+name:     lig_18633-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2ccc(cc2)OC)N)C#N
+docked:   03_docked/lig_18633-1/lig_18633-1.sdf
+measurement:
+    ic50:       [ 180, 59, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6n"
+...
+---
+name:     lig_18634-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cc(ccc2OC)OC)N)C#N
+docked:   03_docked/lig_18634-1/lig_18634-1.sdf
+measurement:
+    ic50:       [  45,  3, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6o"
+...
+---
+name:     lig_18635-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cc(ccc2C)C)N)C#N
+docked:   03_docked/lig_18635-1/lig_18635-1.sdf
+measurement:
+    ic50:        [4400, 670, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6p"
+...
+---
+name:     lig_18636-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cc(ccc2Br)Br)N)C#N
+docked:   03_docked/lig_18636-1/lig_18636-1.sdf
+measurement:
+    ic50:       [3000, 1600, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6q"
+...
+---
+name:     lig_18637-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cc(c(cc2OC)NC(=O)C)OC)N)C#N
+docked:   03_docked/lig_18637-1/lig_18637-1.sdf
+measurement:
+    ic50:       [  35, 16, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6r"
+...
+---
+name:     lig_18638-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cc(c(cc2OC)S(=O)(=O)C)OC)N)C#N
+docked:   03_docked/lig_18638-1/lig_18638-1.sdf
+measurement:
+    ic50:       [  38,  5, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6s"
+...
+---
+name:     lig_18639-1         
+smiles:   CCOc1c(c(cc(n1)NC(=O)Cc2cc(c(cc2OC)[N+](=O)[O-])OC)N)C#N
+docked:   03_docked/lig_18639-1/lig_18639-1.sdf
+measurement:
+    ic50:       [  69, 14, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 1 cmpd 6u"
+...
+---
+name:     lig_18652-1         
+smiles:   CC(C)Oc1c(c(cc(n1)NC(=O)Cc2cc(c(cc2OC)S(=O)(=O)C)OC)N)C#N
+docked:   03_docked/lig_18652-1/lig_18652-1.sdf
+measurement:
+    ic50:       [  14,  2, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 3 cmpd 18b"
+...
+---
+name:     lig_18658-1         
+smiles:   COc1ccc(c(c1)CC(=O)Nc2cc(c(c(n2)OCCO)C#N)N)OC
+docked:   03_docked/lig_18658-1/lig_18658-1.sdf
+measurement:
+    ic50:       [  74, 11, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 3 cmpd 20a"
+...
+---
+name:     lig_18659-1         
+smiles:   COCCOc1c(c(cc(n1)NC(=O)Cc2cc(ccc2OC)OC)N)C#N
+docked:   03_docked/lig_18659-1/lig_18659-1.sdf
+measurement:
+    ic50:       [ 110, 13, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 3 cmpd 20b"
+...
+---
+name:     lig_18660-1         
+smiles:   COc1ccc(c(c1)CC(=O)Nc2cc(c(c(n2)OCCS(=O)(=O)C)C#N)N)OC
+docked:   03_docked/lig_18660-1/lig_18660-1.sdf
+measurement:
+    ic50:       [ 400, 45, nM]
+    doi:  10.1021/jm060199b
+    comment: "table 3 cmpd 20c"
+...
