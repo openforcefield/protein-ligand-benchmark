@@ -90,7 +90,7 @@ measurement:
 ...
 ---
 name:     lig_37_L
-smiles:   "[H][C]1=[N][C]([H])=[C]([H])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3=[C]([H])[C]([H])=[C]([O][C]([H])([H])[H])[C]([CH3])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]"
+smiles:   "[H][C]1=[N][C]([H])=[C]([H])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3=[C]([H])[C]([H])=[C]([O][C]([H])([H])[H])[C]([Cl])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]"
 docked:   03_docked/lig_37_L/lig_37_L.sdf
 charge:   +1
 measurement:
