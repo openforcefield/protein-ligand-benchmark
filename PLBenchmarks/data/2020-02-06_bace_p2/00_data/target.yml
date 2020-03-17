@@ -1,0 +1,24 @@
+id:        11
+date:      2020-02-06
+name:      bace_p2
+fullname:  bace_p2
+netcharge: xx
+pdb:       
+ligands:
+    - lig_28_L
+    - lig_29_L
+    - lig_30_L
+    - lig_31_L
+    - lig_32_L
+    - lig_33_L
+    - lig_34_L
+    - lig_35_L
+    - lig_36_L
+    - lig_37_L
+    - lig_38_L
+    - lig_39_L
+references:
+    measurement: 
+    calculation: 
+comments:  ""
+associated_sets:
