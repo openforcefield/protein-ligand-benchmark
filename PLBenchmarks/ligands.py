@@ -32,7 +32,7 @@ class ligand:
 
     _observables = ["dg", "dh", "tds", "ki", "ic50", "pic50"]
 
-    def __init__(self, d: dict, target: str):
+    def __init__(self, d: dict, target: str = None):
         """
         Initialize :py:class:`PLBenchmarks.ligands.ligand` object from :py:class:`dict` and store data in a :py:class:`pandas.Series`.
 

@@ -80,8 +80,16 @@ def testLigand():
         "lig_18626-1": -8.87,
     }
 
-    eps = 0.01
+    eps = 0.015
     for key, item in jacs_data.items():
+        print(
+            key,
+            item,
+            df[df.name == key][("DerivedMeasurement", "dg")]
+            .values[0]
+            .to(utils.ureg("kcal / mole"))
+            .magnitude,
+        )
         assert (
             pytest.approx(item, eps)
             == df[df.name == key][("DerivedMeasurement", "dg")]
@@ -93,12 +101,6 @@ def testLigand():
 
 def testLigandData():
     for target in targets.target_list:
-        if (
-            target["name"] != "jnk1"
-            or target["name"] != "pde2"
-            or target["name"] != "thrombin"
-        ):
-            continue
         print("=== " + target["name"] + " ===")
         ligSet = ligands.getLigandSetDF(
             target["name"], cols=["name", "smiles", "docked"]
@@ -122,13 +124,6 @@ def testLigandData():
 
 def testLigandData():
     for target in targets.target_list:
-        if (
-            target["name"] != "jnk1"
-            or target["name"] != "pde2"
-            or target["name"] != "thrombin"
-            or target["name"] != "ptp1b"
-        ):
-            continue
         print("=== " + target["name"] + " ===")
         ligSet = ligands.getLigandSetDF(
             target["name"], cols=["name", "smiles", "docked"]
@@ -153,13 +148,6 @@ def testLigandData():
 
 def test_ligand_class():
     for target in targets.target_list:
-        if (
-            target["name"] != "jnk1"
-            or target["name"] != "pde2"
-            or target["name"] != "thrombin"
-            or target["name"] != "ptp1b"
-        ):
-            continue
         print("=== " + target["name"] + " ===")
         ligSet = ligands.getLigandSet(target["name"])
         for lig in ligSet:

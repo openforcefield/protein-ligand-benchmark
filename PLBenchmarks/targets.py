@@ -205,7 +205,10 @@ class target:
                 self.htmlData[key] = (r"\n").join(res)
         if ("pdb") in list(self._data.index):
             pdb = self._data["pdb"]
-            self.htmlData["pdblinks"] = utils.findPdbUrl(" ".join(pdb.split(",")))
+            if pdb is None:
+                self.htmlData["pdblinks"] = ""
+            else:
+                self.htmlData["pdblinks"] = utils.findPdbUrl(" ".join(pdb.split(",")))
 
     def getHtmlData(self):
         if self.htmlData is None:

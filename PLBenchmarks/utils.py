@@ -22,6 +22,8 @@ def findPdbUrl(pdb):
     :return: string compiled string including the urls to the pdb entries
     """
 
+    if pdb is None:
+        return ""
     url = "http://www.rcsb.org/pdb/rest/search"
     query_text = f'\
 <orgPdbCompositeQuery version="1.0">\
@@ -36,16 +38,20 @@ def findPdbUrl(pdb):
 </orgPdbCompositeQuery>\
 '
     request = urllib.request.Request(url, data=query_text.encode())
-    response = urllib.request.urlopen(request)
-    page = response.read()
-    page = page.decode("utf-8").split()
-    res = []
-    pdbs = pdb.split()
-    for p in page:
-        res.append("REP1http://www.rcsb.org/structure/{}REP2{}REP3".format(p, p))
-    for p in pdbs:
-        if p not in page:
-            raise ValueError(f"PDB {p} not found")
+    try:
+        response = urllib.request.urlopen(request)
+        page = response.read()
+        page = page.decode("utf-8").split()
+        res = []
+        pdbs = pdb.split()
+        for p in page:
+            res.append("REP1http://www.rcsb.org/structure/{}REP2{}REP3".format(p, p))
+        for p in pdbs:
+            if p not in page:
+                raise UserWarning(f"PDB {p} not found")
+    except urllib.error.URLError as e:
+        raise UserWarning(f"No internet access to search for PDBs {pdb}")
+        res = pdb.split()
     return ("\n").join(res)
 
 
@@ -83,7 +89,8 @@ def findDoiUrl(doi):
             aut, tit, dat
         )  # , obj['journal-issue']['published-online']['date-parts'][0][0])
         result = f'REP1{obj["URL"]}REP2{desc_string}REP3'
-    except urllib.error.HTTPError as e:
+    except urllib.error.URLError as e:
+        raise UserWarning(f"No internet access to search for DOI {doi}")
         result = doi
     return result
 
