@@ -5,6 +5,7 @@ Unit and regression test for the PLBenchmarks package.
 # Import package, test suite, and other packages as needed
 from PLBenchmarks import utils
 import pytest
+import warnings
 
 
 def test_findPdbUrl():
@@ -20,11 +21,11 @@ def test_findPdbUrl():
     for string in strings:
         assert string in utils.findPdbUrl(" ".join(pdbs)).split()
 
-    with pytest.raises(ValueError, match=f"PDB fakepdb not found"):
+    with pytest.warns(UserWarning):
         utils.findPdbUrl("fakepdb")
 
     pdbs[3] = "fakepdb2"
-    with pytest.raises(ValueError):
+    with pytest.warns(UserWarning):
         utils.findPdbUrl(" ".join(pdbs))
 
 
@@ -34,7 +35,8 @@ def test_findDoiUrl():
         == utils.findDoiUrl("10.1021/acs.jctc.8b00640")
     )
 
-    assert "fakeDOI" == utils.findDoiUrl("fakeDOI")
+    with pytest.warns(UserWarning):
+        assert "fakeDOI" == utils.findDoiUrl("fakeDOI")
 
 
 def test_convertValue():
