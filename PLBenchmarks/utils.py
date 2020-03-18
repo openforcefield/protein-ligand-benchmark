@@ -9,6 +9,8 @@ import urllib
 import json
 from pint import UnitRegistry
 
+import warnings
+
 ureg = UnitRegistry()
 
 BOLTZMANN = constants.gas_constant * ureg("J / mole / K")
@@ -50,7 +52,7 @@ def findPdbUrl(pdb):
             if p not in page:
                 raise UserWarning(f"PDB {p} not found")
     except urllib.error.URLError as e:
-        raise UserWarning(f"No internet access to search for PDBs {pdb}")
+        warnings.warn(f"Could not find PDB {pdb}\n{e}")
         res = pdb.split()
     return ("\n").join(res)
 
@@ -90,7 +92,7 @@ def findDoiUrl(doi):
         )  # , obj['journal-issue']['published-online']['date-parts'][0][0])
         result = f'REP1{obj["URL"]}REP2{desc_string}REP3'
     except urllib.error.URLError as e:
-        raise UserWarning(f"No internet access to search for DOI {doi}")
+        warnings.warn(f"Could not find DOI: {doi}\n{e}")
         result = doi
     return result
 
