@@ -226,24 +226,18 @@ def convertError(eVal, val, originalObs, finalObs, temperature=300.0, outUnit=No
             # e_ki^2 = (del K/del dG)^2 * e_dG^2
             # e_ki   = 1/RT * exp(-dG/RT) * e_dG
             kBT = BOLTZMANN * temperature * ureg.kelvin
-            error = 1.0 / kBT * np.exp(-val / kBT) * eVal
+            error = 1.0 / kBT * np.exp(-val / kBT) * eVal * ureg.molar
             return error.to(outUnit)
         elif finalObs == "ic50":
             kBT = BOLTZMANN * temperature * ureg.kelvin
-            error = 1.0 / kBT * np.exp(-val / kBT) * eVal
+            error = 1.0 / kBT * np.exp(-val / kBT) * eVal * ureg.molar
             return error.to(outUnit)
         elif finalObs == "pic50":
-            raise (NotImplementedError)
-            # error = np.exp(-val / (
-            #                 unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature,
-            #                 unit.kelvin))) / (
-            #                 unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature,
-            #                                                  unit.kelvin)) * val
-            # return unit.Quantity(error, utils.ureg.molar).in_units_of(outUnit)
-            #
-            # unit.AVOGADRO_CONSTANT_NA * unit.BOLTZMANN_CONSTANT_kB * unit.Quantity(temperature,
-            #                                                                                    unit.kelvin)) / np.log(
-            #     10), unit.dimensionless)
+            # e_pic50^2 = (del pic50/del dG)^2 * e_dG^2
+            # e_pic50   = 1/(RT*ln(10)) * e_dG
+            kBT = BOLTZMANN * temperature * ureg.kelvin
+            error = 1.0 / (kBT * np.log(10)) * eVal
+            return error.to(outUnit)
         else:
             raise NotImplementedError
     elif originalObs == "ki":
@@ -258,11 +252,13 @@ def convertError(eVal, val, originalObs, finalObs, temperature=300.0, outUnit=No
         elif finalObs == "ic50":
             return eVal.to(outUnit)
         elif finalObs == "pic50":
-            raise NotImplementedError
-            # if val.value_in_unit(utils.ureg.molar) < 1e-15:
-            #     return unit.Quantity(-1e15, outUnit)
-            # else:
-            #     return unit.Quantity(-np.log(val.value_in_unit(utils.ureg.molar)) / np.log(10), unit.dimensionless)
+            # e_pic50^2 = (del pic50/del Ki)^2 * e_Ki^2
+            # e_pic50   = 1/(Ki*ln(10)) * e_Ki
+            if (val * np.log(10)) < 1e-15 * ureg("molar"):
+                return 1e15 * outUnit
+            else:
+                result = 1 / (val * np.log(10)) * eVal
+                return result.to(outUnit).round(2)
         else:
             raise NotImplementedError
     elif originalObs == "ic50":
@@ -277,25 +273,32 @@ def convertError(eVal, val, originalObs, finalObs, temperature=300.0, outUnit=No
         elif finalObs == "ic50":
             return eVal.to(outUnit)
         elif finalObs == "pic50":
-            raise NotImplementedError
-            # if val.value_in_unit(utils.ureg.molar) < 1e-15:
-            #     return unit.Quantity(-1e15, outUnit)
-            # else:
-            #     return unit.Quantity(-np.log(val.value_in_unit(utils.ureg.molar)) / np.log(10), unit.dimensionless)
+            # e_pic50^2 = (del pic50/del IC50)^2 * e_IC50^2
+            # e_pic50   = 1/(IC50*ln(10)) * e_IC50
+            if (val * np.log(10)) < 1e-15 * ureg("molar"):
+                return 1e15 * outUnit
+            else:
+                result = 1 / (val * np.log(10)) * eVal
+                return result.to(outUnit).round(2)
         else:
             raise NotImplementedError
     elif originalObs == "pic50":
         if finalObs == "dg":
-            error = -BOLTZMANN * temperature * ureg.kelvin * np.log(10) * eVal
+            error = BOLTZMANN * temperature * ureg.kelvin * np.log(10) * eVal
             return error.to(outUnit).round(2)
         elif finalObs == "ki":
-            raise NotImplementedError
-        #            return unit.Quantity(10 ** (-val.value_in_unit(unit.dimensionless)), utils.ureg.molar).in_units_of(outUnit)
+            # Ki = 10^(-pIC50)
+            # dKi^2 = (del Ki / del pIC50)^2 * dpIC50^2
+            # dKi = ln(10) * 10^(-pIC50) * dpIC50
+            error = np.log(10) * 10 ** (-val) * eVal * ureg("molar")
+            return error.to(outUnit).round(2)
         elif finalObs == "ic50":
-            raise NotImplementedError
-        #            return unit.Quantity(10 ** (-val.value_in_unit(unit.dimensionless)), utils.ureg.molar).in_units_of(outUnit)
+            # IC50 = 10^(-pIC50)
+            # dIC50^2 = (del IC50 / del pIC50)^2 * dpIC50^2
+            # dIC50 = ln(10) * 10^(-pIC50) * dpIC50
+            error = np.log(10) * 10 ** (-val) * eVal * ureg("molar")
+            return error.to(outUnit).round(2)
         elif finalObs == "pic50":
-            raise NotImplementedError
-            return eVal.to(outUnit)
+            return eVal.to(outUnit).round(2)
         else:
             raise NotImplementedError
