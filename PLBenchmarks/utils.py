@@ -50,7 +50,7 @@ def findPdbUrl(pdb):
             res.append("REP1http://www.rcsb.org/structure/{}REP2{}REP3".format(p, p))
         for p in pdbs:
             if p not in page:
-                raise UserWarning(f"PDB {p} not found")
+                warnings.warn(f"PDB {p} not found")
     except urllib.error.URLError as e:
         warnings.warn(f"Could not find PDB {pdb}\n{e}")
         res = pdb.split()
