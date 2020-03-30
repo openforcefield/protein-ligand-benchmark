@@ -274,6 +274,14 @@ class ligandSet(dict):
             self[l.getName()] = l
         file.close()
 
+    def getList(self):
+        """
+        Returns list of ligands
+
+        :return: :py:class:`list` of ligand names
+        """
+        return list(self.keys())
+
     def getLigand(self, name):
         """
         Accesses one ligand of the :py:class:`~PLBenchmarks:ligands.ligandSet`
