@@ -5,6 +5,7 @@ Functions and classes for handling the ligand data.
 
 from PLBenchmarks import utils, targets
 
+import os
 import re
 import pandas as pd
 from rdkit import Chem
@@ -264,7 +265,7 @@ class ligandSet(dict):
         """
         super(ligandSet, self).__init__(*arg, **kw)
         tp = targets.getTargetDataPath(target)
-        file = open_text(".".join(tp), "ligands.yml")
+        file = open(os.path.join(tp, "ligands.yml"))
         data = yaml.full_load_all(file)
         for d in data:
             l = ligand(d, target)

@@ -14,15 +14,35 @@ import pandas as pd
 
 import networkx as nx
 
+import os
+
 try:
-    from importlib.resources import open_text
+    from importlib.resources import open_text, path
 except ImportError:
     # Python 2.x backport
-    from importlib_resources import open_text
+    from importlib_resources import open_text, path
 
 
+global dataDir
+global target_list
+
+dataDir = os.path.abspath(os.path.join("PLBenchmarks", "data", ""))
 file = open_text("PLBenchmarks.data", "targets.yml")
 target_list = yaml.full_load(file)
+file.close()
+
+
+def setDataDir(dataPath="./PLBenchmarks/data/"):
+    """
+    Gets the directory name of the target
+
+    :param path: string with path to data directory
+    """
+    global dataDir
+    dataDir = os.path.abspath(os.path.join(*dataPath.split("/")))
+    file = open(os.path.join(dataDir, "targets.yml"))
+    target_list = yaml.full_load(file)
+    file.close()
 
 
 def getTargetDir(target):
@@ -50,7 +70,8 @@ def getTargetDataPath(target):
     """
     for td in target_list:
         if td["name"] == target:
-            return ["PLBenchmarks", "data", td["dir"], "00_data"]
+            print(dataDir)
+            return os.path.join(dataDir, td["dir"], "00_data", "")
             break
     else:
         raise ValueError(f"Path for target {target} not found.")
@@ -72,9 +93,11 @@ class target:
 
         self._name = name
         path = getTargetDataPath(self._name)
-        file = open_text(".".join(path), "target.yml")
+        file = open(os.path.join(path, "target.yml"))
         data = yaml.full_load(file)
         self._data = pd.Series(data)
+        file.close()
+
         self.ligData = None
         self.htmlData = None
         self._ligands = None
@@ -234,13 +257,13 @@ class target:
         )
         pos = nx.circular_layout(G)
 
-        fig = plt.figure(figsize=(40, 20))
+        fig = plt.figure(figsize=(60, 40))
         ax = fig.gca()
         nx.draw(G, pos, node_size=35000, ax=ax, node_color=[[1, 1, 1, 0]])
 
         trans = ax.transData.transform
         trans2 = fig.transFigure.inverted().transform
-        imsize = 0.15  # this is the image size
+        imsize = 0.075  # this is the image size
         for n in G.nodes():
             (x, y) = pos[n]
             xx, yy = trans((x, y))  # figure coordinates

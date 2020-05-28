@@ -3,6 +3,7 @@ Unit and regression test for the PLBenchmarks package.
 """
 
 # Import package, test suite, and other packages as needed
+import os
 from PLBenchmarks import ligands, targets, utils
 import pytest
 import pandas as pd
@@ -99,27 +100,39 @@ def testLigand():
         )
 
 
-def testLigandData():
-    for target in targets.target_list:
-        print("=== " + target["name"] + " ===")
-        ligSet = ligands.ligandSet(target["name"]).getDF(
-            columns=["name", "smiles", "docked"]
+for target in targets.target_list:
+    print("=== " + target["name"] + " ===")
+    ligSet = ligands.ligandSet(target["name"]).getDF(
+        columns=["name", "smiles", "docked"]
+    )
+    testSet = []
+    for index, lig in ligSet.iterrows():
+        testSet.append((target["name"], lig["name"][0], target["dir"], lig))
+
+
+@pytest.mark.parametrize("target, ligName, targetDir, lig", testSet)
+def test_ligandData(target, ligName, targetDir, lig):
+    m1 = Chem.MolFromSmiles(lig["smiles"][0])
+    m2 = Chem.SDMolSupplier(
+        os.path.join(
+            targets.dataDir,
+            targetDir,
+            "02_ligands",
+            lig["name"][0],
+            "crd",
+            f'{lig["name"][0]}.sdf',
         )
-        for index, lig in ligSet.iterrows():
-            m1 = Chem.MolFromSmiles(lig["smiles"][0])
-            m2 = Chem.SDMolSupplier(
-                f'PLBenchmarks/data/{target["dir"]}/03_docked/{lig["name"][0]}/{lig["name"][0]}.sdf'
-            )[0]
-            assert m1.GetNumAtoms() == m2.GetNumAtoms()
-            m1.RemoveAllConformers()
-            m2.RemoveAllConformers()
-            assert pytest.approx(1.0, 1e-9) == DataStructs.FingerprintSimilarity(
-                Chem.RDKFingerprint(m1), Chem.RDKFingerprint(m2)
-            )
-            #            assert Chem.MolToMolBlock(m1) == Chem.MolToMolBlock(m2)
-            res = rdFMCS.FindMCS([m1, m2])
-            assert res.numAtoms == m1.GetNumAtoms()
-            assert res.numBonds == m1.GetNumBonds()
+    )[0]
+    assert m1.GetNumAtoms() == m2.GetNumAtoms()
+    m1.RemoveAllConformers()
+    m2.RemoveAllConformers()
+    assert pytest.approx(1.0, 1e-9) == DataStructs.FingerprintSimilarity(
+        Chem.RDKFingerprint(m1), Chem.RDKFingerprint(m2)
+    )
+    #            assert Chem.MolToMolBlock(m1) == Chem.MolToMolBlock(m2)
+    res = rdFMCS.FindMCS([m1, m2])
+    assert res.numAtoms == m1.GetNumAtoms()
+    assert res.numBonds == m1.GetNumBonds()
 
 
 def test_ligand_class():

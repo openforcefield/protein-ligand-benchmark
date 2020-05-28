@@ -5,6 +5,7 @@ Functions and classes for handling the perturbation edges.
 
 from PLBenchmarks import utils, targets, ligands
 
+import os
 import pandas as pd
 import numpy as np
 import yaml
@@ -51,13 +52,17 @@ class edge:
             if key == "lig_" + str(self._data[0]):
                 l0 = item._data["ROMol"][0]
                 dg0 = item._data[("DerivedMeasurement", "dg")]
+                s0 = item._data["smiles"]
                 err0 = item._data[("DerivedMeasurement", "e_dg")]
             if key == "lig_" + str(self._data[1]):
                 l1 = item._data["ROMol"][0]
+                s1 = item._data["smiles"]
                 dg1 = item._data[("DerivedMeasurement", "dg")]
                 err1 = item._data[("DerivedMeasurement", "e_dg")]
         self._data["Mol1"] = l0
         self._data["Mol2"] = l1
+        self._data["Smiles1"] = s0
+        self._data["Smiles2"] = s1
         self._data["exp. DeltaG [kcal/mol]"] = round(dg1 - dg0, 2)
         self._data["exp. Error [kcal/mol]"] = round(
             np.sqrt(np.power(err0, 2.0) + np.power(err1, 2.0)), 2
@@ -116,12 +121,13 @@ class edgeSet(dict):
         super(edgeSet, self).__init__(*arg, **kw)
         tp = targets.getTargetDataPath(target)
         ligs = ligands.ligandSet(target)
-        file = open_text(".".join(tp), "edges.yml")
+        file = open(os.path.join(tp, "edges.yml"))
         data = yaml.full_load_all(file)
         for d in data:
             e = edge(d)
             e.addLigData(ligs)
             self[e.getName()] = e
+        file.close()
 
     def getEdge(self, name):
         """
