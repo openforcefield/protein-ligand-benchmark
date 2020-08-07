@@ -16,13 +16,14 @@ dependencies:
   - numpy
   - matplotlib
   - pandas
-  - importlib_resources
   - rdkit
   - networkx
   - pint
   - scipy
+  - openforcefield
+  - importlib_resources
   
-  # Pip-only installs
+# Pip-only installs
   #- pip:
   #  - codecov
   #   - pyaml
