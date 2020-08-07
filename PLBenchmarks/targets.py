@@ -4,6 +4,7 @@ Functions and classes for handling the target data.
 """
 
 import yaml
+import PLBenchmarks
 from PLBenchmarks import ligands, edges, utils
 
 import numpy as np
@@ -26,20 +27,21 @@ except ImportError:
 global dataDir
 global target_list
 
-dataDir = os.path.abspath(os.path.join("PLBenchmarks", "data", ""))
-file = open_text("PLBenchmarks.data", "targets.yml")
+dataDir = os.path.abspath(os.path.join(os.path.join(PLBenchmarks.__path__[0], "sample_data")))
+file = open(os.path.join(dataDir, "targets.yml"))
 target_list = yaml.full_load(file)
 file.close()
 
 
-def setDataDir(dataPath="./PLBenchmarks/data/"):
+def setDataDir(dataPath=os.path.abspath(os.path.join(PLBenchmarks.__path__[0], "sample_data"))):
     """
     Gets the directory name of the target
 
     :param path: string with path to data directory
     """
     global dataDir
-    dataDir = os.path.abspath(os.path.join(*dataPath.split("/")))
+    dataDir = os.path.abspath(dataPath)
+    print(dataDir)
     file = open(os.path.join(dataDir, "targets.yml"))
     target_list = yaml.full_load(file)
     file.close()
