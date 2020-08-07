@@ -65,7 +65,6 @@ class ligand:
                         )
                     )
                     vals = self._data[("measurement", f"{obs}")]
-                    u = utils.ureg("")
                     if vals[2] == "nM":
                         u = utils.ureg("nanomolar")
                     elif vals[2] == "uM":

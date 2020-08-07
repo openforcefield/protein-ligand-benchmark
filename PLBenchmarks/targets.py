@@ -3,29 +3,16 @@ targets.py
 Functions and classes for handling the target data.
 """
 
+import os
 import yaml
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import networkx as nx
+
 import PLBenchmarks
 from PLBenchmarks import ligands, edges, utils
 
-import numpy as np
-
-import matplotlib.pyplot as plt
-
-import pandas as pd
-
-import networkx as nx
-
-import os
-
-try:
-    from importlib.resources import open_text, path
-except ImportError:
-    # Python 2.x backport
-    from importlib_resources import open_text, path
-
-
-global dataDir
-global target_list
 
 dataDir = os.path.abspath(os.path.join(os.path.join(PLBenchmarks.__path__[0], "sample_data")))
 file = open(os.path.join(dataDir, "targets.yml"))
@@ -41,8 +28,8 @@ def setDataDir(dataPath=os.path.abspath(os.path.join(PLBenchmarks.__path__[0], "
     """
     global dataDir
     dataDir = os.path.abspath(dataPath)
-    print(dataDir)
     file = open(os.path.join(dataDir, "targets.yml"))
+    global target_list
     target_list = yaml.full_load(file)
     file.close()
 
@@ -305,6 +292,16 @@ class targetSet(dict):
             tgt = target(td["name"])
             self[tgt.getName()] = tgt
         self._df = None
+
+    def __eq__(self, other):
+        if not isinstance(other, targetSet):
+            return False
+        return dict.__eq__(self, other) and self._df == other._df
+
+    def __ne__(self, other):
+        if not isinstance(other, targetSet):
+            return True
+        return dict.__ne__(self, other) or self._df != other._df
 
     def getTarget(self, name):
         """

@@ -3,18 +3,12 @@ edges.py
 Functions and classes for handling the perturbation edges.
 """
 
-from PLBenchmarks import utils, targets, ligands
+from PLBenchmarks import targets, ligands
 
 import os
 import pandas as pd
 import numpy as np
 import yaml
-
-try:
-    from importlib.resources import open_text
-except ImportError:
-    # Python 2.x backport
-    from importlib_resources import open_text
 
 
 class edge:
