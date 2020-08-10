@@ -48,7 +48,7 @@ def getTargetDir(target):
             return td["dir"]
             break
     else:
-        print("Directory for target {target} not found.")
+        raise ValueError(f"Directory for target {target} not found.")
 
 
 def getTargetDataPath(target):
