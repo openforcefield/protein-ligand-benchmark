@@ -3,27 +3,19 @@ ligands.py
 Functions and classes for handling the ligand data.
 """
 
-from PLBenchmarks import utils, targets
-
 import os
 import re
+import io
+import yaml
 import pandas as pd
+
+from PIL import Image
 from rdkit import Chem
 from rdkit.Chem import Draw, PandasTools
 from openforcefield.topology import Molecule
 
-from PIL import Image
-
-import io
-
-import yaml
-
-try:
-    from importlib.resources import open_text
-except ImportError:
-    # Python 2.x backport
-    from importlib_resources import open_text
-
+import PLBenchmarks
+import PLBenchmarks.utils
 
 class ligand:
     """
@@ -66,16 +58,16 @@ class ligand:
                     )
                     vals = self._data[("measurement", f"{obs}")]
                     if vals[2] == "nM":
-                        u = utils.ureg("nanomolar")
+                        u = PLBenchmarks.utils.ureg("nanomolar")
                     elif vals[2] == "uM":
-                        u = utils.ureg("micromolar")
+                        u = PLBenchmarks.utils.ureg("micromolar")
                     elif vals[2] == "kj/mol":
-                        u = utils.ureg("kJ / mole")
+                        u = PLBenchmarks.utils.ureg("kJ / mole")
                     elif vals[2] == "kcal/mol":
-                        u = utils.ureg("kcal / mole")
+                        u = PLBenchmarks.utils.ureg("kcal / mole")
                     else:
                         # let pint figure out what the unit means
-                        u = utils.ureg(vals[2])
+                        u = PLBenchmarks.utils.ureg(vals[2])
                     self._data[("measurement", f"e_{obs}")] = vals[1] * u
                     self._data[("measurement", obs)] = vals[0] * u
 
@@ -83,7 +75,7 @@ class ligand:
         self,
         derivedObs="dg",
         dest="DerivedMeasurement",
-        outUnit=utils.ureg("kcal / mole"),
+        outUnit=PLBenchmarks.utils.ureg("kcal / mole"),
     ):
         """
         Derive observables from (stored) primary data, which is then stored in the :py:class:`pandas.DataFrame`
@@ -101,13 +93,13 @@ class ligand:
                 self._data = self._data.append(
                     pd.Series(
                         [
-                            utils.convertValue(
+                            PLBenchmarks.utils.convertValue(
                                 self._data[("measurement", obs)],
                                 obs,
                                 derivedObs,
                                 outUnit=outUnit,
                             ),
-                            utils.convertError(
+                            PLBenchmarks.utils.convertError(
                                 self._data[("measurement", f"e_{obs}")],
                                 self._data[("measurement", obs)],
                                 obs,
@@ -155,13 +147,13 @@ class ligand:
             if str(doi) != "nan":
                 res = []
                 for ddoi in re.split(r"[; ]+", str(doi)):
-                    res.append(utils.findDoiUrl(ddoi))
+                    res.append(PLBenchmarks.utils.findDoiUrl(ddoi))
             self._data["measurement", "doi_html"] = (r"\n").join(res)
             self._data.drop([("measurement", "doi")], inplace=True)
             self._data.rename({"doi_html": "Reference"}, level=1, inplace=True)
         if ("pdb") in list(self._data.index):
             pdb = self._data["pdb"]
-            self._data["pdb_html"] = utils.findPdbUrl(pdb)
+            self._data["pdb_html"] = PLBenchmarks.utils.findPdbUrl(pdb)
             self._data.drop(["pdb"], inplace=True)
             self._data.rename({"pdb_html": "pdb"}, inplace=True)
 
@@ -263,7 +255,7 @@ class ligandSet(dict):
         :param kw: keywords for :py:class:`dict` (base class)
         """
         super(ligandSet, self).__init__(*arg, **kw)
-        tp = targets.getTargetDataPath(target)
+        tp = PLBenchmarks.targets.getTargetDataPath(target)
         file = open(os.path.join(tp, "ligands.yml"))
         data = yaml.full_load_all(file)
         for d in data:

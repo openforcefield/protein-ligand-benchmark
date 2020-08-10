@@ -11,7 +11,7 @@ import pandas as pd
 import networkx as nx
 
 import PLBenchmarks
-from PLBenchmarks import ligands, edges, utils
+import PLBenchmarks.utils
 
 
 dataDir = os.path.abspath(os.path.join(os.path.join(PLBenchmarks.__path__[0], "sample_data")))
@@ -107,7 +107,7 @@ class target:
         :return: :py:class:`PLBenchmarks.ligands.ligandSet` object
         """
         if self._ligands is None:
-            self._ligands = ligands.ligandSet(self._name)
+            self._ligands = PLBenchmarks.ligands.ligandSet(self._name)
         return self._ligands
 
     def addLigandData(self):
@@ -123,11 +123,11 @@ class target:
             affinities.append(
                 item._data[("DerivedMeasurement", "dg")].to("kcal/mole").magnitude
             )
-        self.ligData["maxDG"] = round(max(affinities) * utils.ureg("kcal / mole"), 1)
-        self.ligData["minDG"] = round(min(affinities) * utils.ureg("kcal / mole"), 1)
+        self.ligData["maxDG"] = round(max(affinities) * PLBenchmarks.utils.ureg("kcal / mole"), 1)
+        self.ligData["minDG"] = round(min(affinities) * PLBenchmarks.utils.ureg("kcal / mole"), 1)
         # calculation of the mean absolute deviation
         mean = np.average(affinities)
-        mad = np.average(np.fabs(affinities - mean)) * utils.ureg("kcal / mole")
+        mad = np.average(np.fabs(affinities - mean)) * PLBenchmarks.utils.ureg("kcal / mole")
         mad = mad.to("kcal/mole")
         self.ligData["MAD(DG)"] = round(mad, 1)
 
@@ -161,7 +161,7 @@ class target:
         :return: :py:class:`PLBenchmarks:edges:edgeSet` object
         """
         if self._edges is None:
-            self._edges = edges.edgeSet(self._name)
+            self._edges = PLBenchmarks.edges.edgeSet(self._name)
         return self._edges
 
     def getEdgeSetDF(self, columns=None):
@@ -213,14 +213,14 @@ class target:
                     continue
                 for doi in item:
                     if str(doi) != "nan":
-                        res.append(utils.findDoiUrl(doi))
+                        res.append(PLBenchmarks.utils.findDoiUrl(doi))
                 self.htmlData[key] = (r"\n").join(res)
         if ("pdb") in list(self._data.index):
             pdb = self._data["pdb"]
             if pdb is None:
                 self.htmlData["pdblinks"] = ""
             else:
-                self.htmlData["pdblinks"] = utils.findPdbUrl(" ".join(pdb.split(",")))
+                self.htmlData["pdblinks"] = PLBenchmarks.utils.findPdbUrl(" ".join(pdb.split(",")))
 
     def getHtmlData(self):
         if self.htmlData is None:

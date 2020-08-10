@@ -2,14 +2,12 @@
 edges.py
 Functions and classes for handling the perturbation edges.
 """
-
-from PLBenchmarks import targets, ligands
-
 import os
 import pandas as pd
 import numpy as np
 import yaml
 
+import PLBenchmarks
 
 class edge:
     """
@@ -113,8 +111,8 @@ class edgeSet(dict):
         :param kw: keywords for :py:class:`dict` (base class)
         """
         super(edgeSet, self).__init__(*arg, **kw)
-        tp = targets.getTargetDataPath(target)
-        ligs = ligands.ligandSet(target)
+        tp = PLBenchmarks.targets.getTargetDataPath(target)
+        ligs = PLBenchmarks.ligands.ligandSet(target)
         file = open(os.path.join(tp, "edges.yml"))
         data = yaml.full_load_all(file)
         for d in data:
