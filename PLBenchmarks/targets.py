@@ -12,6 +12,8 @@ import networkx as nx
 
 import PLBenchmarks
 import PLBenchmarks.utils
+import PLBenchmarks.ligands
+import PLBenchmarks.edges
 
 
 dataDir = os.path.abspath(os.path.join(os.path.join(PLBenchmarks.__path__[0], "sample_data")))
@@ -59,7 +61,6 @@ def getTargetDataPath(target):
     """
     for td in target_list:
         if td["name"] == target:
-            print(dataDir)
             return os.path.join(dataDir, td["dir"], "00_data", "")
             break
     else:

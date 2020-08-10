@@ -8,6 +8,8 @@ import numpy as np
 import yaml
 
 import PLBenchmarks
+import PLBenchmarks.ligands
+import PLBenchmarks.targets
 
 class edge:
     """

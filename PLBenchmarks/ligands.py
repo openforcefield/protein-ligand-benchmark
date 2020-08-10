@@ -15,6 +15,7 @@ from rdkit.Chem import Draw, PandasTools
 from openforcefield.topology import Molecule
 
 import PLBenchmarks
+import PLBenchmarks.targets
 import PLBenchmarks.utils
 
 class ligand:
