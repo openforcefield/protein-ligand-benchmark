@@ -32,8 +32,8 @@ echo "conda activate" >> ~/.bashrc  # Activate conda
 source ~/.bashrc  # source file to get new commands
 #export PATH=$MINICONDA_HOME/bin:$PATH  # Old way, should not be needed anymore
 
-conda config --add channels conda-forge
 conda config --add channels omnia
+conda config --add channels conda-forge
 
 conda config --set always_yes yes
 conda install conda conda-build jinja2 anaconda-client
