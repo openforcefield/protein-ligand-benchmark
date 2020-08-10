@@ -123,14 +123,6 @@ def testLigand():
 
     eps = 0.01
     for key, item in jacs_data.items():
-        print(
-            key,
-            item,
-            df[df.name == key][("DerivedMeasurement", "dg")]
-                .values[0]
-                .to(utils.ureg("kcal / mole"))
-                .magnitude,
-        )
         assert (
                 pytest.approx(item, eps)
                 == df[df.name == key][("DerivedMeasurement", "dg")]
@@ -141,7 +133,6 @@ def testLigand():
 
 
 for target in targets.target_list:
-    print("=== " + target["name"] + " ===")
     ligSet = ligands.ligandSet(target["name"]).getDF(
         columns=["name", "smiles", "docked"]
     )
@@ -177,7 +168,6 @@ def test_ligandData(target, ligName, targetDir, lig):
 
 def test_ligand_class():
     for target in targets.target_list:
-        print("=== " + target["name"] + " ===")
         ligSet = ligands.ligandSet(target["name"])
         for name, lig in ligSet.items():
             lig.getImg()
