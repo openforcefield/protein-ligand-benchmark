@@ -62,15 +62,15 @@ class edge:
             np.sqrt(np.power(err0, 2.0) + np.power(err1, 2.0)), 2
         )
 
-    def getDF(self, cols=None):
+    def getDF(self, columns=None):
         """
         Access the edge data as a :py:class:`pandas.DataFrame`
 
         :param cols: list of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: :py:class:`pandas.DataFrame`
         """
-        if cols:
-            return self._data[cols]
+        if columns:
+            return self._data[columns]
         else:
             return self._data
 
