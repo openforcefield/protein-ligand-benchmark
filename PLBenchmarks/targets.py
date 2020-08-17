@@ -16,13 +16,17 @@ import PLBenchmarks.ligands
 import PLBenchmarks.edges
 
 
-dataDir = os.path.abspath(os.path.join(os.path.join(PLBenchmarks.__path__[0], "sample_data")))
+dataDir = os.path.abspath(
+    os.path.join(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
+)
 file = open(os.path.join(dataDir, "targets.yml"))
 target_list = yaml.full_load(file)
 file.close()
 
 
-def setDataDir(dataPath=os.path.abspath(os.path.join(PLBenchmarks.__path__[0], "sample_data"))):
+def setDataDir(
+    dataPath=os.path.abspath(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
+):
     """
     Gets the directory name of the target
 
@@ -124,11 +128,17 @@ class target:
             affinities.append(
                 item._data[("DerivedMeasurement", "dg")].to("kcal/mole").magnitude
             )
-        self.ligData["maxDG"] = round(max(affinities) * PLBenchmarks.utils.ureg("kcal / mole"), 1)
-        self.ligData["minDG"] = round(min(affinities) * PLBenchmarks.utils.ureg("kcal / mole"), 1)
+        self.ligData["maxDG"] = round(
+            max(affinities) * PLBenchmarks.utils.ureg("kcal / mole"), 1
+        )
+        self.ligData["minDG"] = round(
+            min(affinities) * PLBenchmarks.utils.ureg("kcal / mole"), 1
+        )
         # calculation of the mean absolute deviation
         mean = np.average(affinities)
-        mad = np.average(np.fabs(affinities - mean)) * PLBenchmarks.utils.ureg("kcal / mole")
+        mad = np.average(np.fabs(affinities - mean)) * PLBenchmarks.utils.ureg(
+            "kcal / mole"
+        )
         mad = mad.to("kcal/mole")
         self.ligData["MAD(DG)"] = round(mad, 1)
 
@@ -221,7 +231,9 @@ class target:
             if pdb is None:
                 self.htmlData["pdblinks"] = ""
             else:
-                self.htmlData["pdblinks"] = PLBenchmarks.utils.findPdbUrl(" ".join(pdb.split(",")))
+                self.htmlData["pdblinks"] = PLBenchmarks.utils.findPdbUrl(
+                    " ".join(pdb.split(","))
+                )
 
     def getHtmlData(self):
         if self.htmlData is None:

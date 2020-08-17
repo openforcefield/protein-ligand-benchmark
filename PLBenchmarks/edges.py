@@ -11,6 +11,7 @@ import PLBenchmarks
 import PLBenchmarks.ligands
 import PLBenchmarks.targets
 
+
 class edge:
     """
     Store and convert the data of one perturbation ("edge") in a :py:class:`pandas.Series`.
