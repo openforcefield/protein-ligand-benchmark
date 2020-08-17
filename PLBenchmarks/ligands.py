@@ -18,6 +18,7 @@ import PLBenchmarks
 import PLBenchmarks.targets
 import PLBenchmarks.utils
 
+
 class ligand:
     """
     Store and convert the data of one ligand in a :py:class:`pandas.Series`.
@@ -36,7 +37,7 @@ class ligand:
         self._target = target
         self._data = pd.Series(d)
         self._molecule = None
-        self._name = self._data["name"][0]
+        self._name = self._data["name"]
         # Expand measurement dict into single fields
         if "measurement" in list(self._data.index):
             meas = pd.Series(self._data["measurement"])
@@ -125,15 +126,15 @@ class ligand:
         """
         return self._data["name"][0]
 
-    def getDF(self, cols=None):
+    def getDF(self, columns=None):
         """
         Access the ligand data as a :py:class:`pandas.Dataframe`
 
         :param cols: list of columns which should be returned in the :py:class:`pandas.Dataframe`
         :return: :py:class:`pandas.Dataframe`
         """
-        if cols:
-            return self._data[cols]
+        if columns:
+            return self._data[columns]
         else:
             return self._data
 
@@ -152,11 +153,6 @@ class ligand:
             self._data["measurement", "doi_html"] = (r"\n").join(res)
             self._data.drop([("measurement", "doi")], inplace=True)
             self._data.rename({"doi_html": "Reference"}, level=1, inplace=True)
-        if ("pdb") in list(self._data.index):
-            pdb = self._data["pdb"]
-            self._data["pdb_html"] = PLBenchmarks.utils.findPdbUrl(pdb)
-            self._data.drop(["pdb"], inplace=True)
-            self._data.rename({"pdb_html": "pdb"}, inplace=True)
 
     def getCoordFilePath(self):
         """
@@ -164,7 +160,16 @@ class ligand:
 
         :return: file path as string
         """
-        fname = self._data["docked"][0]
+        fname = os.path.abspath(
+            os.path.join(
+                PLBenchmarks.targets.dataDir,
+                PLBenchmarks.targets.getTargetDir(self._target),
+                "02_ligands",
+                self._name,
+                "crd",
+                f"{self._name}.sdf",
+            )
+        )
         return fname
 
     def getMol(self):
@@ -173,18 +178,9 @@ class ligand:
 
         :return: file path as string
         """
-        if self._molecule is not None:
+        if self._molecule is None:
             fname = self.getCoordFilePath()
-
-            for td in target_list:
-                if td["name"] == self._target:
-                    sdfpath = ["PLBenchmarks", "data", td["dir"]] + fname.split("/")
-                    break
-            else:
-                raise ValueError(f"Path for ligand {self._name} not found.")
-
-            file = open_text(".".join(sdfpath[:-1]), sdfpath[-1])
-            self._molecule = Molecule.from_file(file, "sdf")
+            self._molecule = Molecule.from_file(fname, "sdf")
         return self._molecule
 
     def addMolToFrame(self):
@@ -207,9 +203,9 @@ class ligand:
         """
         self.findLinks()
         if columns:
-            html = pd.Dataframe(self._data[columns]).to_html()
+            html = pd.DataFrame(self._data[columns]).to_html()
         else:
-            html = pd.Dataframe(self._data).to_html()
+            html = pd.DataFrame(self._data).to_html()
         html = html.replace("REP1", '<a target="_blank" href="')
         html = html.replace("REP2", '">')
         html = html.replace("REP3", "</a>")
@@ -318,3 +314,14 @@ class ligandSet(dict):
         html = html.replace("REP3", "</a>")
         html = html.replace("\\n", "<br>")
         return html
+
+    def getMols(self):
+        """
+        Returns a :py:class:`dict` with names as keys and values as py:class:`openforcefield:topology:Molecule` objects
+
+        :return:  :py:class:`dict`
+        """
+        mols = {}
+        for key, item in self.items():
+            mols[key] = item.getMol()
+        return mols

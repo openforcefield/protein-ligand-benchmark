@@ -10,14 +10,15 @@ import pandas as pd
 import yaml
 from rdkit import Chem, DataStructs
 from rdkit.Chem import rdFMCS
+from openforcefield.topology import Molecule
 
 import PLBenchmarks
 from PLBenchmarks import ligands, targets, utils
 
 
-def testLigand():
+def test_affinity_data():
     targets.setDataDir(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
-    file = open(os.path.join(targets.getTargetDataPath('mcl1') + 'ligands.yml'))
+    file = open(os.path.join(targets.getTargetDataPath("mcl1") + "ligands.yml"))
     data = yaml.full_load_all(file)
     dfs = []
     for d in data:
@@ -72,7 +73,7 @@ def testLigand():
             "lig_65",
             "lig_66",
             "lig_67",
-            "lig_68"
+            "lig_68",
         ]
 
     # Check whether the values in the repo are the same and correctly converted by comparing to the values in the JACS paper
@@ -124,35 +125,35 @@ def testLigand():
     eps = 0.01
     for key, item in jacs_data.items():
         assert (
-                pytest.approx(item, eps)
-                == df[df.name == key][("DerivedMeasurement", "dg")]
-                .values[0]
-                .to(utils.ureg("kcal / mole"))
-                .magnitude
+            pytest.approx(item, eps)
+            == df[df.name == key][("DerivedMeasurement", "dg")]
+            .values[0]
+            .to(utils.ureg("kcal / mole"))
+            .magnitude
         )
 
 
 for target in targets.target_list:
-    ligSet = ligands.ligandSet(target["name"]).getDF(
-        columns=["name", "smiles", "docked"]
-    )
+    ligSet = ligands.ligandSet(target["name"])
     testSet = []
-    for index, lig in ligSet.iterrows():
-        testSet.append((target["name"], lig["name"][0], target["dir"], lig))
+    for name, lig in ligSet.items():
+        testSet.append((target["name"], name, lig))
 
 
-@pytest.mark.parametrize("target, ligName, targetDir, lig", testSet)
-def test_ligandData(target, ligName, targetDir, lig):
-    m1 = Chem.MolFromSmiles(lig["smiles"][0])
+@pytest.mark.parametrize("target, ligName, lig", testSet)
+def test_ligandData(target, ligName, lig):
+    m1 = Chem.MolFromSmiles(lig._data["smiles"][0])
+    m1 = Chem.AddHs(m1)
     m2 = Chem.SDMolSupplier(
         os.path.join(
             targets.dataDir,
-            targetDir,
+            targets.getTargetDir(target),
             "02_ligands",
-            lig["name"][0],
+            ligName,
             "crd",
-            f'{lig["name"][0]}.sdf',
-        )
+            f"{ligName}.sdf",
+        ),
+        removeHs=False,
     )[0]
     assert m1.GetNumAtoms() == m2.GetNumAtoms()
     m1.RemoveAllConformers()
@@ -165,15 +166,54 @@ def test_ligandData(target, ligName, targetDir, lig):
     assert res.numAtoms == m1.GetNumAtoms()
     assert res.numBonds == m1.GetNumBonds()
 
+    m3 = lig.getMol()
+    m2 = Molecule.from_rdkit(m2)
+    assert Molecule.are_isomorphic(m2, m3)
+
 
 def test_ligand_class():
     for target in targets.target_list:
         ligSet = ligands.ligandSet(target["name"])
         for name, lig in ligSet.items():
+            assert lig.getName() == name
+            df = lig.getDF()
+            assert df["name"][0] == name
+            df = lig.getDF(columns=["name"])
+            assert df["name"][0] == name
+            # ToDo: make proper tests (?)
+            lig.findLinks()
             lig.getImg()
+            lig.getHTML()
+            lig.getHTML(columns=["name", "smiles"])
 
 
 def test_ligandSet():
     ligs = ligands.ligandSet("mcl1")
-    ligs.getDF()
+
+    lig_list = ligs.getList()
+    for key in lig_list:
+        assert key in ligs.keys()
+        assert isinstance(ligs.getLigand(key), ligands.ligand)
+
+    with pytest.raises(ValueError, match="Ligand xxx is not part of set."):
+        ligs.getLigand("xxx")
+
+    df = ligs.getDF()
+    for i, row in df.iterrows():
+        print(ligs[row.loc["name"][0]]._data, row)
+        pd.testing.assert_series_equal(
+            ligs[row.loc["name"][0]]._data, row, check_names=False
+        )
+
+    df = ligs.getDF(columns=["name", "smiles"])
+    for i, row in df.iterrows():
+        assert row["name"][0] == ligs[row.loc["name"][0]].getName()
+        assert row["smiles"][0] == ligs[row.loc["name"][0]]._data["smiles"][0]
+
+    mols = ligs.getMols()
+    for name, lig in ligs.items():
+        assert Molecule.are_isomorphic(lig.getMol(), mols[name])
+
+    # ToDo: proper test for getHTML()
     ligs.getHTML()
+    ligs.getHTML(columns=["name", "smiles"])
