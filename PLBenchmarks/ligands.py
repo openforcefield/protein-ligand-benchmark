@@ -14,9 +14,7 @@ from rdkit import Chem
 from rdkit.Chem import Draw, PandasTools
 from openforcefield.topology import Molecule
 
-import PLBenchmarks
-import PLBenchmarks.targets
-import PLBenchmarks.utils
+from . import targets, utils
 
 
 class Ligand:
@@ -61,16 +59,16 @@ class Ligand:
                     )
                     values = self._data[("measurement", f"{obs}")]
                     if values[2] == "nM":
-                        u = PLBenchmarks.utils.unit_registry("nanomolar")
+                        u = utils.unit_registry("nanomolar")
                     elif values[2] == "uM":
-                        u = PLBenchmarks.utils.unit_registry("micromolar")
+                        u = utils.unit_registry("micromolar")
                     elif values[2] == "kj/mol":
-                        u = PLBenchmarks.utils.unit_registry("kJ / mole")
+                        u = utils.unit_registry("kJ / mole")
                     elif values[2] == "kcal/mol":
-                        u = PLBenchmarks.utils.unit_registry("kcal / mole")
+                        u = utils.unit_registry("kcal / mole")
                     else:
                         # let pint figure out what the unit means
-                        u = PLBenchmarks.utils.unit_registry(values[2])
+                        u = utils.unit_registry(values[2])
                     self._data[("measurement", f"e_{obs}")] = values[1] * u
                     self._data[("measurement", obs)] = values[0] * u
 
@@ -78,7 +76,7 @@ class Ligand:
         self,
         derived_type="dg",
         destination="DerivedMeasurement",
-        out_unit=PLBenchmarks.utils.unit_registry("kcal / mole"),
+        out_unit=utils.unit_registry("kcal / mole"),
     ):
         """
         Derive observables from (stored) primary data, which is then stored in the :py:class:`pandas.DataFrame`
@@ -96,13 +94,13 @@ class Ligand:
                 self._data = self._data.append(
                     pd.Series(
                         [
-                            PLBenchmarks.utils.convert_value(
+                            utils.convert_value(
                                 self._data[("measurement", obs)],
                                 obs,
                                 derived_type,
                                 out_unit=out_unit,
                             ),
-                            PLBenchmarks.utils.convert_error(
+                            utils.convert_error(
                                 self._data[("measurement", f"e_{obs}")],
                                 self._data[("measurement", obs)],
                                 obs,
@@ -153,7 +151,7 @@ class Ligand:
             result = []
             if str(doi) != "nan":
                 for ddoi in re.split(r"[; ]+", str(doi)):
-                    result.append(PLBenchmarks.utils.find_doi_url(ddoi))
+                    result.append(utils.find_doi_url(ddoi))
             self._data["measurement", "doi_html"] = r"\n".join(result)
             self._data.drop([("measurement", "doi")], inplace=True)
             self._data.rename({"doi_html": "Reference"}, level=1, inplace=True)
@@ -166,8 +164,8 @@ class Ligand:
         """
         filename = os.path.abspath(
             os.path.join(
-                PLBenchmarks.targets.data_directory,
-                PLBenchmarks.targets.get_target_dir(self._target),
+                targets.data_directory,
+                targets.get_target_dir(self._target),
                 "02_ligands",
                 self._name,
                 "crd",
@@ -258,7 +256,7 @@ class LigandSet(dict):
         :param kw: keywords for :py:class:`dict` (base class)
         """
         super(LigandSet, self).__init__(*arg, **kw)
-        target_path = PLBenchmarks.targets.get_target_data_path(target)
+        target_path = targets.get_target_data_path(target)
         file = open(os.path.join(target_path, "ligands.yml"))
         data = yaml.full_load_all(file)
         for d in data:

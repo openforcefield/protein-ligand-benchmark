@@ -10,14 +10,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import networkx as nx
 
-import PLBenchmarks
-import PLBenchmarks.utils
-import PLBenchmarks.ligands
-import PLBenchmarks.edges
+from . import __path__, ligands, edges, utils
 
 
 data_directory = os.path.abspath(
-    os.path.join(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
+    os.path.join(os.path.join(__path__[0], "sample_data"))
 )
 file = open(os.path.join(data_directory, "targets.yml"))
 target_list = yaml.full_load(file)
@@ -25,7 +22,7 @@ file.close()
 
 
 def set_data_dir(
-    data_path=os.path.abspath(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
+    data_path=os.path.abspath(os.path.join(__path__[0], "sample_data"))
 ):
     """
     Gets the directory name of the target
@@ -112,7 +109,7 @@ class Target:
         :return: :py:class:`PLBenchmarks.ligands.ligandSet` object
         """
         if self._ligands is None:
-            self._ligands = PLBenchmarks.ligands.LigandSet(self._name)
+            self._ligands = ligands.LigandSet(self._name)
         return self._ligands
 
     def add_ligand_data(self):
@@ -129,14 +126,14 @@ class Target:
                 item._data[("DerivedMeasurement", "dg")].to("kcal/mole").magnitude
             )
         self.ligand_data["maxDG"] = round(
-            max(affinities) * PLBenchmarks.utils.unit_registry("kcal / mole"), 1
+            max(affinities) * utils.unit_registry("kcal / mole"), 1
         )
         self.ligand_data["minDG"] = round(
-            min(affinities) * PLBenchmarks.utils.unit_registry("kcal / mole"), 1
+            min(affinities) * utils.unit_registry("kcal / mole"), 1
         )
         # calculation of the mean absolute deviation (mad)
         mean = np.average(affinities)
-        mad = np.average(np.fabs(affinities - mean)) * PLBenchmarks.utils.unit_registry(
+        mad = np.average(np.fabs(affinities - mean)) * utils.unit_registry(
             "kcal / mole"
         )
         mad = mad.to("kcal/mole")
@@ -172,7 +169,7 @@ class Target:
         :return: :py:class:`PLBenchmarks:edges:edgeSet` object
         """
         if self._edges is None:
-            self._edges = PLBenchmarks.edges.EdgeSet(self._name)
+            self._edges = edges.EdgeSet(self._name)
         return self._edges
 
     def get_edge_set_dataframe(self, columns=None):
@@ -224,14 +221,14 @@ class Target:
                     continue
                 for doi in item:
                     if str(doi) != "nan":
-                        res.append(PLBenchmarks.utils.find_doi_url(doi))
+                        res.append(utils.find_doi_url(doi))
                 self.html_data[key] = (r"\n").join(res)
         if ("pdb") in list(self._data.index):
             pdb = self._data["pdb"]
             if pdb is None:
                 self.html_data["pdblinks"] = ""
             else:
-                self.html_data["pdblinks"] = PLBenchmarks.utils.find_pdb_url(
+                self.html_data["pdblinks"] = utils.find_pdb_url(
                     " ".join(pdb.split(","))
                 )
 

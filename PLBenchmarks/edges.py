@@ -7,9 +7,7 @@ import pandas as pd
 import numpy as np
 import yaml
 
-import PLBenchmarks
-import PLBenchmarks.ligands
-import PLBenchmarks.targets
+from . import targets, ligands
 
 
 class Edge:
@@ -116,8 +114,8 @@ class EdgeSet(dict):
         :param kw: keywords for :py:class:`dict` (base class)
         """
         super(EdgeSet, self).__init__(*arg, **kw)
-        target_path = PLBenchmarks.targets.get_target_data_path(target)
-        ligand_set = PLBenchmarks.ligands.LigandSet(target)
+        target_path = targets.get_target_data_path(target)
+        ligand_set = ligands.LigandSet(target)
         file = open(os.path.join(target_path, "edges.yml"))
         data = yaml.full_load_all(file)
         for d in data:
