@@ -13,27 +13,28 @@ import networkx as nx
 from . import __path__, ligands, edges, utils
 
 
-data_directory = os.path.abspath(
+data_path = os.path.abspath(
     os.path.join(os.path.join(__path__[0], "sample_data"))
 )
-file = open(os.path.join(data_directory, "targets.yml"))
-target_list = yaml.full_load(file)
+file = open(os.path.join(data_path, "targets.yml"))
+target_dict = yaml.full_load(file)
+print(target_dict)
 file.close()
 
 
 def set_data_dir(
-    data_path=os.path.abspath(os.path.join(__path__[0], "sample_data"))
+    path=os.path.abspath(os.path.join(__path__[0], "sample_data"))
 ):
     """
     Gets the directory name of the target
 
     :param path: string with path to data directory
     """
-    global data_directory
-    data_directory = os.path.abspath(data_path)
-    file = open(os.path.join(data_directory, "targets.yml"))
-    global target_list
-    target_list = yaml.full_load(file)
+    global data_path
+    data_path = os.path.abspath(path)
+    file = open(os.path.join(data_path, "targets.yml"))
+    global target_dict
+    target_dict = yaml.full_load(file)
     file.close()
 
 
@@ -44,10 +45,8 @@ def get_target_dir(target):
     :param target: string with target name
     :return: string with  directory name
     """
-    for td in target_list:
-        if td["name"] == target:
-            return td["dir"]
-            break
+    if target in target_dict:
+        return target_dict[target]["dir"]
     else:
         raise ValueError(f"Directory for target {target} not found.")
 
@@ -60,10 +59,8 @@ def get_target_data_path(target):
     :return: list of directories (have to be joined with '/' to get the file path relative to the PLBenchmarks repository)
 
     """
-    for td in target_list:
-        if td["name"] == target:
-            return os.path.join(data_directory, td["dir"], "00_data", "")
-            break
+    if target in target_dict:
+        return os.path.join(data_path, target_dict[target]["dir"], "00_data", "")
     else:
         raise ValueError(f"Path for target {target} not found.")
 
@@ -298,9 +295,9 @@ class TargetSet(dict):
         :param kw: keywords for :py:class:`dict` (base class)
         """
         super(TargetSet, self).__init__(*arg, **kw)
-        for td in target_list:
-            tgt = Target(td["name"])
-            self[tgt.get_name()] = tgt
+        for name in target_dict.keys():
+            target = Target(name)
+            self[target.get_name()] = target
         self._df = None
 
     def __eq__(self, other):
@@ -320,14 +317,10 @@ class TargetSet(dict):
         :param name: string name of the target
         :return: :py:class:`PLBenchmarks.targets.target` class
         """
-        target = None
-        for key in self.keys():
-            if key == name:
-                target = self[key]
-                break
+        if name in self:
+            return self[name]
         else:
             raise ValueError(f"Target {name} not part of set.")
-        return target
 
     def get_dataframe(self, columns=None):
         """

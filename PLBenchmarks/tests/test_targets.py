@@ -12,31 +12,33 @@ from PLBenchmarks import targets, ligands, edges
 
 
 def test_targets():
-    assert len(targets.target_list) == 1
-    mcl1_dict = {
+    assert len(targets.target_dict) == 1
+    mcl1_dict = {"mcl1":
+        {
         "date": datetime.date(2019, 12, 13),
         "dir": "2019-12-13_mcl1",
         "name": "mcl1",
+        }
     }
-    for key in mcl1_dict.keys():
-        assert targets.target_list[0][key] == mcl1_dict[key]
+    for key in mcl1_dict["mcl1"].keys():
+        assert targets.target_dict["mcl1"][key] == mcl1_dict["mcl1"][key]
 
-    for target in targets.target_list:
+    for target, item in targets.target_dict.items():
         # check if target directory is available
-        assert target["dir"] in os.listdir(
+        assert item["dir"] in os.listdir(
             os.path.join(PLBenchmarks.__path__[0], "sample_data")
         )
-        assert target["dir"] == targets.get_target_dir(target["name"])
+        assert item["dir"] == targets.get_target_dir(target)
 
         # check if YAML files of target are available
         assert "target.yml" in os.listdir(
             os.path.join(
-                PLBenchmarks.__path__[0], "sample_data", target["dir"], "00_data"
+                PLBenchmarks.__path__[0], "sample_data", item["dir"], "00_data"
             )
         )
         assert "ligands.yml" in os.listdir(
             os.path.join(
-                PLBenchmarks.__path__[0], "sample_data", target["dir"], "00_data"
+                PLBenchmarks.__path__[0], "sample_data", item["dir"], "00_data"
             )
         )
 
@@ -51,7 +53,7 @@ def test_targets():
 
 
 def test_target_class():
-    target = [t for t in targets.target_list if t["name"] == "mcl1"][0]
+    target = targets.target_dict["mcl1"]
     tgt = targets.Target(target["name"])
     assert tgt.get_name() == target["name"]
     assert tgt.ligand_data == None

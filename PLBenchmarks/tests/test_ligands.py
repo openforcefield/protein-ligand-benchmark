@@ -147,7 +147,7 @@ def test_ligand_data(target, ligand_name, lig):
     m1 = Chem.AddHs(m1)
     m2 = Chem.SDMolSupplier(
         os.path.join(
-            targets.data_directory,
+            targets.data_path,
             targets.get_target_dir(target),
             "02_ligands",
             ligand_name,
@@ -173,8 +173,8 @@ def test_ligand_data(target, ligand_name, lig):
 
 
 def test_ligand_class():
-    for target in targets.target_list:
-        ligand_set = ligands.LigandSet(target["name"])
+    for target in targets.target_dict.keys():
+        ligand_set = ligands.LigandSet(target)
         for name, lig in ligand_set.items():
             assert lig.get_name() == name
             df = lig.get_dataframe()

@@ -164,7 +164,7 @@ class Ligand:
         """
         filename = os.path.abspath(
             os.path.join(
-                targets.data_directory,
+                targets.data_path,
                 targets.get_target_dir(self._target),
                 "02_ligands",
                 self._name,
@@ -282,10 +282,8 @@ class LigandSet(dict):
         :param name: string name of the ligand
         :return: :py:class:`PLBenchmarks.ligands.ligand` class
         """
-        for key in self.keys():
-            if key == name:
-                return self[key]
-                break
+        if name in self:
+            return self[name]
         else:
             raise ValueError(f"Ligand {name} is not part of set.")
 

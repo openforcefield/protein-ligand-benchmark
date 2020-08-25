@@ -131,10 +131,8 @@ class EdgeSet(dict):
         :param name: string name of the edge
         :return: :py:class:`PLBenchmarks:edges:edge` class
         """
-        for key in self.keys():
-            if key == name:
-                return self[key]
-                break
+        if name in self:
+            return self[name]
         else:
             raise ValueError(f"Edge {name} not part of set.")
 
