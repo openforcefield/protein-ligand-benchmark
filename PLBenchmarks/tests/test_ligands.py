@@ -17,16 +17,18 @@ from PLBenchmarks import ligands, targets, utils
 
 
 def test_affinity_data():
-    targets.setDataDir(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
-    file = open(os.path.join(targets.getTargetDataPath("mcl1") + "ligands.yml"))
+    targets.set_data_dir(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
+    file = open(os.path.join(targets.get_target_data_path("mcl1") + "ligands.yml"))
     data = yaml.full_load_all(file)
     dfs = []
     for d in data:
-        l = ligands.ligand(d)
-        l.deriveObservables(derivedObs="dg", outUnit=utils.ureg("kcal / mole"))
-        l.addMolToFrame()
-        l.getImg()
-        dfs.append(l.getDF(["name", "ROMol", "DerivedMeasurement"]))
+        lig = ligands.Ligand(d)
+        lig.derive_observables(
+            derived_type="dg", out_unit=utils.unit_registry("kcal / mole")
+        )
+        lig.add_mol_to_frame()
+        lig.get_image()
+        dfs.append(lig.get_dataframe(["name", "ROMol", "DerivedMeasurement"]))
     df = pd.DataFrame(dfs)
     assert df.shape[0] == 42
 
@@ -128,30 +130,29 @@ def test_affinity_data():
             pytest.approx(item, eps)
             == df[df.name == key][("DerivedMeasurement", "dg")]
             .values[0]
-            .to(utils.ureg("kcal / mole"))
+            .to(utils.unit_registry("kcal / mole"))
             .magnitude
         )
 
 
-for target in targets.target_list:
-    ligSet = ligands.ligandSet(target["name"])
-    testSet = []
-    for name, lig in ligSet.items():
-        testSet.append((target["name"], name, lig))
+test_set = []
+ligand_set = ligands.LigandSet("mcl1")
+for name, lig in ligand_set.items():
+    test_set.append(("mcl1", name, lig))
 
 
-@pytest.mark.parametrize("target, ligName, lig", testSet)
-def test_ligandData(target, ligName, lig):
+@pytest.mark.parametrize("target, ligand_name, lig", test_set)
+def test_ligand_data(target, ligand_name, lig):
     m1 = Chem.MolFromSmiles(lig._data["smiles"][0])
     m1 = Chem.AddHs(m1)
     m2 = Chem.SDMolSupplier(
         os.path.join(
-            targets.dataDir,
-            targets.getTargetDir(target),
+            targets.data_directory,
+            targets.get_target_dir(target),
             "02_ligands",
-            ligName,
+            ligand_name,
             "crd",
-            f"{ligName}.sdf",
+            f"{ligand_name}.sdf",
         ),
         removeHs=False,
     )[0]
@@ -166,54 +167,54 @@ def test_ligandData(target, ligName, lig):
     assert res.numAtoms == m1.GetNumAtoms()
     assert res.numBonds == m1.GetNumBonds()
 
-    m3 = lig.getMol()
+    m3 = lig.get_molecule()
     m2 = Molecule.from_rdkit(m2)
     assert Molecule.are_isomorphic(m2, m3)
 
 
 def test_ligand_class():
     for target in targets.target_list:
-        ligSet = ligands.ligandSet(target["name"])
-        for name, lig in ligSet.items():
-            assert lig.getName() == name
-            df = lig.getDF()
+        ligand_set = ligands.LigandSet(target["name"])
+        for name, lig in ligand_set.items():
+            assert lig.get_name() == name
+            df = lig.get_dataframe()
             assert df["name"][0] == name
-            df = lig.getDF(columns=["name"])
+            df = lig.get_dataframe(columns=["name"])
             assert df["name"][0] == name
             # ToDo: make proper tests (?)
-            lig.findLinks()
-            lig.getImg()
-            lig.getHTML()
-            lig.getHTML(columns=["name", "smiles"])
+            lig.find_links()
+            lig.get_image()
+            lig.get_html()
+            lig.get_html(columns=["name", "smiles"])
 
 
-def test_ligandSet():
-    ligs = ligands.ligandSet("mcl1")
+def test_ligand_set():
+    ligand_set = ligands.LigandSet("mcl1")
 
-    lig_list = ligs.getList()
+    lig_list = ligand_set.get_list()
     for key in lig_list:
-        assert key in ligs.keys()
-        assert isinstance(ligs.getLigand(key), ligands.ligand)
+        assert key in ligand_set.keys()
+        assert isinstance(ligand_set.get_ligand(key), ligands.Ligand)
 
     with pytest.raises(ValueError, match="Ligand xxx is not part of set."):
-        ligs.getLigand("xxx")
+        ligand_set.get_ligand("xxx")
 
-    df = ligs.getDF()
+    df = ligand_set.get_dataframe()
     for i, row in df.iterrows():
-        print(ligs[row.loc["name"][0]]._data, row)
+        print(ligand_set[row.loc["name"][0]]._data, row)
         pd.testing.assert_series_equal(
-            ligs[row.loc["name"][0]]._data, row, check_names=False
+            ligand_set[row.loc["name"][0]]._data, row, check_names=False
         )
 
-    df = ligs.getDF(columns=["name", "smiles"])
+    df = ligand_set.get_dataframe(columns=["name", "smiles"])
     for i, row in df.iterrows():
-        assert row["name"][0] == ligs[row.loc["name"][0]].getName()
-        assert row["smiles"][0] == ligs[row.loc["name"][0]]._data["smiles"][0]
+        assert row["name"][0] == ligand_set[row.loc["name"][0]].get_name()
+        assert row["smiles"][0] == ligand_set[row.loc["name"][0]]._data["smiles"][0]
 
-    mols = ligs.getMols()
-    for name, lig in ligs.items():
-        assert Molecule.are_isomorphic(lig.getMol(), mols[name])
+    molecules = ligand_set.get_molecules()
+    for name, lig in ligand_set.items():
+        assert Molecule.are_isomorphic(lig.get_molecule(), molecules[name])
 
-    # ToDo: proper test for getHTML()
-    ligs.getHTML()
-    ligs.getHTML(columns=["name", "smiles"])
+    # ToDo: proper test for get_html()
+    ligand_set.get_html()
+    ligand_set.get_html(columns=["name", "smiles"])

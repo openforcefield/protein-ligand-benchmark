@@ -19,7 +19,7 @@ import PLBenchmarks.targets
 import PLBenchmarks.utils
 
 
-class ligand:
+class Ligand:
     """
     Store and convert the data of one ligand in a :py:class:`pandas.Series`.
 
@@ -29,7 +29,8 @@ class ligand:
 
     def __init__(self, d: dict, target: str = None):
         """
-        Initialize :py:class:`PLBenchmarks.ligands.ligand` object from :py:class:`dict` and store data in a :py:class:`pandas.Series`.
+        Initialize :py:class:`PLBenchmarks.ligands.ligand` object from :py:class:`dict` and store data in a
+        :py:class:`pandas.Series`.
 
         :param d: :py:class:`dict` with the ligand data
         :return None
@@ -40,10 +41,10 @@ class ligand:
         self._name = self._data["name"]
         # Expand measurement dict into single fields
         if "measurement" in list(self._data.index):
-            meas = pd.Series(self._data["measurement"])
-            meas.index = ["measurement:" + c for c in meas.index]
+            measurement = pd.Series(self._data["measurement"])
+            measurement.index = ["measurement:" + c for c in measurement.index]
             self._data.drop(["measurement"], inplace=True)
-            self._data = pd.concat([self._data, meas])
+            self._data = pd.concat([self._data, measurement])
             index = self._data.index.to_series().str.split(":", expand=True).fillna("")
             self._data.index = pd.MultiIndex.from_arrays(
                 [index[0].tolist(), index[1].tolist()]
@@ -58,67 +59,70 @@ class ligand:
                             ),
                         )
                     )
-                    vals = self._data[("measurement", f"{obs}")]
-                    if vals[2] == "nM":
-                        u = PLBenchmarks.utils.ureg("nanomolar")
-                    elif vals[2] == "uM":
-                        u = PLBenchmarks.utils.ureg("micromolar")
-                    elif vals[2] == "kj/mol":
-                        u = PLBenchmarks.utils.ureg("kJ / mole")
-                    elif vals[2] == "kcal/mol":
-                        u = PLBenchmarks.utils.ureg("kcal / mole")
+                    values = self._data[("measurement", f"{obs}")]
+                    if values[2] == "nM":
+                        u = PLBenchmarks.utils.unit_registry("nanomolar")
+                    elif values[2] == "uM":
+                        u = PLBenchmarks.utils.unit_registry("micromolar")
+                    elif values[2] == "kj/mol":
+                        u = PLBenchmarks.utils.unit_registry("kJ / mole")
+                    elif values[2] == "kcal/mol":
+                        u = PLBenchmarks.utils.unit_registry("kcal / mole")
                     else:
                         # let pint figure out what the unit means
-                        u = PLBenchmarks.utils.ureg(vals[2])
-                    self._data[("measurement", f"e_{obs}")] = vals[1] * u
-                    self._data[("measurement", obs)] = vals[0] * u
+                        u = PLBenchmarks.utils.unit_registry(values[2])
+                    self._data[("measurement", f"e_{obs}")] = values[1] * u
+                    self._data[("measurement", obs)] = values[0] * u
 
-    def deriveObservables(
+    def derive_observables(
         self,
-        derivedObs="dg",
-        dest="DerivedMeasurement",
-        outUnit=PLBenchmarks.utils.ureg("kcal / mole"),
+        derived_type="dg",
+        destination="DerivedMeasurement",
+        out_unit=PLBenchmarks.utils.unit_registry("kcal / mole"),
     ):
         """
         Derive observables from (stored) primary data, which is then stored in the :py:class:`pandas.DataFrame`
 
-        :param derivedObs: type of derived observable, can be any of 'dg' 'ki', 'ic50' or 'pic50'
-        :param dest: string with column name for 'pandas.DataFrame' where the derived observable should be stored.
-        :param outUnit: unit of type :py:class:`pint` unit of derived coordinate
+        :param derived_type: type of derived observable, can be any of 'dg' 'ki', 'ic50' or 'pic50'
+        :param destination: string with column name for 'pandas.DataFrame' where the derived observable should be stored.
+        :param out_unit: unit of type :py:class:`pint` unit of derived coordinate
         :return: None
         """
         assert (
-            derivedObs in self._observables
+            derived_type in self._observables
         ), "Observable to be derived not known. Should be any of dg, ki, ic50, or pic50"
         for obs in self._observables:
             if ("measurement", obs) in list(self._data.index):
                 self._data = self._data.append(
                     pd.Series(
                         [
-                            PLBenchmarks.utils.convertValue(
+                            PLBenchmarks.utils.convert_value(
                                 self._data[("measurement", obs)],
                                 obs,
-                                derivedObs,
-                                outUnit=outUnit,
+                                derived_type,
+                                out_unit=out_unit,
                             ),
-                            PLBenchmarks.utils.convertError(
+                            PLBenchmarks.utils.convert_error(
                                 self._data[("measurement", f"e_{obs}")],
                                 self._data[("measurement", obs)],
                                 obs,
-                                derivedObs,
-                                outUnit=outUnit,
+                                derived_type,
+                                out_unit=out_unit,
                             ),
                         ],
                         index=pd.MultiIndex.from_tuples(
-                            [(dest, derivedObs), (dest, f"e_{derivedObs}")]
+                            [
+                                (destination, derived_type),
+                                (destination, f"e_{derived_type}"),
+                            ]
                         ),
                     )
                 )
                 break
         else:
-            print(f"Conversion to observable {derivedObs} not possible.")
+            print(f"Conversion to observable {derived_type} not possible.")
 
-    def getName(self):
+    def get_name(self):
         """
         Access the name of the ligand.
 
@@ -126,11 +130,11 @@ class ligand:
         """
         return self._data["name"][0]
 
-    def getDF(self, columns=None):
+    def get_dataframe(self, columns=None):
         """
         Access the ligand data as a :py:class:`pandas.Dataframe`
 
-        :param cols: list of columns which should be returned in the :py:class:`pandas.Dataframe`
+        :param columns: list of columns which should be returned in the :py:class:`pandas.Dataframe`
         :return: :py:class:`pandas.Dataframe`
         """
         if columns:
@@ -138,7 +142,7 @@ class ligand:
         else:
             return self._data
 
-    def findLinks(self):
+    def find_links(self):
         """
         Processes primary data to have links in the html string of the ligand data
 
@@ -146,44 +150,44 @@ class ligand:
         """
         if ("measurement", "doi") in list(self._data.index):
             doi = self._data["measurement", "doi"]
+            result = []
             if str(doi) != "nan":
-                res = []
                 for ddoi in re.split(r"[; ]+", str(doi)):
-                    res.append(PLBenchmarks.utils.findDoiUrl(ddoi))
-            self._data["measurement", "doi_html"] = (r"\n").join(res)
+                    result.append(PLBenchmarks.utils.find_doi_url(ddoi))
+            self._data["measurement", "doi_html"] = r"\n".join(result)
             self._data.drop([("measurement", "doi")], inplace=True)
             self._data.rename({"doi_html": "Reference"}, level=1, inplace=True)
 
-    def getCoordFilePath(self):
+    def get_coordinate_file_path(self):
         """
         Get file path relative to the PLBenchmarks repository of the SDF coordinate file of the docked ligand
 
         :return: file path as string
         """
-        fname = os.path.abspath(
+        filename = os.path.abspath(
             os.path.join(
-                PLBenchmarks.targets.dataDir,
-                PLBenchmarks.targets.getTargetDir(self._target),
+                PLBenchmarks.targets.data_directory,
+                PLBenchmarks.targets.get_target_dir(self._target),
                 "02_ligands",
                 self._name,
                 "crd",
                 f"{self._name}.sdf",
             )
         )
-        return fname
+        return filename
 
-    def getMol(self):
+    def get_molecule(self):
         """
         Get molecule object with coordinates of the docked ligand
 
         :return: file path as string
         """
         if self._molecule is None:
-            fname = self.getCoordFilePath()
-            self._molecule = Molecule.from_file(fname, "sdf")
+            filename = self.get_coordinate_file_path()
+            self._molecule = Molecule.from_file(filename, "sdf")
         return self._molecule
 
-    def addMolToFrame(self):
+    def add_mol_to_frame(self):
         """
         Adds a image file of the ligand to the :py:class:`pandas.Dataframe`
 
@@ -194,50 +198,52 @@ class ligand:
         )
         self._data["ROMol"].apply(lambda x: x[0])
 
-    def getHTML(self, columns=None):
+    def get_html(self, columns=None):
         """
         Access the ligand as a HTML string
 
         :param columns: list of columns which should be returned in the :py:class:`pandas.Dataframe`
         :return: HTML string
         """
-        self.findLinks()
+        self.find_links()
         if columns:
-            html = pd.DataFrame(self._data[columns]).to_html()
+            html_string = pd.DataFrame(self._data[columns]).to_html()
         else:
-            html = pd.DataFrame(self._data).to_html()
-        html = html.replace("REP1", '<a target="_blank" href="')
-        html = html.replace("REP2", '">')
-        html = html.replace("REP3", "</a>")
-        html = html.replace("\\n", "<br>")
-        return html
+            html_string = pd.DataFrame(self._data).to_html()
+        html_string = html_string.replace("REP1", '<a target="_blank" href="')
+        html_string = html_string.replace("REP2", '">')
+        html_string = html_string.replace("REP3", "</a>")
+        html_string = html_string.replace("\\n", "<br>")
+        return html_string
 
-    def getImg(self):
+    def get_image(self):
         """
         Creates a molecule image.
 
         :return: :py:class:`PIL.Image` object
         """
-        dr = Draw.MolDraw2DCairo(200, 200)
-        opts = dr.drawOptions()
+        mol_drawing = Draw.MolDraw2DCairo(200, 200)
+        opts = mol_drawing.drawOptions()
         opts.clearBackground = True
         mol = Chem.MolFromSmiles(self._data["smiles"][0])
         Chem.rdDepictor.Compute2DCoords(mol)
-        dr.DrawMolecule(mol, legend=self._data["name"][0])
-        img = Image.open(io.BytesIO(dr.GetDrawingText())).convert("RGBA")
-        datas = img.getdata()
+        mol_drawing.DrawMolecule(mol, legend=self._data["name"][0])
 
-        newData = []
-        for item in datas:
+        # change to transparent background
+        img = Image.open(io.BytesIO(mol_drawing.GetDrawingText())).convert("RGBA")
+        data = img.getdata()
+        new_data = []
+        for item in data:
             if item[0] == 255 and item[1] == 255 and item[2] == 255:
-                newData.append((255, 255, 255, 0))
+                new_data.append((255, 255, 255, 0))
             else:
-                newData.append(item)
-        img.putdata(newData)
+                new_data.append(item)
+        img.putdata(new_data)
+
         return img
 
 
-class ligandSet(dict):
+class LigandSet(dict):
     """
     Class inherited from dict to store all available ligands of one target.
 
@@ -251,19 +257,19 @@ class ligandSet(dict):
         :param arg: arguments for :py:class:`dict` (base class)
         :param kw: keywords for :py:class:`dict` (base class)
         """
-        super(ligandSet, self).__init__(*arg, **kw)
-        tp = PLBenchmarks.targets.getTargetDataPath(target)
-        file = open(os.path.join(tp, "ligands.yml"))
+        super(LigandSet, self).__init__(*arg, **kw)
+        target_path = PLBenchmarks.targets.get_target_data_path(target)
+        file = open(os.path.join(target_path, "ligands.yml"))
         data = yaml.full_load_all(file)
         for d in data:
-            l = ligand(d, target)
-            l.deriveObservables(derivedObs="dg")
-            # l.findLinks()
-            l.addMolToFrame()
-            self[l.getName()] = l
+            lig = Ligand(d, target)
+            lig.derive_observables(derived_type="dg")
+            # l.find_links()
+            lig.add_mol_to_frame()
+            self[lig.get_name()] = lig
         file.close()
 
-    def getList(self):
+    def get_list(self):
         """
         Returns list of ligands
 
@@ -271,7 +277,7 @@ class ligandSet(dict):
         """
         return list(self.keys())
 
-    def getLigand(self, name):
+    def get_ligand(self, name):
         """
         Accesses one ligand of the :py:class:`~PLBenchmarks:ligands.ligandSet`
 
@@ -285,7 +291,7 @@ class ligandSet(dict):
         else:
             raise ValueError(f"Ligand {name} is not part of set.")
 
-    def getDF(self, columns=None):
+    def get_dataframe(self, columns=None):
         """
         Access the :py:class:`~PLBenchmarks:ligands.ligandSet` as a :py:class:`pandas.Dataframe`
 
@@ -294,34 +300,34 @@ class ligandSet(dict):
         """
         dfs = []
         for key, item in self.items():
-            dfs.append(item.getDF(columns))
+            dfs.append(item.get_dataframe(columns))
         df = pd.concat(dfs, axis=1).T
         return df
 
-    def getHTML(self, columns=None):
+    def get_html(self, columns=None):
         """
         Access the :py:class:`PLBenchmarks:ligands.ligandSet` as a HTML string
 
-        :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.Dataframe`
+        :param columns: :py:class:`list` of columns which should be returned in the :py:class:`pandas.Dataframe`
         :return: HTML string
         """
         for key, item in self.items():
-            item.findLinks()
-        df = self.getDF(columns)
-        html = df.to_html()
-        html = html.replace("REP1", '<a target="_blank" href="')
-        html = html.replace("REP2", '">')
-        html = html.replace("REP3", "</a>")
-        html = html.replace("\\n", "<br>")
-        return html
+            item.find_links()
+        df = self.get_dataframe(columns)
+        html_string = df.to_html()
+        html_string = html_string.replace("REP1", '<a target="_blank" href="')
+        html_string = html_string.replace("REP2", '">')
+        html_string = html_string.replace("REP3", "</a>")
+        html_string = html_string.replace("\\n", "<br>")
+        return html_string
 
-    def getMols(self):
+    def get_molecules(self):
         """
         Returns a :py:class:`dict` with names as keys and values as py:class:`openforcefield:topology:Molecule` objects
 
         :return:  :py:class:`dict`
         """
-        mols = {}
+        molecules = {}
         for key, item in self.items():
-            mols[key] = item.getMol()
-        return mols
+            molecules[key] = item.get_molecule()
+        return molecules

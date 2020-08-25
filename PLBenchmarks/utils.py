@@ -11,12 +11,12 @@ from pint import UnitRegistry
 
 import warnings
 
-ureg = UnitRegistry()
+unit_registry = UnitRegistry()
 
-BOLTZMANN = constants.gas_constant * ureg("J / mole / K")
+boltzmann_constant = constants.gas_constant * unit_registry("J / mole / K")
 
 
-def findPdbUrl(pdb):
+def find_pdb_url(pdb):
     """
     Finds the links to a pdb or a list of pdb codes.
 
@@ -45,10 +45,10 @@ def findPdbUrl(pdb):
         page = response.read()
         page = page.decode("utf-8").split()
         res = []
-        pdbs = pdb.split()
+        pdb_codes = pdb.split()
         for p in page:
             res.append("REP1http://www.rcsb.org/structure/{}REP2{}REP3".format(p, p))
-        for p in pdbs:
+        for p in pdb_codes:
             if p not in page:
                 warnings.warn(f"PDB {p} not found")
     except urllib.error.URLError as e:
@@ -57,7 +57,7 @@ def findPdbUrl(pdb):
     return ("\n").join(res)
 
 
-def findDoiUrl(doi):
+def find_doi_url(doi):
     """
     Finds the links to a digital object identifier (doi).
 
@@ -97,208 +97,255 @@ def findDoiUrl(doi):
     return result
 
 
-def convertValue(val, originalObs, finalObs, temperature=300.0, outUnit=None):
+def convert_value(value, original_type, final_type, temperature=300.0, out_unit=None):
     """
     Converts an experimental value into another derived quantity with specified unit.
 
-    :param val: float, numerical value
-    :param originalObs: string, code for the original observable. Can be `dg`, `ki`, `ic50`, `pic50`
-    :param finalObs: string, code for the desired derived quantity. Can be `dg`, `ki`, `ic50`, `pic50`
+    :param value: float, numerical value
+    :param original_type: string, code for the original observable. Can be `dg`, `ki`, `ic50`, `pic50`
+    :param final_type: string, code for the desired derived quantity. Can be `dg`, `ki`, `ic50`, `pic50`
     :param temperature: float, temperature in kelvin
-    :param outUnit: unit of type :py:class:`pint`, output unit of finalObs, needs to fit to the requested finalObs
+    :param out_unit: unit of type :py:class:`pint`, output unit of final_type, needs to fit to the requested final_type
     :return: :py:class:`pint.Quantity` with desired unit
     """
 
     # define default units
-    if outUnit is None:
-        if finalObs == "dg":
-            outUnit = ureg("kilocalories / mole")
-        elif finalObs == "ki":
-            outUnit = ureg("nanomolar")
-        elif finalObs == "ic50":
-            outUnit = ureg("nanomolar")
-        elif finalObs == "pic50":
-            outUnit = ureg("")
+    if out_unit is None:
+        if final_type == "dg":
+            out_unit = unit_registry("kilocalories / mole")
+        elif final_type == "ki":
+            out_unit = unit_registry("nanomolar")
+        elif final_type == "ic50":
+            out_unit = unit_registry("nanomolar")
+        elif final_type == "pic50":
+            out_unit = unit_registry("")
 
-    if originalObs == "dg":
-        if finalObs == "dg":
-            return val.to(outUnit)
-        elif finalObs == "ki":
-            result = np.exp(-val / (BOLTZMANN * temperature * ureg.kelvin)) * ureg.molar
-            return result.to(outUnit)
-        elif finalObs == "ic50":
-            result = np.exp(-val / (BOLTZMANN * temperature * ureg.kelvin)) * ureg.molar
-            return result.to(outUnit)
-        elif finalObs == "pic50":
-            result = val / (BOLTZMANN * temperature * ureg.kelvin) / np.log(10)
-            return result.to(outUnit)
-        else:
-            raise NotImplementedError
-    elif originalObs == "ki":
-        if finalObs == "dg":
-            if val < 1e-15 * ureg("molar"):
-                return 0.0 * outUnit
-            else:
-                result = (
-                    BOLTZMANN * temperature * ureg.kelvin * np.log(val / ureg.molar)
+    if original_type == "dg":
+        if final_type == "dg":
+            return value.to(out_unit)
+        elif final_type == "ki":
+            result = (
+                np.exp(
+                    -value / (boltzmann_constant * temperature * unit_registry.kelvin)
                 )
-                return result.to(outUnit).round(2)
-        elif finalObs == "ki":
-            return val.to(outUnit)
-        elif finalObs == "ic50":
-            return val.to(outUnit)
-        elif finalObs == "pic50":
-            if val < 1e-15 * ureg("molar"):
-                return -1e15 * outUnit
-            else:
-                result = -np.log(val / ureg.molar) / np.log(10)
-                return result
+                * unit_registry.molar
+            )
+            return result.to(out_unit)
+        elif final_type == "ic50":
+            result = (
+                np.exp(
+                    -value / (boltzmann_constant * temperature * unit_registry.kelvin)
+                )
+                * unit_registry.molar
+            )
+            return result.to(out_unit)
+        elif final_type == "pic50":
+            result = (
+                value
+                / (boltzmann_constant * temperature * unit_registry.kelvin)
+                / np.log(10)
+            )
+            return result.to(out_unit)
         else:
             raise NotImplementedError
-    elif originalObs == "ic50":
-        if finalObs == "dg":
-            if val < 1e-15 * ureg("molar"):
-                return 0.0 * outUnit
+    elif original_type == "ki":
+        if final_type == "dg":
+            if value < 1e-15 * unit_registry("molar"):
+                return 0.0 * out_unit
             else:
                 result = (
-                    BOLTZMANN
+                    boltzmann_constant
                     * temperature
-                    * ureg.kelvin
-                    * np.log(val.to("molar") / ureg.molar)
+                    * unit_registry.kelvin
+                    * np.log(value / unit_registry.molar)
                 )
-                return result.to(outUnit).round(2)
-        elif finalObs == "ki":
-            return val.to(outUnit)
-        elif finalObs == "ic50":
-            return val.to(outUnit)
-        elif finalObs == "pic50":
-            if val.to("molar") < 1e-15 * ureg("molar"):
-                return -1e15 * outUnit
+                return result.to(out_unit).round(2)
+        elif final_type == "ki":
+            return value.to(out_unit)
+        elif final_type == "ic50":
+            return value.to(out_unit)
+        elif final_type == "pic50":
+            if value < 1e-15 * unit_registry("molar"):
+                return -1e15 * out_unit
             else:
-                result = -np.log(val / ureg.molar) / np.log(10)
+                result = -np.log(value / unit_registry.molar) / np.log(10)
                 return result
         else:
             raise NotImplementedError
-    elif originalObs == "pic50":
-        if finalObs == "dg":
-            result = -BOLTZMANN * temperature * ureg.kelvin * val * np.log(10)
-            return result.to(outUnit).round(2)
-        elif finalObs == "ki":
-            result = 10 ** (-val) * ureg("molar")
-            return result.to(outUnit)
-        elif finalObs == "ic50":
-            result = 10 ** (-val) * ureg("molar")
-            return result.to(outUnit)
-        elif finalObs == "pic50":
-            return val.to(outUnit)
+    elif original_type == "ic50":
+        if final_type == "dg":
+            if value < 1e-15 * unit_registry("molar"):
+                return 0.0 * out_unit
+            else:
+                result = (
+                    boltzmann_constant
+                    * temperature
+                    * unit_registry.kelvin
+                    * np.log(value.to("molar") / unit_registry.molar)
+                )
+                return result.to(out_unit).round(2)
+        elif final_type == "ki":
+            return value.to(out_unit)
+        elif final_type == "ic50":
+            return value.to(out_unit)
+        elif final_type == "pic50":
+            if value.to("molar") < 1e-15 * unit_registry("molar"):
+                return -1e15 * out_unit
+            else:
+                result = -np.log(value / unit_registry.molar) / np.log(10)
+                return result
+        else:
+            raise NotImplementedError
+    elif original_type == "pic50":
+        if final_type == "dg":
+            result = (
+                -boltzmann_constant
+                * temperature
+                * unit_registry.kelvin
+                * value
+                * np.log(10)
+            )
+            return result.to(out_unit).round(2)
+        elif final_type == "ki":
+            result = 10 ** (-value) * unit_registry("molar")
+            return result.to(out_unit)
+        elif final_type == "ic50":
+            result = 10 ** (-value) * unit_registry("molar")
+            return result.to(out_unit)
+        elif final_type == "pic50":
+            return value.to(out_unit)
         else:
             raise NotImplementedError
 
 
-def convertError(eVal, val, originalObs, finalObs, temperature=300.0, outUnit=None):
+def convert_error(
+    error_value, value, original_type, final_type, temperature=300.0, out_unit=None
+):
     """
     Converts an experimental value into another derived quantity with specified unit.
 
-    :param eVal: float, error of val, numerical value
-    :param val: float, numerical value
-    :param originalObs: string, code for the original observable. Can be `dg`, `ki`, `ic50`, `pic50`
-    :param finalObs: string, code for the desired derived quantity. Can be `dg`, `ki`, `ic50`, `pic50`
+    :param error_value: float, error of val, numerical value
+    :param value: float, numerical value
+    :param original_type: string, code for the original observable. Can be `dg`, `ki`, `ic50`, `pic50`
+    :param final_type: string, code for the desired derived quantity. Can be `dg`, `ki`, `ic50`, `pic50`
     :param temperature: float, temperature in kelvin
-    :param outUnit: unit of type :py:class:`pint`, output unit of finalObs, needs to fit to the requested finalObs
+    :param out_unit: unit of type :py:class:`pint`, output unit of final_type, needs to fit to the requested final_type
     :return: :py:class:`pint.Quantity` with desired unit
     """
 
     # define default units
-    if outUnit is None:
-        if finalObs == "dg":
-            outUnit = ureg("kilocalories / mole")
-        elif finalObs == "ki":
-            outUnit = ureg("nanomolar")
-        elif finalObs == "ic50":
-            outUnit = ureg("nanomolar")
-        elif finalObs == "pic50":
-            outUnit = ureg("")
+    if out_unit is None:
+        if final_type == "dg":
+            out_unit = unit_registry("kilocalories / mole")
+        elif final_type == "ki":
+            out_unit = unit_registry("nanomolar")
+        elif final_type == "ic50":
+            out_unit = unit_registry("nanomolar")
+        elif final_type == "pic50":
+            out_unit = unit_registry("")
 
-    if originalObs == "dg":
-        if finalObs == "dg":
-            return eVal.to(outUnit)
-        elif finalObs == "ki":
+    if original_type == "dg":
+        if final_type == "dg":
+            return error_value.to(out_unit)
+        elif final_type == "ki":
             # e_ki^2 = (del K/del dG)^2 * e_dG^2
             # e_ki   = 1/RT * exp(-dG/RT) * e_dG
-            kBT = BOLTZMANN * temperature * ureg.kelvin
-            error = 1.0 / kBT * np.exp(-val / kBT) * eVal * ureg.molar
-            return error.to(outUnit)
-        elif finalObs == "ic50":
-            kBT = BOLTZMANN * temperature * ureg.kelvin
-            error = 1.0 / kBT * np.exp(-val / kBT) * eVal * ureg.molar
-            return error.to(outUnit)
-        elif finalObs == "pic50":
+            k_bt = boltzmann_constant * temperature * unit_registry.kelvin
+            error = (
+                1.0 / k_bt * np.exp(-value / k_bt) * error_value * unit_registry.molar
+            )
+            return error.to(out_unit)
+        elif final_type == "ic50":
+            k_bt = boltzmann_constant * temperature * unit_registry.kelvin
+            error = (
+                1.0 / k_bt * np.exp(-value / k_bt) * error_value * unit_registry.molar
+            )
+            return error.to(out_unit)
+        elif final_type == "pic50":
             # e_pic50^2 = (del pic50/del dG)^2 * e_dG^2
             # e_pic50   = 1/(RT*ln(10)) * e_dG
-            kBT = BOLTZMANN * temperature * ureg.kelvin
-            error = 1.0 / (kBT * np.log(10)) * eVal
-            return error.to(outUnit)
+            k_bt = boltzmann_constant * temperature * unit_registry.kelvin
+            error = 1.0 / (k_bt * np.log(10)) * error_value
+            return error.to(out_unit)
         else:
             raise NotImplementedError
-    elif originalObs == "ki":
-        if finalObs == "dg":
-            if val < 1e-15 * ureg.molar:
-                return 0.0 * outUnit
+    elif original_type == "ki":
+        if final_type == "dg":
+            if value < 1e-15 * unit_registry.molar:
+                return 0.0 * out_unit
             else:
-                error = BOLTZMANN * temperature * ureg.kelvin / val * eVal
-                return error.to(outUnit).round(2)
-        elif finalObs == "ki":
-            return eVal.to(outUnit)
-        elif finalObs == "ic50":
-            return eVal.to(outUnit)
-        elif finalObs == "pic50":
+                error = (
+                    boltzmann_constant
+                    * temperature
+                    * unit_registry.kelvin
+                    / value
+                    * error_value
+                )
+                return error.to(out_unit).round(2)
+        elif final_type == "ki":
+            return error_value.to(out_unit)
+        elif final_type == "ic50":
+            return error_value.to(out_unit)
+        elif final_type == "pic50":
             # e_pic50^2 = (del pic50/del Ki)^2 * e_Ki^2
             # e_pic50   = 1/(Ki*ln(10)) * e_Ki
-            if (val * np.log(10)) < 1e-15 * ureg("molar"):
-                return 1e15 * outUnit
+            if (value * np.log(10)) < 1e-15 * unit_registry("molar"):
+                return 1e15 * out_unit
             else:
-                result = 1 / (val * np.log(10)) * eVal
-                return result.to(outUnit).round(2)
+                result = 1 / (value * np.log(10)) * error_value
+                return result.to(out_unit).round(2)
         else:
             raise NotImplementedError
-    elif originalObs == "ic50":
-        if finalObs == "dg":
-            if val < 1e-15 * ureg.molar:
-                return 0.0 * outUnit
+    elif original_type == "ic50":
+        if final_type == "dg":
+            if value < 1e-15 * unit_registry.molar:
+                return 0.0 * out_unit
             else:
-                error = BOLTZMANN * temperature * ureg.kelvin / val * eVal
-                return error.to(outUnit).round(2)
-        elif finalObs == "ki":
-            return eVal.to(outUnit)
-        elif finalObs == "ic50":
-            return eVal.to(outUnit)
-        elif finalObs == "pic50":
+                error = (
+                    boltzmann_constant
+                    * temperature
+                    * unit_registry.kelvin
+                    / value
+                    * error_value
+                )
+                return error.to(out_unit).round(2)
+        elif final_type == "ki":
+            return error_value.to(out_unit)
+        elif final_type == "ic50":
+            return error_value.to(out_unit)
+        elif final_type == "pic50":
             # e_pic50^2 = (del pic50/del IC50)^2 * e_IC50^2
             # e_pic50   = 1/(IC50*ln(10)) * e_IC50
-            if (val * np.log(10)) < 1e-15 * ureg("molar"):
-                return 1e15 * outUnit
+            if (value * np.log(10)) < 1e-15 * unit_registry("molar"):
+                return 1e15 * out_unit
             else:
-                result = 1 / (val * np.log(10)) * eVal
-                return result.to(outUnit).round(2)
+                result = 1 / (value * np.log(10)) * error_value
+                return result.to(out_unit).round(2)
         else:
             raise NotImplementedError
-    elif originalObs == "pic50":
-        if finalObs == "dg":
-            error = BOLTZMANN * temperature * ureg.kelvin * np.log(10) * eVal
-            return error.to(outUnit).round(2)
-        elif finalObs == "ki":
+    elif original_type == "pic50":
+        if final_type == "dg":
+            error = (
+                boltzmann_constant
+                * temperature
+                * unit_registry.kelvin
+                * np.log(10)
+                * error_value
+            )
+            return error.to(out_unit).round(2)
+        elif final_type == "ki":
             # Ki = 10^(-pIC50)
             # dKi^2 = (del Ki / del pIC50)^2 * dpIC50^2
             # dKi = ln(10) * 10^(-pIC50) * dpIC50
-            error = np.log(10) * 10 ** (-val) * eVal * ureg("molar")
-            return error.to(outUnit).round(2)
-        elif finalObs == "ic50":
+            error = np.log(10) * 10 ** (-value) * error_value * unit_registry("molar")
+            return error.to(out_unit).round(2)
+        elif final_type == "ic50":
             # IC50 = 10^(-pIC50)
             # dIC50^2 = (del IC50 / del pIC50)^2 * dpIC50^2
             # dIC50 = ln(10) * 10^(-pIC50) * dpIC50
-            error = np.log(10) * 10 ** (-val) * eVal * ureg("molar")
-            return error.to(outUnit).round(2)
-        elif finalObs == "pic50":
-            return eVal.to(outUnit).round(2)
+            error = np.log(10) * 10 ** (-value) * error_value * unit_registry("molar")
+            return error.to(out_unit).round(2)
+        elif final_type == "pic50":
+            return error_value.to(out_unit).round(2)
         else:
             raise NotImplementedError

@@ -12,7 +12,7 @@ import PLBenchmarks.ligands
 import PLBenchmarks.targets
 
 
-class edge:
+class Edge:
     """
     Store and convert the data of one perturbation ("edge") in a :py:class:`pandas.Series`.
 
@@ -30,40 +30,42 @@ class edge:
         self._data = pd.Series(d)
         self._name = None
 
-    def addLigData(self, ligs):
+    def add_ligand_data(self, ligand_set):
         """
         Adds data from ligands to :py:class:`~PLBenchmarks:edges.edge`. Molecule images and the affinity difference are added.
 
-        :param ligs: :py:class:`PLBenchmarks:ligands:ligandSet` class of the same target
+        :param ligand_set: :py:class:`PLBenchmarks:ligands:ligandSet` class of the same target
         :return: None
         """
-        l0 = None
-        l1 = None
-        dg0 = 0
-        dg1 = 0
-        err0 = 0
-        err1 = 0
-        for key, item in ligs.items():
+        ligand0 = None
+        ligand1 = None
+        smiles0 = None
+        smiles1 = None
+        delta_g0 = 0
+        delta_g1 = 0
+        error0 = 0
+        error1 = 0
+        for key, item in ligand_set.items():
             if key == "lig_" + str(self._data[0]):
-                l0 = item._data["ROMol"][0]
-                dg0 = item._data[("DerivedMeasurement", "dg")]
-                s0 = item._data["smiles"]
-                err0 = item._data[("DerivedMeasurement", "e_dg")]
+                ligand0 = item._data["ROMol"][0]
+                delta_g0 = item._data[("DerivedMeasurement", "dg")]
+                smiles0 = item._data["smiles"]
+                error0 = item._data[("DerivedMeasurement", "e_dg")]
             if key == "lig_" + str(self._data[1]):
-                l1 = item._data["ROMol"][0]
-                s1 = item._data["smiles"]
-                dg1 = item._data[("DerivedMeasurement", "dg")]
-                err1 = item._data[("DerivedMeasurement", "e_dg")]
-        self._data["Mol1"] = l0
-        self._data["Mol2"] = l1
-        self._data["Smiles1"] = s0
-        self._data["Smiles2"] = s1
-        self._data["exp. DeltaG [kcal/mol]"] = round(dg1 - dg0, 2)
+                ligand1 = item._data["ROMol"][0]
+                smiles1 = item._data["smiles"]
+                delta_g1 = item._data[("DerivedMeasurement", "dg")]
+                error1 = item._data[("DerivedMeasurement", "e_dg")]
+        self._data["Mol1"] = ligand0
+        self._data["Mol2"] = ligand1
+        self._data["Smiles1"] = smiles0
+        self._data["Smiles2"] = smiles1
+        self._data["exp. DeltaG [kcal/mol]"] = round(delta_g1 - delta_g0, 2)
         self._data["exp. Error [kcal/mol]"] = round(
-            np.sqrt(np.power(err0, 2.0) + np.power(err1, 2.0)), 2
+            np.sqrt(np.power(error0, 2.0) + np.power(error1, 2.0)), 2
         )
 
-    def getDF(self, columns=None):
+    def get_dataframe(self, columns=None):
         """
         Access the edge data as a :py:class:`pandas.DataFrame`
 
@@ -75,7 +77,7 @@ class edge:
         else:
             return self._data
 
-    def getDict(self):
+    def get_dict(self):
         """
         Access the edge data as a :py:class:`dict` which contains the name of the edge as key and the names of the two ligands as :py:class:`list`.
 
@@ -88,7 +90,7 @@ class edge:
             ]
         }
 
-    def getName(self):
+    def get_name(self):
         """
         Access the name of the edge.
 
@@ -100,7 +102,7 @@ class edge:
             return f"edge_{self._data[0]}_{self._data[1]}"
 
 
-class edgeSet(dict):
+class EdgeSet(dict):
     """
     Class inherited from dict to store all available edges of one target.
     """
@@ -113,18 +115,18 @@ class edgeSet(dict):
         :param arg: arguments for :py:class:`dict` (base class)
         :param kw: keywords for :py:class:`dict` (base class)
         """
-        super(edgeSet, self).__init__(*arg, **kw)
-        tp = PLBenchmarks.targets.getTargetDataPath(target)
-        ligs = PLBenchmarks.ligands.ligandSet(target)
-        file = open(os.path.join(tp, "edges.yml"))
+        super(EdgeSet, self).__init__(*arg, **kw)
+        target_path = PLBenchmarks.targets.get_target_data_path(target)
+        ligand_set = PLBenchmarks.ligands.LigandSet(target)
+        file = open(os.path.join(target_path, "edges.yml"))
         data = yaml.full_load_all(file)
         for d in data:
-            e = edge(d)
-            e.addLigData(ligs)
-            self[e.getName()] = e
+            edg = Edge(d)
+            edg.add_ligand_data(ligand_set)
+            self[edg.get_name()] = edg
         file.close()
 
-    def getEdge(self, name):
+    def get_edge(self, name):
         """
         Accesses one edge of the :py:class:`PLBenchmarks.edges.edgeSet`
 
@@ -138,7 +140,7 @@ class edgeSet(dict):
         else:
             raise ValueError(f"Edge {name} not part of set.")
 
-    def getDF(self, columns=None):
+    def get_dataframe(self, columns=None):
         """
         Access the :py:class:`PLBenchmarks:edges.edgeSet` as a :py:class:`pandas.DataFrame`
 
@@ -147,28 +149,28 @@ class edgeSet(dict):
         """
         dfs = []
         for key, item in self.items():
-            dfs.append(item.getDF(columns))
+            dfs.append(item.get_dataframe(columns))
         df = pd.DataFrame(dfs)
         return df
 
-    def getHTML(self, columns=None):
+    def get_html(self, columns=None):
         """
         Access the :py:class:`PLBenchmarks:edges.edgeSet` as a HTML string
 
         :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: HTML string
         """
-        df = self.getDF(columns)
-        html = df.to_html()
-        return html
+        df = self.get_dataframe(columns)
+        html_string = df.to_html()
+        return html_string
 
-    def getDict(self):
+    def get_dict(self):
         """
         Access the :py:class:`PLBenchmarks:edges.edgeSet` as a dict which contains the name of the edges as key and the names of the two ligands in a list as items.
 
         :return: :py:class:`dict`
         """
-        res = {}
+        result = {}
         for key, item in self.items():
-            res.update(item.getDict())
-        return res
+            result.update(item.get_dict())
+        return result

@@ -26,7 +26,7 @@ def test_targets():
         assert target["dir"] in os.listdir(
             os.path.join(PLBenchmarks.__path__[0], "sample_data")
         )
-        assert target["dir"] == targets.getTargetDir(target["name"])
+        assert target["dir"] == targets.get_target_dir(target["name"])
 
         # check if YAML files of target are available
         assert "target.yml" in os.listdir(
@@ -42,41 +42,41 @@ def test_targets():
 
     test_target = "aaa"
     with pytest.raises(ValueError, match=f"Path for target {test_target} not found."):
-        targets.getTargetDataPath(test_target)
+        targets.get_target_data_path(test_target)
     test_target = "aaa"
     with pytest.raises(
         ValueError, match=f"Directory for target {test_target} not found."
     ):
-        targets.getTargetDir(test_target)
+        targets.get_target_dir(test_target)
 
 
 def test_target_class():
     target = [t for t in targets.target_list if t["name"] == "mcl1"][0]
-    tgt = targets.target(target["name"])
-    assert tgt.getName() == target["name"]
-    assert tgt.ligData == None
-    assert tgt.htmlData == None
+    tgt = targets.Target(target["name"])
+    assert tgt.get_name() == target["name"]
+    assert tgt.ligand_data == None
+    assert tgt.html_data == None
     assert tgt._ligands == None
     assert tgt._edges == None
 
-    ligSet = ligands.ligandSet("mcl1")
-    assert tgt.getLigandSet().keys() == ligSet.keys()
+    ligand_set = ligands.LigandSet("mcl1")
+    assert tgt.get_ligand_set().keys() == ligand_set.keys()
     assert tgt._ligands != None
-    tgt.addLigandData()
-    assert type(tgt.ligData) == type(pd.Series(dtype=object))
-    pd.testing.assert_series_equal(tgt.ligData, tgt.getLigData())
-    tgt.ligData = None
-    ligData = tgt.getLigData()
-    assert type(tgt.ligData) == type(pd.Series(dtype=object))
-    assert ligData["numLigands"] == 42
+    tgt.add_ligand_data()
+    assert type(tgt.ligand_data) == type(pd.Series(dtype=object))
+    pd.testing.assert_series_equal(tgt.ligand_data, tgt.get_ligand_data())
+    tgt.ligand_data = None
+    ligand_data = tgt.get_ligand_data()
+    assert type(tgt.ligand_data) == type(pd.Series(dtype=object))
+    assert ligand_data["numLigands"] == 42
     # cannot compare ROMol column (SVG image), that's why we only compare these columns
     columns = ["name", "smiles", "docked", "measurement", "DerivedMeasurement"]
-    df1 = tgt.getLigandSetDF(columns=columns)
-    df2 = ligSet.getDF(columns=columns)
+    df1 = tgt.get_ligand_set_dataframe(columns=columns)
+    df2 = ligand_set.get_dataframe(columns=columns)
     pd.testing.assert_frame_equal(df1, df2)
-    assert tgt.getLigandSetHTML() == ligSet.getHTML()
+    assert tgt.get_ligand_set_html() == ligand_set.get_html()
 
-    edgeSet = edges.edgeSet("mcl1")
+    edge_set = edges.EdgeSet("mcl1")
     columns = [
         0,
         1,
@@ -86,34 +86,35 @@ def test_target_class():
         "exp. Error [kcal/mol]",
     ]
     pd.testing.assert_frame_equal(
-        tgt.getEdgeSet().getDF(columns=columns), edgeSet.getDF(columns=columns)
+        tgt.get_edge_set().get_dataframe(columns=columns),
+        edge_set.get_dataframe(columns=columns),
     )
-    assert tgt.getEdgeSet().getDict() == edgeSet.getDict()
-    assert tgt.getEdgeSetHTML() == edgeSet.getHTML()
+    assert tgt.get_edge_set().get_dict() == edge_set.get_dict()
+    assert tgt.get_edge_set_html() == edge_set.get_html()
 
     # TODO: this actually does not test anything, only checks if it works
-    tgt.findLinks()
-    tgt.getHtmlData()
-    tgt.getGraph()
+    tgt.find_links()
+    tgt.get_html_data()
+    tgt.get_graph()
 
 
-def test_targetSet():
-    tgts = targets.targetSet()
-    tgts2 = targets.targetSet()
-    assert tgts == tgts
+def test_target_set():
+    target_set = targets.TargetSet()
+    target_set_2 = targets.TargetSet()
+    assert target_set == target_set
 
-    tgts2._df = pd.DataFrame()
-    assert tgts != tgts2
+    target_set_2._df = pd.DataFrame()
+    assert target_set != target_set_2
 
     # TODO: implement __eq__ and __ne__ operator for target class
-    # assert targets.target('mcl1') == tgts.getTarget('mcl1')
+    # assert targets.target('mcl1') == target_set.get_target('mcl1')
 
-    df = tgts.getDF()
+    df = target_set.get_dataframe()
     assert df.shape[0] == 1
     assert df.shape[1] > 1
     assert df["name"][0] == "mcl1"
 
-    df = tgts.getDF(columns=["name"])
+    df = target_set.get_dataframe(columns=["name"])
     assert df.shape[0] == 1
     assert df.shape[1] == 1
     assert df["name"][0] == "mcl1"
@@ -121,20 +122,20 @@ def test_targetSet():
     with pytest.raises(
         ValueError, match=f"Column xxx is not known and cannot be generated."
     ):
-        tgts.getDF(columns=["xxx"])
+        target_set.get_dataframe(columns=["xxx"])
     with pytest.raises(
         ValueError, match=f"Column xxx is not known and cannot be generated."
     ):
-        tgts.getDF(columns=["name", "xxx"])
+        target_set.get_dataframe(columns=["name", "xxx"])
 
     # TODO: this actually does not test anything, only checks if it works
-    tgts.getHTML()
-    tgts.getHTML(columns=["name"])
+    target_set.get_html()
+    target_set.get_html(columns=["name"])
     with pytest.raises(
         ValueError, match=f"Column xxx is not known and cannot be generated."
     ):
-        tgts.getHTML(columns=["xxx"])
+        target_set.get_html(columns=["xxx"])
     with pytest.raises(
         ValueError, match=f"Column xxx is not known and cannot be generated."
     ):
-        tgts.getHTML(columns=["name", "xxx"])
+        target_set.get_html(columns=["name", "xxx"])
