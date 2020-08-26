@@ -18,7 +18,7 @@ from PLBenchmarks import ligands, targets, utils
 
 def test_affinity_data():
     targets.set_data_dir(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
-    file = open(os.path.join(targets.get_target_data_path("mcl1") + "ligands.yml"))
+    file = open(os.path.join(targets.get_target_data_path("mcl1_sample") + "ligands.yml"))
     data = yaml.full_load_all(file)
     dfs = []
     for d in data:
@@ -30,7 +30,7 @@ def test_affinity_data():
         lig.get_image()
         dfs.append(lig.get_dataframe(["name", "ROMol", "DerivedMeasurement"]))
     df = pd.DataFrame(dfs)
-    assert df.shape[0] == 42
+    assert df.shape[0] == 15
 
     for n in df.name:
         assert n in [
@@ -49,33 +49,33 @@ def test_affinity_data():
             "lig_37",
             "lig_38",
             "lig_39",
-            "lig_40",
-            "lig_41",
-            "lig_42",
-            "lig_43",
-            "lig_44",
-            "lig_45",
-            "lig_46",
-            "lig_47",
-            "lig_48",
-            "lig_49",
-            "lig_50",
-            "lig_51",
-            "lig_52",
-            "lig_53",
-            "lig_54",
-            "lig_56",
-            "lig_57",
-            "lig_58",
-            "lig_60",
-            "lig_61",
-            "lig_62",
-            "lig_63",
-            "lig_64",
-            "lig_65",
-            "lig_66",
-            "lig_67",
-            "lig_68",
+            # "lig_40",
+            # "lig_41",
+            # "lig_42",
+            # "lig_43",
+            # "lig_44",
+            # "lig_45",
+            # "lig_46",
+            # "lig_47",
+            # "lig_48",
+            # "lig_49",
+            # "lig_50",
+            # "lig_51",
+            # "lig_52",
+            # "lig_53",
+            # "lig_54",
+            # "lig_56",
+            # "lig_57",
+            # "lig_58",
+            # "lig_60",
+            # "lig_61",
+            # "lig_62",
+            # "lig_63",
+            # "lig_64",
+            # "lig_65",
+            # "lig_66",
+            # "lig_67",
+            # "lig_68",
         ]
 
     # Check whether the values in the repo are the same and correctly converted by comparing to the values in the JACS paper
@@ -95,33 +95,33 @@ def test_affinity_data():
         "lig_37": -8.95,
         "lig_38": -7.02,
         "lig_39": -7.03,
-        "lig_40": -7.25,
-        "lig_41": -7.13,
-        "lig_42": -8.9,
-        "lig_43": -7.03,
-        "lig_44": -8.67,
-        "lig_45": -8.95,
-        "lig_46": -7.6,
-        "lig_47": -5.78,
-        "lig_48": -6.66,
-        "lig_49": -8.36,
-        "lig_50": -9.33,
-        "lig_51": -8.45,
-        "lig_52": -9.23,
-        "lig_53": -9.96,
-        "lig_54": -9.78,
-        "lig_56": -9.26,
-        "lig_57": -9.04,
-        "lig_58": -9.41,
-        "lig_60": -8.92,
-        "lig_61": -8.08,
-        "lig_62": -7.96,
-        "lig_63": -9.06,
-        "lig_64": -9.5,
-        "lig_65": -8.41,
-        "lig_66": -8.43,
-        "lig_67": -7.58,
-        "lig_68": -7.69,
+        # "lig_40": -7.25,
+        # "lig_41": -7.13,
+        # "lig_42": -8.9,
+        # "lig_43": -7.03,
+        # "lig_44": -8.67,
+        # "lig_45": -8.95,
+        # "lig_46": -7.6,
+        # "lig_47": -5.78,
+        # "lig_48": -6.66,
+        # "lig_49": -8.36,
+        # "lig_50": -9.33,
+        # "lig_51": -8.45,
+        # "lig_52": -9.23,
+        # "lig_53": -9.96,
+        # "lig_54": -9.78,
+        # "lig_56": -9.26,
+        # "lig_57": -9.04,
+        # "lig_58": -9.41,
+        # "lig_60": -8.92,
+        # "lig_61": -8.08,
+        # "lig_62": -7.96,
+        # "lig_63": -9.06,
+        # "lig_64": -9.5,
+        # "lig_65": -8.41,
+        # "lig_66": -8.43,
+        # "lig_67": -7.58,
+        # "lig_68": -7.69,
     }
 
     eps = 0.01
@@ -136,9 +136,9 @@ def test_affinity_data():
 
 
 test_set = []
-ligand_set = ligands.LigandSet("mcl1")
+ligand_set = ligands.LigandSet("mcl1_sample")
 for name, lig in ligand_set.items():
-    test_set.append(("mcl1", name, lig))
+    test_set.append(("mcl1_sample", name, lig))
 
 
 @pytest.mark.parametrize("target, ligand_name, lig", test_set)
@@ -189,7 +189,7 @@ def test_ligand_class():
 
 
 def test_ligand_set():
-    ligand_set = ligands.LigandSet("mcl1")
+    ligand_set = ligands.LigandSet("mcl1_sample")
 
     lig_list = ligand_set.get_list()
     for key in lig_list:

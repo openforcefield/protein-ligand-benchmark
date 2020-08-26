@@ -16,16 +16,16 @@ def test_edge():
     assert edg.get_name() == f"edge_xxx_yyy"
     assert edg.get_dict() == {f"edge_xxx_yyy": ["lig_xxx", "lig_yyy"]}
 
-    ligand_set = ligands.LigandSet("mcl1")
-    test_dict = ["50", "60"]
+    ligand_set = ligands.LigandSet("mcl1_sample")
+    test_dict = ["30", "27"]
     edg = edges.Edge(test_dict)
-    assert edg.get_name() == f"edge_50_60"
-    assert edg.get_dict() == {f"edge_50_60": ["lig_50", "lig_60"]}
-    pd.testing.assert_series_equal(edg.get_dataframe(), pd.Series({0: "50", 1: "60"}))
+    assert edg.get_name() == f"edge_30_27"
+    assert edg.get_dict() == {f"edge_30_27": ["lig_30", "lig_27"]}
+    pd.testing.assert_series_equal(edg.get_dataframe(), pd.Series({0: "30", 1: "27"}))
     edg.add_ligand_data(ligand_set)
     with pytest.raises(AssertionError):
         pd.testing.assert_series_equal(
-            edg.get_dataframe(), pd.Series({0: "50", 1: "60"})
+            edg.get_dataframe(), pd.Series({0: "30", 1: "27"})
         )
     df = edg.get_dataframe(
         columns=[
@@ -51,8 +51,8 @@ def test_edge():
 
 def test_edge_set():
     eps = 0.0001
-    lig_set = ligands.LigandSet("mcl1")
-    edg_set = edges.EdgeSet("mcl1")
+    lig_set = ligands.LigandSet("mcl1_sample")
+    edg_set = edges.EdgeSet("mcl1_sample")
     for k, edg in edg_set.items():
         assert f"lig_{edg._data[0]}" in lig_set.keys()
         assert f"lig_{edg._data[1]}" in lig_set.keys()
