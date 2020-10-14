@@ -38,8 +38,9 @@ def test_find_doi_url():
     with pytest.warns(UserWarning):
         assert "fakeDOI" == utils.find_doi_url("fakeDOI")
 
-
-def test_convert_value():
+# ToDo @pytest.mark.parametrize("value,final_type,out_unit", [(1.0, "dg", "kJ / mole"])
+#def test_convert_value_from_dg(value, final_type, out_unit):
+def test_convert_value_from_dg():
     eps = 0.001
     ##############################################
     # ORIGINAL = 'dg'
@@ -81,6 +82,9 @@ def test_convert_value():
     with pytest.raises(NotImplementedError):
         assert "0.24 kcal/mol" == utils.convert_value(dg, "dg", "fakeObs")
 
+
+def test_convert_value_from_ki():
+    eps = 0.001
     ##############################################
     # ORIGINAL = 'ki'
     ##############################################
@@ -192,6 +196,8 @@ def test_convert_value():
     with pytest.raises(NotImplementedError):
         assert "xxx" == utils.convert_value(ki, "ki", "fakeObs")
 
+def test_convert_value_from_ic50():
+    eps = 0.001
     ##############################################
     # ORIGINAL = 'ic50'
     ##############################################
@@ -339,6 +345,9 @@ def test_convert_value():
     with pytest.raises(NotImplementedError):
         utils.convert_value(ic50, "ic50", "fakeObs")
 
+
+def test_convert_value_from_ic50():
+    eps = 0.001
     ##############################################
     # ORIGINAL = 'pic50'
     ##############################################
@@ -481,7 +490,7 @@ def test_convert_value():
         utils.convert_value(pic50, "pic50", "fakeObs")
 
 
-def test_convert_error():
+def test_convert_error_from_dg():
     eps = 0.001
     ##############################################
     # ORIGINAL = 'dg'
@@ -539,6 +548,8 @@ def test_convert_error():
     with pytest.raises(NotImplementedError):
         assert "0.24 kcal/mol" == utils.convert_error(edg, dg, "dg", "fakeObs")
 
+def test_convert_error_from_ki():
+    eps = 0.001
     ##############################################
     # ORIGINAL = 'ki'
     ##############################################
@@ -669,6 +680,9 @@ def test_convert_error():
     with pytest.raises(NotImplementedError):
         assert "xxx" == utils.convert_error(eki, ki, "ki", "fakeObs")
 
+
+def test_convert_error_from_ic50():
+    eps = 0.001
     ##############################################
     # ORIGINAL = 'ic50'
     ##############################################
@@ -815,6 +829,9 @@ def test_convert_error():
     with pytest.raises(NotImplementedError):
         utils.convert_error(eic50, ic50, "ic50", "fakeObs")
 
+
+def test_convert_error_from_pic50():
+    eps = 0.001
     ##############################################
     # ORIGINAL = 'pic50'
     ##############################################
