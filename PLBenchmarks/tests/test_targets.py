@@ -13,11 +13,11 @@ from PLBenchmarks import targets, ligands, edges
 
 def test_targets():
     assert len(targets.target_dict) == 1
-    mcl1_dict = {"mcl1_sample":
-        {
-        "date": datetime.date(2020, 8, 26),
-        "dir": "2020-08-26_mcl1_sample",
-        "name": "mcl1_sample",
+    mcl1_dict = {
+        "mcl1_sample": {
+            "date": datetime.date(2020, 8, 26),
+            "dir": "2020-08-26_mcl1_sample",
+            "name": "mcl1_sample",
         }
     }
     for key in mcl1_dict["mcl1_sample"].keys():

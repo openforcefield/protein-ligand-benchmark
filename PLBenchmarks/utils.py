@@ -148,7 +148,7 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
             return result.to(out_unit)
         else:
             raise NotImplementedError(
-                f"Conversion to observable {final_type} not possible. "\
+                f"Conversion to observable {final_type} not possible. "
                 f"Observable must be any of: dg, ki, ic50 or pic50."
             )
     elif original_type == "ki":
@@ -175,7 +175,7 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
                 return result
         else:
             raise NotImplementedError(
-                f"Conversion to observable {final_type} not possible. "\
+                f"Conversion to observable {final_type} not possible. "
                 f"Observable must be any of: dg, ki, ic50 or pic50."
             )
     elif original_type == "ic50":
@@ -202,7 +202,7 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
                 return result
         else:
             raise NotImplementedError(
-                f"Conversion to observable {final_type} not possible. "\
+                f"Conversion to observable {final_type} not possible. "
                 f"Observable must be any of: dg, ki, ic50 or pic50."
             )
     elif original_type == "pic50":
@@ -225,7 +225,7 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
             return value.to(out_unit)
         else:
             raise NotImplementedError(
-                f"Conversion to observable {final_type} not possible. "\
+                f"Conversion to observable {final_type} not possible. "
                 f"Observable must be any of: dg, ki, ic50 or pic50."
             )
 
@@ -281,7 +281,7 @@ def convert_error(
             return error.to(out_unit)
         else:
             raise NotImplementedError(
-                f"Conversion to observable {final_type} not possible. "\
+                f"Conversion to observable {final_type} not possible. "
                 f"Observable must be any of: dg, ki, ic50 or pic50."
             )
     elif original_type == "ki":
@@ -311,7 +311,7 @@ def convert_error(
                 return result.to(out_unit).round(2)
         else:
             raise NotImplementedError(
-                f"Conversion to observable {final_type} not possible. "\
+                f"Conversion to observable {final_type} not possible. "
                 f"Observable must be any of: dg, ki, ic50 or pic50."
             )
     elif original_type == "ic50":
@@ -341,7 +341,7 @@ def convert_error(
                 return result.to(out_unit).round(2)
         else:
             raise NotImplementedError(
-                f"Conversion to observable {final_type} not possible. "\
+                f"Conversion to observable {final_type} not possible. "
                 f"Observable must be any of: dg, ki, ic50 or pic50."
             )
     elif original_type == "pic50":
@@ -370,6 +370,6 @@ def convert_error(
             return error_value.to(out_unit).round(2)
         else:
             raise NotImplementedError(
-                f"Conversion to observable {final_type} not possible. "\
+                f"Conversion to observable {final_type} not possible. "
                 f"Observable must be any of: dg, ki, ic50 or pic50."
             )

@@ -106,8 +106,10 @@ class Ligand:
                 )
                 break
         else:
-            raise ValueError(f"No known measured observable found. "\
-                             f"Measured observable should be any of: dg, ki, ic50 or pic50.")
+            raise ValueError(
+                f"No known measured observable found. "
+                f"Measured observable should be any of: dg, ki, ic50 or pic50."
+            )
 
     def get_name(self):
         """

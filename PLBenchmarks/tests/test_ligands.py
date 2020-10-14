@@ -18,7 +18,9 @@ from PLBenchmarks import ligands, targets, utils
 
 def test_affinity_data():
     targets.set_data_dir(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
-    file = open(os.path.join(targets.get_target_data_path("mcl1_sample") + "ligands.yml"))
+    file = open(
+        os.path.join(targets.get_target_data_path("mcl1_sample") + "ligands.yml")
+    )
     data = yaml.full_load_all(file)
     dfs = []
     for d in data:
@@ -187,47 +189,48 @@ def test_ligand_class():
             lig.get_html()
             lig.get_html(columns=["name", "smiles"])
 
+
 def test_derive_observables():
     for target in targets.target_dict.keys():
         ligand_set = ligands.LigandSet(target)
         for name, lig in ligand_set.items():
-            for i, t in enumerate(['dg', 'ki', 'ic50', 'pic50']):
+            for i, t in enumerate(["dg", "ki", "ic50", "pic50"]):
                 lig.derive_observables(
-                    derived_type=t,
-                    destination=f"DerivedMeasurement{i}"
+                    derived_type=t, destination=f"DerivedMeasurement{i}"
                 )
                 for original_type in lig._observables:
                     if ("measurement", original_type) in list(lig._data.index):
-                        assert lig._data[(f"DerivedMeasurement{i}", t)] ==\
-                            utils.convert_value(
-                                lig._data[("measurement", original_type)],
-                                original_type=original_type,
-                                final_type=t
-                            )
+                        assert lig._data[
+                            (f"DerivedMeasurement{i}", t)
+                        ] == utils.convert_value(
+                            lig._data[("measurement", original_type)],
+                            original_type=original_type,
+                            final_type=t,
+                        )
 
             # Test expected exception when trying to convert to unknown observable
-            with pytest.raises(NotImplementedError,
-                match=f"Conversion to observable xxx not possible. "\
-                f"Observable must be any of: dg, ki, ic50 or pic50."
+            with pytest.raises(
+                NotImplementedError,
+                match=f"Conversion to observable xxx not possible. "
+                f"Observable must be any of: dg, ki, ic50 or pic50.",
             ):
                 lig.derive_observables(
-                    derived_type="xxx",
-                    destination=f"DerivedMeasurement"
+                    derived_type="xxx", destination=f"DerivedMeasurement"
                 )
 
             # Test expected exception when trying to convert from unknown observable
             for original_type in lig._observables:
                 if ("measurement", original_type) in list(lig._data.index):
-                    lig._data.rename({original_type: 'xxx'}, inplace=True, level=1)
+                    lig._data.rename({original_type: "xxx"}, inplace=True, level=1)
                     with pytest.raises(
-                            ValueError,
-                            match=f"No known measured observable found. "\
-                             f"Measured observable should be any of: dg, ki, ic50 or pic50."
+                        ValueError,
+                        match=f"No known measured observable found. "
+                        f"Measured observable should be any of: dg, ki, ic50 or pic50.",
                     ):
                         lig.derive_observables(
-                            derived_type='pic50',
-                            destination=f"DerivedMeasurement{i}"
+                            derived_type="pic50", destination=f"DerivedMeasurement{i}"
                         )
+
 
 def test_ligand_set():
     ligand_set = ligands.LigandSet("mcl1_sample")

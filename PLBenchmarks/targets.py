@@ -13,17 +13,13 @@ import networkx as nx
 from . import __path__, ligands, edges, utils
 
 
-data_path = os.path.abspath(
-    os.path.join(os.path.join(__path__[0], "sample_data"))
-)
+data_path = os.path.abspath(os.path.join(os.path.join(__path__[0], "sample_data")))
 file = open(os.path.join(data_path, "targets.yml"))
 target_dict = yaml.full_load(file)
 file.close()
 
 
-def set_data_dir(
-    path=os.path.abspath(os.path.join(__path__[0], "sample_data"))
-):
+def set_data_dir(path=os.path.abspath(os.path.join(__path__[0], "sample_data"))):
     """
     Gets the directory name of the target
 

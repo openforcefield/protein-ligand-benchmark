@@ -38,8 +38,9 @@ def test_find_doi_url():
     with pytest.warns(UserWarning):
         assert "fakeDOI" == utils.find_doi_url("fakeDOI")
 
+
 # ToDo @pytest.mark.parametrize("value,final_type,out_unit", [(1.0, "dg", "kJ / mole"])
-#def test_convert_value_from_dg(value, final_type, out_unit):
+# def test_convert_value_from_dg(value, final_type, out_unit):
 def test_convert_value_from_dg():
     eps = 0.001
     ##############################################
@@ -195,6 +196,7 @@ def test_convert_value_from_ki():
 
     with pytest.raises(NotImplementedError):
         assert "xxx" == utils.convert_value(ki, "ki", "fakeObs")
+
 
 def test_convert_value_from_ic50():
     eps = 0.001
@@ -547,6 +549,7 @@ def test_convert_error_from_dg():
     )
     with pytest.raises(NotImplementedError):
         assert "0.24 kcal/mol" == utils.convert_error(edg, dg, "dg", "fakeObs")
+
 
 def test_convert_error_from_ki():
     eps = 0.001
