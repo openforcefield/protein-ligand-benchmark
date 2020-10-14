@@ -23,3 +23,7 @@ dependencies:
   - conda-forge::pint
   - scipy
   - openforcefield
+
+  - pip:
+     - -e ../
+     
