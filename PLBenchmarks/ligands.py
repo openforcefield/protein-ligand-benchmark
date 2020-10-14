@@ -47,27 +47,27 @@ class Ligand:
             self._data.index = pd.MultiIndex.from_arrays(
                 [index[0].tolist(), index[1].tolist()]
             )
-            for obs in self._observables:
-                if ("measurement", obs) in list(self._data.index):
+            for original_type in self._observables:
+                if ("measurement", original_type) in list(self._data.index):
                     self._data = self._data.append(
                         pd.Series(
                             [0],
                             index=pd.MultiIndex.from_tuples(
-                                [("measurement", f"e_{obs}")]
+                                [("measurement", f"e_{original_type}")]
                             ),
                         )
                     )
-                    values = self._data[("measurement", f"{obs}")]
+                    values = self._data[("measurement", f"{original_type}")]
                     # let pint figure out what the unit means
                     u = utils.unit_registry(values[2])
-                    self._data[("measurement", f"e_{obs}")] = values[1] * u
-                    self._data[("measurement", obs)] = values[0] * u
+                    self._data[("measurement", f"e_{original_type}")] = values[1] * u
+                    self._data[("measurement", original_type)] = values[0] * u
 
     def derive_observables(
         self,
         derived_type="dg",
         destination="DerivedMeasurement",
-        out_unit=utils.unit_registry("kcal / mole"),
+        out_unit=None,
     ):
         """
         Derive observables from (stored) primary data, which is then stored in the :py:class:`pandas.DataFrame`
@@ -77,24 +77,21 @@ class Ligand:
         :param out_unit: unit of type :py:class:`pint` unit of derived coordinate
         :return: None
         """
-        assert (
-            derived_type in self._observables
-        ), "Observable to be derived not known. Should be any of dg, ki, ic50, or pic50"
-        for obs in self._observables:
-            if ("measurement", obs) in list(self._data.index):
+        for original_type in self._observables:
+            if ("measurement", original_type) in list(self._data.index):
                 self._data = self._data.append(
                     pd.Series(
                         [
                             utils.convert_value(
-                                self._data[("measurement", obs)],
-                                obs,
+                                self._data[("measurement", original_type)],
+                                original_type,
                                 derived_type,
                                 out_unit=out_unit,
                             ),
                             utils.convert_error(
-                                self._data[("measurement", f"e_{obs}")],
-                                self._data[("measurement", obs)],
-                                obs,
+                                self._data[("measurement", f"e_{original_type}")],
+                                self._data[("measurement", original_type)],
+                                original_type,
                                 derived_type,
                                 out_unit=out_unit,
                             ),
@@ -109,7 +106,8 @@ class Ligand:
                 )
                 break
         else:
-            print(f"Conversion to observable {derived_type} not possible.")
+            raise ValueError(f"No known measured observable found. "\
+                             f"Measured observable should be any of: dg, ki, ic50 or pic50.")
 
     def get_name(self):
         """

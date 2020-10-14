@@ -147,7 +147,10 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
             )
             return result.to(out_unit)
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Conversion to observable {final_type} not possible. "\
+                f"Observable must be any of: dg, ki, ic50 or pic50."
+            )
     elif original_type == "ki":
         if final_type == "dg":
             if value < 1e-15 * unit_registry("molar"):
@@ -171,7 +174,10 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
                 result = -np.log(value / unit_registry.molar) / np.log(10)
                 return result
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Conversion to observable {final_type} not possible. "\
+                f"Observable must be any of: dg, ki, ic50 or pic50."
+            )
     elif original_type == "ic50":
         if final_type == "dg":
             if value < 1e-15 * unit_registry("molar"):
@@ -195,7 +201,10 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
                 result = -np.log(value / unit_registry.molar) / np.log(10)
                 return result
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Conversion to observable {final_type} not possible. "\
+                f"Observable must be any of: dg, ki, ic50 or pic50."
+            )
     elif original_type == "pic50":
         if final_type == "dg":
             result = (
@@ -215,7 +224,10 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
         elif final_type == "pic50":
             return value.to(out_unit)
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Conversion to observable {final_type} not possible. "\
+                f"Observable must be any of: dg, ki, ic50 or pic50."
+            )
 
 
 def convert_error(
@@ -268,7 +280,10 @@ def convert_error(
             error = 1.0 / (k_bt * np.log(10)) * error_value
             return error.to(out_unit)
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Conversion to observable {final_type} not possible. "\
+                f"Observable must be any of: dg, ki, ic50 or pic50."
+            )
     elif original_type == "ki":
         if final_type == "dg":
             if value < 1e-15 * unit_registry.molar:
@@ -295,7 +310,10 @@ def convert_error(
                 result = 1 / (value * np.log(10)) * error_value
                 return result.to(out_unit).round(2)
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Conversion to observable {final_type} not possible. "\
+                f"Observable must be any of: dg, ki, ic50 or pic50."
+            )
     elif original_type == "ic50":
         if final_type == "dg":
             if value < 1e-15 * unit_registry.molar:
@@ -322,7 +340,10 @@ def convert_error(
                 result = 1 / (value * np.log(10)) * error_value
                 return result.to(out_unit).round(2)
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Conversion to observable {final_type} not possible. "\
+                f"Observable must be any of: dg, ki, ic50 or pic50."
+            )
     elif original_type == "pic50":
         if final_type == "dg":
             error = (
@@ -348,4 +369,7 @@ def convert_error(
         elif final_type == "pic50":
             return error_value.to(out_unit).round(2)
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Conversion to observable {final_type} not possible. "\
+                f"Observable must be any of: dg, ki, ic50 or pic50."
+            )
