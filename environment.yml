@@ -1,5 +1,7 @@
-name: test
+name: plbenchmarks
 channels:
+  - conda-forge
+  - omnia
 dependencies:
     # Base depends
   - python
@@ -21,8 +23,3 @@ dependencies:
   - conda-forge::pint
   - scipy
   - openforcefield
-  
-# Pip-only installs
-  #- pip:
-  #  - codecov
-  #   - pyaml
