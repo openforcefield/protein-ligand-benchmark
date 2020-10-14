@@ -18,7 +18,6 @@ data_path = os.path.abspath(
 )
 file = open(os.path.join(data_path, "targets.yml"))
 target_dict = yaml.full_load(file)
-print(target_dict)
 file.close()
 
 
@@ -130,11 +129,9 @@ class Target:
         )
         # calculation of the mean absolute deviation (mad)
         mean = np.average(affinities)
-        mad = np.average(np.fabs(affinities - mean)) * utils.unit_registry(
-            "kcal / mole"
-        )
-        mad = mad.to("kcal/mole")
-        self.ligand_data["MAD(DG)"] = round(mad, 1)
+        std = np.std(affinities)        
+        std = std.to("kcal/mole")
+        self.ligand_data["std(DG)"] = round(std, 1)
 
     def get_ligand_data(self):
         if self.ligand_data is None:
