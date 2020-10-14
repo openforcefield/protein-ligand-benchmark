@@ -1,0 +1,25 @@
+name: plbenchmarks
+channels:
+  - conda-forge
+  - omnia
+dependencies:
+    # Base depends
+  - python
+  - pip
+
+    # Testing
+  - pytest
+  - pytest-cov
+  - codecov
+  - nbval
+  - coverage
+
+  - pyyaml
+  - numpy
+  - matplotlib
+  - pandas
+  - rdkit
+  - networkx
+  - conda-forge::pint
+  - scipy
+  - openforcefield

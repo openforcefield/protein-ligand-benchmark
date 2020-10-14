@@ -16,8 +16,8 @@ else
     export PYTHON_VER=$TRAVIS_PYTHON_VERSION
 fi
 MINICONDA_HOME=$HOME/miniconda
-MINICONDA_MD5=$(curl -s https://repo.continuum.io/miniconda/ | grep -A3 $MINICONDA | sed -n '4p' | sed -n 's/ *<td>\(.*\)<\/td> */\1/p')
-wget -q https://repo.continuum.io/miniconda/$MINICONDA
+MINICONDA_MD5=$(curl -s https://repo.anaconda.com/miniconda/ | grep -A3 $MINICONDA | sed -n '4p' | sed -n 's/ *<td>\(.*\)<\/td> */\1/p')
+wget -q https://repo.anaconda.com/miniconda/$MINICONDA
 if [[ $MINICONDA_MD5 != $(md5sum $MINICONDA | cut -d ' ' -f 1) ]]; then
     echo "Miniconda MD5 mismatch"
     exit 1
@@ -32,8 +32,8 @@ echo "conda activate" >> ~/.bashrc  # Activate conda
 source ~/.bashrc  # source file to get new commands
 #export PATH=$MINICONDA_HOME/bin:$PATH  # Old way, should not be needed anymore
 
-conda config --add channels conda-forge
 conda config --add channels omnia
+conda config --add channels conda-forge
 
 conda config --set always_yes yes
 conda install conda conda-build jinja2 anaconda-client

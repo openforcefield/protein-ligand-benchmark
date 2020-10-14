@@ -12,4 +12,9 @@ comment:
   behavior: default
   flags: null
   paths: null
+
+ignore:
+  - "PLBenchmarks/tests/"           # ignore test files
+  - "PLBenchmarks/sample_data"      # ignore sample data
+  - "PLBenchmarks/_version.py"
   

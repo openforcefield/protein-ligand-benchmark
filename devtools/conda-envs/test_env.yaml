@@ -10,19 +10,19 @@ dependencies:
   - pytest-cov
   - codecov
   - nbval
-  - coverage < 5.0
+  - coverage
 
   - pyyaml
   - numpy
   - matplotlib
   - pandas
-  - importlib_resources
   - rdkit
   - networkx
-  - pint
+  - conda-forge::pint
   - scipy
+  - openforcefield
   
-  # Pip-only installs
+# Pip-only installs
   #- pip:
   #  - codecov
   #   - pyaml
