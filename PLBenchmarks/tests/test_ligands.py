@@ -201,9 +201,9 @@ def test_ligand_set():
 
     df = ligand_set.get_dataframe()
     for i, row in df.iterrows():
-        print(ligand_set[row.loc["name"][0]]._data, row)
+        test_data = row.loc[ligand_set[row.loc["name"][0]]._data.index]
         pd.testing.assert_series_equal(
-            ligand_set[row.loc["name"][0]]._data, row, check_names=False
+            ligand_set[row.loc["name"][0]]._data, test_data, check_names=False
         )
 
     df = ligand_set.get_dataframe(columns=["name", "smiles"])

@@ -58,17 +58,8 @@ class Ligand:
                         )
                     )
                     values = self._data[("measurement", f"{obs}")]
-                    if values[2] == "nM":
-                        u = utils.unit_registry("nanomolar")
-                    elif values[2] == "uM":
-                        u = utils.unit_registry("micromolar")
-                    elif values[2] == "kj/mol":
-                        u = utils.unit_registry("kJ / mole")
-                    elif values[2] == "kcal/mol":
-                        u = utils.unit_registry("kcal / mole")
-                    else:
-                        # let pint figure out what the unit means
-                        u = utils.unit_registry(values[2])
+                    # let pint figure out what the unit means
+                    u = utils.unit_registry(values[2])
                     self._data[("measurement", f"e_{obs}")] = values[1] * u
                     self._data[("measurement", obs)] = values[0] * u
 

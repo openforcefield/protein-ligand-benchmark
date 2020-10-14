@@ -50,7 +50,7 @@ def test_edge():
 
 
 def test_edge_set():
-    eps = 0.0001
+    eps = 0.01
     lig_set = ligands.LigandSet("mcl1_sample")
     edg_set = edges.EdgeSet("mcl1_sample")
     for k, edg in edg_set.items():
