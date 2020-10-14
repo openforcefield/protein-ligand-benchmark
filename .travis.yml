@@ -43,7 +43,7 @@ install:
 
 
 script:
-  - pytest -v --nbval-lax --cov=PLBenchmarks --ignore=examples/Global_analysis.ipynb PLBenchmarks/tests/ examples/
+  - pytest -v --nbval-lax --cov=PLBenchmarks PLBenchmarks/tests/ examples/
 
 notifications:
     email: false
