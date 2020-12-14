@@ -13,6 +13,13 @@ Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Ener
 
 [Documentation](https://plbenchmarks.readthedocs.io/en/latest/) for the `openforcefield` toolkit is hosted at [readthedocs](https://plbenchmarks.readthedocs.io/en/latest/).
 
+### Release History
+
+Releases follow the `major.minor.micro` scheme recommended by [PEP440](https://www.python.org/dev/peps/pep-0440/#final-releases), where
+- `major` increments denote a change that may break API compatibility with previous major releases and mark versions used in publications
+- `minor` increments denote addition of new targets, changes of coordinates or topologies, or addition of new features to the API
+- `micro` increments denote bugfixes and changes of metadata
+
 ### License
 
 MIT. See the [License File](LICENSE) for more information.
