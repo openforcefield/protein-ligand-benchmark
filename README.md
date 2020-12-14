@@ -9,11 +9,11 @@ ProteinLigandBenchmarks
 
 Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.
 
-### Documentation
+## Documentation
 
 [Documentation](https://plbenchmarks.readthedocs.io/en/latest/) for the `openforcefield` toolkit is hosted at [readthedocs](https://plbenchmarks.readthedocs.io/en/latest/).
 
-### Data file tree and file description
+## Data file tree and file description
 
 The data is organized as followed:  
 
@@ -62,24 +62,49 @@ data
 ├── <date>_<target_name_2>                    # directory for target 2  
 …
 ```
+## Description of meta data YAML files
 
-### Release History
+#### `targets.yml`
+
+This file lists all the registered targets in the benchmark set. Each entry denotes one target and contains the following information:
+
+```
+mcl1_sample:
+  name:     mcl1_sample
+  date:     2020-08-26
+  dir:      2020-08-26_mcl1_sample
+```
+
+`mcl1_sample` is the entry name and each entry has three sub-entries: 
+- `name` is the target name, which is usually the same as the entry name of the target. 
+- `date` is the data when the target was initially added to the benchmark set.
+- `dir` is the directory name where all the data for the target is found. Usually it is the `date` and the `name` field, connected by a underscore `_`. 
+
+#### `target.yml`
+
+This file is always found in the meta data directory of each target: `<date>_<target_name>/00_data/target.yml`. It contains additionally information about the target:
+
+#### `ligands.yml`
+
+#### `edges.yml`
+
+## Release History
 
 Releases follow the `major.minor.micro` scheme recommended by [PEP440](https://www.python.org/dev/peps/pep-0440/#final-releases), where
 - `major` increments denote a change that may break API compatibility with previous major releases and mark versions used in publications
 - `minor` increments denote addition of new targets, changes of coordinates or topologies, or addition of new features to the API
 - `micro` increments denote bugfixes and changes of metadata
 
-### License
+## License
 
 MIT. See the [License File](LICENSE) for more information.
 
-### Copyright
+## Copyright
 
 Copyright (c) 2019, Open Force Field Consortium, David F. Hahn
 
 
-#### Acknowledgements
+## Acknowledgements
 
 Project based on the
 [Computational Molecular Science Python Cookiecutter](https://github.com/molssi/cookiecutter-cms) version 1.1.
