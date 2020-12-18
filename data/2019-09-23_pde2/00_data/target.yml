@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d1d41c8e525a00cfef2f6e03df86767c8a1c4b5e46a3f07eab0c585bd97b9371
-size 347
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.29
+  pdb: 6C7E
+associated_sets:
+- Janssen
+comments: null
+dpi: 0.07
+id: 2
+iridium_classifier: MT
+iridium_score: 0.3
+name: pde2
+netcharge: -8 e
+pdb: 6EZF
+references:
+  calculation:
+  - 10.1038/s41598-018-23039-5
+  - 10.1039/C9SC03754C
+  measurement:
+  - 10.1021/ml500262u
+  - 10.1021/ja404449g

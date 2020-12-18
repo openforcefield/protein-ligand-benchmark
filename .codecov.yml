@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6587b0e541ccaaf8e07f4631216e2424b25671693abed21e1e1d95f52fdb6971
-size 414
+# Codecov configuration to make it a bit less noisy
+coverage:
+  status:
+    patch: false
+    project:
+      default:
+        threshold: 50%
+comment:
+  layout: "header"
+  require_changes: false
+  branches: null
+  behavior: default
+  flags: null
+  paths: null
+
+ignore:
+  - "PLBenchmarks/tests/"           # ignore test files
+  - "PLBenchmarks/sample_data"      # ignore sample data
+  - "PLBenchmarks/_version.py"
+  

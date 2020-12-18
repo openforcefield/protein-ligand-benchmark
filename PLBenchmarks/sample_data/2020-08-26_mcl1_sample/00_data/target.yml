@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eee51280a3f9e91b4060e3a98ea0e0c48de655092db6c75c1230053b237e03b8
-size 575
+id:        99
+date:      2020-08-21
+name:      mcl1_sample
+fullname:  Induced myeloid leukemia cell differentiation protein Mcl-1
+netcharge: xx
+pdb:       4HW3
+ligands:
+    - lig_23
+    - lig_26
+    - lig_27
+    - lig_28
+    - lig_29
+    - lig_30
+    - lig_31
+    - lig_32
+    - lig_33
+    - lig_34
+    - lig_35
+    - lig_36
+    - lig_37
+    - lig_38
+    - lig_39
+references:
+    measurement:
+    calculation:
+        - 10.1021/ja512751q
+        - 10.1021/acs.jcim.9b00105
+comments:  "hydrophobic interactions contributing to binding"
+associated_sets:
+    - Schrodinger JACS

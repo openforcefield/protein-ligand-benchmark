@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d32c513f23b0af2a76018c0454d1306a37271a6262d01998f42625eb23d12dcb
-size 388
+# Configure LGTM for this package
+
+extraction:
+  python:  # Configure Python
+    python_setup:  # Configure the setup
+      version: 3  # Specify Version 3
+path_classifiers:
+  library:
+    - versioneer.py  # Set Versioneer.py to an external "library" (3rd party code)
+    - devtools/*
+  generated:
+    - PLBenchmarks/_version.py
+  test:
+    - "PLBenchmarks/tests/*.py"
+  docs:
+    - docs

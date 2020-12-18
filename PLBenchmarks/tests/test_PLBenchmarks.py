@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:716e6dee9de530b795f08fdeba9b078760ec3b5d5b15145e2ed5342b27b96174
-size 320
+"""
+Unit and regression test for the PLBenchmarks package.
+"""
+
+# Import package, test suite, and other packages as needed
+import PLBenchmarks
+import pytest
+import sys
+
+
+def test_PLBenchmarks_imported():
+    """Sample test, will always pass so long as import statement worked"""
+    assert "PLBenchmarks" in sys.modules

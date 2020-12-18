@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:79c539f072aa52b529276b4ce1b35a2e0f5d42aade4d807bb175ab34df9b9e6f
-size 190
+- 02_ligOMe
+- 05_ligOEt
+---
+- 07_ligOH
+- 02_ligOMe
+---
+- 07_ligOH
+- 01_ligF
+---
+- 03_ligNHMe
+- 02_ligOMe
+---
+- 03_ligNHMe
+- 04_ligNMe2
+---
+- 04_ligNMe2
+- 08_ligNH2
+---
+- 06_ligPyr
+- 01_ligF

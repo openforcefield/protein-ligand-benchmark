@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:661b65d396f52093b4c14e8335b9f9c4cd6f9dc77e81da36e9ec7b89a194715d
-size 356
+alternate:
+  iridium_classifier: ''
+  iridium_score: ''
+  pdb: ''
+associated_sets:
+- Merck KGaA fep-benchmark
+comments: ''
+date: 2019-12-13
+dpi: ''
+id: 7
+iridium_classifier: ''
+iridium_score: ''
+name: cmet
+netcharge: 6 e
+pdb: 4R1Y
+references:
+  calculation:
+  - 10.1021/acs.jcim.0c00900
+  - 10.1039/C9SC03754C
+  measurement:
+  - 10.1016/j.bmcl.2015.02.002

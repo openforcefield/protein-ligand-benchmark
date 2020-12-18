@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:211a40e355be0b0533590b540e5fcbd94ebdadd7a04f04bb69695c795c78a90b
-size 333
+name: test
+channels:
+dependencies:
+    # Base depends
+  - python
+  - pip
+
+    # Testing
+  - pytest
+  - pytest-cov
+  - codecov
+  - nbval
+  - coverage
+
+  - pyyaml
+  - numpy
+  - matplotlib
+  - pandas
+  - rdkit
+  - networkx
+  - conda-forge::pint
+  - scipy
+  - openforcefield
+  
+# Pip-only installs
+  #- pip:
+  #  - codecov
+  #   - pyaml

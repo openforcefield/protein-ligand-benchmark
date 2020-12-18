@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d29abf84dd2d8f4bb67549c57675f96b8cb408aba1c09284f02fffb37a7cb543
-size 340
+"""
+ProteinLigandBenchmarks
+Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.
+"""
+
+# Add imports here
+
+# Handle versioneer
+from ._version import get_versions
+
+versions = get_versions()
+__version__ = versions["version"]
+__git_revision__ = versions["full-revisionid"]
+del get_versions, versions

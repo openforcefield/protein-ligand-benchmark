@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dd020ab0785e85a6635e6f79d490d33b9b4581e8197e85dc3d67d8c4d5e0ed5
-size 248
+*.pdb filter=lfs diff=lfs merge=lfs -text
+*.gro filter=lfs diff=lfs merge=lfs -text
+*.top filter=lfs diff=lfs merge=lfs -text
+*.itp filter=lfs diff=lfs merge=lfs -text
+*.sdf filter=lfs diff=lfs merge=lfs -text
+score.dat filter=lfs diff=lfs merge=lfs -text
+pairs.dat filter=lfs diff=lfs merge=lfs -text

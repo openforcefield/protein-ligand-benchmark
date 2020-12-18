@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:66f61d530926e2bf7e10aeacc1323d840513f7b84ff2e3763d0ec6c22c699549
-size 339
+name: plbenchmarks
+channels:
+    - conda-forge
+    - omnia
+    - defaults
+dependencies:
+    # readthedocs dependencies
+    - numpydoc
+    - nbsphinx
+    - sphinx_bootstrap_theme
+    - m2r >=0.2.1
+    - testpath ==0.3.1
+    # conda build dependencies
+    - python
+    - setuptools
+    - numpy
+    - openmm
+    # Serialization:
+    - pyyaml
