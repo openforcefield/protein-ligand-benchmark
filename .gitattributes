@@ -1,7 +1,6 @@
-*.pdb filter=lfs diff=lfs merge=lfs -text
-*.gro filter=lfs diff=lfs merge=lfs -text
-*.top filter=lfs diff=lfs merge=lfs -text
-*.itp filter=lfs diff=lfs merge=lfs -text
-*.sdf filter=lfs diff=lfs merge=lfs -text
-score.dat filter=lfs diff=lfs merge=lfs -text
-pairs.dat filter=lfs diff=lfs merge=lfs -text
+data/**/*.dat filter=lfs diff=lfs merge=lfs -text
+data/**/*.pdb filter=lfs diff=lfs merge=lfs -text
+data/**/*.gro filter=lfs diff=lfs merge=lfs -text
+data/**/*.top filter=lfs diff=lfs merge=lfs -text
+data/**/*.itp filter=lfs diff=lfs merge=lfs -text
+data/**/*.sdf filter=lfs diff=lfs merge=lfs -text
