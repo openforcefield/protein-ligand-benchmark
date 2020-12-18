@@ -1,29 +1,3 @@
-environment:
-
-  matrix:
-    - PYTHON: "C:\\Python36-x64"
-      PYTHON_VERSION: "3.6"
-      PYTHON_ARCH: "64"
-
-    - PYTHON: "C:\\Python37-x64"
-      PYTHON_VERSION: "3.7"
-      PYTHON_ARCH: "64"
-  
-
-install:
-    # Make sure pip is around
-  - python -m ensurepip
-  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
-  
-    # Install the package locally
-  - pip install --upgrade pip setuptools
-  - pip install pytest pytest-cov codecov
-  - pip install -e .
-  
-build: false
-
-test_script:
-  - pytest -v --cov=plbenchmarks plbenchmarks\\tests
-
-on_success:
-  - codecov
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d67748367cadd534f9a04de62b00d68a64c37d0cce5850ce1ecbcb640c56cf1
+size 560

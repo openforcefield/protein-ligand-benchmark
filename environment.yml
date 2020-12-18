@@ -1,29 +1,3 @@
-name: plbenchmarks
-channels:
-  - conda-forge
-  - omnia
-dependencies:
-    # Base depends
-  - python
-  - pip
-
-    # Testing
-  - pytest
-  - pytest-cov
-  - codecov
-  - nbval
-  - coverage
-
-  - pyyaml
-  - numpy
-  - matplotlib
-  - pandas
-  - rdkit
-  - networkx
-  - conda-forge::pint
-  - scipy
-  - openforcefield
-
-  - pip:
-     - -e ../
-     
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca997e6cddae54a98ba070efebd82b2a582c4a0c3e1ae4c8e415dcef41a93b16
+size 334

@@ -1,23 +1,3 @@
-.. plbenchmarks documentation master file, created by
-   sphinx-quickstart on Thu Mar 15 13:55:56 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Protein-Ligand Benchmarks for Free Energy Calculations
-======================================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   install
-   examples
-   data
-   api
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+version https://git-lfs.github.com/spec/v1
+oid sha256:dede060deade90b0c48e2f5ddf31a783b038cb72d556efd9e4b9be92bccb9477
+size 517

@@ -1,18 +1,3 @@
-# Compiling ProteinLigandBenchmarks's Documentation
-
-The docs for this project are built with [Sphinx](http://www.sphinx-doc.org/en/master/).
-To compile the docs, first ensure that Sphinx and the ReadTheDocs theme are installed.
-
-
-```bash
-pip install sphinx sphinx_rtd_theme
-```
-
-
-Once installed, you can use the `Makefile` in this directory to compile static HTML pages by
-```bash
-make html
-```
-
-The compiled docs will be in the `_build` directory and can be viewed by opening `index.html` (which may itself 
-be inside a directory called `html/` depending on what version of Sphinx is installed).
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d859dd719e25fff6e15b7c37422fb7036b0c2e440364a3e90f52649ea73447d
+size 597

@@ -1,7 +1,3 @@
-include LICENSE
-include MANIFEST.in
-include versioneer.py
-
-graft PLBenchmarks
-prune PLBenchmarks/data
-global-exclude *.py[cod] __pycache__ *.so
+version https://git-lfs.github.com/spec/v1
+oid sha256:40562af95089ab52f1b31b39ccf3bb637f9bad0054d149dee6b1754f987dc8ba
+size 143
