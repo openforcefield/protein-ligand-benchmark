@@ -1,0 +1,395 @@
+charge: 1
+measurement:
+  comment: Table 3, entry 13a
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 720
+  - -1
+  - nM
+name: lig_CAT-13a
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]([H])([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13b
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 450
+  - -1
+  - nM
+name: lig_CAT-13b
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]([H])([H])[C]([H])([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13c
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 320
+  - -1
+  - nM
+name: lig_CAT-13c
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]([H])([C]([H])([H])[H])[C]([H])([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13d
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 47
+  - -1
+  - nM
+name: lig_CAT-13d
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]4([H])[C]([H])([H])[C]4([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13e
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 110
+  - -1
+  - nM
+name: lig_CAT-13e
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]4([H])[C]([H])([H])[C]([H])([H])[C]4([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13f
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 470
+  - -1
+  - nM
+name: lig_CAT-13f
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]4([H])[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]4([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13g
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 470
+  - -1
+  - nM
+name: lig_CAT-13g
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]4([H])[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]4([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13h
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 190
+  - -1
+  - nM
+name: lig_CAT-13h
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]4([C]([H])([H])[H])[C]([H])([H])[C]4([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13i
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 350
+  - -1
+  - nM
+name: lig_CAT-13i
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]([H])([H])[C]4([H])[C]([H])([H])[C]4([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13j
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 860
+  - -1
+  - nM
+name: lig_CAT-13j
+smiles: '[H][C]1=[N][C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([Cl])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13k
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 170
+  - -1
+  - nM
+name: lig_CAT-13k
+smiles: '[H][C]1=[N][C]([H])=[C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([Cl])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13m
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 830
+  - -1
+  - nM
+name: lig_CAT-13m
+smiles: '[H][C]1=[N][C]([H])=[C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([Cl])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])[C]([H])=[N]1'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13n
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 1200
+  - -1
+  - nM
+name: lig_CAT-13n
+smiles: '[H][C]1=[N][C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([Cl])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[N][C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 3, entry 13o
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 1200
+  - -1
+  - nM
+name: lig_CAT-13o
+smiles: '[H][C]1=[C]([H])[S][C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([Cl])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[N]1'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17a
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 30
+  - -1
+  - nM
+name: lig_CAT-17a
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([Cl])=[C]([H])[C]([Cl])=[C]2[H])=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17b
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 99
+  - -1
+  - nM
+name: lig_CAT-17b
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]4([H])[C]([H])([H])[C]4([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([O][C]([H])([H])[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17c
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 130
+  - -1
+  - nM
+name: lig_CAT-17c
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]4([H])[C]([H])([H])[C]4([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([C]#[N])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17d
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 270
+  - -1
+  - nM
+name: lig_CAT-17d
+smiles: '[H][C]1=[N][C]([H])=[C]([H])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17e
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 100
+  - -1
+  - nM
+name: lig_CAT-17e
+smiles: '[H][C]1=[N][C]([H])=[C]([O][C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17f
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 270
+  - -1
+  - nM
+name: lig_CAT-17f
+smiles: '[H][C]1=[N][C]([H])=[C]([C]#[N])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17g
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 160
+  - -1
+  - nM
+name: lig_CAT-17g
+smiles: '[H][C]1=[N][C]([H])=[C]([F])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17h
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 59
+  - -1
+  - nM
+name: lig_CAT-17h
+smiles: '[H][C]1=[N][C]([H])=[C]([Cl])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 4, entry 17i
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 250
+  - -1
+  - nM
+name: lig_CAT-17i
+smiles: '[H][C]1=[N][C]([H])=[C]([C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 5, entry 24
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 5.4
+  - -1
+  - nM
+name: lig_CAT-24
+smiles: '[H][C]1=[N][C]([H])=[C]([C]#[C][C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4a
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 3.3
+  - -1
+  - uM
+name: lig_CAT-4a
+smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C]2=[C]([H])[C]([C@]3([C]4=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]4[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4b
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 0.19
+  - -1
+  - uM
+name: lig_CAT-4b
+smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([O][C]([H])([H])[H])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4c
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 3.8
+  - -1
+  - uM
+name: lig_CAT-4c
+smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([H])=[C]([O][C]([H])([H])[H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4d
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 0.46
+  - -1
+  - uM
+name: lig_CAT-4d
+smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([O][C]([H])([H])[C]([H])([H])[H])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4i
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 1.9
+  - -1
+  - uM
+name: lig_CAT-4i
+smiles: '[H][C]1=[N][C]([C]2=[C]([H])[C]([C@]3([C]4=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]4[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4j
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 0.53
+  - -1
+  - uM
+name: lig_CAT-4j
+smiles: '[H][C]1=[N][C]([H])=[C]([H])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4k
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 3.8
+  - -1
+  - uM
+name: lig_CAT-4k
+smiles: '[H][C]1=[N][C]([H])=[C]([H])[C]([C]2=[C]([H])[C]([C@]3([C]4=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]4[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4l
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 0.31
+  - -1
+  - uM
+name: lig_CAT-4l
+smiles: '[H][C]1=[N][C]([H])=[C]([C]2=[C]([H])[C]([C@]3([C]4=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]4[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])[N]=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4m
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 0.43
+  - -1
+  - uM
+name: lig_CAT-4m
+smiles: '[H][C]1=[N][C]([H])=[C]([C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4n
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 0.47
+  - -1
+  - uM
+name: lig_CAT-4n
+smiles: '[H][C]1=[N][C]([H])=[C]([C]#[N])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4o
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 0.29
+  - -1
+  - uM
+name: lig_CAT-4o
+smiles: '[H][C]1=[N][C]([H])=[C]([F])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 4p
+  doi: 10.1016/j.bmcl.2012.02.013
+  ki:
+  - 0.09
+  - -1
+  - uM
+name: lig_CAT-4p
+smiles: '[H][C]1=[N][C]([H])=[C]([Cl])[C]([H])=[C]1[C]1=[C]([H])[C]([C@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]([H])[C]([H])=[C]1[H]'

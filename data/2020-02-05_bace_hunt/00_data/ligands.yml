@@ -1,0 +1,351 @@
+charge: 1
+measurement:
+  comment: Table 1, entry 11
+  doi: 10.1021/jm4002154
+  ic50:
+  - 455
+  - -1
+  - nM
+name: lig_11
+smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 12
+  doi: 10.1021/jm4002154
+  ic50:
+  - 24
+  - -1
+  - nM
+name: lig_12
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 13
+  doi: 10.1021/jm4002154
+  ic50:
+  - 94
+  - -1
+  - nM
+name: lig_13
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([C]#[N])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 14
+  doi: 10.1021/jm4002154
+  ic50:
+  - 68
+  - -1
+  - nM
+name: lig_14
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([O][C]([H])([H])[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 15
+  doi: 10.1021/jm4002154
+  ic50:
+  - 1701
+  - -1
+  - nM
+name: lig_15
+smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])[C]([O][C]([H])([H])[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 16
+  doi: 10.1021/jm4002154
+  ic50:
+  - 7197
+  - -1
+  - nM
+name: lig_16
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([H])=[C]1[O][C]([H])([H])[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 17
+  doi: 10.1021/jm4002154
+  ic50:
+  - 28
+  - -1
+  - nM
+name: lig_17
+smiles: '[H][C]1=[C]([Cl])[C]([H])=[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])[C]([H])=[C]1[Cl]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 18
+  doi: 10.1021/jm4002154
+  ic50:
+  - 61
+  - -1
+  - nM
+name: lig_18
+smiles: '[H][C]1=[C]([F])[C]([H])=[C]([O][C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 19
+  doi: 10.1021/jm4002154
+  ic50:
+  - 60
+  - -1
+  - nM
+name: lig_19
+smiles: '[H][C]1=[C]([F])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([O][C]([H])([H])[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 1a
+  doi: 10.1021/jm4002154
+  ic50:
+  - 36830
+  - -1
+  - nM
+name: lig_1a
+smiles: '[H][C]1=[C]([H])[C]2=[C]([C]([H])=[C]1[Br])[C@@]1([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]1[H])[C]([H])([H])[C]([C]([H])([H])[H])([C]([H])([H])[H])[O]2'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 20
+  doi: 10.1021/jm4002154
+  ic50:
+  - 39
+  - -1
+  - nM
+name: lig_20
+smiles: '[H][C]1=[C]([F])[C]([H])=[C]([Cl])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 21
+  doi: 10.1021/jm4002154
+  ic50:
+  - 36
+  - -1
+  - nM
+name: lig_21
+smiles: '[H][C]1=[C]([F])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([Cl])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 22
+  doi: 10.1021/jm4002154
+  ic50:
+  - 2864
+  - -1
+  - nM
+name: lig_22
+smiles: '[H][C]1=[C]([H])[C]([O][C]([H])([C]([H])([H])[H])[C]([H])([H])[H])=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 23
+  doi: 10.1021/jm4002154
+  ic50:
+  - 70
+  - -1
+  - nM
+name: lig_23
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([O][C]([H])([H])[C]([H])([H])[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 24
+  doi: 10.1021/jm4002154
+  ic50:
+  - 74
+  - -1
+  - nM
+name: lig_24
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([C]([F])([F])[F])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 25
+  doi: 10.1021/jm4002154
+  ic50:
+  - 344
+  - -1
+  - nM
+name: lig_25
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([S][C]([H])([H])[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 26
+  doi: 10.1021/jm4002154
+  ic50:
+  - 28
+  - -1
+  - nM
+name: lig_26
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([O][C]([H])([F])[F])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 27
+  doi: 10.1021/jm4002154
+  ic50:
+  - 99
+  - -1
+  - nM
+name: lig_27
+smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([F])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 28
+  doi: 10.1021/jm4002154
+  ic50:
+  - 278
+  - -1
+  - nM
+name: lig_28
+smiles: '[H][C]1=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]([H])[C]([C]2([H])[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]2([H])[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 29
+  doi: 10.1021/jm4002154
+  ic50:
+  - 431
+  - -1
+  - nM
+name: lig_29
+smiles: '[H][C]1=[C]([H])[C]2=[C]([C]([H])=[C]1[O][C]([H])([H])[C]([H])([C]([H])([H])[H])[C]([H])([H])[H])[C@@]1([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]1[H])[C]([H])([H])[C]([C]([H])([H])[H])([C]([H])([H])[H])[O]2'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 30
+  doi: 10.1021/jm4002154
+  ic50:
+  - 8661
+  - -1
+  - nM
+name: lig_30
+smiles: '[H][C]1=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]([H])[C]([N]2[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]2([H])[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 31
+  doi: 10.1021/jm4002154
+  ic50:
+  - 113
+  - -1
+  - nM
+name: lig_31
+smiles: '[H][C]1=[N][C]([H])=[C]([H])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 32
+  doi: 10.1021/jm4002154
+  ic50:
+  - 2363
+  - -1
+  - nM
+name: lig_32
+smiles: '[H][C]1=[N][C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]([H])[C]([H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 33
+  doi: 10.1021/jm4002154
+  ic50:
+  - 6270
+  - -1
+  - nM
+name: lig_33
+smiles: '[H][C]1=[N][C]([H])=[C]([H])[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 34
+  doi: 10.1021/jm4002154
+  ic50:
+  - 34
+  - -1
+  - nM
+name: lig_34
+smiles: '[H][C]1=[N][C]([H])=[C]([Cl])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 35
+  doi: 10.1021/jm4002154
+  ic50:
+  - 63
+  - -1
+  - nM
+name: lig_35
+smiles: '[H][C]1=[N][C]([H])=[C]([C]([F])([F])[F])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 36
+  doi: 10.1021/jm4002154
+  ic50:
+  - 10
+  - -1
+  - nM
+name: lig_36
+smiles: '[H][C]1=[N][C]([H])=[C]([C]#[C][C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 37
+  doi: 10.1021/jm4002154
+  ic50:
+  - 130
+  - -1
+  - nM
+name: lig_37
+smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])[C]([F])=[N]1'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 38
+  doi: 10.1021/jm4002154
+  ic50:
+  - 145
+  - -1
+  - nM
+name: lig_38
+smiles: '[H][C]1=[N][C]([H])=[C]([F])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]2[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]3([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])[C]2=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 39
+  doi: 10.1021/jm4002154
+  ic50:
+  - 151
+  - -1
+  - nM
+name: lig_39
+smiles: '[H][C]1=[N][C]([H])=[C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])[C]([H])=[N]1'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 40
+  doi: 10.1021/jm4002154
+  ic50:
+  - 501
+  - -1
+  - nM
+name: lig_40
+smiles: '[H][C]1=[N][S][C]([C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])=[C]1[H]'
+---
+charge: 1
+measurement:
+  comment: Table 1, entry 41
+  doi: 10.1021/jm4002154
+  ic50:
+  - 230
+  - -1
+  - nM
+name: lig_41
+smiles: '[H][C]1=[C]([C](=[O])[N]([H])[C]2=[C]([H])[C]([H])=[C]3[O][C]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[C@]4([C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]4[H])[C]3=[C]2[H])[O][C]([C]([H])([H])[H])=[C]1[H]'

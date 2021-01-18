@@ -1,0 +1,52 @@
+bace:
+  date: 2020-02-04
+  dir: 2020-02-04_bace
+  name: bace
+bace_hunt:
+  date: 2020-02-05
+  dir: 2020-02-05_bace_hunt
+  name: bace_hunt
+bace_p2:
+  date: 2020-02-06
+  dir: 2020-02-06_bace_p2
+  name: bace_p2
+cdk2:
+  date: 2019-12-13
+  dir: 2019-12-13_cdk2
+  name: cdk2
+cmet:
+  date: 2019-12-13
+  dir: 2019-12-13_cmet
+  name: cmet
+galectin:
+  date: 2019-12-13
+  dir: 2019-12-13_galectin
+  name: galectin
+jnk1:
+  date: 2019-09-23
+  dir: 2019-09-23_jnk1
+  name: jnk1
+mcl1:
+  date: 2019-12-13
+  dir: 2019-12-13_mcl1
+  name: mcl1
+p38:
+  date: 2019-12-09
+  dir: 2019-12-09_p38
+  name: p38
+pde2:
+  date: 2019-09-23
+  dir: 2019-09-23_pde2
+  name: pde2
+ptp1b:
+  date: 2019-12-12
+  dir: 2019-12-12_ptp1b
+  name: ptp1b
+thrombin:
+  date: 2019-09-23
+  dir: 2019-09-23_thrombin
+  name: thrombin
+tyk2:
+  date: 2020-02-07
+  dir: 2020-02-07_tyk2
+  name: tyk2

@@ -1,0 +1,197 @@
+measurement:
+  comment: Table 1 cmpd 1a
+  dg:
+  - -31.3
+  - 0.2
+  - kilojoules / mole
+  dh:
+  - -13.1
+  - 0.9
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - -18.2
+  - 0.7
+  - kilojoules / mole
+name: lig_1a
+smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)F)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 1b
+  dg:
+  - -35.4
+  - 0.8
+  - kilojoules / mole
+  dh:
+  - -37.1
+  - 1.1
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - 1.7
+  - 0.3
+  - kilojoules / mole
+name: lig_1b
+smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Cl)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 1c
+  dg:
+  - -35.8
+  - 0.7
+  - kilojoules / mole
+  dh:
+  - -34.5
+  - 0.4
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - -1.3
+  - 0.3
+  - kilojoules / mole
+name: lig_1c
+smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Br)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 1d
+  dg:
+  - -34.5
+  - 0.3
+  - kilojoules / mole
+  dh:
+  - -38.0
+  - 1.1
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - -3.5
+  - 0.8
+  - kilojoules / mole
+name: lig_1d
+smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)I)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 3a
+  dg:
+  - -34.8
+  - 0.6
+  - kilojoules / mole
+  dh:
+  - -28.5
+  - 0.7
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - -6.3
+  - 1.1
+  - kilojoules / mole
+name: lig_3a
+smiles: Cc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 3b
+  dg:
+  - -32.9
+  - 0.5
+  - kilojoules / mole
+  dh:
+  - -16.5
+  - 0.9
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - -16.4
+  - 0.4
+  - kilojoules / mole
+name: lig_3b
+smiles: CCc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 5
+  dg:
+  - -31.7
+  - 0.0
+  - kilojoules / mole
+  dh:
+  - -13.6
+  - 0.0
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - -18.1
+  - 0.0
+  - kilojoules / mole
+name: lig_5
+smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3ccccc3)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 6a
+  dg:
+  - -38.4
+  - 0.2
+  - kilojoules / mole
+  dh:
+  - -41.3
+  - 0.4
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - 2.9
+  - 0.3
+  - kilojoules / mole
+name: lig_6a
+smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3Cl)Cl)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 6b
+  dg:
+  - -37.2
+  - 0.5
+  - kilojoules / mole
+  dh:
+  - -33.5
+  - 1.7
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - -3.7
+  - 2.2
+  - kilojoules / mole
+name: lig_6b
+smiles: Cc1ccc(cc1CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])Cl
+---
+measurement:
+  comment: Table 1 cmpd 6e
+  dg:
+  - -37.3
+  - 0.3
+  - kilojoules / mole
+  dh:
+  - -41.0
+  - 2.1
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - 3.8
+  - 2.2
+  - kilojoules / mole
+name: lig_6e
+smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3F)Cl)[NH3+]
+---
+measurement:
+  comment: Table 1 cmpd 7a
+  dg:
+  - -34.4
+  - 0.1
+  - kilojoules / mole
+  dh:
+  - -31.9
+  - 1.3
+  - kilojoules / mole
+  doi: 10.1016/j.jmb.2009.04.051
+  tds:
+  - -2.5
+  - 1.3
+  - kilojoules / mole
+name: lig_7a
+smiles: Cc1ccc(c(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])C

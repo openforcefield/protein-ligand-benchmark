@@ -1,0 +1,209 @@
+measurement:
+  comment: table 1 cmpd 2
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.57
+  - 0.15
+  - ''
+name: lig_43249674
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5ccccc5Cl
+---
+measurement:
+  comment: table 1 cmpd 6
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.02
+  - 0.2
+  - ''
+name: lig_48009208
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5ccc(cc5Cl)F
+---
+measurement:
+  comment: table 1 cmpd 7
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.71
+  - 0.19
+  - ''
+name: lig_48022468
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5c(cccc5Cl)F
+---
+measurement:
+  comment: table 1 cmpd 8
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.59
+  - 0.23
+  - ''
+name: lig_48168913
+smiles: Cc1c(cccn1)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5
+---
+measurement:
+  comment: table 1 cmpd 10
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.92
+  - 0.08
+  - ''
+name: lig_48271249
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(cnc5)OC
+---
+measurement:
+  comment: table 1 cmpd 16
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 6.42
+  - 0.13
+  - ''
+name: lig_49072088
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(cnc5)OC(C)C
+---
+measurement:
+  comment: table 1 cmpd 9
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.22
+  - 0.3
+  - ''
+name: lig_49137374
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(ccc5Cl)OC
+---
+measurement:
+  comment: table 1 cmpd 4
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.14
+  - 0.3
+  - ''
+name: lig_49137530
+smiles: CCCCOc1cc(cnc1)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5
+---
+measurement:
+  comment: table 1 cmpd 21
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.1
+  - 0.22
+  - ''
+name: lig_49175789
+smiles: CCCCOc1ccc(c(c1)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5)Cl
+---
+measurement:
+  comment: table 1 cmpd 15
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.75
+  - 0.36
+  - ''
+name: lig_49175828
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(ccc5Cl)OC(C)C
+---
+measurement:
+  comment: table 1 cmpd 11
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.21
+  - 0.21
+  - ''
+name: lig_49220392
+smiles: CCOc1ccc(c(c1)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5)Cl
+---
+measurement:
+  comment: table 1 cmpd 13
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 8.19
+  - 0.17
+  - ''
+name: lig_49220548
+smiles: CCCOc1ccc(c(c1)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5)Cl
+---
+measurement:
+  comment: table 1 cmpd 14
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.52
+  - 0.16
+  - ''
+name: lig_49396360
+smiles: CCCOc1cc(cnc1)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5
+---
+measurement:
+  comment: table 1 cmpd 12
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.37
+  - 0.2
+  - ''
+name: lig_49580115
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(cnc5)OCCF
+---
+measurement:
+  comment: table 1 cmpd 24
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.85
+  - 0.3
+  - ''
+name: lig_49582390
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(cnc5)OCC6CC6
+---
+measurement:
+  comment: table 1 cmpd 17
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.53
+  - 0.15
+  - ''
+name: lig_49582468
+smiles: CCOCc1cc(cnc1)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5
+---
+measurement:
+  comment: table 1 cmpd 20
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.0
+  - 0.19
+  - ''
+name: lig_49585367
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(cnc5)OCCOC
+---
+measurement:
+  comment: table 1 cmpd 18
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.05
+  - 0.25
+  - ''
+name: lig_49932129
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(cnc5)CCOC
+---
+measurement:
+  comment: table 1 cmpd 19
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 7.19
+  - 0.01
+  - ''
+name: lig_49932714
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(cnc5)OCCCF
+---
+measurement:
+  comment: table 1 cmpd 23
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 6.88
+  - 0.31
+  - ''
+name: lig_50107616
+smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(cnc5)CCCOC
+---
+measurement:
+  comment: table 1 cmpd 22
+  doi: 10.1038/s41598-018-23039-5
+  pic50:
+  - 6.93
+  - 0.05
+  - ''
+name: lig_50181001
+smiles: CCCCOc1cc(cnc1Cl)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5

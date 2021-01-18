@@ -1,0 +1,21 @@
+alternate:
+  iridium_classifier: ''
+  iridium_score: ''
+  pdb: ''
+associated_sets:
+- Merck KGaA fep-benchmark
+comments: ''
+date: 2019-12-13
+dpi: ''
+id: 7
+iridium_classifier: ''
+iridium_score: ''
+name: cmet
+netcharge: 6 e
+pdb: 4R1Y
+references:
+  calculation:
+  - 10.1021/acs.jcim.0c00900
+  - 10.1039/C9SC03754C
+  measurement:
+  - 10.1016/j.bmcl.2015.02.002

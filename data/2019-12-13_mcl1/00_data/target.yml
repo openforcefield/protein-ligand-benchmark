@@ -1,0 +1,22 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.3
+  pdb: 6O6F
+associated_sets:
+- Schrodinger JACS
+comments: hydrophobic interactions contributing to binding
+date: 2019-12-13
+dpi: 0.26
+id: 9
+iridium_classifier: HT
+iridium_score: 0.41
+name: mcl1
+netcharge: 4 e
+pdb: 4HW3
+references:
+  calculation:
+  - 10.1021/ja512751q
+  - 10.1021/acs.jcim.9b00105
+  - 10.1039/C9SC03754C
+  measurement:
+  - 10.1021/jm301448p

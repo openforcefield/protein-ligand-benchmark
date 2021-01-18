@@ -1,0 +1,21 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.28
+  pdb: 6UWP
+associated_sets:
+- Schrodinger JACS
+comments: ''
+date: 2020-02-04
+dpi: 0.11
+id: 10
+iridium_classifier: HT
+iridium_score: 0.32
+name: bace
+netcharge: -10 e
+pdb: 4DJW
+references:
+  calculation:
+  - 10.1021/ja512751q
+  - 10.1039/C9SC03754C
+  measurement:
+  - 10.1016/j.bmcl.2012.02.013

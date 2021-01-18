@@ -1,0 +1,22 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.31
+  pdb: 3LXP
+associated_sets:
+- Schrodinger JACS
+comments: ''
+date: 2020-02-07
+dpi: 0.15
+id: 13
+iridium_classifier: HT
+iridium_score: 0.5
+name: tyk2
+netcharge: -3 e
+pdb: 4GIH
+references:
+  calculation:
+  - 10.1021/ja512751q
+  - 10.1039/C9SC03754C
+  measurement:
+  - 10.1016/j.ejmech.2013.03.070
+  - 10.1021/jm400266t

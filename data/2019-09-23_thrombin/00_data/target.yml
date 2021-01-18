@@ -1,0 +1,23 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.31
+  pdb: 3LXP
+associated_sets:
+- Schrodinger JACS
+comments:
+- expulsion of a single water molecule from the active site contributing to binding
+date: 2019-09-23
+dpi: 0.15
+id: 3
+iridium_classifier: HT
+iridium_score: 0.3
+name: thrombin
+netcharge: -1 e
+pdb: 2ZFF
+references:
+  calculation:
+  - 10.1021/ja512751q
+  - 10.1021/acs.jcim.9b00105
+  - 10.1039/C9SC03754C
+  measurement:
+  - 10.1016/j.jmb.2009.04.051

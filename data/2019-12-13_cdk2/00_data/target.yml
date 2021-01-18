@@ -1,0 +1,22 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.31
+  pdb: 3DDQ
+associated_sets:
+- Schrodinger JACS
+comments: ''
+date: 2019-12-13
+dpi: 0.28
+id: 6
+iridium_classifier: MT
+iridium_score: 0.87
+name: cdk2
+netcharge: -2 e
+pdb: 1H1Q
+references:
+  calculation:
+  - 10.1021/ja512751q
+  - 10.1021/acs.jcim.9b00105
+  - 10.1039/C9SC03754C
+  measurement:
+  - 10.1021/ci5004027
