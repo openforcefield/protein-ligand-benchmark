@@ -5,7 +5,7 @@ Contains utility functions
 
 import numpy as np
 from scipy import constants
-import urllib
+import requests
 import json
 from pint import UnitRegistry
 
@@ -20,41 +20,30 @@ def find_pdb_url(pdb):
     """
     Finds the links to a pdb or a list of pdb codes.
 
-    :param pdb: string
+    :param pdb: string or list of strings
     :return: string compiled string including the urls to the pdb entries
     """
 
     if pdb is None:
         return ""
-    url = "http://www.rcsb.org/pdb/rest/search"
-    query_text = f'\
-<orgPdbCompositeQuery version="1.0">\
- <queryRefinement>\
-   <queryRefinementLevel>0</queryRefinementLevel>\
-      <orgPdbQuery>\
-        <version>head</version>\
-        <queryType>org.pdb.query.simple.StructureIdQuery</queryType>\
-        <structureIdList>{pdb}</structureIdList>\
-      </orgPdbQuery>\
- </queryRefinement>\
-</orgPdbCompositeQuery>\
-'
-    request = urllib.request.Request(url, data=query_text.encode())
-    try:
-        response = urllib.request.urlopen(request)
-        page = response.read()
-        page = page.decode("utf-8").split()
-        res = []
-        pdb_codes = pdb.split()
-        for p in page:
-            res.append("REP1http://www.rcsb.org/structure/{}REP2{}REP3".format(p, p))
-        for p in pdb_codes:
-            if p not in page:
-                warnings.warn(f"PDB {p} not found")
-    except urllib.error.URLError as e:
-        warnings.warn(f"Could not find PDB {pdb}\n{e}")
-        res = pdb.split()
-    return ("\n").join(res)
+    if type(pdb) == str:
+        pdb = [pdb]
+
+    result = []
+    for p in pdb:
+        url = f"https://data.rcsb.org/rest/v1/core/entry/{p}"
+        try:
+            response = requests.get(url)
+            if response.status_code == requests.codes.ok:
+                page = response.text
+                result.append(f"REP1http://www.rcsb.org/structure/{p}REP2{p}REP3")
+            else:
+                warnings.warn(f"Could not find PDB {p}")
+                result.append(p)
+        except requests.exceptions.RequestException as e:
+            warnings.warn(f"Could not find PDB {p}\n{e}")
+            result.append(p)
+    return ("\n").join(result)
 
 
 def find_doi_url(doi):
@@ -66,13 +55,14 @@ def find_doi_url(doi):
     """
 
     url = "https://api.crossref.org/works/" + str(doi)
-    request = urllib.request.Request(url)
     try:
-        response = urllib.request.urlopen(request)
-        page = response.read().decode("utf-8")
-        obj = json.loads(page)
-        if obj["status"] == "ok":
-            obj = obj["message"]
+        response = requests.get(url)
+    except requests.exceptions.RequestException as e:
+        warnings.warn(f"Could not find DOI: {doi}\n{e}")
+
+    if response.status_code == requests.codes.ok:
+        obj = response.json()
+        obj = obj["message"]
         aut = obj["author"]
         if len(aut) > 0:
             aut = obj["author"][0]["family"]
@@ -90,11 +80,10 @@ def find_doi_url(doi):
         desc_string = "{} et al., {} {}".format(
             aut, tit, dat
         )  # , obj['journal-issue']['published-online']['date-parts'][0][0])
-        result = f'REP1{obj["URL"]}REP2{desc_string}REP3'
-    except urllib.error.URLError as e:
-        warnings.warn(f"Could not find DOI: {doi}\n{e}")
-        result = doi
-    return result
+        return  f'REP1{obj["URL"]}REP2{desc_string}REP3'
+    else:
+        warnings.warn(f"Could not find DOI: {doi}")
+        return doi
 
 
 def convert_value(value, original_type, final_type, temperature=300.0, out_unit=None):

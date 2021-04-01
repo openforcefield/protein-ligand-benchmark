@@ -19,7 +19,7 @@ def test_find_pdb_url():
 
     strings = [f"REP1http://www.rcsb.org/structure/{pdb}REP2{pdb}REP3" for pdb in pdbs]
     for string in strings:
-        assert string in utils.find_pdb_url(" ".join(pdbs)).split()
+        assert string in utils.find_pdb_url(pdbs)
 
     with pytest.warns(UserWarning):
         utils.find_pdb_url("fakepdb")

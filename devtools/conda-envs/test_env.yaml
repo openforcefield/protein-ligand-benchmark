@@ -21,6 +21,7 @@ dependencies:
   - conda-forge::pint
   - scipy
   - openforcefield
+  - requests
   
 # Pip-only installs
   #- pip:
