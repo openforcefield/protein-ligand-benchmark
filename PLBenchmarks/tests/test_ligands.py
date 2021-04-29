@@ -21,9 +21,9 @@ def test_affinity_data():
     file = open(
         os.path.join(targets.get_target_data_path("mcl1_sample") + "ligands.yml")
     )
-    data = yaml.full_load_all(file)
+    data = yaml.full_load(file)
     dfs = []
-    for d in data:
+    for key, d in data.items():
         lig = ligands.Ligand(d)
         lig.derive_observables(
             derived_type="dg", out_unit=utils.unit_registry("kcal / mole")
@@ -127,11 +127,11 @@ def test_affinity_data():
     }
 
     eps = 0.01
+    df.index = df.name
     for key, item in jacs_data.items():
         assert (
             pytest.approx(item, eps)
-            == df[df.name == key][("DerivedMeasurement", "dg")]
-            .values[0]
+            == df.loc[key, ("DerivedMeasurement", "value")]
             .to(utils.unit_registry("kcal / mole"))
             .magnitude
         )

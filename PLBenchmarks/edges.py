@@ -46,14 +46,14 @@ class Edge:
         for key, item in ligand_set.items():
             if key == "lig_" + str(self._data[0]):
                 ligand0 = item._data["ROMol"][0]
-                delta_g0 = item._data[("DerivedMeasurement", "dg")]
+                delta_g0 = item._data[("DerivedMeasurement", "value")]
                 smiles0 = item._data["smiles"]
-                error0 = item._data[("DerivedMeasurement", "e_dg")]
+                error0 = item._data[("DerivedMeasurement", "error")]
             if key == "lig_" + str(self._data[1]):
                 ligand1 = item._data["ROMol"][0]
                 smiles1 = item._data["smiles"]
-                delta_g1 = item._data[("DerivedMeasurement", "dg")]
-                error1 = item._data[("DerivedMeasurement", "e_dg")]
+                delta_g1 = item._data[("DerivedMeasurement", "value")]
+                error1 = item._data[("DerivedMeasurement", "error")]
         self._data["Mol1"] = ligand0
         self._data["Mol2"] = ligand1
         self._data["Smiles1"] = smiles0

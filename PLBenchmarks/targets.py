@@ -115,7 +115,7 @@ class Target:
         affinities = []
         for key, item in lgs.items():
             affinities.append(
-                item._data[("DerivedMeasurement", "dg")].to("kcal/mole").magnitude
+                item._data[("DerivedMeasurement", "value")].to("kcal/mole").magnitude
             )
         self.ligand_data["maxDG"] = round(
             max(affinities) * utils.unit_registry("kcal / mole"), 1

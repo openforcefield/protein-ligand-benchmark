@@ -47,21 +47,20 @@ class Ligand:
             self._data.index = pd.MultiIndex.from_arrays(
                 [index[0].tolist(), index[1].tolist()]
             )
-            for original_type in self._observables:
-                if ("measurement", original_type) in list(self._data.index):
-                    self._data = self._data.append(
-                        pd.Series(
-                            [0],
-                            index=pd.MultiIndex.from_tuples(
-                                [("measurement", f"e_{original_type}")]
-                            ),
-                        )
-                    )
-                    values = self._data[("measurement", f"{original_type}")]
-                    # let pint figure out what the unit means
-                    u = utils.unit_registry(values[2])
-                    self._data[("measurement", f"e_{original_type}")] = values[1] * u
-                    self._data[("measurement", original_type)] = values[0] * u
+            original_type = self._data[("measurement", "type")]
+            if original_type not in self._observables:
+                raise ValueError(
+                    f"No known measured observable found. "
+                    f"Measured observable should be any of: dg, ki, ic50 or pic50."
+                )
+            # let pint figure out what the unit means
+            unit = utils.unit_registry(self._data[("measurement", "unit")])
+            self._data[("measurement", "error")] = (
+                self._data[("measurement", "error")] * unit
+            )
+            self._data[("measurement", "value")] = (
+                self._data[("measurement", "value")] * unit
+            )
 
     def derive_observables(
         self,
@@ -77,39 +76,42 @@ class Ligand:
         :param out_unit: unit of type :py:class:`pint` unit of derived coordinate
         :return: None
         """
-        for original_type in self._observables:
-            if ("measurement", original_type) in list(self._data.index):
-                self._data = self._data.append(
-                    pd.Series(
-                        [
-                            utils.convert_value(
-                                self._data[("measurement", original_type)],
-                                original_type,
-                                derived_type,
-                                out_unit=out_unit,
-                            ),
-                            utils.convert_error(
-                                self._data[("measurement", f"e_{original_type}")],
-                                self._data[("measurement", original_type)],
-                                original_type,
-                                derived_type,
-                                out_unit=out_unit,
-                            ),
-                        ],
-                        index=pd.MultiIndex.from_tuples(
-                            [
-                                (destination, derived_type),
-                                (destination, f"e_{derived_type}"),
-                            ]
-                        ),
-                    )
-                )
-                break
-        else:
+        original_type = self._data[("measurement", "type")]
+        if original_type not in self._observables:
             raise ValueError(
                 f"No known measured observable found. "
                 f"Measured observable should be any of: dg, ki, ic50 or pic50."
             )
+
+        self._data = self._data.append(
+            pd.Series(
+                [
+                    derived_type,
+                    utils.convert_value(
+                        self._data[("measurement", "value")],
+                        original_type,
+                        derived_type,
+                        out_unit=out_unit,
+                    ),
+                    utils.convert_error(
+                        self._data[("measurement", "error")],
+                        self._data[("measurement", "value")],
+                        original_type,
+                        derived_type,
+                        out_unit=out_unit,
+                    ),
+                    out_unit,
+                ],
+                index=pd.MultiIndex.from_tuples(
+                    [
+                        (destination, "type"),
+                        (destination, "value"),
+                        (destination, "error"),
+                        (destination, "unit"),
+                    ]
+                ),
+            )
+        )
 
     def get_name(self):
         """
@@ -249,13 +251,13 @@ class LigandSet(dict):
         super(LigandSet, self).__init__(*arg, **kw)
         target_path = targets.get_target_data_path(target)
         file = open(os.path.join(target_path, "ligands.yml"))
-        data = yaml.full_load_all(file)
-        for d in data:
+        data = yaml.full_load(file)
+        for name, d in data.items():
             lig = Ligand(d, target)
             lig.derive_observables(derived_type="dg")
             # l.find_links()
             lig.add_mol_to_frame()
-            self[lig.get_name()] = lig
+            self[name] = lig
         file.close()
 
     def get_list(self):

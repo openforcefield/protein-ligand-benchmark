@@ -38,12 +38,12 @@ def test_edge():
         ]
     )
     ddg = (
-        ligand_set[f"lig_{edg._data[1]}"]._data[("DerivedMeasurement", "dg")]
-        - ligand_set[f"lig_{edg._data[0]}"]._data[("DerivedMeasurement", "dg")]
+        ligand_set[f"lig_{edg._data[1]}"]._data[("DerivedMeasurement", "value")]
+        - ligand_set[f"lig_{edg._data[0]}"]._data[("DerivedMeasurement", "value")]
     )
     e_ddg = np.sqrt(
-        ligand_set[f"lig_{edg._data[1]}"]._data[("DerivedMeasurement", "e_dg")] ** 2
-        + ligand_set[f"lig_{edg._data[0]}"]._data[("DerivedMeasurement", "e_dg")] ** 2
+        ligand_set[f"lig_{edg._data[1]}"]._data[("DerivedMeasurement", "error")] ** 2
+        + ligand_set[f"lig_{edg._data[0]}"]._data[("DerivedMeasurement", "error")] ** 2
     )
     assert pytest.approx(df["exp. DeltaG [kcal/mol]"].magnitude, eps) == ddg.magnitude
     assert pytest.approx(df["exp. Error [kcal/mol]"].magnitude, 0.5) == e_ddg.magnitude
@@ -57,16 +57,16 @@ def test_edge_set():
         assert f"lig_{edg._data[0]}" in lig_set.keys()
         assert f"lig_{edg._data[1]}" in lig_set.keys()
         ddg = (
-            lig_set[f"lig_{edg._data[1]}"]._data[("DerivedMeasurement", "dg")]
-            - lig_set[f"lig_{edg._data[0]}"]._data[("DerivedMeasurement", "dg")]
+            lig_set[f"lig_{edg._data[1]}"]._data[("DerivedMeasurement", "value")]
+            - lig_set[f"lig_{edg._data[0]}"]._data[("DerivedMeasurement", "value")]
         )
         assert (
             pytest.approx(edg._data["exp. DeltaG [kcal/mol]"].magnitude, eps)
             == ddg.magnitude
         )
         e_ddg = np.sqrt(
-            lig_set[f"lig_{edg._data[1]}"]._data[("DerivedMeasurement", "e_dg")] ** 2
-            + lig_set[f"lig_{edg._data[0]}"]._data[("DerivedMeasurement", "e_dg")] ** 2
+            lig_set[f"lig_{edg._data[1]}"]._data[("DerivedMeasurement", "error")] ** 2
+            + lig_set[f"lig_{edg._data[0]}"]._data[("DerivedMeasurement", "error")] ** 2
         )
         assert (
             pytest.approx(edg._data["exp. Error [kcal/mol]"].magnitude, 0.5)
@@ -78,16 +78,16 @@ def test_edge_set():
         assert f"lig_{edg[0]}" in lig_set.keys()
         assert f"lig_{edg[1]}" in lig_set.keys()
         ddg = (
-            lig_set[f"lig_{edg[1]}"]._data[("DerivedMeasurement", "dg")]
-            - lig_set[f"lig_{edg[0]}"]._data[("DerivedMeasurement", "dg")]
+            lig_set[f"lig_{edg[1]}"]._data[("DerivedMeasurement", "value")]
+            - lig_set[f"lig_{edg[0]}"]._data[("DerivedMeasurement", "value")]
         )
         assert (
             pytest.approx(edg["exp. DeltaG [kcal/mol]"].magnitude, eps) == ddg.magnitude
         )
 
         e_ddg = np.sqrt(
-            lig_set[f"lig_{edg[1]}"]._data[("DerivedMeasurement", "e_dg")] ** 2
-            + lig_set[f"lig_{edg[0]}"]._data[("DerivedMeasurement", "e_dg")] ** 2
+            lig_set[f"lig_{edg[1]}"]._data[("DerivedMeasurement", "error")] ** 2
+            + lig_set[f"lig_{edg[0]}"]._data[("DerivedMeasurement", "error")] ** 2
         )
         assert (
             pytest.approx(edg["exp. Error [kcal/mol]"].magnitude, 0.5)
@@ -108,15 +108,15 @@ def test_edge_set():
         assert f"lig_{edg[0]}" in lig_set.keys()
         assert f"lig_{edg[1]}" in lig_set.keys()
         ddg = (
-            lig_set[f"lig_{edg[1]}"]._data[("DerivedMeasurement", "dg")]
-            - lig_set[f"lig_{edg[0]}"]._data[("DerivedMeasurement", "dg")]
+            lig_set[f"lig_{edg[1]}"]._data[("DerivedMeasurement", "value")]
+            - lig_set[f"lig_{edg[0]}"]._data[("DerivedMeasurement", "value")]
         )
         assert (
             pytest.approx(edg["exp. DeltaG [kcal/mol]"].magnitude, eps) == ddg.magnitude
         )
         e_ddg = np.sqrt(
-            lig_set[f"lig_{edg[1]}"]._data[("DerivedMeasurement", "e_dg")] ** 2
-            + lig_set[f"lig_{edg[0]}"]._data[("DerivedMeasurement", "e_dg")] ** 2
+            lig_set[f"lig_{edg[1]}"]._data[("DerivedMeasurement", "error")] ** 2
+            + lig_set[f"lig_{edg[0]}"]._data[("DerivedMeasurement", "error")] ** 2
         )
         assert (
             pytest.approx(edg["exp. Error [kcal/mol]"].magnitude, 0.5)
