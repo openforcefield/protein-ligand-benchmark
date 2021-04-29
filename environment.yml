@@ -24,7 +24,6 @@ dependencies:
   - scipy
   - openforcefield
   - requests
+  - git-lfs
 
-  - pip:
-     - -e ../
      
