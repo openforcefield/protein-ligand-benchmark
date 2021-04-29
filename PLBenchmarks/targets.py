@@ -238,7 +238,7 @@ class Target:
             graph.add_node(key.split("_")[1], image=item.get_image())
         graph.add_edges_from(
             [
-                [item[0].split("_")[1], item[1].split("_")[1]]
+                [item["ligand_a"].split("_")[1], item["ligand_b"].split("_")[1]]
                 for key, item in self.get_edge_set().get_dict().items()
             ]
         )

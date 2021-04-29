@@ -26,7 +26,7 @@ class Edge:
         :return: None
         """
         self._data = pd.Series(d)
-        self._name = None
+        self._name = self._data["name"]
 
     def add_ligand_data(self, ligand_set):
         """
@@ -35,32 +35,21 @@ class Edge:
         :param ligand_set: :py:class:`PLBenchmarks:ligands:ligandSet` class of the same target
         :return: None
         """
-        ligand0 = None
-        ligand1 = None
-        smiles0 = None
-        smiles1 = None
-        delta_g0 = 0
-        delta_g1 = 0
-        error0 = 0
-        error1 = 0
-        for key, item in ligand_set.items():
-            if key == "lig_" + str(self._data[0]):
-                ligand0 = item._data["ROMol"][0]
-                delta_g0 = item._data[("DerivedMeasurement", "value")]
-                smiles0 = item._data["smiles"]
-                error0 = item._data[("DerivedMeasurement", "error")]
-            if key == "lig_" + str(self._data[1]):
-                ligand1 = item._data["ROMol"][0]
-                smiles1 = item._data["smiles"]
-                delta_g1 = item._data[("DerivedMeasurement", "value")]
-                error1 = item._data[("DerivedMeasurement", "error")]
-        self._data["Mol1"] = ligand0
-        self._data["Mol2"] = ligand1
-        self._data["Smiles1"] = smiles0
-        self._data["Smiles2"] = smiles1
-        self._data["exp. DeltaG [kcal/mol]"] = round(delta_g1 - delta_g0, 2)
+        name1 = self._data["ligand_a"]
+        self._data["Mol1"] = ligand_set[name1]._data["ROMol"][0][0]
+        self._data["Smiles1"] = ligand_set[name1]._data["smiles"][0]
+        delta_g1 = ligand_set[name1]._data[("DerivedMeasurement", "value")]
+        error1 = ligand_set[name1]._data[("DerivedMeasurement", "error")]
+
+        name2 = self._data["ligand_b"]
+        self._data["Mol2"] = ligand_set[name2]._data["ROMol"][0][0]
+        self._data["Smiles2"] = ligand_set[name2]._data["smiles"][0]
+        delta_g2 = ligand_set[name2]._data[("DerivedMeasurement", "value")]
+        error2 = ligand_set[name2]._data[("DerivedMeasurement", "error")]
+
+        self._data["exp. DeltaG [kcal/mol]"] = round(delta_g2 - delta_g1, 2)
         self._data["exp. Error [kcal/mol]"] = round(
-            np.sqrt(np.power(error0, 2.0) + np.power(error1, 2.0)), 2
+            np.sqrt(np.power(error1, 2.0) + np.power(error2, 2.0)), 2
         )
 
     def get_dataframe(self, columns=None):
@@ -81,12 +70,7 @@ class Edge:
 
         :return: :py:class:`dict`
         """
-        return {
-            f"edge_{self._data[0]}_{self._data[1]}": [
-                f"lig_{self._data[0]}",
-                f"lig_{self._data[1]}",
-            ]
-        }
+        return self._data.to_dict()
 
     def get_name(self):
         """
@@ -97,7 +81,7 @@ class Edge:
         if self._name is not None:
             return self._name
         else:
-            return f"edge_{self._data[0]}_{self._data[1]}"
+            return self._data["name"]
 
 
 class EdgeSet(dict):
@@ -117,11 +101,11 @@ class EdgeSet(dict):
         target_path = targets.get_target_data_path(target)
         ligand_set = ligands.LigandSet(target)
         file = open(os.path.join(target_path, "edges.yml"))
-        data = yaml.full_load_all(file)
-        for d in data:
+        data = yaml.full_load(file)
+        for name, d in data.items():
             edg = Edge(d)
             edg.add_ligand_data(ligand_set)
-            self[edg.get_name()] = edg
+            self[name] = edg
         file.close()
 
     def get_edge(self, name):
@@ -168,5 +152,5 @@ class EdgeSet(dict):
         """
         result = {}
         for key, item in self.items():
-            result.update(item.get_dict())
+            result[key] = item.get_dict()
         return result

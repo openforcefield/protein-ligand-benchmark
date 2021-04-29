@@ -72,7 +72,7 @@ def test_target_class():
     assert type(tgt.ligand_data) == type(pd.Series(dtype=object))
     assert ligand_data["numLigands"] == 15
     # cannot compare ROMol column (SVG image), that's why we only compare these columns
-    columns = ["name", "smiles", "docked", "measurement", "DerivedMeasurement"]
+    columns = ["name", "smiles", "measurement", "DerivedMeasurement"]
     df1 = tgt.get_ligand_set_dataframe(columns=columns)
     df2 = ligand_set.get_dataframe(columns=columns)
     pd.testing.assert_frame_equal(df1, df2)
@@ -80,8 +80,8 @@ def test_target_class():
 
     edge_set = edges.EdgeSet("mcl1_sample")
     columns = [
-        0,
-        1,
+        "ligand_a",
+        "ligand_b",
         "Smiles1",
         "Smiles2",
         "exp. DeltaG [kcal/mol]",
@@ -91,7 +91,14 @@ def test_target_class():
         tgt.get_edge_set().get_dataframe(columns=columns),
         edge_set.get_dataframe(columns=columns),
     )
-    assert tgt.get_edge_set().get_dict() == edge_set.get_dict()
+    dict1 = tgt.get_edge_set().get_dict()
+    dict2 = edge_set.get_dict()
+    assert dict1.keys() == dict2.keys()
+    for key, item in dict1.items():
+        assert item.keys() == dict2[key].keys()
+        for kk, ii in item.items():
+            if kk != "Mol1" and kk != "Mol2":
+                assert ii == dict2[key][kk]
     assert tgt.get_edge_set_html() == edge_set.get_html()
 
     # TODO: this actually does not test anything, only checks if it works
