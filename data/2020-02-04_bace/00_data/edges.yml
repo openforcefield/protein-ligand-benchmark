@@ -1,173 +1,232 @@
-- CAT-13b
-- CAT-17g
----
-- CAT-13a
-- CAT-17g
----
-- CAT-13e
-- CAT-17g
----
-- CAT-4m
-- CAT-4c
----
-- CAT-13k
-- CAT-4d
----
-- CAT-24
-- CAT-17e
----
-- CAT-13g
-- CAT-17g
----
-- CAT-13d
-- CAT-13h
----
-- CAT-13a
-- CAT-17i
----
-- CAT-4m
-- CAT-13j
----
-- CAT-13a
-- CAT-13m
----
-- CAT-4l
-- CAT-13k
----
-- CAT-13o
-- CAT-17i
----
-- CAT-4c
-- CAT-4o
----
-- CAT-4j
-- CAT-4o
----
-- CAT-4i
-- CAT-13m
----
-- CAT-24
-- CAT-17i
----
-- CAT-13j
-- CAT-4o
----
-- CAT-4n
-- CAT-13k
----
-- CAT-4o
-- CAT-4b
----
-- CAT-17i
-- CAT-13f
----
-- CAT-17c
-- CAT-17e
----
-- CAT-13k
-- CAT-4b
----
-- CAT-4m
-- CAT-4j
----
-- CAT-13n
-- CAT-13k
----
-- CAT-13d
-- CAT-17h
----
-- CAT-17b
-- CAT-13d
----
-- CAT-4m
-- CAT-4n
----
-- CAT-4m
-- CAT-13k
----
-- CAT-13c
-- CAT-17i
----
-- CAT-4a
-- CAT-4o
----
-- CAT-13h
-- CAT-17i
----
-- CAT-4o
-- CAT-4d
----
-- CAT-17g
-- CAT-17c
----
-- CAT-4a
-- CAT-13k
----
-- CAT-13d
-- CAT-17d
----
-- CAT-17g
-- CAT-17f
----
-- CAT-13e
-- CAT-17i
----
-- CAT-13d
-- CAT-13b
----
-- CAT-17g
-- CAT-13i
----
-- CAT-4m
-- CAT-13m
----
-- CAT-17g
-- CAT-13c
----
-- CAT-17i
-- CAT-17a
----
-- CAT-13d
-- CAT-13f
----
-- CAT-17f
-- CAT-17e
----
-- CAT-13d
-- CAT-17a
----
-- CAT-17g
-- CAT-17d
----
-- CAT-13n
-- CAT-13a
----
-- CAT-13o
-- CAT-17h
----
-- CAT-17b
-- CAT-17e
----
-- CAT-4k
-- CAT-4o
----
-- CAT-4m
-- CAT-4l
----
-- CAT-4m
-- CAT-4k
----
-- CAT-13n
-- CAT-4i
----
-- CAT-13g
-- CAT-17i
----
-- CAT-4p
-- CAT-13k
----
-- CAT-4m
-- CAT-4p
----
-- CAT-13d
-- CAT-13i
+edge_CAT-13a_CAT-13m:
+  ligand_a: lig_CAT-13a
+  ligand_b: lig_CAT-13m
+  name: edge_CAT-13a_CAT-13m
+edge_CAT-13a_CAT-17g:
+  ligand_a: lig_CAT-13a
+  ligand_b: lig_CAT-17g
+  name: edge_CAT-13a_CAT-17g
+edge_CAT-13a_CAT-17i:
+  ligand_a: lig_CAT-13a
+  ligand_b: lig_CAT-17i
+  name: edge_CAT-13a_CAT-17i
+edge_CAT-13b_CAT-17g:
+  ligand_a: lig_CAT-13b
+  ligand_b: lig_CAT-17g
+  name: edge_CAT-13b_CAT-17g
+edge_CAT-13c_CAT-17i:
+  ligand_a: lig_CAT-13c
+  ligand_b: lig_CAT-17i
+  name: edge_CAT-13c_CAT-17i
+edge_CAT-13d_CAT-13b:
+  ligand_a: lig_CAT-13d
+  ligand_b: lig_CAT-13b
+  name: edge_CAT-13d_CAT-13b
+edge_CAT-13d_CAT-13f:
+  ligand_a: lig_CAT-13d
+  ligand_b: lig_CAT-13f
+  name: edge_CAT-13d_CAT-13f
+edge_CAT-13d_CAT-13h:
+  ligand_a: lig_CAT-13d
+  ligand_b: lig_CAT-13h
+  name: edge_CAT-13d_CAT-13h
+edge_CAT-13d_CAT-13i:
+  ligand_a: lig_CAT-13d
+  ligand_b: lig_CAT-13i
+  name: edge_CAT-13d_CAT-13i
+edge_CAT-13d_CAT-17a:
+  ligand_a: lig_CAT-13d
+  ligand_b: lig_CAT-17a
+  name: edge_CAT-13d_CAT-17a
+edge_CAT-13d_CAT-17d:
+  ligand_a: lig_CAT-13d
+  ligand_b: lig_CAT-17d
+  name: edge_CAT-13d_CAT-17d
+edge_CAT-13d_CAT-17h:
+  ligand_a: lig_CAT-13d
+  ligand_b: lig_CAT-17h
+  name: edge_CAT-13d_CAT-17h
+edge_CAT-13e_CAT-17g:
+  ligand_a: lig_CAT-13e
+  ligand_b: lig_CAT-17g
+  name: edge_CAT-13e_CAT-17g
+edge_CAT-13e_CAT-17i:
+  ligand_a: lig_CAT-13e
+  ligand_b: lig_CAT-17i
+  name: edge_CAT-13e_CAT-17i
+edge_CAT-13g_CAT-17g:
+  ligand_a: lig_CAT-13g
+  ligand_b: lig_CAT-17g
+  name: edge_CAT-13g_CAT-17g
+edge_CAT-13g_CAT-17i:
+  ligand_a: lig_CAT-13g
+  ligand_b: lig_CAT-17i
+  name: edge_CAT-13g_CAT-17i
+edge_CAT-13h_CAT-17i:
+  ligand_a: lig_CAT-13h
+  ligand_b: lig_CAT-17i
+  name: edge_CAT-13h_CAT-17i
+edge_CAT-13j_CAT-4o:
+  ligand_a: lig_CAT-13j
+  ligand_b: lig_CAT-4o
+  name: edge_CAT-13j_CAT-4o
+edge_CAT-13k_CAT-4b:
+  ligand_a: lig_CAT-13k
+  ligand_b: lig_CAT-4b
+  name: edge_CAT-13k_CAT-4b
+edge_CAT-13k_CAT-4d:
+  ligand_a: lig_CAT-13k
+  ligand_b: lig_CAT-4d
+  name: edge_CAT-13k_CAT-4d
+edge_CAT-13n_CAT-13a:
+  ligand_a: lig_CAT-13n
+  ligand_b: lig_CAT-13a
+  name: edge_CAT-13n_CAT-13a
+edge_CAT-13n_CAT-13k:
+  ligand_a: lig_CAT-13n
+  ligand_b: lig_CAT-13k
+  name: edge_CAT-13n_CAT-13k
+edge_CAT-13n_CAT-4i:
+  ligand_a: lig_CAT-13n
+  ligand_b: lig_CAT-4i
+  name: edge_CAT-13n_CAT-4i
+edge_CAT-13o_CAT-17h:
+  ligand_a: lig_CAT-13o
+  ligand_b: lig_CAT-17h
+  name: edge_CAT-13o_CAT-17h
+edge_CAT-13o_CAT-17i:
+  ligand_a: lig_CAT-13o
+  ligand_b: lig_CAT-17i
+  name: edge_CAT-13o_CAT-17i
+edge_CAT-17b_CAT-13d:
+  ligand_a: lig_CAT-17b
+  ligand_b: lig_CAT-13d
+  name: edge_CAT-17b_CAT-13d
+edge_CAT-17b_CAT-17e:
+  ligand_a: lig_CAT-17b
+  ligand_b: lig_CAT-17e
+  name: edge_CAT-17b_CAT-17e
+edge_CAT-17c_CAT-17e:
+  ligand_a: lig_CAT-17c
+  ligand_b: lig_CAT-17e
+  name: edge_CAT-17c_CAT-17e
+edge_CAT-17f_CAT-17e:
+  ligand_a: lig_CAT-17f
+  ligand_b: lig_CAT-17e
+  name: edge_CAT-17f_CAT-17e
+edge_CAT-17g_CAT-13c:
+  ligand_a: lig_CAT-17g
+  ligand_b: lig_CAT-13c
+  name: edge_CAT-17g_CAT-13c
+edge_CAT-17g_CAT-13i:
+  ligand_a: lig_CAT-17g
+  ligand_b: lig_CAT-13i
+  name: edge_CAT-17g_CAT-13i
+edge_CAT-17g_CAT-17c:
+  ligand_a: lig_CAT-17g
+  ligand_b: lig_CAT-17c
+  name: edge_CAT-17g_CAT-17c
+edge_CAT-17g_CAT-17d:
+  ligand_a: lig_CAT-17g
+  ligand_b: lig_CAT-17d
+  name: edge_CAT-17g_CAT-17d
+edge_CAT-17g_CAT-17f:
+  ligand_a: lig_CAT-17g
+  ligand_b: lig_CAT-17f
+  name: edge_CAT-17g_CAT-17f
+edge_CAT-17i_CAT-13f:
+  ligand_a: lig_CAT-17i
+  ligand_b: lig_CAT-13f
+  name: edge_CAT-17i_CAT-13f
+edge_CAT-17i_CAT-17a:
+  ligand_a: lig_CAT-17i
+  ligand_b: lig_CAT-17a
+  name: edge_CAT-17i_CAT-17a
+edge_CAT-24_CAT-17e:
+  ligand_a: lig_CAT-24
+  ligand_b: lig_CAT-17e
+  name: edge_CAT-24_CAT-17e
+edge_CAT-24_CAT-17i:
+  ligand_a: lig_CAT-24
+  ligand_b: lig_CAT-17i
+  name: edge_CAT-24_CAT-17i
+edge_CAT-4a_CAT-13k:
+  ligand_a: lig_CAT-4a
+  ligand_b: lig_CAT-13k
+  name: edge_CAT-4a_CAT-13k
+edge_CAT-4a_CAT-4o:
+  ligand_a: lig_CAT-4a
+  ligand_b: lig_CAT-4o
+  name: edge_CAT-4a_CAT-4o
+edge_CAT-4c_CAT-4o:
+  ligand_a: lig_CAT-4c
+  ligand_b: lig_CAT-4o
+  name: edge_CAT-4c_CAT-4o
+edge_CAT-4i_CAT-13m:
+  ligand_a: lig_CAT-4i
+  ligand_b: lig_CAT-13m
+  name: edge_CAT-4i_CAT-13m
+edge_CAT-4j_CAT-4o:
+  ligand_a: lig_CAT-4j
+  ligand_b: lig_CAT-4o
+  name: edge_CAT-4j_CAT-4o
+edge_CAT-4k_CAT-4o:
+  ligand_a: lig_CAT-4k
+  ligand_b: lig_CAT-4o
+  name: edge_CAT-4k_CAT-4o
+edge_CAT-4l_CAT-13k:
+  ligand_a: lig_CAT-4l
+  ligand_b: lig_CAT-13k
+  name: edge_CAT-4l_CAT-13k
+edge_CAT-4m_CAT-13j:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-13j
+  name: edge_CAT-4m_CAT-13j
+edge_CAT-4m_CAT-13k:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-13k
+  name: edge_CAT-4m_CAT-13k
+edge_CAT-4m_CAT-13m:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-13m
+  name: edge_CAT-4m_CAT-13m
+edge_CAT-4m_CAT-4c:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-4c
+  name: edge_CAT-4m_CAT-4c
+edge_CAT-4m_CAT-4j:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-4j
+  name: edge_CAT-4m_CAT-4j
+edge_CAT-4m_CAT-4k:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-4k
+  name: edge_CAT-4m_CAT-4k
+edge_CAT-4m_CAT-4l:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-4l
+  name: edge_CAT-4m_CAT-4l
+edge_CAT-4m_CAT-4n:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-4n
+  name: edge_CAT-4m_CAT-4n
+edge_CAT-4m_CAT-4p:
+  ligand_a: lig_CAT-4m
+  ligand_b: lig_CAT-4p
+  name: edge_CAT-4m_CAT-4p
+edge_CAT-4n_CAT-13k:
+  ligand_a: lig_CAT-4n
+  ligand_b: lig_CAT-13k
+  name: edge_CAT-4n_CAT-13k
+edge_CAT-4o_CAT-4b:
+  ligand_a: lig_CAT-4o
+  ligand_b: lig_CAT-4b
+  name: edge_CAT-4o_CAT-4b
+edge_CAT-4o_CAT-4d:
+  ligand_a: lig_CAT-4o
+  ligand_b: lig_CAT-4d
+  name: edge_CAT-4o_CAT-4d
+edge_CAT-4p_CAT-13k:
+  ligand_a: lig_CAT-4p
+  ligand_b: lig_CAT-13k
+  name: edge_CAT-4p_CAT-13k

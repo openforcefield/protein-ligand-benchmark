@@ -1,74 +1,100 @@
-- 22
-- 1h1r
----
-- 1h1s
-- 1oiy
----
-- 1oiu
-- 26
----
-- 26
-- 1h1q
----
-- 17
-- 1h1q
----
-- 1oiy
-- 1oi9
----
-- 29
-- 26
----
-- 1h1s
-- 26
----
-- 28
-- 26
----
-- 17
-- 21
----
-- 28
-- 31
----
-- 1h1r
-- 1oi9
----
-- 1h1r
-- 21
----
-- 30
-- 26
----
-- 1oiy
-- 32
----
-- 17
-- 22
----
-- 26
-- 1oi9
----
-- 1oiy
-- 29
----
-- 1oiy
-- 31
----
-- 31
-- 32
----
-- 1oi9
-- 20
----
-- 20
-- 1h1q
----
-- 1oiy
-- 1h1q
----
-- 1oiu
-- 1h1q
----
-- 30
-- 31
+edge_17_1h1q:
+  ligand_a: lig_17
+  ligand_b: lig_1h1q
+  name: edge_17_1h1q
+edge_17_21:
+  ligand_a: lig_17
+  ligand_b: lig_21
+  name: edge_17_21
+edge_17_22:
+  ligand_a: lig_17
+  ligand_b: lig_22
+  name: edge_17_22
+edge_1h1r_1oi9:
+  ligand_a: lig_1h1r
+  ligand_b: lig_1oi9
+  name: edge_1h1r_1oi9
+edge_1h1r_21:
+  ligand_a: lig_1h1r
+  ligand_b: lig_21
+  name: edge_1h1r_21
+edge_1h1s_1oiy:
+  ligand_a: lig_1h1s
+  ligand_b: lig_1oiy
+  name: edge_1h1s_1oiy
+edge_1h1s_26:
+  ligand_a: lig_1h1s
+  ligand_b: lig_26
+  name: edge_1h1s_26
+edge_1oi9_20:
+  ligand_a: lig_1oi9
+  ligand_b: lig_20
+  name: edge_1oi9_20
+edge_1oiu_1h1q:
+  ligand_a: lig_1oiu
+  ligand_b: lig_1h1q
+  name: edge_1oiu_1h1q
+edge_1oiu_26:
+  ligand_a: lig_1oiu
+  ligand_b: lig_26
+  name: edge_1oiu_26
+edge_1oiy_1h1q:
+  ligand_a: lig_1oiy
+  ligand_b: lig_1h1q
+  name: edge_1oiy_1h1q
+edge_1oiy_1oi9:
+  ligand_a: lig_1oiy
+  ligand_b: lig_1oi9
+  name: edge_1oiy_1oi9
+edge_1oiy_29:
+  ligand_a: lig_1oiy
+  ligand_b: lig_29
+  name: edge_1oiy_29
+edge_1oiy_31:
+  ligand_a: lig_1oiy
+  ligand_b: lig_31
+  name: edge_1oiy_31
+edge_1oiy_32:
+  ligand_a: lig_1oiy
+  ligand_b: lig_32
+  name: edge_1oiy_32
+edge_20_1h1q:
+  ligand_a: lig_20
+  ligand_b: lig_1h1q
+  name: edge_20_1h1q
+edge_22_1h1r:
+  ligand_a: lig_22
+  ligand_b: lig_1h1r
+  name: edge_22_1h1r
+edge_26_1h1q:
+  ligand_a: lig_26
+  ligand_b: lig_1h1q
+  name: edge_26_1h1q
+edge_26_1oi9:
+  ligand_a: lig_26
+  ligand_b: lig_1oi9
+  name: edge_26_1oi9
+edge_28_26:
+  ligand_a: lig_28
+  ligand_b: lig_26
+  name: edge_28_26
+edge_28_31:
+  ligand_a: lig_28
+  ligand_b: lig_31
+  name: edge_28_31
+edge_29_26:
+  ligand_a: lig_29
+  ligand_b: lig_26
+  name: edge_29_26
+edge_30_26:
+  ligand_a: lig_30
+  ligand_b: lig_26
+  name: edge_30_26
+edge_30_31:
+  ligand_a: lig_30
+  ligand_b: lig_31
+  name: edge_30_31
+edge_31_32:
+  ligand_a: lig_31
+  ligand_b: lig_32
+  name: edge_31_32

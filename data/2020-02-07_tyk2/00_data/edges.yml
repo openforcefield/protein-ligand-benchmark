@@ -1,71 +1,96 @@
-- jmc_23
-- ejm_55
----
-- ejm_44
-- ejm_55
----
-- ejm_49
-- ejm_31
----
-- ejm_31
-- ejm_46
----
-- jmc_28
-- jmc_27
----
-- ejm_42
-- ejm_48
----
-- ejm_31
-- ejm_43
----
-- ejm_50
-- ejm_42
----
-- ejm_42
-- ejm_55
----
-- jmc_23
-- ejm_46
----
-- ejm_31
-- ejm_45
----
-- ejm_55
-- ejm_54
----
-- ejm_45
-- ejm_42
----
-- ejm_31
-- jmc_28
----
-- ejm_31
-- ejm_48
----
-- ejm_47
-- ejm_31
----
-- ejm_47
-- ejm_55
----
-- ejm_44
-- ejm_42
----
-- jmc_23
-- jmc_27
----
-- ejm_43
-- ejm_55
----
-- jmc_23
-- jmc_30
----
-- jmc_28
-- jmc_30
----
-- ejm_42
-- ejm_54
----
-- ejm_49
-- ejm_50
+edge_ejm_31_ejm_43:
+  ligand_a: lig_ejm_31
+  ligand_b: lig_ejm_43
+  name: edge_ejm_31_ejm_43
+edge_ejm_31_ejm_45:
+  ligand_a: lig_ejm_31
+  ligand_b: lig_ejm_45
+  name: edge_ejm_31_ejm_45
+edge_ejm_31_ejm_46:
+  ligand_a: lig_ejm_31
+  ligand_b: lig_ejm_46
+  name: edge_ejm_31_ejm_46
+edge_ejm_31_ejm_48:
+  ligand_a: lig_ejm_31
+  ligand_b: lig_ejm_48
+  name: edge_ejm_31_ejm_48
+edge_ejm_31_jmc_28:
+  ligand_a: lig_ejm_31
+  ligand_b: lig_jmc_28
+  name: edge_ejm_31_jmc_28
+edge_ejm_42_ejm_48:
+  ligand_a: lig_ejm_42
+  ligand_b: lig_ejm_48
+  name: edge_ejm_42_ejm_48
+edge_ejm_42_ejm_54:
+  ligand_a: lig_ejm_42
+  ligand_b: lig_ejm_54
+  name: edge_ejm_42_ejm_54
+edge_ejm_42_ejm_55:
+  ligand_a: lig_ejm_42
+  ligand_b: lig_ejm_55
+  name: edge_ejm_42_ejm_55
+edge_ejm_43_ejm_55:
+  ligand_a: lig_ejm_43
+  ligand_b: lig_ejm_55
+  name: edge_ejm_43_ejm_55
+edge_ejm_44_ejm_42:
+  ligand_a: lig_ejm_44
+  ligand_b: lig_ejm_42
+  name: edge_ejm_44_ejm_42
+edge_ejm_44_ejm_55:
+  ligand_a: lig_ejm_44
+  ligand_b: lig_ejm_55
+  name: edge_ejm_44_ejm_55
+edge_ejm_45_ejm_42:
+  ligand_a: lig_ejm_45
+  ligand_b: lig_ejm_42
+  name: edge_ejm_45_ejm_42
+edge_ejm_47_ejm_31:
+  ligand_a: lig_ejm_47
+  ligand_b: lig_ejm_31
+  name: edge_ejm_47_ejm_31
+edge_ejm_47_ejm_55:
+  ligand_a: lig_ejm_47
+  ligand_b: lig_ejm_55
+  name: edge_ejm_47_ejm_55
+edge_ejm_49_ejm_31:
+  ligand_a: lig_ejm_49
+  ligand_b: lig_ejm_31
+  name: edge_ejm_49_ejm_31
+edge_ejm_49_ejm_50:
+  ligand_a: lig_ejm_49
+  ligand_b: lig_ejm_50
+  name: edge_ejm_49_ejm_50
+edge_ejm_50_ejm_42:
+  ligand_a: lig_ejm_50
+  ligand_b: lig_ejm_42
+  name: edge_ejm_50_ejm_42
+edge_ejm_55_ejm_54:
+  ligand_a: lig_ejm_55
+  ligand_b: lig_ejm_54
+  name: edge_ejm_55_ejm_54
+edge_jmc_23_ejm_46:
+  ligand_a: lig_jmc_23
+  ligand_b: lig_ejm_46
+  name: edge_jmc_23_ejm_46
+edge_jmc_23_ejm_55:
+  ligand_a: lig_jmc_23
+  ligand_b: lig_ejm_55
+  name: edge_jmc_23_ejm_55
+edge_jmc_23_jmc_27:
+  ligand_a: lig_jmc_23
+  ligand_b: lig_jmc_27
+  name: edge_jmc_23_jmc_27
+edge_jmc_23_jmc_30:
+  ligand_a: lig_jmc_23
+  ligand_b: lig_jmc_30
+  name: edge_jmc_23_jmc_30
+edge_jmc_28_jmc_27:
+  ligand_a: lig_jmc_28
+  ligand_b: lig_jmc_27
+  name: edge_jmc_28_jmc_27
+edge_jmc_28_jmc_30:
+  ligand_a: lig_jmc_28
+  ligand_b: lig_jmc_30
+  name: edge_jmc_28_jmc_30

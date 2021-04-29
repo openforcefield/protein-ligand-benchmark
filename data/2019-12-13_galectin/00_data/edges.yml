@@ -1,20 +1,28 @@
-- 02_ligOMe
-- 05_ligOEt
----
-- 07_ligOH
-- 02_ligOMe
----
-- 07_ligOH
-- 01_ligF
----
-- 03_ligNHMe
-- 02_ligOMe
----
-- 03_ligNHMe
-- 04_ligNMe2
----
-- 04_ligNMe2
-- 08_ligNH2
----
-- 06_ligPyr
-- 01_ligF
+edge_02_ligOMe_05_ligOEt:
+  ligand_a: lig_02_ligOMe
+  ligand_b: lig_05_ligOEt
+  name: edge_02_ligOMe_05_ligOEt
+edge_03_ligNHMe_02_ligOMe:
+  ligand_a: lig_03_ligNHMe
+  ligand_b: lig_02_ligOMe
+  name: edge_03_ligNHMe_02_ligOMe
+edge_03_ligNHMe_04_ligNMe2:
+  ligand_a: lig_03_ligNHMe
+  ligand_b: lig_04_ligNMe2
+  name: edge_03_ligNHMe_04_ligNMe2
+edge_04_ligNMe2_08_ligNH2:
+  ligand_a: lig_04_ligNMe2
+  ligand_b: lig_08_ligNH2
+  name: edge_04_ligNMe2_08_ligNH2
+edge_06_ligPyr_01_ligF:
+  ligand_a: lig_06_ligPyr
+  ligand_b: lig_01_ligF
+  name: edge_06_ligPyr_01_ligF
+edge_07_ligOH_01_ligF:
+  ligand_a: lig_07_ligOH
+  ligand_b: lig_01_ligF
+  name: edge_07_ligOH_01_ligF
+edge_07_ligOH_02_ligOMe:
+  ligand_a: lig_07_ligOH
+  ligand_b: lig_02_ligOMe
+  name: edge_07_ligOH_02_ligOMe

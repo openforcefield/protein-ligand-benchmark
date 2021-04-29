@@ -1,77 +1,104 @@
-- 32_L
-- 31_L
----
-- 32_L
-- 29_L
----
-- 32_L
-- 35_L
----
-- 32_L
-- 30_L
----
-- 28_L
-- 35_L
----
-- 39_L
-- 35_L
----
-- 35_L
-- 29_L
----
-- 39_L
-- 34_L
----
-- 39_L
-- 37_L
----
-- 39_L
-- 28_L
----
-- 39_L
-- 36_L
----
-- 31_L
-- 30_L
----
-- 31_L
-- 29_L
----
-- 34_L
-- 29_L
----
-- 34_L
-- 30_L
----
-- 34_L
-- 36_L
----
-- 37_L
-- 36_L
----
-- 28_L
-- 36_L
----
-- 38_L
-- 36_L
----
-- 33_L
-- 30_L
----
-- 30_L
-- 29_L
----
-- 33_L
-- 29_L
----
-- 28_L
-- 38_L
----
-- 28_L
-- 29_L
----
-- 28_L
-- 37_L
----
-- 38_L
-- 37_L
+edge_28_L_29_L:
+  ligand_a: lig_28_L
+  ligand_b: lig_29_L
+  name: edge_28_L_29_L
+edge_28_L_35_L:
+  ligand_a: lig_28_L
+  ligand_b: lig_35_L
+  name: edge_28_L_35_L
+edge_28_L_36_L:
+  ligand_a: lig_28_L
+  ligand_b: lig_36_L
+  name: edge_28_L_36_L
+edge_28_L_37_L:
+  ligand_a: lig_28_L
+  ligand_b: lig_37_L
+  name: edge_28_L_37_L
+edge_28_L_38_L:
+  ligand_a: lig_28_L
+  ligand_b: lig_38_L
+  name: edge_28_L_38_L
+edge_30_L_29_L:
+  ligand_a: lig_30_L
+  ligand_b: lig_29_L
+  name: edge_30_L_29_L
+edge_31_L_29_L:
+  ligand_a: lig_31_L
+  ligand_b: lig_29_L
+  name: edge_31_L_29_L
+edge_31_L_30_L:
+  ligand_a: lig_31_L
+  ligand_b: lig_30_L
+  name: edge_31_L_30_L
+edge_32_L_29_L:
+  ligand_a: lig_32_L
+  ligand_b: lig_29_L
+  name: edge_32_L_29_L
+edge_32_L_30_L:
+  ligand_a: lig_32_L
+  ligand_b: lig_30_L
+  name: edge_32_L_30_L
+edge_32_L_31_L:
+  ligand_a: lig_32_L
+  ligand_b: lig_31_L
+  name: edge_32_L_31_L
+edge_32_L_35_L:
+  ligand_a: lig_32_L
+  ligand_b: lig_35_L
+  name: edge_32_L_35_L
+edge_33_L_29_L:
+  ligand_a: lig_33_L
+  ligand_b: lig_29_L
+  name: edge_33_L_29_L
+edge_33_L_30_L:
+  ligand_a: lig_33_L
+  ligand_b: lig_30_L
+  name: edge_33_L_30_L
+edge_34_L_29_L:
+  ligand_a: lig_34_L
+  ligand_b: lig_29_L
+  name: edge_34_L_29_L
+edge_34_L_30_L:
+  ligand_a: lig_34_L
+  ligand_b: lig_30_L
+  name: edge_34_L_30_L
+edge_34_L_36_L:
+  ligand_a: lig_34_L
+  ligand_b: lig_36_L
+  name: edge_34_L_36_L
+edge_35_L_29_L:
+  ligand_a: lig_35_L
+  ligand_b: lig_29_L
+  name: edge_35_L_29_L
+edge_37_L_36_L:
+  ligand_a: lig_37_L
+  ligand_b: lig_36_L
+  name: edge_37_L_36_L
+edge_38_L_36_L:
+  ligand_a: lig_38_L
+  ligand_b: lig_36_L
+  name: edge_38_L_36_L
+edge_38_L_37_L:
+  ligand_a: lig_38_L
+  ligand_b: lig_37_L
+  name: edge_38_L_37_L
+edge_39_L_28_L:
+  ligand_a: lig_39_L
+  ligand_b: lig_28_L
+  name: edge_39_L_28_L
+edge_39_L_34_L:
+  ligand_a: lig_39_L
+  ligand_b: lig_34_L
+  name: edge_39_L_34_L
+edge_39_L_35_L:
+  ligand_a: lig_39_L
+  ligand_b: lig_35_L
+  name: edge_39_L_35_L
+edge_39_L_36_L:
+  ligand_a: lig_39_L
+  ligand_b: lig_36_L
+  name: edge_39_L_36_L
+edge_39_L_37_L:
+  ligand_a: lig_39_L
+  ligand_b: lig_37_L
+  name: edge_39_L_37_L
