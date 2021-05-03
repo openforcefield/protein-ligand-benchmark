@@ -13,6 +13,19 @@ Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Ener
 
 [Documentation](https://plbenchmarks.readthedocs.io/en/latest/) for the `openforcefield` toolkit is hosted at [readthedocs](https://plbenchmarks.readthedocs.io/en/latest/).
 
+## Installation
+
+The repository uses [`git-lfs` (large file storage)](https://git-lfs.github.com) for the storage of all the data file. Ideally `git-lfs` is installed first before cloning the repository. 
+
+```
+conda create -n plbenchmark python=3.9 git-lfs
+conda activate plbenchmark
+git lfs clone https://github.com/openforcefield/protein-ligand-benchmark.git
+cd protein-ligand-benchmark
+conda env update --file environment.yml
+pip install -e .
+```
+
 ## Data file tree and file description
 
 The data is organized as followed:  
@@ -178,25 +191,26 @@ Releases follow the `major.minor.micro` scheme recommended by [PEP440](https://w
 - `minor` increments denote addition of new targets or addition and larger changes to the API
 - `micro` increments denote bugfixes, addition of API features, changes of coordinates or topologies, and changes of metadata
 
-## License
-
-MIT. See the [License File](LICENSE) for more information.
-
-CC-BY-4.0 for data (content of directory [`data`](data). See the [License File](LICENSE_DATA) for more information.
 
 ## Contributions
 
 - **Authors** David Hahn
-- **Data Contributors** The authors of the following publications, expecially Vytautas Gapsys and Christina E. M. Schindler.
+- **Data Contributors** The authors of the following publications, especially Vytautas Gapsys and Christina E. M. Schindler.
   - [V. Gapsys et al., Large scale relative protein ligand binding affinities using non-equilibrium alchemy, Chem. Sci., 2020,11, 1140-1152](https://doi.org/10.1039/C9SC03754C)
   - [Christina E. M. Schindler et al., Large-Scale Assessment of Binding Free Energy Calculations in Active Drug Discovery Projects, J. Chem. Inf. Model. 2020, 60, 11, 5457–5474](https://doi.org/10.1021/acs.jcim.0c00900)
   - [Laura Perez Benito et al., Predicting Activity Cliffs with Free-Energy Perturbation, J. Chem. Theory Comput. 2019, 15, 3, 1884–1895](https://pubs.acs.org/doi/10.1021/acs.jctc.8b01290)
 - **Discussions and Suggestions** Christopher I. Bayly, Marko Breznik, Hannah E. Bruce Macdonald, John D.Chodera, Katharina Meier, Antonia S. J. S. Mey, David L. Mobley, Laura Perez Benito, Gary Tresadern, Gregory L. Warren and all members of the Open Force Field Initiative
 - **Code review and discussions** Matt Thompson, Jeffrey Wagner
 
+## License
+
+MIT. See the [License File](LICENSE) for more information.
+
+CC-BY-4.0 for data (content of directory [`data`](data). See the [License File](LICENSE_DATA) for more information.
+
 ## Copyright
 
-Copyright (c) 2019, Open Force Field Consortium, David F. Hahn
+Copyright (c) 2021, Open Force Field Consortium, David F. Hahn
 
 ## Acknowledgements
 
