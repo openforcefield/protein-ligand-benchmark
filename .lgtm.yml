@@ -9,8 +9,8 @@ path_classifiers:
     - versioneer.py  # Set Versioneer.py to an external "library" (3rd party code)
     - devtools/*
   generated:
-    - PLBenchmarks/_version.py
+    - plbenchmark/_version.py
   test:
-    - "PLBenchmarks/tests/*.py"
+    - "plbenchmark/tests/*.py"
   docs:
     - docs

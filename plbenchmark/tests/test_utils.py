@@ -1,9 +1,9 @@
 """
-Unit and regression test for the PLBenchmarks package.
+Unit and regression test for the plbenchmark package.
 """
 
 # Import package, test suite, and other packages as needed
-from PLBenchmarks import utils
+from plbenchmark import utils
 import pytest
 import warnings
 

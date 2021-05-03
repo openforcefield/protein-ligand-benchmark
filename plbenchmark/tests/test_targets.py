@@ -1,5 +1,5 @@
 """
-Unit and regression test for the PLBenchmarks package.
+Unit and regression test for the plbenchmark package.
 """
 
 # Import package, test suite, and other packages as needed
@@ -7,8 +7,8 @@ import pytest
 import os
 import datetime
 import pandas as pd
-import PLBenchmarks
-from PLBenchmarks import targets, ligands, edges
+import plbenchmark
+from plbenchmark import targets, ligands, edges
 
 
 def test_targets():
@@ -26,19 +26,19 @@ def test_targets():
     for target, item in targets.target_dict.items():
         # check if target directory is available
         assert item["dir"] in os.listdir(
-            os.path.join(PLBenchmarks.__path__[0], "sample_data")
+            os.path.join(plbenchmark.__path__[0], "sample_data")
         )
         assert item["dir"] == targets.get_target_dir(target)
 
         # check if YAML files of target are available
         assert "target.yml" in os.listdir(
             os.path.join(
-                PLBenchmarks.__path__[0], "sample_data", item["dir"], "00_data"
+                plbenchmark.__path__[0], "sample_data", item["dir"], "00_data"
             )
         )
         assert "ligands.yml" in os.listdir(
             os.path.join(
-                PLBenchmarks.__path__[0], "sample_data", item["dir"], "00_data"
+                plbenchmark.__path__[0], "sample_data", item["dir"], "00_data"
             )
         )
 

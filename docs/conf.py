@@ -17,13 +17,13 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-import PLBenchmarks
+import plbenchmark
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'ProteinLigandBenchmarks'
-copyright = ("2019, David F. Hahn. Project structure based on the "
+project = 'protein-ligand-benchmark'
+copyright = ("2021, David F. Hahn. Project structure based on the "
              "Computational Molecular Science Python Cookiecutter version 1.1")
 author = 'David F. Hahn'
 
@@ -117,7 +117,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'PLBenchmarksdoc'
+htmlhelp_basename = 'plbenchmarkdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -144,8 +144,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'PLBenchmarks.tex', 'ProteinLigandBenchmarks Documentation',
-     'PLBenchmarks', 'manual'),
+    (master_doc, 'plbenchmark.tex', 'ProteinLigandBenchmarks Documentation',
+     'plbenchmark', 'manual'),
 ]
 
 
@@ -154,7 +154,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'PLBenchmarks', 'ProteinLigandBenchmarks Documentation',
+    (master_doc, 'plbenchmark', 'protein-ligand-benchmark Documentation',
      [author], 1)
 ]
 
@@ -165,8 +165,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'PLBenchmarks', 'ProteinLigandBenchmarks Documentation',
-     author, 'PLBenchmarks', 'Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.',
+    (master_doc, 'plbenchmark', 'protein-ligand-benchmark Documentation',
+     author, 'plbenchmark', 'Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.',
      'Miscellaneous'),
 ]
 

@@ -1,4 +1,4 @@
-Getting started with PLBenchmarks
+Getting started with plbenchmark
 =================================
 
 .. toctree::
@@ -6,7 +6,7 @@ Getting started with PLBenchmarks
 
 .. code:: ipython3
 
-    from PLBenchmarks import targets
+    from plbenchmark import targets
     from IPython.core.display import HTML
 
 Get the whole set of targets in the dataset
@@ -14,7 +14,7 @@ Get the whole set of targets in the dataset
 
 .. code:: ipython3
 
-    # it is initialized from the `PLBenchmarks/data/targets.yml` file
+    # it is initialized from the `plbenchmark/data/targets.yml` file
     tgtset = targets.targetSet()
     # to see which targets are available, one can get a list of names
     tgtset.getNames()
@@ -181,7 +181,7 @@ A ``target`` can be accessed with its name in two ways
 The ``target`` class
 --------------------
 
-contains all the available information about one target of PLBenchmarks.
+contains all the available information about one target of plbenchmark.
 It also has two member variables, ``_ligandSet`` and ``_edgeSet``, which
 contain the information about the available ligand and edges of the
 respective target. A ``target`` can either be accessed from the
@@ -830,7 +830,7 @@ but can also be initialized directly.
 
 .. code:: ipython3
 
-    from PLBenchmarks import ligands
+    from plbenchmark import ligands
 
 .. code:: ipython3
 
@@ -1108,7 +1108,7 @@ also be initialized directly.
 
 .. code:: ipython3
 
-    from PLBenchmarks import edges
+    from plbenchmark import edges
 
 .. code:: ipython3
 

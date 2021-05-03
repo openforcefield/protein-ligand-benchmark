@@ -1,13 +1,13 @@
 """
-Unit and regression test for the PLBenchmarks package.
+Unit and regression test for the plbenchmark package.
 """
 
 # Import package, test suite, and other packages as needed
-import PLBenchmarks
+import plbenchmark
 import pytest
 import sys
 
 
-def test_PLBenchmarks_imported():
+def test_plbenchmark_imported():
     """Sample test, will always pass so long as import statement worked"""
-    assert "PLBenchmarks" in sys.modules
+    assert "plbenchmark" in sys.modules

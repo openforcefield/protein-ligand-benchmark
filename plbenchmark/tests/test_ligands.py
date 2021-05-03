@@ -1,5 +1,5 @@
 """
-Unit and regression test for the PLBenchmarks package.
+Unit and regression test for the plbenchmark package.
 """
 
 # Import package, test suite, and other packages as needed
@@ -12,12 +12,12 @@ from rdkit import Chem, DataStructs
 from rdkit.Chem import rdFMCS
 from openforcefield.topology import Molecule
 
-import PLBenchmarks
-from PLBenchmarks import ligands, targets, utils
+import plbenchmark
+from plbenchmark import ligands, targets, utils
 
 
 def test_affinity_data():
-    targets.set_data_dir(os.path.join(PLBenchmarks.__path__[0], "sample_data"))
+    targets.set_data_dir(os.path.join(plbenchmark.__path__[0], "sample_data"))
     file = open(
         os.path.join(targets.get_target_data_path("mcl1_sample") + "ligands.yml")
     )

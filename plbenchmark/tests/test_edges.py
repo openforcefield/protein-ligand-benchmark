@@ -1,12 +1,12 @@
 """
-Unit and regression test for the PLBenchmarks package.
+Unit and regression test for the plbenchmark package.
 """
 
 # Import package, test suite, and other packages as needed
 import pytest
 import numpy as np
 import pandas as pd
-from PLBenchmarks import edges, ligands
+from plbenchmark import edges, ligands
 
 
 def test_edge():

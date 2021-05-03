@@ -80,7 +80,7 @@ def find_doi_url(doi):
         desc_string = "{} et al., {} {}".format(
             aut, tit, dat
         )  # , obj['journal-issue']['published-online']['date-parts'][0][0])
-        return  f'REP1{obj["URL"]}REP2{desc_string}REP3'
+        return f'REP1{obj["URL"]}REP2{desc_string}REP3'
     else:
         warnings.warn(f"Could not find DOI: {doi}")
         return doi

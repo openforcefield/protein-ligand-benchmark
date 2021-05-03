@@ -51,7 +51,7 @@ def get_target_data_path(target):
     Gets the file path of the target data
 
     :param target: string with target name
-    :return: list of directories (have to be joined with '/' to get the file path relative to the PLBenchmarks repository)
+    :return: list of directories (have to be joined with '/' to get the file path relative to the plbenchmark repository)
 
     """
     if target in target_dict:
@@ -96,9 +96,9 @@ class Target:
 
     def get_ligand_set(self):
         """
-        Get :py:class:`~PLBenchmarks.ligands.ligandSet` associated with the target
+        Get :py:class:`~plbenchmark.ligands.ligandSet` associated with the target
 
-        :return: :py:class:`PLBenchmarks.ligands.ligandSet` object
+        :return: :py:class:`plbenchmark.ligands.ligandSet` object
         """
         if self._ligands is None:
             self._ligands = ligands.LigandSet(self._name)
@@ -106,7 +106,7 @@ class Target:
 
     def add_ligand_data(self):
         """
-        Adds data from ligands to :py:class:`PLBenchmarks.targets.target`. Molecule images and the minimum and maximum affinity are added.
+        Adds data from ligands to :py:class:`plbenchmark.targets.target`. Molecule images and the minimum and maximum affinity are added.
 
         :return: None
         """
@@ -134,7 +134,7 @@ class Target:
 
     def get_ligand_set_dataframe(self, columns=None):
         """
-        Get :py:class:`~PLBenchmarks.ligands.ligandSet` associated with the target in a :py:class:`pandas.DataFrame`
+        Get :py:class:`~plbenchmark.ligands.ligandSet` associated with the target in a :py:class:`pandas.DataFrame`
 
         :param columns: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: :py:class:`pandas.DataFrame`
@@ -143,7 +143,7 @@ class Target:
 
     def get_ligand_set_html(self, columns=None):
         """
-        Get :py:class:`~PLBenchmarks.ligands.ligandSet` associated with the target in a html string
+        Get :py:class:`~plbenchmark.ligands.ligandSet` associated with the target in a html string
 
         :param columns: list of columns which should be returned
         :return: html string
@@ -152,9 +152,9 @@ class Target:
 
     def get_edge_set(self):
         """
-        Get :py:class:`~PLBenchmarks:edges:edgeSet` associated with the target
+        Get :py:class:`~plbenchmark:edges:edgeSet` associated with the target
 
-        :return: :py:class:`PLBenchmarks:edges:edgeSet` object
+        :return: :py:class:`plbenchmark:edges:edgeSet` object
         """
         if self._edges is None:
             self._edges = edges.EdgeSet(self._name)
@@ -162,16 +162,16 @@ class Target:
 
     def get_edge_set_dataframe(self, columns=None):
         """
-        Get :py:class:`~PLBenchmarks:edges:edgeSet` associated with the target as a :py:class:`pandas.DataFrame`
+        Get :py:class:`~plbenchmark:edges:edgeSet` associated with the target as a :py:class:`pandas.DataFrame`
 
         :param columns: list of columns which should be returned in the :py:class:`pandas.DataFrame`
-        :return: :py:class:`PLBenchmarks:edges:edgeSet` object
+        :return: :py:class:`plbenchmark:edges:edgeSet` object
         """
         return self.get_edge_set().get_dataframe(columns)
 
     def get_edge_set_html(self, columns=None):
         """
-        Get :py:class:`~PLBenchmarks:edges:edgeSet` associated with the target in a html string
+        Get :py:class:`~plbenchmark:edges:edgeSet` associated with the target in a html string
 
         :param columns: :py:class:`list` of edge which should be returned
         :return: html string
@@ -274,7 +274,7 @@ class Target:
 
 class TargetSet(dict):
     """
-    Class inherited from dict to store all available targets in PLBenchmarks.
+    Class inherited from dict to store all available targets in plbenchmark.
     """
 
     def __init__(self, *arg, **kw):
@@ -306,7 +306,7 @@ class TargetSet(dict):
         Accesses one target of the targetSet
 
         :param name: string name of the target
-        :return: :py:class:`PLBenchmarks.targets.target` class
+        :return: :py:class:`plbenchmark.targets.target` class
         """
         if name in self:
             return self[name]
@@ -342,7 +342,7 @@ class TargetSet(dict):
 
     def get_html(self, columns=None):
         """
-        Access the :py:class:`~PLBenchmarks:targets:targetSet` as a HTML string
+        Access the :py:class:`~plbenchmark:targets:targetSet` as a HTML string
 
         :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: HTML string

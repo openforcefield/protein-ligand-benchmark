@@ -7,18 +7,24 @@ matrix:
     # Extra includes for OSX since python language is not available by default on OSX
     - os: osx
       language: generic
-      env: PYTHON_VER=3.6
+      env: PYTHON_VER=3.7
     - os: osx
       language: generic
-      env: PYTHON_VER=3.7
+      env: PYTHON_VER=3.8
+    - os: osx
+      language: generic
+      env: PYTHON_VER=3.9
 
 
     - os: linux
       language: generic  # No need to set Python version since its conda
-      env: PYTHON_VER=3.6
+      env: PYTHON_VER=3.7
     - os: linux
       language: generic
-      env: PYTHON_VER=3.7
+      env: PYTHON_VER=3.8
+    - os: linux
+      language: generic
+      env: PYTHON_VER=3.9
 
 
 before_install:
@@ -43,7 +49,7 @@ install:
 
 
 script:
-  - pytest -v --nbval-lax --cov=PLBenchmarks PLBenchmarks/tests/ examples/
+  - pytest -v --nbval-lax --cov=plbenchmark plbenchmark/tests/ examples/
 
 notifications:
     email: false

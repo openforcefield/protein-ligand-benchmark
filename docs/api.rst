@@ -10,7 +10,7 @@ Targets
 .. toctree::
    :maxdepth: 1
 
-.. automodule::  PLBenchmarks.targets
+.. automodule::  plbenchmark.targets
 		 :members:
 
 Ligands
@@ -18,7 +18,7 @@ Ligands
 .. toctree::
    :maxdepth: 1
 
-.. automodule::  PLBenchmarks.ligands
+.. automodule::  plbenchmark.ligands
 		 :members:
 
 Edges
@@ -26,7 +26,7 @@ Edges
 .. toctree::
    :maxdepth: 1
 
-.. automodule::  PLBenchmarks.edges
+.. automodule::  plbenchmark.edges
 		 :members:
 
 Utils
@@ -34,7 +34,7 @@ Utils
 .. toctree::
    :maxdepth: 1
 
-.. automodule::  PLBenchmarks.utils	      
+.. automodule::  plbenchmark.utils	      
 		:members:
 
    

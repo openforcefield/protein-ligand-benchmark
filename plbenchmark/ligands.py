@@ -27,7 +27,7 @@ class Ligand:
 
     def __init__(self, d: dict, target: str = None):
         """
-        Initialize :py:class:`PLBenchmarks.ligands.ligand` object from :py:class:`dict` and store data in a
+        Initialize :py:class:`plbenchmark.ligands.ligand` object from :py:class:`dict` and store data in a
         :py:class:`pandas.Series`.
 
         :param d: :py:class:`dict` with the ligand data
@@ -151,7 +151,7 @@ class Ligand:
 
     def get_coordinate_file_path(self):
         """
-        Get file path relative to the PLBenchmarks repository of the SDF coordinate file of the docked ligand
+        Get file path relative to the plbenchmark repository of the SDF coordinate file of the docked ligand
 
         :return: file path as string
         """
@@ -242,7 +242,7 @@ class LigandSet(dict):
 
     def __init__(self, target, *arg, **kw):
         """
-        Initializes :py:class:`~PLBenchmarks.ligands.ligandSet` class
+        Initializes :py:class:`~plbenchmark.ligands.ligandSet` class
 
         :param target: string name of target
         :param arg: arguments for :py:class:`dict` (base class)
@@ -270,10 +270,10 @@ class LigandSet(dict):
 
     def get_ligand(self, name):
         """
-        Accesses one ligand of the :py:class:`~PLBenchmarks:ligands.ligandSet`
+        Accesses one ligand of the :py:class:`~plbenchmark:ligands.ligandSet`
 
         :param name: string name of the ligand
-        :return: :py:class:`PLBenchmarks.ligands.ligand` class
+        :return: :py:class:`plbenchmark.ligands.ligand` class
         """
         if name in self:
             return self[name]
@@ -282,7 +282,7 @@ class LigandSet(dict):
 
     def get_dataframe(self, columns=None):
         """
-        Access the :py:class:`~PLBenchmarks:ligands.ligandSet` as a :py:class:`pandas.Dataframe`
+        Access the :py:class:`~plbenchmark:ligands.ligandSet` as a :py:class:`pandas.Dataframe`
 
         :param columns: :py:class:`list` of columns which should be returned in the :py:class:`pandas.Dataframe`
         :return: :py:class:`pandas.Dataframe`
@@ -295,7 +295,7 @@ class LigandSet(dict):
 
     def get_html(self, columns=None):
         """
-        Access the :py:class:`PLBenchmarks:ligands.ligandSet` as a HTML string
+        Access the :py:class:`plbenchmark:ligands.ligandSet` as a HTML string
 
         :param columns: :py:class:`list` of columns which should be returned in the :py:class:`pandas.Dataframe`
         :return: HTML string

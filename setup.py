@@ -1,5 +1,5 @@
 """
-ProteinLigandBenchmarks
+protein-ligand-benchmark
 Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Energy Calculations.
 """
 import sys
@@ -21,7 +21,7 @@ except IOError:
 
 setup(
     # Self-descriptive entries which should always be present
-    name='PLBenchmarks',
+    name='plbenchmark',
     author='David F. Hahn',
     author_email='davidfriedrichhahn@gmail.com',
     description=short_description[0],

@@ -14,7 +14,7 @@ comment:
   paths: null
 
 ignore:
-  - "PLBenchmarks/tests/"           # ignore test files
-  - "PLBenchmarks/sample_data"      # ignore sample data
-  - "PLBenchmarks/_version.py"
+  - "plbenchmark/tests/"           # ignore test files
+  - "plbenchmark/sample_data"      # ignore sample data
+  - "plbenchmark/_version.py"
   

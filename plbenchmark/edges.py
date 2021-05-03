@@ -30,9 +30,9 @@ class Edge:
 
     def add_ligand_data(self, ligand_set):
         """
-        Adds data from ligands to :py:class:`~PLBenchmarks:edges.edge`. Molecule images and the affinity difference are added.
+        Adds data from ligands to :py:class:`~plbenchmark:edges.edge`. Molecule images and the affinity difference are added.
 
-        :param ligand_set: :py:class:`PLBenchmarks:ligands:ligandSet` class of the same target
+        :param ligand_set: :py:class:`plbenchmark:ligands:ligandSet` class of the same target
         :return: None
         """
         name1 = self._data["ligand_a"]
@@ -110,10 +110,10 @@ class EdgeSet(dict):
 
     def get_edge(self, name):
         """
-        Accesses one edge of the :py:class:`PLBenchmarks.edges.edgeSet`
+        Accesses one edge of the :py:class:`plbenchmark.edges.edgeSet`
 
         :param name: string name of the edge
-        :return: :py:class:`PLBenchmarks:edges:edge` class
+        :return: :py:class:`plbenchmark:edges:edge` class
         """
         if name in self:
             return self[name]
@@ -122,7 +122,7 @@ class EdgeSet(dict):
 
     def get_dataframe(self, columns=None):
         """
-        Access the :py:class:`PLBenchmarks:edges.edgeSet` as a :py:class:`pandas.DataFrame`
+        Access the :py:class:`plbenchmark:edges.edgeSet` as a :py:class:`pandas.DataFrame`
 
         :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: :py:class:`pandas.DataFrame`
@@ -135,7 +135,7 @@ class EdgeSet(dict):
 
     def get_html(self, columns=None):
         """
-        Access the :py:class:`PLBenchmarks:edges.edgeSet` as a HTML string
+        Access the :py:class:`plbenchmark:edges.edgeSet` as a HTML string
 
         :param cols: :py:class:`list` of columns which should be returned in the :py:class:`pandas.DataFrame`
         :return: HTML string
@@ -146,7 +146,7 @@ class EdgeSet(dict):
 
     def get_dict(self):
         """
-        Access the :py:class:`PLBenchmarks:edges.edgeSet` as a dict which contains the name of the edges as key and the names of the two ligands in a list as items.
+        Access the :py:class:`plbenchmark:edges.edgeSet` as a dict which contains the name of the edges as key and the names of the two ligands in a list as items.
 
         :return: :py:class:`dict`
         """

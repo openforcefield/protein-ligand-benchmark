@@ -42,7 +42,7 @@ def get_config():
     cfg.style = "pep440"
     cfg.tag_prefix = ""
     cfg.parentdir_prefix = "None"
-    cfg.versionfile_source = "PLBenchmarks/_version.py"
+    cfg.versionfile_source = "plbenchmark/_version.py"
     cfg.verbose = False
     return cfg
 

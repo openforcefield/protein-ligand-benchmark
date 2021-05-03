@@ -1,4 +1,4 @@
-name: plbenchmarks
+name: plbenchmark
 channels:
   - conda-forge
   - omnia
