@@ -13,6 +13,7 @@ Protein-Ligand Benchmarks for Free Energy Calculations
    install
    examples
    data
+   contributions
    api
 
 Indices and tables

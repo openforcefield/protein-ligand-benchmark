@@ -1,9 +1,13 @@
 Data
-=================
+====
+
+Data file tree and file description
+-----------------------------------
 
 .. toctree::
    :maxdepth: 1
 
-.. raw:: html
-	 :file: tgtset.html
+The data is organized as follows:
+
+.. literalinclude:: file_tree.txt
 

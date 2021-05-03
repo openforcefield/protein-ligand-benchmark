@@ -9,18 +9,15 @@ Installation from Source
 .. toctree::
    :maxdepth: 1
 
-To install PLBenchmarks from source, clone the repository from `github
-<https://github.com/openforcefield/PLBenchmarks>`_::
+The repository uses `git-lfs (large file storage) <https://git-lfs.github.com>`_ for the storage of all the data file. Ideally git-lfs is installed first before cloning the repository.
 
-    git clone https://github.com/openforcefield/PLBenchmarks.git
-    cd PLBenchmarks
+:: 
 
-Create a custom conda environment which contains the required dependencies and activate it::
+    conda create -n plbenchmark python=3.9 git-lfs
+    conda activate plbenchmark
+    git lfs clone https://github.com/openforcefield/protein-ligand-benchmark.git
+    cd protein-ligand-benchmark
+    conda env update --file environment.yml
+    pip install -e .
 
-    conda env create --name plbenchmarks --file devtools/conda-envs/test_env.yaml
-    conda activate plbenchmarks
-
-The final step is to install PLBenchmarks itself::
-
-    python setup.py develop
 
