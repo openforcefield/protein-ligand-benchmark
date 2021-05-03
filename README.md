@@ -27,12 +27,13 @@ data
 │   │   └── target.yml                        #         target
 │   ├── 01_protein                            #     protein data
 │   │   ├── crd                               #         coordinates
-│   │   │   ├── protein.pdb                   #             aminoacid residues   
-│   │   │   └── cofactors_crystalwater.pdb    #             cofactors and cyrstal waters    
+│   │   │   ├── cofactors_crystalwater.pdb    #             cofactors and cyrstal waters    
+│   │   │   └── protein.pdb                   #             aminoacid residues   
 │   │   └── top                               #         topology(s)
-│   │   │   └── amber99sb-star-ildn-mut.ff    #             force field spec.           
-│   │   │       ├── topol.itp                 #                 Gromacs ITP file
-│   │   │       └── topol.top                 #                 Gromacs TOP file
+│   │   │   └── amber99sb-star-ildn-mut.ff    #             force field spec.     
+│   │   │       ├── cofactors_crystalwater.top#                 Gromacs TOP file of cofactors and crystal water
+│   │   │       ├── protein.top               #                 Gromacs TOP file of amino acid residues
+│   │   │       └── *.itp                     #                 Gromacs ITP file(s) to be included in TOP files
 │   └── 02_ligands                            #     ligands
 │   ├── lig_<name_1>                          #          ligand 1 
 │   │   ├── crd                               #              coordinates
@@ -131,19 +132,19 @@ Explanation of the entries:
   
 #### `ligands.yml`
 
-This file is found in the meta data directory of each target: `<date>_<target_name>/00_data/ligands.yml`. It contains information of the ligand of one target. The entries of the ligands are separated by three dashes (`---`). One entry looks like this:
+This file is found in the meta data directory of each target: `<date>_<target_name>/00_data/ligands.yml`. It contains information of the ligands of one target. One entry looks like this:
 
 ```
-measurement:
-  comment: Table 2, entry 23
-  doi: 10.1021/jm301448p
-  ki:
-  - 0.37
-  - 0.03
-  - uM
-name: lig_23
-smiles: '[H]c1c(c(c2c(c1[H])c(c(c(c2OC([H])([H])C([H])([H])C([H])([H])C3=C(Sc4c3c(c(c(c4[H])[H])[H])[H])C(=O)[O-])[H])[H])[H])[H])[H]'
----
+lig_23:
+  measurement:
+    comment: Table 2, entry 23
+    doi: 10.1021/jm301448p
+    error: 0.03
+    type: ki
+    unit: uM
+    value: 0.37
+  name: lig_23
+  smiles: '[H]c1c(c(c2c(c1[H])c(c(c(c2OC([H])([H])C([H])([H])C([H])([H])C3=C(Sc4c3c(c(c(c4[H])[H])[H])[H])C(=O)[O-])[H])[H])[H])[H])[H]'
 ```
 
 Explanation of the entries:
@@ -151,18 +152,21 @@ Explanation of the entries:
 - `measurement`: affinity measurement entry
   - `comment`: comment about the measurement
   - `doi`: DOI (digital object identifier) pointing to the reference for this measurement
-  - `ki`: binding constant Ki, being a list of value, error and the unit of the measurement. The error is `-1`, if it is not given in the reference. Instead of `ki`, `ic50` (IC50 value), `pic50` (pIC50 value), or `dg` (free energy of binding) are accepted entries. 
+  - `error`: Error of measurement, `null` if not reported
+  - `type`: type of measurement observable, `ki` (binding equilibrium constant), `ic50` (IC50 value), `pic50` (pIC50 value), or `dg` (free energy of binding) are accepted entries. 
+  - `unit`: Unit of value and error entries.
+  - `value`: Value of the measurement.
 - `name`: name of ligand, which always starts with `lig_`, followed by a unique identifier.
 - `smiles`: SMILES string of the ligand, with charge state information and chirality information. 
 
 #### `edges.yml`
 
-This file is found in the meta data directory of each target: `<date>_<target_name>/00_data/edges.yml`. It contains information of the edges of one target. The entries of the ligands are separated by three dashes (`---`). One entry looks like this:
+This file is found in the meta data directory of each target: `<date>_<target_name>/00_data/edges.yml`. It contains information of the edges of one target.  One entry looks like this:
 
 ```
-- 50
-- 60
----
+edge_50_60:
+  ligand_a: lig_50
+  ligand_b: lig_60
 ```
 
 Each entry is just a list of two ligand identifiers. 
@@ -180,10 +184,19 @@ MIT. See the [License File](LICENSE) for more information.
 
 CC-BY-4.0 for data (content of directory [`data`](data). See the [License File](LICENSE_DATA) for more information.
 
+## Contributions
+
+- **Authors** David Hahn
+- **Data Contributors** The authors of the following publications, expecially Vytautas Gapsys and Christina E. M. Schindler.
+  - [V. Gapsys et al., Large scale relative protein ligand binding affinities using non-equilibrium alchemy, Chem. Sci., 2020,11, 1140-1152](https://doi.org/10.1039/C9SC03754C)
+  - [Christina E. M. Schindler et al., Large-Scale Assessment of Binding Free Energy Calculations in Active Drug Discovery Projects, J. Chem. Inf. Model. 2020, 60, 11, 5457–5474](https://doi.org/10.1021/acs.jcim.0c00900)
+  - [Laura Perez Benito et al., Predicting Activity Cliffs with Free-Energy Perturbation, J. Chem. Theory Comput. 2019, 15, 3, 1884–1895](https://pubs.acs.org/doi/10.1021/acs.jctc.8b01290)
+- **Discussions and Suggestions** Christopher I. Bayly, Marko Breznik, Hannah E. Bruce Macdonald, John D.Chodera, Katharina Meier, Antonia S. J. S. Mey, David L. Mobley, Laura Perez Benito, Gary Tresadern, Gregory L. Warren and all members of the Open Force Field Initiative
+- **Code review and discussions** Matt Thompson, Jeffrey Wagner
+
 ## Copyright
 
 Copyright (c) 2019, Open Force Field Consortium, David F. Hahn
-
 
 ## Acknowledgements
 
