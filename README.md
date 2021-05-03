@@ -3,7 +3,8 @@ ProteinLigandBenchmarks
 [//]: # (Badges)
 [![Travis Build Status](https://travis-ci.org/openforcefield/protein-ligand-benchmark.svg?branch=master)](https://travis-ci.org/openforcefield/protein-ligand-benchmark)
 [![codecov](https://codecov.io/gh/openforcefield/protein-ligand-benchmark/branch/master/graph/badge.svg)](https://codecov.io/gh/openforcefield/protein-ligand-benchmark)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/openforcefield/protein-ligand-benchmark.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/openforcefield/protein-ligand-benchmark/context:python)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/openforcefield/PLBenchmarks.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/openforcefield/PLBenchmarks/context:python)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/openforcefield/PLBenchmarks.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/openforcefield/PLBenchmarks/context:python)
 [![Documentation Status](https://readthedocs.org/projects/plbenchmarks/badge/?version=latest)](https://plbenchmarks.readthedocs.io/en/latest/?badge=latest)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
