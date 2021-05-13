@@ -18,7 +18,7 @@ Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Ener
 The repository uses [`git-lfs` (large file storage)](https://git-lfs.github.com) for the storage of all the data file. Ideally `git-lfs` is installed first before cloning the repository. 
 
 ```
-conda create -n plbenchmark python=3.9 git-lfs
+conda create -n plbenchmark python=3.7 git-lfs
 conda activate plbenchmark
 git lfs clone https://github.com/openforcefield/protein-ligand-benchmark.git
 cd protein-ligand-benchmark
