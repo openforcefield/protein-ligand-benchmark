@@ -13,7 +13,7 @@ The repository uses `git-lfs (large file storage) <https://git-lfs.github.com>`_
 
 :: 
 
-    conda create -n plbenchmark python=3.9 git-lfs
+    conda create -n plbenchmark python=3.7 git-lfs
     conda activate plbenchmark
     git lfs clone https://github.com/openforcefield/protein-ligand-benchmark.git
     cd protein-ligand-benchmark

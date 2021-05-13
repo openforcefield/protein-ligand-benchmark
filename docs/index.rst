@@ -11,7 +11,7 @@ Protein-Ligand Benchmarks for Free Energy Calculations
    :caption: Contents:
 
    install
-   examples
+   Getting Started  <examples/01-protein-ligand-benchmark.ipynb>
    data
    contributions
    api
