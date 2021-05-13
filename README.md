@@ -206,7 +206,7 @@ Releases follow the `major.minor.micro` scheme recommended by [PEP440](https://w
 
 MIT. See the [License File](LICENSE) for more information.
 
-CC-BY-4.0 for data (content of directory [`data`](data). See the [License File](LICENSE_DATA) for more information.
+CC-BY-4.0 for data (content of directory [`data`](data)). See the [License File](LICENSE_DATA) for more information.
 
 ## Copyright
 
