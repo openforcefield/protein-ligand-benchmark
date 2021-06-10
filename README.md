@@ -13,7 +13,7 @@ Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Ener
 
 ## Documentation
 
-[Documentation](https://plbenchmarks.readthedocs.io/en/latest/) for the `openforcefield` toolkit is hosted at [readthedocs](https://plbenchmarks.readthedocs.io/en/latest/).
+[Documentation](https://plbenchmarks.readthedocs.io/en/latest/) for the `protein-ligand-benchmark` package is hosted at [readthedocs](https://plbenchmarks.readthedocs.io/en/latest/).
 
 ## Installation
 
