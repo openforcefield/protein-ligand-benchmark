@@ -46,11 +46,11 @@ data
 │   │   └── target.yml                        #         target
 │   ├── 01_protein                            #     protein data
 │   │   ├── crd                               #         coordinates
-│   │   │   ├── cofactors_crystalwater.pdb    #             cofactors and cyrstal waters    
+│   │   │   ├── cofactors_crystalwater.pdb    #             cofactors and cyrstal waters (might be empty if there are none)  
 │   │   │   └── protein.pdb                   #             aminoacid residues   
 │   │   └── top                               #         topology(s)
 │   │   │   └── amber99sb-star-ildn-mut.ff    #             force field spec.     
-│   │   │       ├── cofactors_crystalwater.top#                 Gromacs TOP file of cofactors and crystal water
+│   │   │       ├── cofactors_crystalwater.top#                 Gromacs TOP file of cofactors and crystal water (might be empty if there are none)
 │   │   │       ├── protein.top               #                 Gromacs TOP file of amino acid residues
 │   │   │       └── *.itp                     #                 Gromacs ITP file(s) to be included in TOP files
 │   └── 02_ligands                            #     ligands
