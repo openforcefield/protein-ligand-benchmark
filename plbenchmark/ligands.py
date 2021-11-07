@@ -12,7 +12,7 @@ import pandas as pd
 from PIL import Image
 from rdkit import Chem
 from rdkit.Chem import Draw, PandasTools
-from openforcefield.topology import Molecule
+from openff.toolkit.topology import Molecule
 
 from . import targets, utils
 
