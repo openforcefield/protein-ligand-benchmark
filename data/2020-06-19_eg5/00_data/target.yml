@@ -1,0 +1,18 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.32
+  pdb: 2X7C
+associated_sets: 
+ - Merck KGgA fep-benchmark
+comments: 
+date: 2020-06-19
+dpi: 0.18
+id: 14
+iridium_classifier: MT
+iridium_score: 0.88
+name: eg5
+netcharge: null
+pdb: 3L9H
+references:
+  calculation: null
+  measurement: null

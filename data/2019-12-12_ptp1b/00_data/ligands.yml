@@ -2,7 +2,7 @@ lig_20667_2qbp:
   measurement:
     comment: Table 3, entry 32
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.004
@@ -12,7 +12,7 @@ lig_20669_2qbr:
   measurement:
     comment: Table 1, entry 16
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.47
@@ -22,7 +22,7 @@ lig_20670_2qbs:
   measurement:
     comment: Table 2, entry 19
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.21
@@ -32,7 +32,7 @@ lig_23330_2qbq:
   measurement:
     comment: Table 2, entry 23
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.036
@@ -42,7 +42,7 @@ lig_23466:
   measurement:
     comment: Table 1, entry 8
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 1.7
@@ -52,7 +52,7 @@ lig_23467:
   measurement:
     comment: Table 1, entry 10
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 4.0
@@ -62,7 +62,7 @@ lig_23468:
   measurement:
     comment: Table 1, entry 11
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 2.0
@@ -72,7 +72,7 @@ lig_23469:
   measurement:
     comment: Table 1, entry 12
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 2.1
@@ -82,7 +82,7 @@ lig_23470:
   measurement:
     comment: Table 1, entry 13
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 2.1
@@ -92,7 +92,7 @@ lig_23471:
   measurement:
     comment: Table 1, entry 14
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 2.0
@@ -102,7 +102,7 @@ lig_23472:
   measurement:
     comment: Table 1, entry 15
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.44
@@ -112,7 +112,7 @@ lig_23473:
   measurement:
     comment: Table 1, entry 17
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.68
@@ -122,7 +122,7 @@ lig_23474:
   measurement:
     comment: Table 1, entry 18
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.2
@@ -132,7 +132,7 @@ lig_23475:
   measurement:
     comment: Table 2, entry 20
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.39
@@ -142,7 +142,7 @@ lig_23476:
   measurement:
     comment: Table 2, entry 21
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.12
@@ -152,7 +152,7 @@ lig_23477:
   measurement:
     comment: Table 2, entry 22
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.31
@@ -162,7 +162,7 @@ lig_23479:
   measurement:
     comment: Table 3, entry 27
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.19
@@ -172,7 +172,7 @@ lig_23480:
   measurement:
     comment: Table 3, entry 28
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.39
@@ -182,7 +182,7 @@ lig_23482:
   measurement:
     comment: Table 3, entry 30
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.044
@@ -192,7 +192,7 @@ lig_23483:
   measurement:
     comment: Table 3, entry 31
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.055
@@ -202,7 +202,7 @@ lig_23484:
   measurement:
     comment: Table 3, entry 33
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 2.0
@@ -212,7 +212,7 @@ lig_23485:
   measurement:
     comment: Table 3, entry 34
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.008
@@ -222,7 +222,7 @@ lig_23486:
   measurement:
     comment: Table 3, entry 35
     doi: 10.1021/jm0702478
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.00068
