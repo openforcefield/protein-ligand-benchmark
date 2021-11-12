@@ -10,7 +10,7 @@ import pandas as pd
 import yaml
 from rdkit import Chem, DataStructs
 from rdkit.Chem import rdFMCS
-from openforcefield.topology import Molecule
+from openff.toolkit.topology import Molecule
 
 import plbenchmark
 from plbenchmark import ligands, targets, utils

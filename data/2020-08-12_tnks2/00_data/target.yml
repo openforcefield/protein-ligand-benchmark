@@ -1,0 +1,18 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.27
+  pdb: 4PC9
+associated_sets: 
+  - Merck KGgA fep-benchmark
+comments: null
+date: 2020-08-12
+dpi: 0.08
+id: 21
+iridium_classifier: HT
+iridium_score: 0.29
+name: tnks2
+netcharge: null
+pdb: 4UI5
+references:
+  calculation: null
+  measurement: null

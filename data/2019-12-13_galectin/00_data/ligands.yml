@@ -52,7 +52,7 @@ lig_06_ligPyr:
   measurement:
     comment: Table 1, entry 10, ki > 300; no error given
     doi: 10.1039/C8OB02888E
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 300.0

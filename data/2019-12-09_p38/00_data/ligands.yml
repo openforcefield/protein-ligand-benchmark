@@ -322,7 +322,7 @@ lig_p38a_3fmh:
   measurement:
     comment: Table 4, entry 2ii; no error given
     doi: 10.1021/jm101423y
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 11

@@ -115,17 +115,17 @@ lig_3b:
 lig_5:
   measurement:
     additional:
-    - error: null
+    - error: -1
       type: dh
       unit: kilojoules / mole
       value: -13.6
-    - error: null
+    - error: -1
       type: tds
       unit: kilojoules / mole
       value: -18.1
     comment: Table 1 cmpd 5
     doi: 10.1016/j.jmb.2009.04.051
-    error: null
+    error: -1
     type: dg
     unit: kilojoules / mole
     value: -31.7

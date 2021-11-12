@@ -3,7 +3,7 @@ lig_CAT-13a:
   measurement:
     comment: Table 3, entry 13a
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 720
@@ -14,7 +14,7 @@ lig_CAT-13b:
   measurement:
     comment: Table 3, entry 13b
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 450
@@ -25,7 +25,7 @@ lig_CAT-13c:
   measurement:
     comment: Table 3, entry 13c
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 320
@@ -36,7 +36,7 @@ lig_CAT-13d:
   measurement:
     comment: Table 3, entry 13d
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 47
@@ -47,7 +47,7 @@ lig_CAT-13e:
   measurement:
     comment: Table 3, entry 13e
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 110
@@ -58,7 +58,7 @@ lig_CAT-13f:
   measurement:
     comment: Table 3, entry 13f
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 470
@@ -69,7 +69,7 @@ lig_CAT-13g:
   measurement:
     comment: Table 3, entry 13g
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 470
@@ -80,7 +80,7 @@ lig_CAT-13h:
   measurement:
     comment: Table 3, entry 13h
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 190
@@ -91,7 +91,7 @@ lig_CAT-13i:
   measurement:
     comment: Table 3, entry 13i
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 350
@@ -102,7 +102,7 @@ lig_CAT-13j:
   measurement:
     comment: Table 3, entry 13j
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 860
@@ -113,7 +113,7 @@ lig_CAT-13k:
   measurement:
     comment: Table 3, entry 13k
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 170
@@ -124,7 +124,7 @@ lig_CAT-13m:
   measurement:
     comment: Table 3, entry 13m
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 830
@@ -135,7 +135,7 @@ lig_CAT-13n:
   measurement:
     comment: Table 3, entry 13n
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 1200
@@ -146,7 +146,7 @@ lig_CAT-13o:
   measurement:
     comment: Table 3, entry 13o
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 1200
@@ -157,7 +157,7 @@ lig_CAT-17a:
   measurement:
     comment: Table 4, entry 17a
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 30
@@ -168,7 +168,7 @@ lig_CAT-17b:
   measurement:
     comment: Table 4, entry 17b
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 99
@@ -179,7 +179,7 @@ lig_CAT-17c:
   measurement:
     comment: Table 4, entry 17c
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 130
@@ -190,7 +190,7 @@ lig_CAT-17d:
   measurement:
     comment: Table 4, entry 17d
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 270
@@ -201,7 +201,7 @@ lig_CAT-17e:
   measurement:
     comment: Table 4, entry 17e
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 100
@@ -212,7 +212,7 @@ lig_CAT-17f:
   measurement:
     comment: Table 4, entry 17f
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 270
@@ -223,7 +223,7 @@ lig_CAT-17g:
   measurement:
     comment: Table 4, entry 17g
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 160
@@ -234,7 +234,7 @@ lig_CAT-17h:
   measurement:
     comment: Table 4, entry 17h
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 59
@@ -245,7 +245,7 @@ lig_CAT-17i:
   measurement:
     comment: Table 4, entry 17i
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 250
@@ -256,7 +256,7 @@ lig_CAT-24:
   measurement:
     comment: Table 5, entry 24
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: nM
     value: 5.4
@@ -267,7 +267,7 @@ lig_CAT-4a:
   measurement:
     comment: Table 1, entry 4a
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 3.3
@@ -278,7 +278,7 @@ lig_CAT-4b:
   measurement:
     comment: Table 1, entry 4b
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.19
@@ -289,7 +289,7 @@ lig_CAT-4c:
   measurement:
     comment: Table 1, entry 4c
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 3.8
@@ -300,7 +300,7 @@ lig_CAT-4d:
   measurement:
     comment: Table 1, entry 4d
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.46
@@ -311,7 +311,7 @@ lig_CAT-4i:
   measurement:
     comment: Table 1, entry 4i
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 1.9
@@ -322,7 +322,7 @@ lig_CAT-4j:
   measurement:
     comment: Table 1, entry 4j
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.53
@@ -333,7 +333,7 @@ lig_CAT-4k:
   measurement:
     comment: Table 1, entry 4k
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 3.8
@@ -344,7 +344,7 @@ lig_CAT-4l:
   measurement:
     comment: Table 1, entry 4l
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.31
@@ -355,7 +355,7 @@ lig_CAT-4m:
   measurement:
     comment: Table 1, entry 4m
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.43
@@ -366,7 +366,7 @@ lig_CAT-4n:
   measurement:
     comment: Table 1, entry 4n
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.47
@@ -377,7 +377,7 @@ lig_CAT-4o:
   measurement:
     comment: Table 1, entry 4o
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.29
@@ -388,7 +388,7 @@ lig_CAT-4p:
   measurement:
     comment: Table 1, entry 4p
     doi: 10.1016/j.bmcl.2012.02.013
-    error: null
+    error: -1
     type: ki
     unit: uM
     value: 0.09

@@ -1,0 +1,18 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.30
+  pdb: 5TBM
+associated_sets: 
+  - Merck KGgA fep-benchmark
+comments: null
+date: 2020-07-03
+dpi: 0.17
+id: 16
+iridium_classifier: HT
+iridium_score: 0.35
+name: hif2a
+netcharge: null
+pdb: 5TBM
+references:
+  calculation: null
+  measurement: null

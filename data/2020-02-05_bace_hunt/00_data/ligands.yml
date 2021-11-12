@@ -3,7 +3,7 @@ lig_11:
   measurement:
     comment: Table 1, entry 11
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 455
@@ -14,7 +14,7 @@ lig_12:
   measurement:
     comment: Table 1, entry 12
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 24
@@ -25,7 +25,7 @@ lig_13:
   measurement:
     comment: Table 1, entry 13
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 94
@@ -36,7 +36,7 @@ lig_14:
   measurement:
     comment: Table 1, entry 14
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 68
@@ -47,7 +47,7 @@ lig_15:
   measurement:
     comment: Table 1, entry 15
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 1701
@@ -58,7 +58,7 @@ lig_16:
   measurement:
     comment: Table 1, entry 16
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 7197
@@ -69,7 +69,7 @@ lig_17:
   measurement:
     comment: Table 1, entry 17
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 28
@@ -80,7 +80,7 @@ lig_18:
   measurement:
     comment: Table 1, entry 18
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 61
@@ -91,7 +91,7 @@ lig_19:
   measurement:
     comment: Table 1, entry 19
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 60
@@ -102,7 +102,7 @@ lig_1a:
   measurement:
     comment: Table 1, entry 1a
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 36830
@@ -113,7 +113,7 @@ lig_20:
   measurement:
     comment: Table 1, entry 20
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 39
@@ -124,7 +124,7 @@ lig_21:
   measurement:
     comment: Table 1, entry 21
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 36
@@ -135,7 +135,7 @@ lig_22:
   measurement:
     comment: Table 1, entry 22
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 2864
@@ -146,7 +146,7 @@ lig_23:
   measurement:
     comment: Table 1, entry 23
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 70
@@ -157,7 +157,7 @@ lig_24:
   measurement:
     comment: Table 1, entry 24
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 74
@@ -168,7 +168,7 @@ lig_25:
   measurement:
     comment: Table 1, entry 25
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 344
@@ -179,7 +179,7 @@ lig_26:
   measurement:
     comment: Table 1, entry 26
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 28
@@ -190,7 +190,7 @@ lig_27:
   measurement:
     comment: Table 1, entry 27
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 99
@@ -201,7 +201,7 @@ lig_28:
   measurement:
     comment: Table 1, entry 28
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 278
@@ -212,7 +212,7 @@ lig_29:
   measurement:
     comment: Table 1, entry 29
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 431
@@ -223,7 +223,7 @@ lig_30:
   measurement:
     comment: Table 1, entry 30
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 8661
@@ -234,7 +234,7 @@ lig_31:
   measurement:
     comment: Table 1, entry 31
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 113
@@ -245,7 +245,7 @@ lig_32:
   measurement:
     comment: Table 1, entry 32
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 2363
@@ -256,7 +256,7 @@ lig_33:
   measurement:
     comment: Table 1, entry 33
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 6270
@@ -267,7 +267,7 @@ lig_34:
   measurement:
     comment: Table 1, entry 34
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 34
@@ -278,7 +278,7 @@ lig_35:
   measurement:
     comment: Table 1, entry 35
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 63
@@ -289,7 +289,7 @@ lig_36:
   measurement:
     comment: Table 1, entry 36
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 10
@@ -300,7 +300,7 @@ lig_37:
   measurement:
     comment: Table 1, entry 37
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 130
@@ -311,7 +311,7 @@ lig_38:
   measurement:
     comment: Table 1, entry 38
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 145
@@ -322,7 +322,7 @@ lig_39:
   measurement:
     comment: Table 1, entry 39
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 151
@@ -333,7 +333,7 @@ lig_40:
   measurement:
     comment: Table 1, entry 40
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 501
@@ -344,7 +344,7 @@ lig_41:
   measurement:
     comment: Table 1, entry 41
     doi: 10.1021/jm4002154
-    error: null
+    error: -1
     type: ic50
     unit: nM
     value: 230

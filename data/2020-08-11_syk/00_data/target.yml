@@ -1,0 +1,18 @@
+alternate:
+  iridium_classifier: HT
+  iridium_score: 0.3
+  pdb: 4PX6
+associated_sets:
+  - Merck KGgA fep-benchmark
+comments: null
+date: 2020-08-11
+dpi: null
+id: 20
+iridium_classifier: MT
+iridium_score: 0.69
+name: syk
+netcharge: null
+pdb: 4PV0
+references:
+  calculation: null
+  measurement: null
