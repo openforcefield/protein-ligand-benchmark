@@ -1,0 +1,248 @@
+edge_0340_0738:
+  ligand_a: lig_0340
+  ligand_b: lig_0738
+  name: edge_0340_0738
+edge_0340_4754:
+  ligand_a: lig_0340
+  ligand_b: lig_4754
+  name: edge_0340_4754
+edge_0395_8161:
+  ligand_a: lig_0395
+  ligand_b: lig_8161
+  name: edge_0395_8161
+edge_1038_0309:
+  ligand_a: lig_1038
+  ligand_b: lig_0309
+  name: edge_1038_0309
+edge_1038_0848:
+  ligand_a: lig_1038
+  ligand_b: lig_0848
+  name: edge_1038_0848
+edge_1038_5687:
+  ligand_a: lig_1038
+  ligand_b: lig_5687
+  name: edge_1038_5687
+edge_1038_9211:
+  ligand_a: lig_1038
+  ligand_b: lig_9211
+  name: edge_1038_9211
+edge_1423_4754:
+  ligand_a: lig_1423
+  ligand_b: lig_4754
+  name: edge_1423_4754
+edge_1801_4147:
+  ligand_a: lig_1801
+  ligand_b: lig_4147
+  name: edge_1801_4147
+edge_1939_3032:
+  ligand_a: lig_1939
+  ligand_b: lig_3032
+  name: edge_1939_3032
+edge_1939_7846:
+  ligand_a: lig_1939
+  ligand_b: lig_7846
+  name: edge_1939_7846
+edge_2333_0309:
+  ligand_a: lig_2333
+  ligand_b: lig_0309
+  name: edge_2333_0309
+edge_2333_0848:
+  ligand_a: lig_2333
+  ligand_b: lig_0848
+  name: edge_2333_0848
+edge_2333_9211:
+  ligand_a: lig_2333
+  ligand_b: lig_9211
+  name: edge_2333_9211
+edge_2750_5973:
+  ligand_a: lig_2750
+  ligand_b: lig_5973
+  name: edge_2750_5973
+edge_2750_6221:
+  ligand_a: lig_2750
+  ligand_b: lig_6221
+  name: edge_2750_6221
+edge_3032_4096:
+  ligand_a: lig_3032
+  ligand_b: lig_4096
+  name: edge_3032_4096
+edge_3032_8041:
+  ligand_a: lig_3032
+  ligand_b: lig_8041
+  name: edge_3032_8041
+edge_3484_2750:
+  ligand_a: lig_3484
+  ligand_b: lig_2750
+  name: edge_3484_2750
+edge_3484_4189:
+  ligand_a: lig_3484
+  ligand_b: lig_4189
+  name: edge_3484_4189
+edge_3806-mvEster_0340:
+  ligand_a: lig_3806-mvEster
+  ligand_b: lig_0340
+  name: edge_3806-mvEster_0340
+edge_3806-mvEster_1423:
+  ligand_a: lig_3806-mvEster
+  ligand_b: lig_1423
+  name: edge_3806-mvEster_1423
+edge_3806-mvEster_5973:
+  ligand_a: lig_3806-mvEster
+  ligand_b: lig_5973
+  name: edge_3806-mvEster_5973
+edge_3806_0340:
+  ligand_a: lig_3806
+  ligand_b: lig_0340
+  name: edge_3806_0340
+edge_3806_1423:
+  ligand_a: lig_3806
+  ligand_b: lig_1423
+  name: edge_3806_1423
+edge_3806_4147:
+  ligand_a: lig_3806
+  ligand_b: lig_4147
+  name: edge_3806_4147
+edge_3806_5973:
+  ligand_a: lig_3806
+  ligand_b: lig_5973
+  name: edge_3806_5973
+edge_3806_6221:
+  ligand_a: lig_3806
+  ligand_b: lig_6221
+  name: edge_3806_6221
+edge_4096_4147:
+  ligand_a: lig_4096
+  ligand_b: lig_4147
+  name: edge_4096_4147
+edge_4147_0395:
+  ligand_a: lig_4147
+  ligand_b: lig_0395
+  name: edge_4147_0395
+edge_4147_2750:
+  ligand_a: lig_4147
+  ligand_b: lig_2750
+  name: edge_4147_2750
+edge_4147_5973:
+  ligand_a: lig_4147
+  ligand_b: lig_5973
+  name: edge_4147_5973
+edge_4147_7846:
+  ligand_a: lig_4147
+  ligand_b: lig_7846
+  name: edge_4147_7846
+edge_4189_4415:
+  ligand_a: lig_4189
+  ligand_b: lig_4415
+  name: edge_4189_4415
+edge_4415_3032:
+  ligand_a: lig_4415
+  ligand_b: lig_3032
+  name: edge_4415_3032
+edge_4754_4147:
+  ligand_a: lig_4754
+  ligand_b: lig_4147
+  name: edge_4754_4147
+edge_5544_3806:
+  ligand_a: lig_5544
+  ligand_b: lig_3806
+  name: edge_5544_3806
+edge_5544_4147:
+  ligand_a: lig_5544
+  ligand_b: lig_4147
+  name: edge_5544_4147
+edge_5644_0309:
+  ligand_a: lig_5644
+  ligand_b: lig_0309
+  name: edge_5644_0309
+edge_5644_9211:
+  ligand_a: lig_5644
+  ligand_b: lig_9211
+  name: edge_5644_9211
+edge_5670_9211:
+  ligand_a: lig_5670
+  ligand_b: lig_9211
+  name: edge_5670_9211
+edge_5687_1056:
+  ligand_a: lig_5687
+  ligand_b: lig_1056
+  name: edge_5687_1056
+edge_5687_1801:
+  ligand_a: lig_5687
+  ligand_b: lig_1801
+  name: edge_5687_1801
+edge_5687_4147:
+  ligand_a: lig_5687
+  ligand_b: lig_4147
+  name: edge_5687_4147
+edge_5687_8161:
+  ligand_a: lig_5687
+  ligand_b: lig_8161
+  name: edge_5687_8161
+edge_5973_4096:
+  ligand_a: lig_5973
+  ligand_b: lig_4096
+  name: edge_5973_4096
+edge_5973_4754:
+  ligand_a: lig_5973
+  ligand_b: lig_4754
+  name: edge_5973_4754
+edge_6694_4147:
+  ligand_a: lig_6694
+  ligand_b: lig_4147
+  name: edge_6694_4147
+edge_7395_0738:
+  ligand_a: lig_7395
+  ligand_b: lig_0738
+  name: edge_7395_0738
+edge_7395_1939:
+  ligand_a: lig_7395
+  ligand_b: lig_1939
+  name: edge_7395_1939
+edge_7395_3484:
+  ligand_a: lig_7395
+  ligand_b: lig_3484
+  name: edge_7395_3484
+edge_8041_0738:
+  ligand_a: lig_8041
+  ligand_b: lig_0738
+  name: edge_8041_0738
+edge_8041_1939:
+  ligand_a: lig_8041
+  ligand_b: lig_1939
+  name: edge_8041_1939
+edge_8041_4147:
+  ligand_a: lig_8041
+  ligand_b: lig_4147
+  name: edge_8041_4147
+edge_8041_4415:
+  ligand_a: lig_8041
+  ligand_b: lig_4415
+  name: edge_8041_4415
+edge_8414_1038:
+  ligand_a: lig_8414
+  ligand_b: lig_1038
+  name: edge_8414_1038
+edge_8414_1056:
+  ligand_a: lig_8414
+  ligand_b: lig_1056
+  name: edge_8414_1056
+edge_8414_2333:
+  ligand_a: lig_8414
+  ligand_b: lig_2333
+  name: edge_8414_2333
+edge_8414_5644:
+  ligand_a: lig_8414
+  ligand_b: lig_5644
+  name: edge_8414_5644
+edge_9211_0848:
+  ligand_a: lig_9211
+  ligand_b: lig_0848
+  name: edge_9211_0848
+edge_9211_1056:
+  ligand_a: lig_9211
+  ligand_b: lig_1056
+  name: edge_9211_1056
+edge_9211_9237:
+  ligand_a: lig_9211
+  ligand_b: lig_9237
+  name: edge_9211_9237
