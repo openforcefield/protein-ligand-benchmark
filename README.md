@@ -31,6 +31,7 @@ pip install -e .
 ## Getting Started
 
 Example notebooks can be found in the [Documentation](https://plbenchmarks.readthedocs.io/en/latest/examples.html) and in [`examples`](examples).
+Paper repository [here](https://github.com/openforcefield/FE-Benchmarks-Best-Practices). 
 
 ## Data file tree and file description
 
