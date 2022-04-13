@@ -57,7 +57,7 @@ jobs:
 
       - name: "run tests"
         run: |
-          pytest -v -nbval-lax --cov=plbenchmark plbenchmark/tests/ examples/ docs/examples/
+          pytest -v --nbval-lax --cov=plbenchmark plbenchmark/tests/ examples/ docs/examples/
 
       - name: "codecov"
         if: ${{ github.repository == 'openforcefield/protein-ligand-benchmark'
