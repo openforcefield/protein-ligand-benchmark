@@ -3,11 +3,9 @@ on:
   pull_request:
     branches:
       - master
-      - gh-ci
   push:
     branches:
       - master
-      - gh-ci
   schedule:
     # At 07:00 UTC on Monday and Thursday.
     - cron: "0 7 * * 1,4"
@@ -23,6 +21,7 @@ defaults:
 
 jobs:
   tests:
+    if: "github.repository == 'openforcefield/protein-ligand-benchmark'"
     runs-on: ${{ matrix.OS }}-latest
     name: "tests"
     strategy:
@@ -60,8 +59,7 @@ jobs:
           pytest -v --nbval-lax --cov=plbenchmark plbenchmark/tests/ examples/ docs/examples/
 
       - name: "codecov"
-        if: ${{ github.repository == 'openforcefield/protein-ligand-benchmark'
-                && github.event != 'schedule' }}
+        if: "github.event != 'schedule'"
         uses: codecov/codecov-action@v2
         with:
           file: coverage.xml
