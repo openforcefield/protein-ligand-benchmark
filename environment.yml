@@ -1,7 +1,6 @@
 name: plbenchmark
 channels:
   - conda-forge
-  - omnia
 dependencies:
     # Base depends
   - python
@@ -22,7 +21,7 @@ dependencies:
   - networkx
   - conda-forge::pint
   - scipy
-  - openforcefield
+  - openff-toolkit
   - requests
   - git-lfs
   - nbsphinx     
