@@ -1,0 +1,67 @@
+name: "CI"
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+  schedule:
+    # At 07:00 UTC on Monday and Thursday.
+    - cron: "0 7 * * 1,4"
+
+concurrency:
+  # Cancel out any previous workflows within the same PR
+  group: "${{ github.ref }}-${{ github.head_ref }}-${{ github.workflow }}"
+  cancel-in-progress: True
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+jobs:
+  tests:
+    if: "github.repository == 'openforcefield/protein-ligand-benchmark'"
+    runs-on: ${{ matrix.OS }}-latest
+    name: "tests"
+    strategy:
+      fail-fast: False
+      matrix:
+        os: ['ubuntu', 'macos']
+        python-versions: [3.8, 3.9]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: True
+          use-mamba: True
+          python-version: ${{ matrix.python-version }}
+          miniforge-variant: Mambaforge
+          environment-file: environment.yml
+          activate-environment: plbenchmark
+ 
+      - name: "install"
+        run: python setup.py develop --no-deps
+
+      - name: "test imports"
+        run: |
+          python -Ic "import plbenchmark"
+ 
+      - name: "environment information"
+        run: |
+          mamba info -a
+          mamba list
+
+      - name: "run tests"
+        run: |
+          pytest -v --nbval-lax --cov=plbenchmark --cov-report=xml plbenchmark/tests/ examples/ docs/examples/
+
+      - name: "codecov"
+        if: "github.event != 'schedule'"
+        uses: codecov/codecov-action@v2
+        with:
+          file: coverage.xml
+          fail_ci_if_error: True
+          verbose: True

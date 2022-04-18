@@ -1,7 +1,7 @@
 ProteinLigandBenchmarks
 ==============================
 [//]: # (Badges)
-[![Travis Build Status](https://travis-ci.org/openforcefield/protein-ligand-benchmark.svg?branch=master)](https://travis-ci.org/openforcefield/protein-ligand-benchmark)
+[![build](https://github.com/openforcefield/protein-ligand-benchmark/actions/workflows/ci.yaml/badge.svg)](https://github.com/openforcefield/protein-ligand-benchmark/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/openforcefield/protein-ligand-benchmark/branch/master/graph/badge.svg)](https://codecov.io/gh/openforcefield/protein-ligand-benchmark)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/openforcefield/PLBenchmarks.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/openforcefield/PLBenchmarks/context:python)
 [![Documentation Status](https://readthedocs.org/projects/plbenchmarks/badge/?version=latest)](https://plbenchmarks.readthedocs.io/en/latest/?badge=latest)
