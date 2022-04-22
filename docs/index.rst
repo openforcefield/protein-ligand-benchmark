@@ -12,6 +12,7 @@ Protein-Ligand Benchmarks for Free Energy Calculations
 
    install
    Getting Started  <examples/01-protein-ligand-benchmark.ipynb>
+   LiveCoMS Article <https://github.com/openforcefield/FE-Benchmarks-Best-Practices>
    data
    contributions
    api
