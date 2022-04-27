@@ -7,13 +7,9 @@ import numpy as np
 from scipy import constants
 import requests
 import json
-from pint import UnitRegistry
+from openff.units import unit
 
 import warnings
-
-unit_registry = UnitRegistry()
-
-boltzmann_constant = constants.gas_constant * unit_registry("J / mole / K")
 
 
 def find_pdb_url(pdb):
@@ -101,13 +97,13 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
     # define default units
     if out_unit is None:
         if final_type == "dg":
-            out_unit = unit_registry("kilocalories / mole")
+            out_unit = unit("kilocalories / mole")
         elif final_type == "ki":
-            out_unit = unit_registry("nanomolar")
+            out_unit = unit("nanomolar")
         elif final_type == "ic50":
-            out_unit = unit_registry("nanomolar")
+            out_unit = unit("nanomolar")
         elif final_type == "pic50":
-            out_unit = unit_registry("")
+            out_unit = unit("")
 
     if original_type == "dg":
         if final_type == "dg":
@@ -115,23 +111,24 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
         elif final_type == "ki":
             result = (
                 np.exp(
-                    -value / (boltzmann_constant * temperature * unit_registry.kelvin)
+                    -value / (unit.molar_gas_constant
+                              * temperature * unit.kelvin)
                 )
-                * unit_registry.molar
+                * unit.molar
             )
             return result.to(out_unit)
         elif final_type == "ic50":
             result = (
                 np.exp(
-                    -value / (boltzmann_constant * temperature * unit_registry.kelvin)
+                    -value / (unit.molar_gas_constant * temperature * unit.kelvin)
                 )
-                * unit_registry.molar
+                * unit.molar
             )
             return result.to(out_unit)
         elif final_type == "pic50":
             result = (
                 value
-                / (boltzmann_constant * temperature * unit_registry.kelvin)
+                / (unit.molar_gas_constant * temperature * unit.kelvin)
                 / np.log(10)
             )
             return result.to(out_unit)
@@ -142,14 +139,14 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
             )
     elif original_type == "ki":
         if final_type == "dg":
-            if value < 1e-15 * unit_registry("molar"):
+            if value < 1e-15 * unit("molar"):
                 return 0.0 * out_unit
             else:
                 result = (
-                    boltzmann_constant
+                    unit.molar_gas_constant
                     * temperature
-                    * unit_registry.kelvin
-                    * np.log(value / unit_registry.molar)
+                    * unit.kelvin
+                    * np.log(value / unit.molar)
                 )
                 return result.to(out_unit).round(2)
         elif final_type == "ki":
@@ -157,10 +154,10 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
         elif final_type == "ic50":
             return value.to(out_unit)
         elif final_type == "pic50":
-            if value < 1e-15 * unit_registry("molar"):
+            if value < 1e-15 * unit("molar"):
                 return -1e15 * out_unit
             else:
-                result = -np.log(value / unit_registry.molar) / np.log(10)
+                result = -np.log(value / unit.molar) / np.log(10)
                 return result
         else:
             raise NotImplementedError(
@@ -169,14 +166,14 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
             )
     elif original_type == "ic50":
         if final_type == "dg":
-            if value < 1e-15 * unit_registry("molar"):
+            if value < 1e-15 * unit("molar"):
                 return 0.0 * out_unit
             else:
                 result = (
-                    boltzmann_constant
+                    unit.molar_gas_constant
                     * temperature
-                    * unit_registry.kelvin
-                    * np.log(value.to("molar") / unit_registry.molar)
+                    * unit.kelvin
+                    * np.log(value.to("molar") / unit.molar)
                 )
                 return result.to(out_unit).round(2)
         elif final_type == "ki":
@@ -184,10 +181,10 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
         elif final_type == "ic50":
             return value.to(out_unit)
         elif final_type == "pic50":
-            if value.to("molar") < 1e-15 * unit_registry("molar"):
+            if value.to("molar") < 1e-15 * unit("molar"):
                 return -1e15 * out_unit
             else:
-                result = -np.log(value / unit_registry.molar) / np.log(10)
+                result = -np.log(value / unit.molar) / np.log(10)
                 return result
         else:
             raise NotImplementedError(
@@ -197,18 +194,18 @@ def convert_value(value, original_type, final_type, temperature=300.0, out_unit=
     elif original_type == "pic50":
         if final_type == "dg":
             result = (
-                -boltzmann_constant
+                -1 * unit.molar_gas_constant
                 * temperature
-                * unit_registry.kelvin
+                * unit.kelvin
                 * value
                 * np.log(10)
             )
             return result.to(out_unit).round(2)
         elif final_type == "ki":
-            result = 10 ** (-value) * unit_registry("molar")
+            result = 10 ** (-value) * unit("molar")
             return result.to(out_unit)
         elif final_type == "ic50":
-            result = 10 ** (-value) * unit_registry("molar")
+            result = 10 ** (-value) * unit("molar")
             return result.to(out_unit)
         elif final_type == "pic50":
             return value.to(out_unit)
@@ -237,13 +234,13 @@ def convert_error(
     # define default units
     if out_unit is None:
         if final_type == "dg":
-            out_unit = unit_registry("kilocalories / mole")
+            out_unit = unit("kilocalories / mole")
         elif final_type == "ki":
-            out_unit = unit_registry("nanomolar")
+            out_unit = unit("nanomolar")
         elif final_type == "ic50":
-            out_unit = unit_registry("nanomolar")
+            out_unit = unit("nanomolar")
         elif final_type == "pic50":
-            out_unit = unit_registry("")
+            out_unit = unit("")
 
     if original_type == "dg":
         if final_type == "dg":
@@ -251,21 +248,21 @@ def convert_error(
         elif final_type == "ki":
             # e_ki^2 = (del K/del dG)^2 * e_dG^2
             # e_ki   = 1/RT * exp(-dG/RT) * e_dG
-            k_bt = boltzmann_constant * temperature * unit_registry.kelvin
+            k_bt = unit.molar_gas_constant * temperature * unit.kelvin
             error = (
-                1.0 / k_bt * np.exp(-value / k_bt) * error_value * unit_registry.molar
+                1.0 / k_bt * np.exp(-value / k_bt) * error_value * unit.molar
             )
             return error.to(out_unit)
         elif final_type == "ic50":
-            k_bt = boltzmann_constant * temperature * unit_registry.kelvin
+            k_bt = unit.molar_gas_constant * temperature * unit.kelvin
             error = (
-                1.0 / k_bt * np.exp(-value / k_bt) * error_value * unit_registry.molar
+                1.0 / k_bt * np.exp(-value / k_bt) * error_value * unit.molar
             )
             return error.to(out_unit)
         elif final_type == "pic50":
             # e_pic50^2 = (del pic50/del dG)^2 * e_dG^2
             # e_pic50   = 1/(RT*ln(10)) * e_dG
-            k_bt = boltzmann_constant * temperature * unit_registry.kelvin
+            k_bt = unit.molar_gas_constant * temperature * unit.kelvin
             error = 1.0 / (k_bt * np.log(10)) * error_value
             return error.to(out_unit)
         else:
@@ -275,13 +272,13 @@ def convert_error(
             )
     elif original_type == "ki":
         if final_type == "dg":
-            if value < 1e-15 * unit_registry.molar:
+            if value < 1e-15 * unit.molar:
                 return 0.0 * out_unit
             else:
                 error = (
-                    boltzmann_constant
+                    unit.molar_gas_constant
                     * temperature
-                    * unit_registry.kelvin
+                    * unit.kelvin
                     / value
                     * error_value
                 )
@@ -293,7 +290,7 @@ def convert_error(
         elif final_type == "pic50":
             # e_pic50^2 = (del pic50/del Ki)^2 * e_Ki^2
             # e_pic50   = 1/(Ki*ln(10)) * e_Ki
-            if (value * np.log(10)) < 1e-15 * unit_registry("molar"):
+            if (value * np.log(10)) < 1e-15 * unit("molar"):
                 return 1e15 * out_unit
             else:
                 result = 1 / (value * np.log(10)) * error_value
@@ -305,13 +302,13 @@ def convert_error(
             )
     elif original_type == "ic50":
         if final_type == "dg":
-            if value < 1e-15 * unit_registry.molar:
+            if value < 1e-15 * unit.molar:
                 return 0.0 * out_unit
             else:
                 error = (
-                    boltzmann_constant
+                    unit.molar_gas_constant
                     * temperature
-                    * unit_registry.kelvin
+                    * unit.kelvin
                     / value
                     * error_value
                 )
@@ -323,7 +320,7 @@ def convert_error(
         elif final_type == "pic50":
             # e_pic50^2 = (del pic50/del IC50)^2 * e_IC50^2
             # e_pic50   = 1/(IC50*ln(10)) * e_IC50
-            if (value * np.log(10)) < 1e-15 * unit_registry("molar"):
+            if (value * np.log(10)) < 1e-15 * unit("molar"):
                 return 1e15 * out_unit
             else:
                 result = 1 / (value * np.log(10)) * error_value
@@ -336,9 +333,9 @@ def convert_error(
     elif original_type == "pic50":
         if final_type == "dg":
             error = (
-                boltzmann_constant
+                unit.molar_gas_constant
                 * temperature
-                * unit_registry.kelvin
+                * unit.kelvin
                 * np.log(10)
                 * error_value
             )
@@ -347,13 +344,13 @@ def convert_error(
             # Ki = 10^(-pIC50)
             # dKi^2 = (del Ki / del pIC50)^2 * dpIC50^2
             # dKi = ln(10) * 10^(-pIC50) * dpIC50
-            error = np.log(10) * 10 ** (-value) * error_value * unit_registry("molar")
+            error = np.log(10) * 10 ** (-value) * error_value * unit("molar")
             return error.to(out_unit).round(2)
         elif final_type == "ic50":
             # IC50 = 10^(-pIC50)
             # dIC50^2 = (del IC50 / del pIC50)^2 * dpIC50^2
             # dIC50 = ln(10) * 10^(-pIC50) * dpIC50
-            error = np.log(10) * 10 ** (-value) * error_value * unit_registry("molar")
+            error = np.log(10) * 10 ** (-value) * error_value * unit("molar")
             return error.to(out_unit).round(2)
         elif final_type == "pic50":
             return error_value.to(out_unit).round(2)

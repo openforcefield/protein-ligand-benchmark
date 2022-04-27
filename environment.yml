@@ -19,7 +19,7 @@ dependencies:
   - pandas
   - rdkit
   - networkx
-  - conda-forge::pint
+  - openff-units
   - scipy
   - openff-toolkit
   - requests
