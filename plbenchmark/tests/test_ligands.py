@@ -26,7 +26,7 @@ def test_affinity_data():
     for key, d in data.items():
         lig = ligands.Ligand(d)
         lig.derive_observables(
-            derived_type="dg", out_unit=utils.unit_registry("kcal / mole")
+            derived_type="dg", out_unit=utils.unit("kcal / mole")
         )
         lig.add_mol_to_frame()
         lig.get_image()
@@ -132,7 +132,7 @@ def test_affinity_data():
         assert (
             pytest.approx(item, eps)
             == df.loc[key, ("DerivedMeasurement", "value")]
-            .to(utils.unit_registry("kcal / mole"))
+            .to(utils.unit("kcal / mole"))
             .magnitude
         )
 
