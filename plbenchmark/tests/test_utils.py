@@ -39,9 +39,9 @@ def test_find_doi_url():
         assert "fakeDOI" == utils.find_doi_url("fakeDOI")
 
 
-def conv_unit(inval, og_type, final_type, temp, out_unit, conv):
+def conv_val(inval, og_type, final_type, temp, out_unit, conv):
     """
-    Helper function to convert unit values for testing purposes.
+    Helper function to convert value units for testing purposes.
     """
     if temp is not None:
         retval = utils.convert_value(
@@ -68,8 +68,8 @@ def test_convert_value_from_dg(exp, og_type, final_type, temp, out_units,
                                conv):
     dg = utils.unit.Quantity(1, utils.unit("kJ / mole"))
 
-    conv_val = conv_unit(dg, og_type, final_type, temp, out_units, conv)
-    assert pytest.approx(exp, 0.001) == conv_val
+    comp_val = conv_val(dg, og_type, final_type, temp, out_units, conv)
+    assert pytest.approx(exp, 0.001) == comp_val
 
 
 @pytest.mark.parametrize(
@@ -93,8 +93,8 @@ def test_convert_value_from_ki(ki_units, exp, og_type, final_type, temp,
                                out_units, conv):
     ki = utils.unit.Quantity(1, ki_units)
 
-    conv_val = conv_unit(ki, og_type, final_type, temp, out_units, conv)
-    assert pytest.approx(exp, 0.001) == conv_val
+    comp_val = conv_val(ki, og_type, final_type, temp, out_units, conv)
+    assert pytest.approx(exp, 0.001) == comp_val
 
 
 @pytest.mark.parametrize(
@@ -104,7 +104,7 @@ def test_convert_value_from_ki(ki_units, exp, og_type, final_type, temp,
          ('molar', 0.0, 'ic50', 'dg', None, 'kcal / mole', 'kJ / mole'),
          ('molar', 1.0, 'ic50', 'ki', None, 'molar', 'molar'),
          ('molar', 1.0, 'ic50', 'ic50', None, 'molar', 'molar'),
-         ('molar', 1.0, 'ic50', 'pic50', None, None, None),
+         ('molar', 0.0, 'ic50', 'pic50', None, None, None),
          ('nanomolar', -51.69, 'ic50', 'dg', 300, 'kJ / mole', 'kJ/mole'),
          ('nanomolar', -12.35, 'ic50', 'dg', None, None, 'kcal / mole'),
          ('nanomolar', -12.35, 'ic50', 'dg', 300, None, 'kcal / mole'),
@@ -117,10 +117,10 @@ def test_convert_value_from_ki(ki_units, exp, og_type, final_type, temp,
          ('nanomolar', 9.0, 'ic50', 'pic50', None, None, None)])
 def test_convert_value_from_ic50(ic50_units, exp, og_type, final_type, temp,
                                  out_units, conv):
-    ic50 = utils.unit.Quantity(1, utils.unit.molar)
+    ic50 = utils.unit.Quantity(1, ic50_units)
 
-    conv_val = conv_unit(ic50, og_type, final_type, temp, out_units, conv)
-    assert pytest.approx(exp, 0.001) == conv_val
+    comp_val = conv_val(ic50, og_type, final_type, temp, out_units, conv)
+    assert pytest.approx(exp, 0.001) == comp_val
 
 
 @pytest.mark.parametrize(
@@ -144,7 +144,8 @@ def test_convert_value_from_pic50(pic50_val, exp, og_type, final_type, temp,
                                   out_units, conv):
     pic50 = utils.unit.Quantity(pic50_val, "")
 
-    conv_val = conv_unit(pic50, og_type, final_type, temp, out_units, conv)
+    comp_val = conv_val(pic50, og_type, final_type, temp, out_units, conv)
+    assert pytest.approx(exp, 0.001) == comp_val
 
 
 @pytest.mark.parametrize('value, in_units, in_type',
@@ -162,482 +163,133 @@ def test_convert_value_from_x_not_implemented_error(value, in_units, in_type):
         utils.convert_value(var, in_type, "fakeObs")
 
 
-def test_convert_error_from_dg():
-    eps = 0.001
-    ##############################################
-    # ORIGINAL = 'dg'
-    ##############################################
+def conv_err(inerr, inval, og_type, final_type, temp, out_unit, conv):
+    """
+    Helper function to convert error units for testing purposes.
+    """
+    if temp is not None:
+        retval = utils.convert_error(
+                inerr, inval, og_type, final_type, temperature=temp,
+                out_unit=out_unit)
+    else:
+        retval = utils.convert_error(
+                inerr, inval, og_type, final_type, out_unit=out_unit)
+
+    if conv is not None:
+        return retval.to(utils.unit(conv)).magnitude
+    else:
+        return retval.magnitude
+
+
+@pytest.mark.parametrize(
+        'exp, og_type, final_type, temp, out_units, conv',
+        [(0.1, 'dg', 'dg', None, 'kJ / mole', None),
+         (0.1, 'dg', 'dg', 273, 'kJ / mole', 'kJ / mole'),
+         (0.0239, 'dg', 'dg', 273, 'kJ / mole', 'kcal / mole'),
+         (0.026849, 'dg', 'ki', None, None, 'molar'),
+         (0.026849, 'dg', 'ic50', None, None, 'molar'),
+         (0.0174, 'dg', 'pic50', None, None, None)])
+def test_convert_error_from_dg(exp, og_type, final_type, temp, out_units,
+                               conv):
     dg = utils.unit.Quantity(1, utils.unit("kJ / mole"))
     edg = utils.unit.Quantity(0.1, utils.unit("kJ / mole"))
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(
-            edg, dg, "dg", "dg", out_unit=utils.unit("kJ / mole")
-        ).magnitude
-    )
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(
-            edg,
-            dg,
-            "dg",
-            "dg",
-            temperature=273,
-            out_unit=utils.unit("kJ / mole"),
-        )
-        .to(utils.unit("kJ / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.0239, eps)
-        == utils.convert_error(
-            edg,
-            dg,
-            "dg",
-            "dg",
-            temperature=273,
-            out_unit=utils.unit("kJ / mole"),
-        )
-        .to(utils.unit("kcal / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.026849, eps)
-        == utils.convert_error(edg, dg, "dg", "ki")
-        .to(utils.unit.molar)
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.026849, eps)
-        == utils.convert_error(edg, dg, "dg", "ic50")
-        .to(utils.unit.molar)
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.0174, eps)
-        == utils.convert_error(edg, dg, "dg", "pic50").magnitude
-    )
+
+    comp_err = conv_err(edg, dg, og_type, final_type, temp, out_units, conv)
+    assert pytest.approx(exp, 0.001) == comp_err
+
+
+@pytest.mark.parametrize('in_value, in_err, in_units, in_type',
+        [(1, 0.1, 'kJ / mole', 'dg'),
+         (1, 0.1, 'molar', 'ki'),
+         (1, 0.1, 'nanomolar', 'ki'),
+         (1, 0.1, 'molar', 'ic50'),
+         (1, 0.1, 'nanomolar', 'ic50'),
+         (0, 0.5, "", 'pic50'),
+         (9, 0.5, "", 'pic50')])
+def test_convert_error_from_x_notimpl(in_value, in_err, in_units, in_type):
+    val = utils.unit.Quantity(in_value, utils.unit(in_units))
+    err = utils.unit.Quantity(in_err, utils.unit(in_units))
     with pytest.raises(NotImplementedError):
-        assert "0.24 kcal/mol" == utils.convert_error(edg, dg, "dg", "fakeObs")
+        utils.convert_error(err, val, in_type, 'fakeObs')
 
 
-def test_convert_error_from_ki():
-    eps = 0.001
-    ##############################################
-    # ORIGINAL = 'ki'
-    ##############################################
-    ki = utils.unit.Quantity(1, utils.unit.molar)
-    eki = utils.unit.Quantity(0.1, utils.unit.molar)
-    assert (
-        pytest.approx(0.25, eps)
-        == utils.convert_error(
-            eki,
-            ki,
-            "ki",
-            "dg",
-            temperature=300,
-            out_unit=utils.unit("kJ / mole"),
-        )
-        .to(utils.unit("kJ / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.23, eps)  # 0.226984758
-        == utils.convert_error(
-            eki,
-            ki,
-            "ki",
-            "dg",
-            temperature=273,
-            out_unit=utils.unit("kJ / mole"),
-        )
-        .to(utils.unit("kJ / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.06, eps)  # 0.059616175
-        == utils.convert_error(
-            eki, ki, "ki", "dg", out_unit=utils.unit("kcal / mole")
-        ).magnitude
-    )
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(eki, ki, "ki", "ki", out_unit=utils.unit.molar)
-        .to(utils.unit.molar)
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(eki, ki, "ki", "ic50")
-        .to(utils.unit.molar)
-        .magnitude
-    )
+@pytest.mark.parametrize(
+        'ki_units, exp, og_type, final_type, temp, out_units, conv',
+        [('molar', 0.25, 'ki', 'dg', 300, 'kJ / mole', 'kJ / mole'),
+         ('molar', 0.23, 'ki', 'dg', 273, 'kJ / mole', 'kJ / mole'),
+         ('molar', 0.06, 'ki', 'dg', None, 'kcal / mole', None),
+         ('molar', 0.1, 'ki', 'ki', None, 'molar', 'molar'),
+         ('molar', 0.1, 'ki', 'ic50', None, None, 'molar'),
+         ('molar', 0.04, 'ki', 'pic50', None, None, None),
+         ('nanomolar', 0.25, 'ki', 'dg', 300, 'kJ / mole', None),
+         ('nanomolar', 0.06, 'ki', 'dg', None, None, 'kcal / mole'),
+         ('nanomolar', 0.06, 'ki', 'dg', 300, 'kcal / mole', None),
+         ('nanomolar', 0.23, 'ki', 'dg', 273, 'kJ / mole', None),
+         ('nanomolar', 0.1, 'ki', 'ki', None, None, 'nanomolar'),
+         ('nanomolar', 0.1, 'ki', 'ki', None, 'nanomolar', None),
+         ('nanomolar', 0.1, 'ki', 'ic50', None, None, 'nanomolar'),
+         ('nanomolar', 0.04, 'ki', 'pic50', None, None, None)])
+def test_convert_error_from_ki(ki_units, exp, og_type, final_type, temp,
+                               out_units, conv):
+    ki = utils.unit.Quantity(1, utils.unit(ki_units))
+    eki = utils.unit.Quantity(0.1, utils.unit(ki_units))
 
-    assert (
-        pytest.approx(0.04, eps)  # 0.043429448
-        == utils.convert_error(eki, ki, "ki", "pic50").magnitude
-    )
-
-    with pytest.raises(NotImplementedError):
-        assert "xxx" == utils.convert_error(eki, ki, "ki", "fakeObs")
-
-    ki = utils.unit.Quantity(1, utils.unit("nanomolar"))
-    eki = utils.unit.Quantity(0.1, utils.unit("nanomolar"))
-    assert (
-        pytest.approx(0.25, eps)  # 0.02494338
-        == utils.convert_error(
-            eki,
-            ki,
-            "ki",
-            "dg",
-            temperature=300,
-            out_unit=utils.unit("kJ / mole"),
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(0.06, eps)
-        == utils.convert_error(eki, ki, "ki", "dg")
-        .to(utils.unit("kcal / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.06, eps)
-        == utils.convert_error(
-            eki,
-            ki,
-            "ki",
-            "dg",
-            temperature=300,
-            out_unit=utils.unit("kcal / mole"),
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(0.23, eps)
-        == utils.convert_error(
-            eki,
-            ki,
-            "ki",
-            "dg",
-            temperature=273,
-            out_unit=utils.unit("kJ / mole"),
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(eki, ki, "ki", "ki")
-        .to(utils.unit("nanomolar"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(
-            eki, ki, "ki", "ki", out_unit=utils.unit("nanomolar")
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(eki, ki, "ki", "ic50")
-        .to(utils.unit("nanomolar"))
-        .magnitude
-    )
-
-    assert (
-        pytest.approx(0.04, eps)
-        == utils.convert_error(eki, ki, "ki", "pic50").magnitude
-    )
-
-    with pytest.raises(NotImplementedError):
-        assert "xxx" == utils.convert_error(eki, ki, "ki", "fakeObs")
+    comp_err = conv_err(eki, ki, og_type, final_type, temp, out_units, conv)
+    assert pytest.approx(exp, 0.001) == comp_err
 
 
-def test_convert_error_from_ic50():
-    eps = 0.001
-    ##############################################
-    # ORIGINAL = 'ic50'
-    ##############################################
-    ic50 = utils.unit.Quantity(1, utils.unit.molar)
-    eic50 = utils.unit.Quantity(0.1, utils.unit.molar)
-    assert (
-        pytest.approx(0.25, eps)
-        == utils.convert_error(
-            eic50,
-            ic50,
-            "ic50",
-            "dg",
-            temperature=300,
-            out_unit=utils.unit("kJ / mole"),
-        )
-        .to(utils.unit("kJ / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.23, eps)
-        == utils.convert_error(
-            eic50,
-            ic50,
-            "ic50",
-            "dg",
-            temperature=273,
-            out_unit=utils.unit("kJ / mole"),
-        )
-        .to(utils.unit("kJ / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.06, eps)
-        == utils.convert_error(
-            eic50, ic50, "ic50", "dg", out_unit=utils.unit("kcal / mole")
-        ).magnitude
-    )
+@pytest.mark.parametrize(
+        'ic50_units, exp, og_type, final_type, temp, out_units, conv',
+        [('molar', 0.25, 'ic50', 'dg', 300, 'kJ / mole', 'kJ / mole'),
+         ('molar', 0.23, 'ic50', 'dg', 273, 'kJ / mole', 'kJ / mole'),
+         ('molar', 0.06, 'ic50', 'dg', None, 'kcal / mole', None),
+         ('molar', 0.1, 'ic50', 'ki', None, 'molar', 'molar'),
+         ('molar', 0.1, 'ic50', 'ic50', None, 'nanomolar', 'molar'),
+         ('molar', 0.04, 'ic50', 'pic50', None, None, None),
+         ('nanomolar', 0.25, 'ic50', 'dg', 300, 'kJ /mole', None),
+         ('nanomolar', 0.06, 'ic50', 'dg', None, 'kcal / mole', None),
+         ('nanomolar', 0.06, 'ic50', 'dg', 300, None, 'kcal / mole'),
+         ('nanomolar', 0.06, 'ic50', 'dg', 300, 'kcal / mole', None),
+         ('nanomolar', 0.23, 'ic50', 'dg', 273, 'kJ / mole', None),
+         ('nanomolar', 0.1, 'ic50', 'ki', None, None, 'nanomolar'),
+         ('nanomolar', 0.1, 'ic50', 'ki', None, 'nanomolar', None),
+         ('nanomolar', 0.1, 'ic50', 'ic50', None, None, 'nanomolar'),
+         ('nanomolar', 0.1, 'ic50', 'ic50', None, 'nanomolar', None),
+         ('nanomolar', 0.04, 'ic50', 'pic50', None, None, None)])
+def test_convert_error_from_ic50(ic50_units, exp, og_type, final_type, temp,
+                                 out_units, conv):
 
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(
-            eic50, ic50, "ic50", "ki", out_unit=utils.unit.molar
-        )
-        .to(utils.unit.molar)
-        .magnitude
-    )
+    ic50 = utils.unit.Quantity(1, utils.unit(ic50_units))
+    eic50 = utils.unit.Quantity(0.1, utils.unit(ic50_units))
 
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(
-            eic50, ic50, "ic50", "ic50", out_unit=utils.unit("nanomolar")
-        )
-        .to(utils.unit.molar)
-        .magnitude
-    )
-
-    assert (
-        pytest.approx(0.04, eps)
-        == utils.convert_error(eic50, ic50, "ic50", "pic50").magnitude
-    )
-
-    with pytest.raises(NotImplementedError):
-        utils.convert_error(eic50, ic50, "ic50", "fakeObs")
-
-    ic50 = utils.unit.Quantity(1, utils.unit("nanomolar"))
-    eic50 = utils.unit.Quantity(0.1, utils.unit("nanomolar"))
-    assert (
-        pytest.approx(0.25, eps)
-        == utils.convert_error(
-            eic50,
-            ic50,
-            "ic50",
-            "dg",
-            temperature=300,
-            out_unit=utils.unit("kJ / mole"),
-        ).magnitude
-    )
-    assert (
-        pytest.approx(0.06, eps)
-        == utils.convert_error(eic50, ic50, "ic50", "dg")
-        .to(utils.unit("kcal / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.06, eps)
-        == utils.convert_error(eic50, ic50, "ic50", "dg", temperature=300)
-        .to(utils.unit("kcal / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.06, eps)
-        == utils.convert_error(
-            eic50,
-            ic50,
-            "ic50",
-            "dg",
-            temperature=300,
-            out_unit=utils.unit("kcal / mole"),
-        ).magnitude
-    )
-    assert (
-        pytest.approx(0.23, eps)
-        == utils.convert_error(
-            eic50,
-            ic50,
-            "ic50",
-            "dg",
-            temperature=273,
-            out_unit=utils.unit("kJ / mole"),
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(eic50, ic50, "ic50", "ki")
-        .to(utils.unit("nanomolar"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(
-            eic50, ic50, "ic50", "ki", out_unit=utils.unit("nanomolar")
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(eic50, ic50, "ic50", "ic50")
-        .to(utils.unit("nanomolar"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.1, eps)
-        == utils.convert_error(
-            eic50, ic50, "ic50", "ic50", out_unit=utils.unit("nanomolar")
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(0.04, eps)
-        == utils.convert_error(eic50, ic50, "ic50", "pic50").magnitude
-    )
-
-    with pytest.raises(NotImplementedError):
-        utils.convert_error(eic50, ic50, "ic50", "fakeObs")
+    comp_err = conv_err(
+        eic50, ic50, og_type, final_type, temp, out_units, conv)
+    assert pytest.approx(exp, 0.001) == comp_err
 
 
-def test_convert_error_from_pic50():
-    eps = 0.001
-    ##############################################
-    # ORIGINAL = 'pic50'
-    ##############################################
-    pic50 = utils.unit.Quantity(0, "")
-    epic50 = utils.unit.Quantity(0.5, "")
-    assert (
-        pytest.approx(2.87, eps)  # 2.871712748
-        == utils.convert_error(
-            epic50,
-            pic50,
-            "pic50",
-            "dg",
-            temperature=300.0,
-            out_unit=utils.unit("kJ / mole"),
-        ).magnitude
-    )
-    assert (
-        pytest.approx(2.61, eps)  # 2.613258601
-        == utils.convert_error(
-            epic50,
-            pic50,
-            "pic50",
-            "dg",
-            temperature=273.0,
-            out_unit=utils.unit("kJ / mole"),
-        ).magnitude
-    )
-    assert (
-        pytest.approx(0.69, eps)  # 0.686356035
-        == utils.convert_error(
-            epic50, pic50, "pic50", "dg", out_unit=utils.unit("kcal / mole")
-        ).magnitude
-    )
+@pytest.mark.parametrize(
+    'pic50_val, epic50_val, exp, og_type, final_type, temp, out_units, conv',
+    [(0, 0.5, 2.87, 'pic50', 'dg', 300, 'kJ / mole', None),
+     (0, 0.5, 2.61, 'pic50', 'dg', 273, 'kJ / mole', None),
+     (0, 0.5, 0.69, 'pic50', 'dg', None, 'kcal / mole', None),
+     (0, 0.5, 1.15, 'pic50', 'ki', None, 'molar', None),
+     (0, 0.5, 1.15, 'pic50', 'ic50', None, 'molar', 'molar'),
+     (0, 0.5, 0.5, 'pic50', 'pic50', None, None, None),
+     (9, 0.5, 2.87, 'pic50', 'dg', 300, 'kJ /mole', None),
+     (9, 0.5, 0.69, 'pic50', 'dg', None, 'kcal / mole', None),
+     (9, 0.5, 0.69, 'pic50', 'dg', 300, None, 'kcal / mole'),
+     (9, 0.5, 0.69, 'pic50', 'dg', 300, 'kcal / mole', None),
+     (9, 0.5, 2.61, 'pic50', 'dg', 273, 'kJ / mole', None),
+     (9, 0.5, 1.15, 'pic50', 'ki', None, None, 'nanomolar'),
+     (9, 0.5, 1.15, 'pic50', 'ic50', None, None, 'nanomolar'),
+     (9, 0.5, 1.15, 'pic50', 'ic50', None, 'nanomolar', 'nanomolar'),
+     (9, 0.5, 0.5, 'pic50', 'pic50', None, None, None)])
+def test_convert_error_from_pic50(pic50_val, epic50_val, exp, og_type,
+                                  final_type, temp, out_units, conv):
 
-    assert (
-        pytest.approx(1.15, eps)  # 1.151292546
-        == utils.convert_error(
-            epic50, pic50, "pic50", "ki", out_unit=utils.unit.molar
-        ).magnitude
-    )
+    pic50 = utils.unit.Quantity(pic50_val, "")
+    epic50 = utils.unit.Quantity(epic50_val, "")
 
-    assert (
-        pytest.approx(1.15, eps)  # 1.151292546
-        == utils.convert_error(
-            epic50, pic50, "pic50", "ic50", out_unit=utils.unit.molar
-        )
-        .to(utils.unit.molar)
-        .magnitude
-    )
-
-    assert (
-        pytest.approx(0.5, eps)
-        == utils.convert_error(epic50, pic50, "pic50", "pic50").magnitude
-    )
-
-    with pytest.raises(NotImplementedError):
-        utils.convert_error(epic50, pic50, "pic50", "fakeObs")
-
-    pic50 = utils.unit.Quantity(9, "")
-    epic50 = utils.unit.Quantity(0.5, "")
-    assert (
-        pytest.approx(2.87, eps)  # 2.871712748
-        == utils.convert_error(
-            epic50,
-            pic50,
-            "pic50",
-            "dg",
-            temperature=300,
-            out_unit=utils.unit("kJ / mole"),
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(0.69, eps)  # 0.686356035
-        == utils.convert_error(epic50, pic50, "pic50", "dg")
-        .to(utils.unit("kcal / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.69, eps)  # 0.686356035
-        == utils.convert_error(epic50, pic50, "pic50", "dg", temperature=300)
-        .to(utils.unit("kcal / mole"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(0.69, eps)  # 0.686356035
-        == utils.convert_error(
-            epic50,
-            pic50,
-            "pic50",
-            "dg",
-            temperature=300,
-            out_unit=utils.unit("kcal / mole"),
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(2.61, eps)  # 2.613258601
-        == utils.convert_error(
-            epic50,
-            pic50,
-            "pic50",
-            "dg",
-            temperature=273,
-            out_unit=utils.unit("kJ / mole"),
-        ).magnitude
-    )
-
-    assert (
-        pytest.approx(1.15, eps)  # 1.151292546
-        == utils.convert_error(epic50, pic50, "pic50", "ki")
-        .to(utils.unit("nanomolar"))
-        .magnitude
-    )
-
-    assert (
-        pytest.approx(1.15, eps)  # 1.151292546
-        == utils.convert_error(epic50, pic50, "pic50", "ic50")
-        .to(utils.unit("nanomolar"))
-        .magnitude
-    )
-    assert (
-        pytest.approx(1.15, eps)  # 1.151292546
-        == utils.convert_error(
-            epic50, pic50, "pic50", "ic50", out_unit=utils.unit("nanomolar")
-        )
-        .to(utils.unit("nanomolar"))
-        .magnitude
-    )
-
-    assert (
-        pytest.approx(0.5, eps)
-        == utils.convert_error(epic50, pic50, "pic50", "pic50").magnitude
-    )
-    with pytest.raises(NotImplementedError):
-        utils.convert_error(epic50, pic50, "pic50", "fakeObs")
+    comp_err = conv_err(
+        epic50, pic50, og_type, final_type, temp, out_units, conv)
+    assert pytest.approx(exp, 0.001) == comp_err
