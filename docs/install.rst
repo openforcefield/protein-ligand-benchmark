@@ -20,4 +20,3 @@ The repository uses `git-lfs (large file storage) <https://git-lfs.github.com>`_
     conda env update --file environment.yml
     pip install -e .
 
-

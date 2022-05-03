@@ -12,3 +12,8 @@ Contributions
    * `Laura Perez Benito et al., Predicting Activity Cliffs with Free-Energy Perturbation, J. Chem. Theory Comput. 2019, 15, 3, 1884–1895 <https://pubs.acs.org/doi/10.1021/acs.jctc.8b01290>`_
 * **Discussions and Suggestions** Christopher I. Bayly, Marko Breznik, Hannah E. Bruce Macdonald, John D.Chodera, Katharina Meier, Antonia S. J. S. Mey, David L. Mobley, Laura Perez Benito, Gary Tresadern, Gregory L. Warren and all members of the Open Force Field Initiative
 * **Code review and discussions** Matt Thompson, Jeffrey Wagner
+
+Related Publication
+-------------------
+The `preprint <https://arxiv.org/pdf/2105.06222.pdf>`_ on "Best practices for constructing, preparing, and evaluating protein-ligand binding affinity benchmarks" provides accompanying information to this benchmark dataset and how to use it for alchemical free energy calculations.
+For any suggestions of improvements please raise an issue in its `GitHub repository <https://github.com/openforcefield/FE-Benchmarks-Best-Practices>`_.
