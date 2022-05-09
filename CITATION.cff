@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+title: 'Protein-Ligand Benchmark Dataset for Free Energy Calculations'
+message: "If you use this software, please cite both the article from preferred-citation and the software itself."
+type: dataset
+authors:
+  - given-names: David F.
+    family-names: Hahn
+    email: dhahn3@its.jnj.com
+    affiliation: "Computational Chemistry, Janssen Research & Development"
+    orcid: 'https://orcid.org/0000-0003-2830-6880'
+  - given-names: Jeffrey R.
+    family-names: Wagner
+    affiliation: "Software Scientist, Open Force Field Initiative"
+    orcid: 'https://orcid.org/0000-0001-6448-0873'
+preferred-citation:
+  title: "Best practices for constructing, preparing, and evaluating protein-ligand binding affinity benchmarks."
+  authors:
+    - given-names: David F.
+      family-names: Hahn
+      email: dhahn3@its.jnj.com
+      affiliation: "Computational Chemistry, Janssen Research & Development"
+      orcid: 'https://orcid.org/0000-0003-2830-6880'
+    - given-names: Christopher I.
+      family-names: Bayly
+      affiliation: OpenEye Scientific Software
+      orcid: 'https://orcid.org/0000-0001-9145-6457'
+    - given-names: Hannah E.
+      family-names: Bruce Macdonald
+      orcid: 'https://orcid.org/0000-0002-5562-6866'
+    - given-names: John D.
+      family-names: Chodera
+      email: john.chodera@choderalab.org
+      orcid: 'https://orcid.org/0000-0003-0542-119X'
+      affiliation: "Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center"
+    - given-names: Vytautas
+      family-names: Gapsys
+      orcid: 'https://orcid.org/0000-0002-6761-7780'
+    - given-names: Antonia S. J. S.
+      family-names: Mey
+      orcid: 'https://orcid.org/0000-0001-7512-5252'
+    - given-names: David L.
+      family-names: Mobley
+      affiliation: "Departments of Pharmaceutical Sciences and Chemistry, University of California, Irvine."
+      orcid: 'https://orcid.org/0000-0002-1083-5533'
+    - given-names: Laura
+      family-names: Perez Benito
+      orcid: 'https://orcid.org/0000-0001-9607-9048'
+    - given-names: Christina E. M.
+      family-names: Schindler
+    - given-names: Gary
+      family-names: Tresadern
+      orcid: 'https://orcid.org/0000-0002-4801-1644'
+    - given-names: Gregory L.
+      family-names: Warren
+      orcid: 'https://orcid.org/0000-0003-4017-0162'
+  type: article
+repository-code: "https://github.com/openforcefield/protein-ligand-benchmark"
+doi: 10.5281/zenodo.4813735
