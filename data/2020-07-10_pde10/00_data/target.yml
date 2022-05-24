@@ -13,5 +13,7 @@ name: pde10
 netcharge: null
 pdb: 4BBX
 references:
-  calculation: null
-  measurement: null
+  calculation:
+  - 10.1021/acs.jctc.8b01290
+  measurement: 
+  - 10.1021/jm500073h
