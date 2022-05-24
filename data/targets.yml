@@ -46,6 +46,10 @@ p38:
   date: 2019-12-09
   dir: 2019-12-09_p38
   name: p38
+pde10:
+  date: 2020-07-10
+  dir: 2020-07-10_pde10
+  name: pde10
 pde2:
   date: 2019-09-23
   dir: 2019-09-23_pde2
@@ -58,6 +62,10 @@ ptp1b:
   date: 2019-12-12
   dir: 2019-12-12_ptp1b
   name: ptp1b
+ros1:
+  date: 2020-04-09
+  dir: 2020-04-09_ros1
+  name: ros1
 shp2:
   date: 2020-07-30
   dir: 2020-07-30_shp2
