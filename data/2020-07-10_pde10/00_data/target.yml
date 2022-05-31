@@ -10,7 +10,7 @@ id: 18
 iridium_classifier: MT
 iridium_score: 1.45
 name: pde10
-netcharge: null
+netcharge: -3 e
 pdb: 4BBX
 references:
   calculation:
