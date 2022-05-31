@@ -3,12 +3,12 @@ alternate:
   iridium_score: null
   pdb: null
 associated_sets: null
-comments: null
+comments: ''
 date: 2020-07-10
-dpi: null
+dpi: 0.37
 id: 18
-iridium_classifier: null
-iridium_score: null
+iridium_classifier: MT
+iridium_score: 1.45
 name: pde10
 netcharge: null
 pdb: 4BBX
