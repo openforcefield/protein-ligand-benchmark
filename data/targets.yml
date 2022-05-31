@@ -62,10 +62,6 @@ ptp1b:
   date: 2019-12-12
   dir: 2019-12-12_ptp1b
   name: ptp1b
-ros1:
-  date: 2020-04-09
-  dir: 2020-04-09_ros1
-  name: ros1
 shp2:
   date: 2020-07-30
   dir: 2020-07-30_shp2
