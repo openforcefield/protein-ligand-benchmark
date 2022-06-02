@@ -118,14 +118,14 @@ class Target:
                 item._data[("DerivedMeasurement", "value")].to("kcal/mole").magnitude
             )
         self.ligand_data["maxDG"] = round(
-            max(affinities) * utils.unit_registry("kcal / mole"), 1
+            max(affinities) * utils.unit("kcal / mole"), 1
         )
         self.ligand_data["minDG"] = round(
-            min(affinities) * utils.unit_registry("kcal / mole"), 1
+            min(affinities) * utils.unit("kcal / mole"), 1
         )
         # calculation of the standard deviation
         std = np.std(affinities)
-        self.ligand_data["std(DG)"] = round(std * utils.unit_registry("kcal / mole"), 1)
+        self.ligand_data["std(DG)"] = round(std * utils.unit("kcal / mole"), 1)
 
     def get_ligand_data(self):
         if self.ligand_data is None:

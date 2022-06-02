@@ -54,7 +54,7 @@ class Ligand:
                     f"Measured observable should be any of: dg, ki, ic50 or pic50."
                 )
             # let pint figure out what the unit means
-            unit = utils.unit_registry(self._data[("measurement", "unit")])
+            unit = utils.unit(self._data[("measurement", "unit")])
             self._data[("measurement", "error")] = (
                 self._data[("measurement", "error")] * unit
             )
