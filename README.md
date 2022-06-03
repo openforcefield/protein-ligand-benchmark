@@ -195,6 +195,35 @@ edge_50_60:
 
 Each entry is just a list of two ligand identifiers. 
 
+## Summary
+
+Summary of the contents of the Protein-Ligand Benchmark Dataset. It contains the available protein targets with corresponding PDB ID and number of ligands.
+
+| Target    | PDB  | N. Lig. |
+| --------- |:----:|--------:|
+| bace      | 4DJW | 36      |
+| bace_hunt | 4JPC | 32      |
+| bace_p2   | 3IN4 | 12      |
+| cdk2      | 1H1Q | 16      |
+| cdk8      | 5HNB | 33      |
+| cmet      | 4R1Y | 12      |
+| eg5       | 3L9H | 28      |
+| galectin  | 5E89 | 8       |
+| hif2a     | 5TBM | 42      |
+| jnk1      | 2GMX | 21      |
+| mcl1      | 4HW3 | 42      |
+| p38       | 3FLY | 34      |
+| pde10     | 4BBX | 35      |
+| pde2      | 6EZF | 21      |
+| pfkfb3    | 6HVI | 40      |
+| ptp1b     | 2QBS | 23      |
+| shp2      | 5EHR | 26      |
+| syk       | 4PV0 | 44      |
+| thrombin  | 2ZFF | 11      |
+| tnks2     | 4UI5 | 27      |
+| tyk2      | 4GIH | 16      |
+
+
 ## Release History
 
 Releases follow the `major.minor.micro` scheme recommended by [PEP440](https://www.python.org/dev/peps/pep-0440/#final-releases), where
