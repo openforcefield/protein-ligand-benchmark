@@ -102,7 +102,7 @@ ENV/
 .mypy_cache/
 
 # MacOS
-.DS_Store
+*.DS_Store
 
 #*#
 *~
