@@ -1,0 +1,225 @@
+lig_CAT-4k
+                    3D
+ Schrodinger Suite 2021-1.
+ 44 47  0  0  1  0            999 V2000
+   29.9692   13.1218   20.2728 H   0  0  0  0  0  0
+   29.3301   12.2721   20.4627 C   0  0  0  0  0  0
+   29.8792   11.2570   21.1553 N   0  0  0  0  0  0
+   29.1055   10.1815   21.4019 C   0  0  0  0  0  0
+   29.5696    9.3752   21.9447 H   0  0  0  0  0  0
+   27.7645   10.0766   20.9983 C   0  0  0  0  0  0
+   27.1818    9.2062   21.2560 H   0  0  0  0  0  0
+   27.1907   11.1335   20.2670 C   0  0  0  0  0  0
+   25.7888   11.0994   19.8250 C   0  0  0  0  0  0
+   24.7514   10.9417   20.7649 C   0  0  0  0  0  0
+   25.0153   10.8159   21.8033 H   0  0  0  0  0  0
+   23.3875   10.9744   20.3841 C   0  0  0  0  0  0
+   22.2902   10.8221   21.4545 C   0  0  2  0  0  0
+   20.8521   10.7001   20.9008 C   0  0  0  0  0  0
+   20.0546   11.8402   20.6286 C   0  0  0  0  0  0
+   20.4429   12.8386   20.7606 H   0  0  0  0  0  0
+   18.7259   11.6970   20.1886 C   0  0  0  0  0  0
+   18.1206   12.5720   20.0083 H   0  0  0  0  0  0
+   18.1811   10.4190   19.9920 C   0  0  0  0  0  0
+   17.1558   10.3150   19.6730 H   0  0  0  0  0  0
+   18.9715    9.2797   20.2018 C   0  0  0  0  0  0
+   18.5632    8.2933   20.0356 H   0  0  0  0  0  0
+   20.2978    9.4200   20.6449 C   0  0  0  0  0  0
+   20.8836    8.5239   20.8039 H   0  0  0  0  0  0
+   22.4041   11.9274   22.5351 C   0  0  0  0  0  0
+   22.3713   13.1392   22.3070 O   0  0  0  0  0  0
+   22.5669   11.3608   23.7269 N   0  0  0  0  0  0
+   22.7549   12.0135   25.0210 C   0  0  0  0  0  0
+   22.1254   11.5588   25.7878 H   0  0  0  0  0  0
+   23.7947   11.9311   25.3363 H   0  0  0  0  0  0
+   22.5029   13.0743   24.9746 H   0  0  0  0  0  0
+   22.6750   10.0077   23.5226 C   0  0  0  0  0  0
+   22.8964    9.1860   24.6018 N   0  0  0  0  0  0
+   22.9899    8.1808   24.4829 H   0  0  0  0  0  0
+   22.5761    9.6602   22.2912 N   0  0  0  0  0  0
+   23.0763   11.1411   19.0138 C   0  0  0  0  0  0
+   22.0532   11.1673   18.6711 H   0  0  0  0  0  0
+   24.1027   11.2769   18.0623 C   0  0  0  0  0  0
+   23.8568   11.4043   17.0187 H   0  0  0  0  0  0
+   25.4491   11.2599   18.4673 C   0  0  0  0  0  0
+   26.2298   11.3859   17.7304 H   0  0  0  0  0  0
+   28.0026   12.2545   19.9939 C   0  0  0  0  0  0
+   27.6078   13.0948   19.4394 H   0  0  0  0  0  0
+   22.9944    9.4695   25.5701 H   0  0  0  0  0  0
+  1  2  1  0  0  0
+  2 42  1  0  0  0
+  2  3  2  0  0  0
+  3  4  1  0  0  0
+  4  5  1  0  0  0
+  4  6  2  0  0  0
+  6  7  1  0  0  0
+  6  8  1  0  0  0
+  8  9  1  0  0  0
+  8 42  2  0  0  0
+  9 40  1  0  0  0
+  9 10  2  0  0  0
+ 10 11  1  0  0  0
+ 10 12  1  0  0  0
+ 12 36  2  0  0  0
+ 12 13  1  0  0  0
+ 13 35  1  0  0  0
+ 13 25  1  0  0  0
+ 13 14  1  0  0  0
+ 14 23  1  0  0  0
+ 14 15  2  0  0  0
+ 15 16  1  0  0  0
+ 15 17  1  0  0  0
+ 17 18  1  0  0  0
+ 17 19  2  0  0  0
+ 19 20  1  0  0  0
+ 19 21  1  0  0  0
+ 21 22  1  0  0  0
+ 21 23  2  0  0  0
+ 23 24  1  0  0  0
+ 25 26  2  0  0  0
+ 25 27  1  0  0  0
+ 27 28  1  0  0  0
+ 27 32  1  0  0  0
+ 28 29  1  0  0  0
+ 28 30  1  0  0  0
+ 28 31  1  0  0  0
+ 32 33  1  0  0  0
+ 32 35  2  0  0  0
+ 33 34  1  0  0  0
+ 33 44  1  0  0  0
+ 36 37  1  0  0  0
+ 36 38  1  0  0  0
+ 38 39  1  0  0  0
+ 38 40  2  0  0  0
+ 40 41  1  0  0  0
+ 42 43  1  0  0  0
+M  END
+> <s_m_source_file>
+ligprep_bace.smi
+
+> <i_m_source_file_index>
+31
+
+> <i_lp_mmshare_version>
+53161
+
+> <i_f3d_flags>
+0
+
+> <s_epik_input>
+W2NIXTFbY0hdbltjSF1bY0hdYzEtYzJbY0hdYyhbY0hdW2NIXVtjSF0yKVtDQEBdMyhDKD1PKU4oW0NIM10pQyg9TjMpW05IMl0pYzRbY0hdW2NIXVtjSF1bY0hdW2NIXTQ=
+
+> <s_epik_cmdline>
+J2VwaWtfcHl0aG9uJywgJy1waHQnLCAnMC4wJywgJy1waCcsICc3LjQnLCAnLXRuJywgJzgnLCAnLW1hJywgJzUwMCcsICctaW1hZScsICc8aW5maWxlLm1hZT4nLCAnLW9tYWUnLCAnPG91dGZpbGUubWFlPic=
+
+> <r_lp_tautomer_probability>
+1
+
+> <r_epik_Ionization_Penalty>
+0.5063
+
+> <r_epik_Ionization_Penalty_Charging>
+0
+
+> <r_epik_Ionization_Penalty_Neutral>
+0.5063
+
+> <r_epik_State_Penalty>
+-0
+
+> <r_epik_Charging_Adjusted_Penalty>
+0
+
+> <i_epik_Tot_Q>
+0
+
+> <i_epik_Tot_abs_Q>
+0
+
+> <s_epik_Chemistry_Notes>
+This compound has an imine and may undergo hydrolysis.
+
+> <s_lp_Force_Field>
+S-OPLS
+
+> <r_lp_Energy>
+51.5245
+
+> <b_lp_Chiralities_Consistent>
+1
+
+> <s_lp_Variant>
+lig_CAT-4k-1
+
+> <s_i_glide_gridfile>
+glide-grid_4DJW-BACE
+
+> <i_i_glide_lignum>
+31
+
+> <i_i_glide_rotatable_bonds>
+3
+
+> <r_i_docking_score>
+-6.23129
+
+> <r_i_glide_ligand_efficiency>
+-0.239665
+
+> <r_i_glide_ligand_efficiency_sa>
+-0.710006
+
+> <r_i_glide_ligand_efficiency_ln>
+-1.4634
+
+> <r_i_glide_gscore>
+-6.23129
+
+> <r_i_glide_lipo>
+-2.55783
+
+> <r_i_glide_hbond>
+-0.193863
+
+> <r_i_glide_metal>
+-0
+
+> <r_i_glide_rewards>
+-1.35725
+
+> <r_i_glide_evdw>
+-41.5212
+
+> <r_i_glide_ecoul>
+-2.73177
+
+> <r_i_glide_erotb>
+0.485235
+
+> <r_i_glide_esite>
+-0.121752
+
+> <r_i_glide_emodel>
+-59.1078
+
+> <r_i_glide_energy>
+-44.253
+
+> <r_i_glide_einternal>
+1.10566
+
+> <i_i_glide_confnum>
+4
+
+> <i_i_glide_posenum>
+10
+
+> <r_i_glide_eff_state_penalty>
+-0
+
+> <r_i_glide_rmsd>
+0.100207
+
+> <s_glide_core_constrain_type>
+snapped_core_restrain
+$$$$

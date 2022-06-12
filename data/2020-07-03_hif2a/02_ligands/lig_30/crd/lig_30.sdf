@@ -1,0 +1,194 @@
+lig_30
+                    3D
+ Schrodinger Suite 2021-1.
+ 31 32  0  0  1  0            999 V2000
+   17.8518   -1.2920   -9.8512 H   0  0  0  0  0  0
+   18.8381   -1.0529  -10.2261 C   0  0  0  0  0  0
+   19.5532   -2.0334  -10.9373 C   0  0  0  0  0  0
+   18.9965   -3.2414  -11.1681 F   0  0  0  0  0  0
+   20.8409   -1.7527  -11.4285 C   0  0  0  0  0  0
+   21.3967   -2.4933  -11.9885 H   0  0  0  0  0  0
+   21.4035   -0.4836  -11.1871 C   0  0  0  0  0  0
+   22.6280   -0.1939  -11.7043 O   0  0  0  0  0  0
+   23.7424   -0.3395  -10.9127 C   0  0  0  0  0  0
+   23.7250   -0.9157   -9.6194 C   0  0  0  0  0  0
+   22.8171   -1.2822   -9.1546 H   0  0  0  0  0  0
+   24.9302   -1.0708   -8.8962 C   0  0  0  0  0  0
+   24.9143   -1.5327   -7.9186 H   0  0  0  0  0  0
+   26.1473   -0.6696   -9.4756 C   0  0  0  0  0  0
+   27.6622   -0.9693   -8.5591 S   0  0  0  0  0  0
+   27.3702   -1.9228   -7.4825 O   0  0  0  0  0  0
+   28.7477   -1.3169   -9.4835 O   0  0  0  0  0  0
+   28.0261    0.6664   -7.8104 C   0  0  0  0  0  0
+   27.5644    1.4837   -8.3683 H   0  0  0  0  0  0
+   29.3328    0.8354   -7.8871 F   0  0  0  0  0  0
+   27.6260    0.6965   -6.5406 F   0  0  0  0  0  0
+   26.1644   -0.0282  -10.7408 C   0  0  0  0  0  0
+   27.6260    0.5925  -11.4328 Cl  0  0  0  0  0  0
+   24.9613    0.1152  -11.4510 C   0  0  0  0  0  0
+   24.9678    0.7605  -12.7519 C   0  0  0  0  0  0
+   24.9746    1.2752  -13.7839 N   0  0  0  0  0  0
+   20.7059    0.5002  -10.4722 C   0  0  0  0  0  0
+   21.1619    1.4654  -10.2830 H   0  0  0  0  0  0
+   19.4076    0.2231  -10.0055 C   0  0  0  0  0  0
+   18.6988    1.2554   -9.2769 C   0  0  0  0  0  0
+   18.1406    2.0752   -8.6834 N   0  0  0  0  0  0
+  1  2  1  0  0  0
+  2 29  1  0  0  0
+  2  3  2  0  0  0
+  3  4  1  0  0  0
+  3  5  1  0  0  0
+  5  6  1  0  0  0
+  5  7  2  0  0  0
+  7  8  1  0  0  0
+  7 27  1  0  0  0
+  8  9  1  0  0  0
+  9 24  1  0  0  0
+  9 10  2  0  0  0
+ 10 11  1  0  0  0
+ 10 12  1  0  0  0
+ 12 13  1  0  0  0
+ 12 14  2  0  0  0
+ 14 15  1  0  0  0
+ 14 22  1  0  0  0
+ 15 16  2  0  0  0
+ 15 17  2  0  0  0
+ 15 18  1  0  0  0
+ 18 19  1  0  0  0
+ 18 20  1  0  0  0
+ 18 21  1  0  0  0
+ 22 23  1  0  0  0
+ 22 24  2  0  0  0
+ 24 25  1  0  0  0
+ 25 26  3  0  0  0
+ 27 28  1  0  0  0
+ 27 29  2  0  0  0
+ 29 30  1  0  0  0
+ 30 31  3  0  0  0
+M  END
+> <s_m_source_file>
+ligprep_hif2a.smi
+
+> <i_m_source_file_index>
+27
+
+> <i_lp_mmshare_version>
+53161
+
+> <i_f3d_flags>
+0
+
+> <s_epik_input>
+RmMxW2NIXWMoQyNOKVtjSF1jKFtjSF0xKU9jMltjSF1bY0hdYyhTKD1PKSg9TylbQ0hdKEYpRiljKENsKWMyQyNO
+
+> <s_epik_cmdline>
+J2VwaWtfcHl0aG9uJywgJy1waHQnLCAnMC4wJywgJy1waCcsICc3LjQnLCAnLXRuJywgJzgnLCAnLW1hJywgJzUwMCcsICctaW1hZScsICc8aW5maWxlLm1hZT4nLCAnLW9tYWUnLCAnPG91dGZpbGUubWFlPic=
+
+> <r_lp_tautomer_probability>
+1
+
+> <r_epik_Ionization_Penalty>
+0
+
+> <r_epik_Ionization_Penalty_Charging>
+0
+
+> <r_epik_Ionization_Penalty_Neutral>
+0
+
+> <r_epik_State_Penalty>
+-0
+
+> <r_epik_Charging_Adjusted_Penalty>
+0
+
+> <i_epik_Tot_Q>
+0
+
+> <i_epik_Tot_abs_Q>
+0
+
+> <s_lp_Force_Field>
+S-OPLS
+
+> <r_lp_Energy>
+27.9574
+
+> <b_lp_Chiralities_Consistent>
+1
+
+> <s_lp_Variant>
+lig_30-1
+
+> <s_i_glide_gridfile>
+glide-grid_5TBM-HIF2a
+
+> <i_i_glide_lignum>
+27
+
+> <i_i_glide_rotatable_bonds>
+4
+
+> <r_i_docking_score>
+-10.0733
+
+> <r_i_glide_ligand_efficiency>
+-0.402933
+
+> <r_i_glide_ligand_efficiency_sa>
+-1.17818
+
+> <r_i_glide_ligand_efficiency_ln>
+-2.38768
+
+> <r_i_glide_gscore>
+-10.0733
+
+> <r_i_glide_lipo>
+-3.96335
+
+> <r_i_glide_hbond>
+0
+
+> <r_i_glide_metal>
+-0
+
+> <r_i_glide_rewards>
+-3.42605
+
+> <r_i_glide_evdw>
+-53.3208
+
+> <r_i_glide_ecoul>
+-3.59009
+
+> <r_i_glide_erotb>
+0.520622
+
+> <r_i_glide_esite>
+0
+
+> <r_i_glide_emodel>
+-88.4759
+
+> <r_i_glide_energy>
+-56.9109
+
+> <r_i_glide_einternal>
+0.201415
+
+> <i_i_glide_confnum>
+1
+
+> <i_i_glide_posenum>
+5
+
+> <r_i_glide_eff_state_penalty>
+-0
+
+> <r_i_glide_rmsd>
+0.0826626
+
+> <s_glide_core_constrain_type>
+snapped_core_restrain
+$$$$

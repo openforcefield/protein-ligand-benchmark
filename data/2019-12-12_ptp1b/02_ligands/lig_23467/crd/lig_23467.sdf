@@ -1,0 +1,195 @@
+lig_23467
+                    3D
+ Schrodinger Suite 2021-1.
+ 31 32  0  0  1  0            999 V2000
+   44.3782    8.9216   -0.1215 H   0  0  0  0  0  0
+   45.1845    9.4932    0.3156 C   0  0  0  0  0  0
+   45.0024   10.8568    0.5979 C   0  0  0  0  0  0
+   46.0367   11.6268    1.1803 C   0  0  0  0  0  0
+   47.2717   10.9787    1.4716 C   0  0  0  0  0  0
+   47.4544    9.5957    1.1919 C   0  0  0  0  0  0
+   46.4047    8.8677    0.6231 C   0  0  0  0  0  0
+   46.5362    7.8149    0.4152 H   0  0  0  0  0  0
+   48.5686    8.8256    1.4299 O   0  0  0  0  0  0
+   49.6249    9.3751    2.1655 C   0  0  0  0  0  0
+   50.3365    8.5961    2.4529 H   0  0  0  0  0  0
+   50.1590   10.0865    1.5303 H   0  0  0  0  0  0
+   49.2358    9.8354    3.0741 H   0  0  0  0  0  0
+   48.0753   11.5454    1.9114 H   0  0  0  0  0  0
+   45.7857   13.0455    1.4969 C   0  0  0  0  0  0
+   46.2426   13.8308    2.5260 C   0  0  0  0  0  0
+   45.7350   15.1589    2.5538 C   0  0  0  0  0  0
+   44.8647   15.4162    1.5272 C   0  0  0  0  0  0
+   44.6760   13.9965    0.5126 S   0  0  0  0  0  0
+   44.1068   16.6498    1.1966 C   0  0  0  0  0  0
+   43.5827   16.7786    0.0712 O   0  0  0  0  0  0
+   44.0253   17.5594    2.0560 O   0  5  0  0  0  0
+   46.0232   16.0465    3.5202 O   0  0  0  0  0  0
+   47.2232   16.7702    3.3510 C   0  0  0  0  0  0
+   47.0762   17.5446    2.5947 H   0  0  0  0  0  0
+   48.0190   16.1142    2.9987 H   0  0  0  0  0  0
+   47.6222   17.4045    4.6856 C   0  0  0  0  0  0
+   48.7253   17.9966    4.7157 O   0  0  0  0  0  0
+   46.8238   17.2886    5.6540 O   0  5  0  0  0  0
+   47.3986   13.2416    3.9155 Br  0  0  0  0  0  0
+   44.0420   11.2983    0.3777 H   0  0  0  0  0  0
+  1  2  1  0  0  0
+  2  7  1  0  0  0
+  2  3  2  0  0  0
+  3  4  1  0  0  0
+  3 31  1  0  0  0
+  4  5  2  0  0  0
+  4 15  1  0  0  0
+  5  6  1  0  0  0
+  5 14  1  0  0  0
+  6  7  2  0  0  0
+  6  9  1  0  0  0
+  7  8  1  0  0  0
+  9 10  1  0  0  0
+ 10 11  1  0  0  0
+ 10 12  1  0  0  0
+ 10 13  1  0  0  0
+ 15 19  1  0  0  0
+ 15 16  2  0  0  0
+ 16 17  1  0  0  0
+ 16 30  1  0  0  0
+ 17 18  2  0  0  0
+ 17 23  1  0  0  0
+ 18 19  1  0  0  0
+ 18 20  1  0  0  0
+ 20 21  2  0  0  0
+ 20 22  1  0  0  0
+ 23 24  1  0  0  0
+ 24 25  1  0  0  0
+ 24 26  1  0  0  0
+ 24 27  1  0  0  0
+ 27 28  2  0  0  0
+ 27 29  1  0  0  0
+M  CHG  2  22  -1  29  -1
+M  END
+> <s_m_source_file>
+ligprep_ptp1b.smi
+
+> <i_m_source_file_index>
+6
+
+> <i_lp_mmshare_version>
+53161
+
+> <i_f3d_flags>
+0
+
+> <s_epik_input>
+W0NIM11PYyhbY0hdMSlbY0hdW2NIXVtjSF1jMS1jMmMoQnIpYyhjKHMyKUMoPU8pW09IXSlPW0NIMl1DKD1PKVtPSF0=
+
+> <s_epik_cmdline>
+J2VwaWtfcHl0aG9uJywgJy1waHQnLCAnMC4wJywgJy1waCcsICc3LjQnLCAnLXRuJywgJzgnLCAnLW1hJywgJzUwMCcsICctaW1hZScsICc8aW5maWxlLm1hZT4nLCAnLW9tYWUnLCAnPG91dGZpbGUubWFlPic=
+
+> <r_lp_tautomer_probability>
+1
+
+> <r_epik_Ionization_Penalty>
+0.0001
+
+> <r_epik_Ionization_Penalty_Charging>
+0.0001
+
+> <r_epik_Ionization_Penalty_Neutral>
+0
+
+> <r_epik_State_Penalty>
+-0
+
+> <r_epik_Charging_Adjusted_Penalty>
+9.21585e-05
+
+> <i_epik_Tot_Q>
+-2
+
+> <i_epik_Tot_abs_Q>
+2
+
+> <s_lp_Force_Field>
+S-OPLS
+
+> <r_lp_Energy>
+44.3714
+
+> <b_lp_Chiralities_Consistent>
+1
+
+> <s_lp_Variant>
+lig_23467-1
+
+> <s_i_glide_gridfile>
+glide-grid_2QBS-PTP1B
+
+> <i_i_glide_lignum>
+6
+
+> <i_i_glide_rotatable_bonds>
+6
+
+> <r_i_docking_score>
+-8.07993
+
+> <r_i_glide_ligand_efficiency>
+-0.367269
+
+> <r_i_glide_ligand_efficiency_sa>
+-1.0291
+
+> <r_i_glide_ligand_efficiency_ln>
+-1.97503
+
+> <r_i_glide_gscore>
+-8.07993
+
+> <r_i_glide_lipo>
+-1.22267
+
+> <r_i_glide_hbond>
+-1.14573
+
+> <r_i_glide_metal>
+-0
+
+> <r_i_glide_rewards>
+-0.781849
+
+> <r_i_glide_evdw>
+-32.4838
+
+> <r_i_glide_ecoul>
+-29.0734
+
+> <r_i_glide_erotb>
+0.786566
+
+> <r_i_glide_esite>
+-0.0920515
+
+> <r_i_glide_emodel>
+-120.775
+
+> <r_i_glide_energy>
+-61.5572
+
+> <r_i_glide_einternal>
+0.0475726
+
+> <i_i_glide_confnum>
+5
+
+> <i_i_glide_posenum>
+7
+
+> <r_i_glide_eff_state_penalty>
+-0
+
+> <r_i_glide_rmsd>
+0.0874003
+
+> <s_glide_core_constrain_type>
+snapped_core_restrain
+$$$$

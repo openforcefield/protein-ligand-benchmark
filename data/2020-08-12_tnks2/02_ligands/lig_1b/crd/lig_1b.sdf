@@ -1,0 +1,195 @@
+lig_1b
+                    3D
+ Schrodinger Suite 2021-1.
+ 31 33  0  0  1  0            999 V2000
+  -41.1170  -15.3111   16.0482 H   0  0  0  0  0  0
+  -40.4937  -14.4997   15.6981 C   0  0  0  0  0  0
+  -39.7703  -13.7227   16.6215 C   0  0  0  0  0  0
+  -39.8445  -13.9455   17.6739 H   0  0  0  0  0  0
+  -38.9549  -12.6665   16.1737 C   0  0  0  0  0  0
+  -38.3971  -12.0760   16.8875 H   0  0  0  0  0  0
+  -38.8785  -12.3810   14.7961 C   0  0  0  0  0  0
+  -39.6117  -13.1466   13.8602 C   0  0  0  0  0  0
+  -40.4144  -14.2125   14.3204 C   0  0  0  0  0  0
+  -40.9800  -14.8037   13.6137 H   0  0  0  0  0  0
+  -39.5717  -12.8459   12.4854 N   0  0  0  0  0  0
+  -38.8557  -11.8399   12.0540 C   0  0  0  0  0  0
+  -38.7973  -11.5080   10.5956 C   0  0  0  0  0  0
+  -39.2701  -12.4213    9.6281 C   0  0  0  0  0  0
+  -39.6624  -13.3860    9.9264 H   0  0  0  0  0  0
+  -39.2366  -12.0859    8.2626 C   0  0  0  0  0  0
+  -39.6191  -12.8121    7.5646 H   0  0  0  0  0  0
+  -38.7185  -10.8378    7.8387 C   0  0  0  0  0  0
+  -38.6611  -10.4291    6.5264 O   0  0  0  0  0  0
+  -39.1403  -11.3206    5.5308 C   0  0  0  0  0  0
+  -39.0368  -10.8556    4.5503 H   0  0  0  0  0  0
+  -40.1951  -11.5569    5.6798 H   0  0  0  0  0  0
+  -38.5586  -12.2448    5.5245 H   0  0  0  0  0  0
+  -38.2265   -9.9429    8.8056 C   0  0  0  0  0  0
+  -37.8231   -8.9902    8.4956 H   0  0  0  0  0  0
+  -38.2641  -10.2668   10.1722 C   0  0  0  0  0  0
+  -37.8875   -9.5411   10.8808 H   0  0  0  0  0  0
+  -38.1002  -11.0704   12.9512 N   0  0  0  0  0  0
+  -37.4922  -10.3560   12.5678 H   0  0  0  0  0  0
+  -38.0319  -11.2659   14.2762 C   0  0  0  0  0  0
+  -37.3194  -10.5930   15.0160 O   0  0  0  0  0  0
+  1  2  1  0  0  0
+  2  9  1  0  0  0
+  2  3  2  0  0  0
+  3  4  1  0  0  0
+  3  5  1  0  0  0
+  5  6  1  0  0  0
+  5  7  2  0  0  0
+  7 30  1  0  0  0
+  7  8  1  0  0  0
+  8  9  2  0  0  0
+  8 11  1  0  0  0
+  9 10  1  0  0  0
+ 11 12  2  0  0  0
+ 12 13  1  0  0  0
+ 12 28  1  0  0  0
+ 13 26  1  0  0  0
+ 13 14  2  0  0  0
+ 14 15  1  0  0  0
+ 14 16  1  0  0  0
+ 16 17  1  0  0  0
+ 16 18  2  0  0  0
+ 18 19  1  0  0  0
+ 18 24  1  0  0  0
+ 19 20  1  0  0  0
+ 20 21  1  0  0  0
+ 20 22  1  0  0  0
+ 20 23  1  0  0  0
+ 24 25  1  0  0  0
+ 24 26  2  0  0  0
+ 26 27  1  0  0  0
+ 28 29  1  0  0  0
+ 28 30  1  0  0  0
+ 30 31  2  0  0  0
+M  END
+> <s_m_source_file>
+ligprep_tnks2.smi
+
+> <i_m_source_file_index>
+2
+
+> <i_lp_mmshare_version>
+53161
+
+> <i_f3d_flags>
+0
+
+> <s_epik_input>
+W2NIXTFbY0hdW2NIXVtjSF1jKGMxMiluYyhbbkhdYzI9TyktYzNbY0hdW2NIXWMoT1tDSDNdKVtjSF1bY0hdMw==
+
+> <s_epik_cmdline>
+J2VwaWtfcHl0aG9uJywgJy1waHQnLCAnMC4wJywgJy1waCcsICc3LjQnLCAnLXRuJywgJzgnLCAnLW1hJywgJzUwMCcsICctaW1hZScsICc8aW5maWxlLm1hZT4nLCAnLW9tYWUnLCAnPG91dGZpbGUubWFlPic=
+
+> <r_lp_tautomer_probability>
+1
+
+> <r_epik_Ionization_Penalty>
+0.0257
+
+> <r_epik_Ionization_Penalty_Charging>
+0.0257
+
+> <r_epik_Ionization_Penalty_Neutral>
+0
+
+> <r_epik_State_Penalty>
+-0
+
+> <r_epik_Charging_Adjusted_Penalty>
+0.025659
+
+> <i_epik_Tot_Q>
+0
+
+> <i_epik_Tot_abs_Q>
+0
+
+> <s_lp_Force_Field>
+S-OPLS
+
+> <r_lp_Energy>
+26.2838
+
+> <b_lp_Chiralities_Consistent>
+1
+
+> <s_lp_Variant>
+lig_1b-1
+
+> <s_i_glide_gridfile>
+glide-grid_4UI5-TNKS2
+
+> <i_i_glide_lignum>
+2
+
+> <i_i_glide_rotatable_bonds>
+2
+
+> <r_i_docking_score>
+-11.4864
+
+> <r_i_glide_ligand_efficiency>
+-0.604548
+
+> <r_i_glide_ligand_efficiency_sa>
+-1.61318
+
+> <r_i_glide_ligand_efficiency_ln>
+-2.91205
+
+> <r_i_glide_gscore>
+-11.4864
+
+> <r_i_glide_lipo>
+-4.04922
+
+> <r_i_glide_hbond>
+-0.864
+
+> <r_i_glide_metal>
+-0
+
+> <r_i_glide_rewards>
+-3.41657
+
+> <r_i_glide_evdw>
+-44.3649
+
+> <r_i_glide_ecoul>
+-8.82907
+
+> <r_i_glide_erotb>
+0.385975
+
+> <r_i_glide_esite>
+0
+
+> <r_i_glide_emodel>
+-90.3458
+
+> <r_i_glide_energy>
+-53.194
+
+> <r_i_glide_einternal>
+0.00246445
+
+> <i_i_glide_confnum>
+2
+
+> <i_i_glide_posenum>
+8
+
+> <r_i_glide_eff_state_penalty>
+-0
+
+> <r_i_glide_rmsd>
+0.0353915
+
+> <s_glide_core_constrain_type>
+snapped_core_restrain
+$$$$
