@@ -1,8 +1,0 @@
-[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)F)F)F)[H])([H])O[H])[H])[H],lig_01_ligF
-[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)OC([H])([H])[H])F)F)[H])([H])O[H])[H])[H],lig_02_ligOMe
-[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)N([H])C([H])([H])[H])F)F)[H])([H])O[H])[H])[H],lig_03_ligNHMe
-[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)N(C([H])([H])[H])C([H])([H])[H])F)F)[H])([H])O[H])[H])[H],lig_04_ligNMe2
-[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)OC([H])([H])C([H])([H])[H])F)F)[H])([H])O[H])[H])[H],lig_05_ligOEt
-[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)N5C(C(C(C5([H])[H])([H])[H])([H])[H])([H])[H])F)F)[H])([H])O[H])[H])[H],lig_06_ligPyr
-[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)O[H])F)F)[H])([H])O[H])[H])[H],lig_07_ligOH
-[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])S[C@]2([C@]([C@@]([C@@]([C@@](O2)([H])C([H])([H])O[H])([H])O[H])([H])N3C(=C(N=N3)c4c(c(c(c(c4F)F)N([H])[H])F)F)[H])([H])O[H])[H])[H],lig_08_ligNH2

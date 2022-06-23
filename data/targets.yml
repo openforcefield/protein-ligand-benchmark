@@ -1,84 +1,84 @@
 bace:
   date: 2020-02-04
-  dir: 2020-02-04_bace
+  dir: bace
   name: bace
 bace_hunt:
   date: 2020-02-05
-  dir: 2020-02-05_bace_hunt
+  dir: bace_hunt
   name: bace_hunt
 bace_p2:
   date: 2020-02-06
-  dir: 2020-02-06_bace_p2
+  dir: bace_p2
   name: bace_p2
 cdk2:
   date: 2019-12-13
-  dir: 2019-12-13_cdk2
+  dir: cdk2
   name: cdk2
 cdk8:
   date: 2020-07-01
-  dir: 2020-07-01_cdk8
+  dir: cdk8
   name: cdk8
 cmet:
   date: 2019-12-13
-  dir: 2019-12-13_cmet
+  dir: cmet
   name: cmet
 eg5:
   date: 2020-06-19
-  dir: 2020-06-19_eg5
+  dir: eg5
   name: eg5
 galectin:
   date: 2019-12-13
-  dir: 2019-12-13_galectin
+  dir: galectin
   name: galectin
 hif2a:
   date: 2020-07-03
-  dir: 2020-07-03_hif2a
+  dir: hif2a
   name: hif2a
 jnk1:
   date: 2019-09-23
-  dir: 2019-09-23_jnk1
+  dir: jnk1
   name: jnk1
 mcl1:
   date: 2019-12-13
-  dir: 2019-12-13_mcl1
+  dir: mcl1
   name: mcl1
 p38:
   date: 2019-12-09
-  dir: 2019-12-09_p38
+  dir: p38
   name: p38
 pde10:
   date: 2020-07-10
-  dir: 2020-07-10_pde10
+  dir: pde10
   name: pde10
 pde2:
   date: 2019-09-23
-  dir: 2019-09-23_pde2
+  dir: pde2
   name: pde2
 pfkfb3:
   date: 2020-07-06
-  dir: 2020-07-06_pfkfb3
+  dir: pfkfb3
   name: pfkfb3
 ptp1b:
   date: 2019-12-12
-  dir: 2019-12-12_ptp1b
+  dir: ptp1b
   name: ptp1b
 shp2:
   date: 2020-07-30
-  dir: 2020-07-30_shp2
+  dir: shp2
   name: shp2
 syk:
   date: 2020-08-11
-  dir: 2020-08-11_syk
+  dir: syk
   name: syk
 thrombin:
   date: 2019-09-23
-  dir: 2019-09-23_thrombin
+  dir: thrombin
   name: thrombin
 tnks2:
   date: 2020-08-12
-  dir: 2020-08-12_tnks2
+  dir: tnks2
   name: tnks2
 tyk2:
   date: 2020-02-07
-  dir: 2020-02-07_tyk2
+  dir: tyk2
   name: tyk2
