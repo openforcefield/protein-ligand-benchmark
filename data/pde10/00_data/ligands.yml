@@ -78,16 +78,6 @@ lig_1423:
     value: 6.53
   name: lig_1423
   smiles: '[H][C]1=[N][N]([C]([H])([H])[C]([H])([H])[O][C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([C]([F])([F])[F])[N]=[C]2[C]([N]3[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]3([H])[H])=[N][C]([H])=[C]([H])[N]21'
-lig_1801:
-  charge: 0.0
-  measurement:
-    doi: 10.1021/jm500073h
-    error: -1
-    type: pic50
-    unit: ''
-    value: 9.14
-  name: lig_1801
-  smiles: '[H][C]1=[N][N]([C]([H])([H])[C]([H])([H])[O][C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[N]=[C]([N]2[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])[C]2=[N][C]([C]#[C][c]3[n][c]4[c]([H])[c]([H])[c]([H])[c]([H])[c]4[c]([H])[c]3[H])=[C]([H])[N]21'
 lig_1939:
   charge: 0.0
   measurement:

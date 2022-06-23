@@ -18,16 +18,6 @@ lig_p38a_2bb:
     value: 223
   name: lig_p38a_2bb
   smiles: '[H][C]1=[N][C]([N]([H])[C]([H])([H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]'
-lig_p38a_2c:
-  measurement:
-    comment: Table 2, entry 2c
-    doi: 10.1021/jm101423y
-    error: 10
-    type: ic50
-    unit: nM
-    value: 21
-  name: lig_p38a_2c
-  smiles: '[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([C]1=[C]([Cl])[C]([H])=[C]([H])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]'
 lig_p38a_2e:
   measurement:
     comment: Table 2, entry 2e
@@ -178,16 +168,6 @@ lig_p38a_2p:
     value: 6
   name: lig_p38a_2p
   smiles: '[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[C]([H])([H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[H]'
-lig_p38a_2q:
-  measurement:
-    comment: Table 3, entry 2q
-    doi: 10.1021/jm101423y
-    error: 0.2
-    type: ic50
-    unit: nM
-    value: 1
-  name: lig_p38a_2q
-  smiles: '[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]1([H])[C]([H])([H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[C]1([H])[H]'
 lig_p38a_2r:
   measurement:
     comment: Table 3, entry 2r
@@ -218,16 +198,6 @@ lig_p38a_2t:
     value: 2
   name: lig_p38a_2t
   smiles: '[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[C]#[N]'
-lig_p38a_2u:
-  measurement:
-    comment: Table 3, entry 2u
-    doi: 10.1021/jm101423y
-    error: 0.1
-    type: ic50
-    unit: nM
-    value: 1
-  name: lig_p38a_2u
-  smiles: '[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]1([H])[C]([H])([H])[C]([H])([H])[N]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])([H])[C]1([H])[H]'
 lig_p38a_2v:
   measurement:
     comment: Table 4, entry 2v
@@ -278,16 +248,6 @@ lig_p38a_3fln:
     value: 10
   name: lig_p38a_3fln
   smiles: '[H][C]1=[N][C]([N]([H])[C]2([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]2([H])[H])=[N][C]2=[C]1[C]([H])=[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])[C](=[O])[N]2[C]([H])([H])[H]'
-lig_p38a_3flq:
-  measurement:
-    comment: Table 4, entry 2dd
-    doi: 10.1021/jm101423y
-    error: 20
-    type: ic50
-    unit: nM
-    value: 50
-  name: lig_p38a_3flq
-  smiles: '[H][C]1=[C]2[C](=[N][C]([N]([H])[C@@]([H])([C]([H])([H])[H])[C]([H])([H])[S](=[O])(=[O])[C]([H])([H])[H])=[N]1)[N]([C]([H])([H])[H])[C](=[O])[C]([O][C]1=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]1[H])=[C]2[H]'
 lig_p38a_3flw:
   measurement:
     comment: Table 4, entry 2b
@@ -328,13 +288,3 @@ lig_p38a_3fmh:
     value: 11
   name: lig_p38a_3fmh
   smiles: '[H][C]1=[N][N]([C]([H])([H])[C@]([H])([N]([H])[C]2=[N][C]([H])=[C]3[C](=[N]2)[N]([C]([H])([H])[H])[C](=[O])[C]([O][C]2=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]2[H])=[C]3[H])[C]([H])([H])[H])[N]=[N]1'
-lig_p38a_3fmk:
-  measurement:
-    comment: Table 4, entry 2hh
-    doi: 10.1021/jm101423y
-    error: 0.7
-    type: ic50
-    unit: nM
-    value: 2
-  name: lig_p38a_3fmk
-  smiles: '[H][C]1=[N][N]([C]([H])([H])[C@@]([H])([N]([H])[C]2=[N][C]([H])=[C]3[C](=[N]2)[N]([C]([H])([H])[H])[C](=[O])[C]([O][C]2=[C]([F])[C]([H])=[C]([F])[C]([H])=[C]2[H])=[C]3[H])[C]([H])([H])[H])[N]=[N]1'

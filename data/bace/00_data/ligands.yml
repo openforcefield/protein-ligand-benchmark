@@ -152,17 +152,6 @@ lig_CAT-13o:
     value: 1200
   name: lig_CAT-13o
   smiles: '[H][C]1=[C]([H])[S][C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([Cl])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[N]1'
-lig_CAT-17a:
-  charge: 1
-  measurement:
-    comment: Table 4, entry 17a
-    doi: 10.1016/j.bmcl.2012.02.013
-    error: -1
-    type: ki
-    unit: nM
-    value: 30
-  name: lig_CAT-17a
-  smiles: '[H][C]1=[C]([H])[C]([C]2=[C]([H])[C]([Cl])=[C]([H])[C]([Cl])=[C]2[H])=[C]([H])[C]([C@]2([C]3([H])[C]([H])([H])[C]3([H])[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])=[C]1[H]'
 lig_CAT-17b:
   charge: 1
   measurement:
@@ -273,28 +262,6 @@ lig_CAT-4a:
     value: 3.3
   name: lig_CAT-4a
   smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C]2=[C]([H])[C]([C@]3([C]4=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]4[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]3[H])=[C]([H])[C]([H])=[C]2[H])[C]([H])=[C]1[H]'
-lig_CAT-4b:
-  charge: 1
-  measurement:
-    comment: Table 1, entry 4b
-    doi: 10.1016/j.bmcl.2012.02.013
-    error: -1
-    type: ki
-    unit: uM
-    value: 0.19
-  name: lig_CAT-4b
-  smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([O][C]([H])([H])[H])=[C]([H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])[C]([H])=[C]1[H]'
-lig_CAT-4c:
-  charge: 1
-  measurement:
-    comment: Table 1, entry 4c
-    doi: 10.1016/j.bmcl.2012.02.013
-    error: -1
-    type: ki
-    unit: uM
-    value: 3.8
-  name: lig_CAT-4c
-  smiles: '[H][C]1=[C]([H])[C]([H])=[C]([C@@]2([C]3=[C]([H])[C]([H])=[C]([H])[C]([C]4=[C]([H])[C]([H])=[C]([O][C]([H])([H])[H])[C]([H])=[C]4[H])=[C]3[H])[C](=[O])[N]([C]([H])([H])[H])[C]([N]([H])[H])=[N+]2[H])[C]([H])=[C]1[H]'
 lig_CAT-4d:
   charge: 1
   measurement:

@@ -98,16 +98,6 @@ lig_22:
     value: 0.032
   name: lig_22
   smiles: '[H][C]1=[N][N]([C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]([C]([H])([H])[C]2=[N][N]([H])[C]3=[C]2[C]([H])=[C]([C]2=[N][C]([H])=[C]([H])[N]2[C]([H])([H])[H])[C]([H])=[C]3[H])[C]([H])=[C]1[H]'
-lig_23:
-  charge: 0
-  measurement:
-    doi: 10.1016/j.bmcl.2016.01.062
-    error: -1
-    type: ic50
-    unit: uM
-    value: 0.27
-  name: lig_23
-  smiles: '[H][C]1=[N][N]([C]([H])([H])[H])[C]([H])=[C]1[C]1=[C]([H])[C]([H])=[C]([C]([H])([H])[C]2=[N][N]([H])[C]3=[C]2[C]([H])=[C]([C]2=[N][C]([H])=[C]([H])[C]([N]([H])[H])=[C]2[H])[C]([H])=[C]3[H])[C]([H])=[C]1[H]'
 lig_24:
   charge: 0
   measurement:
@@ -178,16 +168,6 @@ lig_30:
     value: 0.003
   name: lig_30
   smiles: '[H][O][C@]1([H])[C]([H])([H])[N]([C](=[O])[C]2=[C]([H])[C]3=[C]([C]([H])=[C]2[H])[N]([H])[N]=[C]3[C]([H])([H])[C]2=[C]([H])[C]([H])=[C]([C]3=[C]([H])[N]([C]([H])([H])[H])[N]=[C]3[H])[C]([H])=[C]2[H])[C]([H])([H])[C]1([H])[H]'
-lig_31:
-  charge: 0
-  measurement:
-    doi: 10.1016/j.bmcl.2016.01.062
-    error: -1
-    type: ic50
-    unit: uM
-    value: 0.002
-  name: lig_31
-  smiles: '[H][O][C@@]1([H])[C]([H])([H])[N]([C](=[O])[C]2=[C]([H])[C]3=[C]([C]([H])=[C]2[H])[N]([H])[N]=[C]3[C]([H])([H])[C]2=[C]([H])[C]([H])=[C]([C]3=[C]([H])[N]([C]([H])([H])[H])[N]=[C]3[H])[C]([H])=[C]2[H])[C]([H])([H])[C]1([H])[H]'
 lig_32:
   charge: 0
   measurement:

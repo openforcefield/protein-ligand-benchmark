@@ -70,18 +70,6 @@ lig_163:
     value: 0.0085
   name: lig_163
   smiles: '[H][O][C@@]1([H])[C]2=[C]([C]([O][C]3=[C]([H])[C]([F])=[C]([H])[C]([C]#[N])=[C]3[H])=[C]([H])[C]([H])=[C]2[S](=[O])(=[O])[C]([H])([H])[H])[C]([H])([H])[C]1([F])[F]'
-lig_164:
-  charge: 0
-  measurement:
-    doi:
-    - 10.1158/0008-5472.CAN-16-0473
-    - https://patents.google.com/patent/US9908845B2
-    error: -1
-    type: ic50
-    unit: uM
-    value: 11
-  name: lig_164
-  smiles: '[H][C]1=[C]([F])[C]([H])=[C]([O][C]2=[C]([H])[C]([H])=[C]([S](=[O])(=[O])[C]([H])([H])[H])[C]3=[C]2[C]([H])([H])[C]([F])([F])[C@]3([H])[N]([H])[H])[C]([H])=[C]1[C]#[N]'
 lig_165:
   charge: 0
   measurement:
@@ -202,18 +190,6 @@ lig_235:
     value: 0.038
   name: lig_235
   smiles: '[H][O][C@@]1([H])[C]2=[C]([C]([O][C]3=[C]([H])[N]=[C]([H])[C]([C]#[N])=[C]3[H])=[C]([H])[C]([H])=[C]2[S](=[O])(=[O])[C]([F])([F])[F])[C]([H])([H])[C]1([F])[F]'
-lig_237:
-  charge: 0
-  measurement:
-    doi:
-    - 10.1158/0008-5472.CAN-16-0473
-    - https://patents.google.com/patent/US9908845B2
-    error: -1
-    type: ic50
-    unit: uM
-    value: 0.1
-  name: lig_237
-  smiles: '[H][O][C@]1([H])[C]2=[C]([C]([O][C]3=[C]([H])[C]([F])=[C]([H])[C]([C]#[N])=[C]3[H])=[C]([H])[C]([H])=[C]2[S](=[O])(=[O])[C]([H])([F])[F])[C]([H])([H])[C]1([F])[F]'
 lig_25:
   charge: 0
   measurement:
@@ -274,18 +250,6 @@ lig_256:
     value: 0.015
   name: lig_256
   smiles: '[H][O][C@@]1([H])[C]2=[C]([C]([O][C]3=[C]([H])[C]([F])=[C]([H])[C]([F])=[C]3[H])=[C]([H])[C]([H])=[C]2[S](=[O])(=[O])[N]([H])[H])[C]([H])([H])[C]1([F])[F]'
-lig_266:
-  charge: 0
-  measurement:
-    doi:
-    - 10.1158/0008-5472.CAN-16-0473
-    - https://patents.google.com/patent/US9908845B2
-    error: -1
-    type: ic50
-    unit: uM
-    value: 0.019
-  name: lig_266
-  smiles: '[H][O][C@@]1([H])[C]2=[C]([C]([O][C]3=[C]([H])[C]([H])=[C]([F])[C]4=[C]3[C]([H])=[N][N]4[H])=[C]([H])[C]([H])=[C]2[S](=[O])(=[O])[C]([F])([F])[F])[C]([H])([H])[C]1([F])[F]'
 lig_289:
   charge: 0
   measurement:
@@ -466,30 +430,6 @@ lig_67:
     value: 0.035
   name: lig_67
   smiles: '[H][O][C@@]1([H])[C]2=[C]([C]([O][C]3=[C]([H])[C]([F])=[C]([H])[C]([F])=[C]3[H])=[C]([H])[C]([H])=[C]2[C]#[N])[C]([H])([H])[C]1([F])[F]'
-lig_7a:
-  charge: 0
-  measurement:
-    doi:
-    - 10.1158/0008-5472.CAN-16-0473
-    - https://patents.google.com/patent/US9908845B2
-    error: -1
-    type: ic50
-    unit: uM
-    value: 0.047
-  name: lig_7a
-  smiles: '[H][O][C@@]1([H])[C]2=[C]([C]([O][C]3=[C]([H])[C]([F])=[C]([H])[C]([Cl])=[C]3[H])=[C]([H])[C]([H])=[C]2[S](=[O])(=[O])[C]([H])([F])[F])[C@@]([H])([C]([H])([H])[H])[C]1([H])[H]'
-lig_7b:
-  charge: 0
-  measurement:
-    doi:
-    - 10.1158/0008-5472.CAN-16-0473
-    - https://patents.google.com/patent/US9908845B2
-    error: -1
-    type: ic50
-    unit: uM
-    value: 3.8
-  name: lig_7b
-  smiles: '[H][O][C@]1([H])[C]2=[C]([C]([O][C]3=[C]([H])[C]([F])=[C]([H])[C]([Cl])=[C]3[H])=[C]([H])[C]([H])=[C]2[S](=[O])(=[O])[C]([H])([F])[F])[C@@]([H])([C]([H])([H])[H])[C]1([H])[H]'
 lig_84:
   charge: 0
   measurement:
