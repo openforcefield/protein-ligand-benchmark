@@ -9,7 +9,7 @@ from openfe.setup.lomap_scorers import default_lomap_score
 
 
 # Pick up ligand paths, load in rdkit and feed to SmallMoleculeComponent
-path = pathlib.Path('../../02_ligands/')
+path = pathlib.Path('../02_ligands/')
 
 ligand_mols = []  # List of SmallMoleculeComponents
 
@@ -35,7 +35,7 @@ for i, edge in enumerate(edges):
 
 output = {}
 output['mapper'] = "Lomap v2.1.0 MCS (time=20, threed=True, element_changes=False, max3d=1), default scorer"
-output['planner'] = "openfe v0.3-dev minimal_spanning_graph"
+output['planner'] = "openfe v0.4-dev minimal_spanning_graph"
 
 edges_dict = {}
 
