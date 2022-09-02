@@ -17,7 +17,7 @@ Protein-Ligand Benchmark Dataset for testing Parameters and Methods of Free Ener
 
 ## Related Publication
 
-The [preprint](https://arxiv.org/pdf/2105.06222.pdf) on "Best practices for constructing, preparing, and evaluating protein-ligand binding affinity benchmarks" provides accompanying information to this benchmark dataset and how to use it for alchemical free energy calculations. For any suggestions of improvements please raise an issue in its [GitHub repository](https://github.com/openforcefield/FE-Benchmarks-Best-Practices). 
+The [LiveCoMS article](https://livecomsjournal.org/index.php/livecoms/article/view/v4i1e1497) on "Best practices for constructing, preparing, and evaluating protein-ligand binding affinity benchmarks" provides accompanying information to this benchmark dataset and how to use it for alchemical free energy calculations. For any suggestions of improvements please raise an issue in its [GitHub repository protein-ligand-benchmark-livecoms](https://github.com/openforcefield/protein-ligand-benchmark-livecoms). 
 
 ## Installation
 
