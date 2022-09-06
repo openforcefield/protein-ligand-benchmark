@@ -1,0 +1,1 @@
+"${SCHRODINGER}/glide" glide-grid_thrombin-2ZFF.in -OVERWRITE -HOST localhost -TMPLAUNCHDIR

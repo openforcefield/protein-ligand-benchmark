@@ -1,0 +1,1 @@
+"${SCHRODINGER}/ligprep" -inp ligprep_cmet.inp -HOST localhost:1 -NJOBS 1 -TMPLAUNCHDIR
