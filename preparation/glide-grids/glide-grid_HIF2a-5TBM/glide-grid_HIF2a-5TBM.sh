@@ -1,0 +1,1 @@
+"${SCHRODINGER}/glide" glide-grid_HIF2a-5TBM.in -OVERWRITE -HOST localhost -TMPLAUNCHDIR

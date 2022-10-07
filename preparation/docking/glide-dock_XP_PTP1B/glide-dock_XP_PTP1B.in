@@ -1,0 +1,12 @@
+CORE_DEFINITION   mcssmarts
+CORE_POS_MAX_RMSD   0.25
+CORE_RESTRAIN   True
+FORCEFIELD   OPLS_2005
+GRIDFILE   /Users/bobym/Documents/Schrodinger/plbenchmark.prj/raw_strucs/grids/glide-grid_PTP1B-2QBS/glide-grid_PTP1B-2QBS.zip
+LIGANDFILE   /Users/bobym/Documents/Schrodinger/plbenchmark.prj/prepped_ligs/ligands/ligprep_ptp1b-out.sdf
+POSE_OUTTYPE   ligandlib_sd
+POSTDOCK_XP_DELE   0.5
+PRECISION   XP
+REF_LIGAND_FILE   glide-dock_XP_PTP1B.reflig.maegz
+USE_REF_LIGAND   True
+WRITE_XP_DESC   False

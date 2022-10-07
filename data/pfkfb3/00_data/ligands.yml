@@ -1,0 +1,330 @@
+lig_19:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 2.919
+  name: lig_19
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([N]([H])[C]3=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]3[H])=[C]([H])[C]([C]3=[C]([H])[C]4=[C]([C]([H])=[C]3[H])[C]([H])=[C]([H])[N]4[C]([H])([H])[H])=[C]2[N]=[C]1[H]'
+lig_20:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.572
+  name: lig_20
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]([H])[C]([O][C]([H])([H])[H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_23:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 1.58
+  name: lig_23
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([N]([H])[C]3=[C]([H])[N]=[C]([H])[C]([H])=[C]3[H])=[C]([H])[C]([C]3=[C]([H])[C]([H])=[C]4[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]4=[C]3[H])=[C]2[N]=[C]1[H]'
+lig_24:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.315
+  name: lig_24
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[C]([H])=[C]([H])[C]([H])=[C]1[C]#[N])=[C]2[H]'
+lig_26:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.19
+  name: lig_26
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([C](=[O])[N]([H])[H])[C]([H])=[C]([H])[C]([H])=[C]1[H])=[C]2[H]'
+lig_29:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.085
+  name: lig_29
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([N]([H])[C]3=[C]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])=[C]([H])[C]([H])=[C]3[H])=[C]([H])[C]([C]3=[C]([H])[C]([H])=[C]4[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]4=[C]3[H])=[C]2[N]=[C]1[H]'
+lig_31:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.157
+  name: lig_31
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([N]([H])[C]3=[C]([H])[N]=[C]([H])[C]([H])=[C]3[O][C]([H])([H])[H])=[C]([H])[C]([C]3=[C]([H])[C]([H])=[C]4[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]4=[C]3[H])=[C]2[N]=[C]1[H]'
+lig_33:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.491
+  name: lig_33
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([N]([H])[C]3=[C]([C]#[N])[C]([H])=[C]([H])[N]=[C]3[H])=[C]([H])[C]([C]3=[C]([H])[C]([H])=[C]4[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]4=[C]3[H])=[C]2[N]=[C]1[H]'
+lig_34:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.049
+  name: lig_34
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([C](=[O])[N]([H])[H])[C]([H])=[C]([H])[N]=[C]1[H])=[C]2[H]'
+lig_35:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.037
+  name: lig_35
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([N]([H])[C]3=[C]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])=[C]([H])[N]=[C]3[H])=[C]([H])[C]([C]3=[C]([H])[C]4=[C]([C]([H])=[C]3[H])[C]([H])=[C]([H])[N]4[C]([H])([H])[H])=[C]2[N]=[C]1[H]'
+lig_37:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.047
+  name: lig_37
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[C](=[O])[N]([H])[C]1([H])[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]1([H])[H])=[C]2[H]'
+lig_38:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.38
+  name: lig_38
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([N]([C]([H])([H])[H])[C]([H])([H])[H])=[C]([H])[C]([H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_39:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 5.299
+  name: lig_39
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]([H])[C]([N]([H])[H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_41:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 3.844
+  name: lig_41
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]([H])[C]([O][C]([F])([F])[F])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_42:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.622
+  name: lig_42
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]([H])[C]([S][C]([H])([H])[H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_43:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 1.373
+  name: lig_43
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]([H])[C]([Br])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_44:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.051
+  name: lig_44
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]([Br])[C]([H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_47:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.779
+  name: lig_47
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([N]([H])[C]3=[C]([H])[N]=[C]([H])[C]([H])=[C]3[S](=[O])(=[O])[C]([H])([H])[H])=[C]([H])[C]([C]3=[C]([H])[C]([H])=[C]([C]([H])([H])[C]([H])([H])[H])[C]([H])=[C]3[H])=[C]2[N]=[C]1[H]'
+lig_48:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 1.353
+  name: lig_48
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]([O][C]([H])([H])[H])[C]([H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_49:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 1.528
+  name: lig_49
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]([N]([H])[H])[C]([H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_52:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.024
+  name: lig_52
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_53:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 7.425
+  name: lig_53
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[C]([H])([H])[C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_55:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.016
+  name: lig_55
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([N]([H])[C]3=[C]([H])[N]=[C]([H])[C]([H])=[C]3[S](=[O])(=[O])[C]([H])([H])[H])=[C]([H])[C]([C]3=[C]([H])[C]([F])=[C]4[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]4=[C]3[H])=[C]2[N]=[C]1[H]'
+lig_56:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.018
+  name: lig_56
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([C]([H])([H])[H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_57:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.021
+  name: lig_57
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([F])[F])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_58:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.202
+  name: lig_58
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[O][C]([H])([H])[C]([H])([H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_59:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 1.126
+  name: lig_59
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[O][C]([H])([H])[C]([H])([H])[O][C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
+lig_62:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 2.301
+  name: lig_62
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]3=[N][O][N]=[C]3[C]([H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])=[C]([H])[N]=[C]1[H])=[C]2[H]'
+lig_63:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.53
+  name: lig_63
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]3=[N][S][N]=[C]3[C]([H])=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])=[C]([H])[N]=[C]1[H])=[C]2[H]'
+lig_64:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.124
+  name: lig_64
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([H])=[C]([C]3=[C]([H])[C]([N]([H])[C]4=[C]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])=[C]([H])[N]=[C]4[H])=[C]([H])[C]4=[C]3[N]=[C]([H])[C]([H])=[N]4)[C]([H])=[C]2[S]1'
+lig_65:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.111
+  name: lig_65
+  smiles: '[H][C]1=[N][C]2=[C]([H])[C]([C]3=[C]([H])[C]([N]([H])[C]4=[C]([H])[N]=[C]([H])[C]([H])=[C]4[S](=[O])(=[O])[C]([H])([H])[H])=[C]([H])[C]4=[C]3[N]=[C]([H])[C]([H])=[N]4)=[C]([H])[C]([H])=[C]2[S]1'
+lig_69:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.014
+  name: lig_69
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[S][C]([H])=[C]([C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])=[C]([H])[N]=[C]1[H])=[C]2[H]'
+lig_70:
+  charge: 0
+  measurement:
+    doi: 10.1002/cmdc.201800569
+    error: -1
+    type: ic50
+    unit: uM
+    value: 0.028
+  name: lig_70
+  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[O][C]([H])=[C]([C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([S](=[O])(=[O])[C]([H])([H])[H])[C]([H])=[C]([H])[N]=[C]1[H])=[C]2[H]'

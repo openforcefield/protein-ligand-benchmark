@@ -1,0 +1,98 @@
+#Fetching and pre-processing pdbs from RCSB using pdb-tools:
+
+pdb_fetch 1h1q | pdb_selchain -A,B | pdb_tidy > 1h1q.pdb
+pdb_fetch 5hnb | pdb_selchain -A,B | pdb_delresname -EDO,FMT | pdb_tidy > 5hnb.pdb
+pdb_fetch 1h1q | pdb_selchain -A,B | pdb_tidy > 1H1Q.pdb
+pdb_fetch 5hnb | pdb_selchain -A,B | pdb_delresname -EDO,FMT | pdb_tidy > 5HNB.pdb
+pdb_fetch 4riy | pdb_selchain -A | pdb_delresname -7PE | pdb_tidy > 4RIY.pdb
+pdb_fetch 3l9h | pdb_selchain -A | pdb_tidy > 3L9H.pdb
+pdb_fetch 5e89 | pdb_selchain -A | pdb_delresname -CL | pdb_tidy > 5E89.pdb
+pdb_fetch 5tbm | pdb_selchain -A,B | pdb_delresname -EDO,FMT | pdb_tidy > 5TBM.pdb
+pdb_fetch 4hw3 | pdb_selchain -B | pdb_tidy > 4HW3.pdb
+pdb_fetch 3fly | pdb_selchain -A | pdb_tidy > 3FLY.pdb
+pdb_fetch 4d08 | pdb_selchain -D | pdb_tidy > 4D08.pdb
+pdb_fetch 6hvi | pdb_selchain -A | pdb_delresname -FLC,DMS | pdb_tidy > 6HVI.pdb
+pdb_fetch 2qbs | pdb_selchain -A | pdb_tidy > 2QBS.pdb
+pdb_fetch 5ehr | pdb_selchain -A | pdb_delresname -PO4 | pdb_tidy > 5EHR.pdb
+pdb_fetch 4pv0 | pdb_selchain -A | pdb_delresname -CL | pdb_tidy > 4PV0.pdb
+pdb_fetch 2zff | pdb_selchain -H,L | pdb_delresname -NA | pdb_tidy > 2ZFF.pdb
+pdb_fetch 4ui5 | pdb_selchain -A,C | pdb_delresname -SO4,GOL | pdb_tidy > 4UI5.pdb
+pdb_fetch 4gih | pdb_selchain -A | pdb_tidy > 4GIH.pdb
+
+#Preparing with Schrodinger's Prepwizard CLI:
+
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 1H1Q.pdb CDK2-1H1Q.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3  5HNB.pdb CDK8-5NHB.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4R1Y.pdb cMET-4R1Y.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 3L9H.pdb EG5-3L9H.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 5E89.pdb galectin-5E89.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3  5TBM.pdb HIF2a-5TBM.maegz
+$SCHRODINGER/utilities/prepwizard -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4HW3.pdb MCL1-4HW3.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 3FLY.pdb P38-3FLY.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4D08.pdb PDE2-4D08.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 6HVI.pdb PFKFB3-6HVI.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 2QBS.pdb PTP1B-2QBS.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 5EHR.pdb SHP2-5EHR.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4PV0.pdb SYK-4PV0.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 2ZFF.pdb thrombin-2ZFF.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4UI5.pdb TNKS2-4UI5.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4GIH.pdb TYK2-4GIH.maegz
+
+#splitting protein, ligand, and cofactors into separate files
+
+$SCHRODINGER/run split_structure.py -m ligand -many_files CDK2-1H1Q.maegz CDK2.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files CDK8-5NHB.maegz CDK8.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files cMET-4R1Y.maegz cMET.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files EG5-3L9H.maegz EG5.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files galectin-5E89.maegz galectin.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files HIF2a-5TBM.maegz HIF2a.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files MCL1-4HW3.maegz MCL1.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files P38-3FLY.maegz P38.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files PDE2-4D08.maegz PDE2.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files PFKFB3-6HVI.maegz PFKFB3.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files PTP1B-2QBS.maegz PTP1B.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files SHP2-5EHR.maegz SHP2.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files SYK-4PV0.maegz SYK.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files thrombin-2ZFF.maegz thrombin.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files TNKS2-4UI5.maegz TNKS2.maegz
+$SCHRODINGER/run split_structure.py -m ligand -many_files TYK2-4GIH.maegz TYK2.maegz
+
+#converting ligands and cofactors from maegz to sdf format:
+
+$SCHRODINGER/utilities/sdconvert -imae CDK2_ligand1.maegz -osd CDK2_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae CDK8_ligand1.maegz -osd CDK8_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae cMET_ligand1.maegz -osd cMET_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae EG5_ligand2.maegz -osd EG5_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae EG5_ligand1.maegz -osd EG5_cofactor.sdf
+$SCHRODINGER/utilities/sdconvert -imae galectin_ligand1.maegz -osd galectin_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae HIF2a_ligand1.maegz -osd HIF2a_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae MCL1_ligand1.maegz -osd MCL1_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae P38_ligand1.maegz -osd P38_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae PDE2_ligand1.maegz -osd PDE2_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae PFKFB3_ligand1.maegz -osd PFKFB3_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae PFKFB3_ligand2.maegz -osd PFKFB3_cofactor.sdf
+$SCHRODINGER/utilities/sdconvert -imae PTP1B_ligand1.maegz -osd PTP1B_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae SHP2_ligand1.maegz -osd SHP2_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae SYK_ligand1.maegz -osd SYK_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae thrombin_ligand1.maegz -osd thrombin_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae TNKS2_ligand1.maegz -osd TNKS2_ligand.sdf
+$SCHRODINGER/utilities/sdconvert -imae TYK2_ligand1.maegz -osd TYK2_ligand.sdf
+
+#converting receptor/proteins from maegz to pdb format:
+
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae CDK2_receptor1.maegz -opdb CDK2_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae CDK8_receptor1.maegz -opdb CDK8_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae cMET_receptor1.maegz -opdb cMET_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae EG5_receptor1.maegz -opdb EG5_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae galectin_receptor1.maegz -opdb galectin_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae HIF2a_receptor1.maegz -opdb HIF2a_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae MCL1_receptor1.maegz -opdb MCL1_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae P38_receptor1.maegz -opdb P38_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae PDE2_receptor1.maegz -opdb PDE2_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae PFKFB3_receptor1.maegz -opdb PFKFB3_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae PTP1B_receptor1.maegz -opdb PTP1B_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae SHP2_receptor1.maegz -opdb SHP2_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae SYK_receptor1.maegz -opdb SYK_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae thrombin_receptor1.maegz -opdb thrombin_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae TNKS2_receptor1.maegz -opdb TNKS2_prepped.pdb
+$SCHRODINGER/utilities/pdbconvert -no_dup_conect -write_seq_headers -first_occ -imae TYK2_receptor1.maegz -opdb TYK2_prepped.pdb

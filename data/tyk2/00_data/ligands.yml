@@ -1,0 +1,131 @@
+lig_ejm_31:
+  measurement:
+    comment: Table 4, entry 31
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.029
+    type: ki
+    unit: uM
+    value: 0.096
+  name: lig_ejm_31
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)C([H])([H])[H])[H])[H])Cl)[H]'
+lig_ejm_42:
+  measurement:
+    comment: Table 4, entry 42
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.019
+    type: ki
+    unit: uM
+    value: 0.064
+  name: lig_ejm_42
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)C([H])([H])C([H])([H])[H])[H])[H])Cl)[H]'
+lig_ejm_43:
+  measurement:
+    comment: Table 4, entry 43
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.25
+    type: ki
+    unit: uM
+    value: 0.84
+  name: lig_ejm_43
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)C([H])(C([H])([H])[H])C([H])([H])[H])[H])[H])Cl)[H]'
+lig_ejm_45:
+  measurement:
+    comment: Table 4, entry 45
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.028
+    type: ki
+    unit: uM
+    value: 0.094
+  name: lig_ejm_45
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)C([H])([H])C3(C(C3([H])[H])([H])[H])[H])[H])[H])Cl)[H]'
+lig_ejm_46:
+  measurement:
+    comment: Table 4, entry 46
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.0014
+    type: ki
+    unit: uM
+    value: 0.0048
+  name: lig_ejm_46
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)C3(C(C3([H])[H])([H])[H])[H])[H])[H])Cl)[H]'
+lig_ejm_47:
+  measurement:
+    comment: Table 4, entry 47
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.022
+    type: ki
+    unit: uM
+    value: 0.074
+  name: lig_ejm_47
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)C3(C(C(C3([H])[H])([H])[H])([H])[H])[H])[H])[H])Cl)[H]'
+lig_ejm_48:
+  measurement:
+    comment: Table 4, entry 48
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.072
+    type: ki
+    unit: uM
+    value: 0.24
+  name: lig_ejm_48
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)C3(C(C(C(C3([H])[H])([H])[H])([H])[H])([H])[H])[H])[H])[H])Cl)[H]'
+lig_ejm_50:
+  measurement:
+    comment: Table 4, entry 50
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.075
+    type: ki
+    unit: uM
+    value: 0.25
+  name: lig_ejm_50
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)C([H])([H])O[H])[H])[H])Cl)[H]'
+lig_ejm_54:
+  measurement:
+    comment: Table 4, entry 54
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.0054
+    type: ki
+    unit: uM
+    value: 0.018
+  name: lig_ejm_54
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)N([H])C([H])([H])C([H])([H])[H])[H])[H])Cl)[H]'
+lig_ejm_55:
+  measurement:
+    comment: Table 4, entry 55
+    doi: 10.1016/j.ejmech.2013.03.070
+    error: 0.051
+    type: ki
+    unit: uM
+    value: 0.17
+  name: lig_ejm_55
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)OC([H])([H])[H])[H])[H])Cl)[H]'
+lig_jmc_23:
+  measurement:
+    comment: Table 2, entry 23; values for four different enantionmers listed, this
+      one is for cis
+    doi: 10.1021/jm400266t
+    error: 0.75
+    type: ki
+    unit: nM
+    value: 2.5
+  name: lig_jmc_23
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)[C@@]3([C@](C3([H])[H])([H])F)[H])[H])[H])Cl)[H]'
+lig_jmc_27:
+  measurement:
+    comment: Table 2, entry 27; cis enantiomer
+    doi: 10.1021/jm400266t
+    error: 1.5
+    type: ki
+    unit: nM
+    value: 5.1
+  name: lig_jmc_27
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)[C@@]3([C@](C3([H])[H])([H])Cl)[H])[H])[H])Cl)[H]'
+lig_jmc_28:
+  measurement:
+    comment: Table 2, entry 28; cis enantiomer
+    doi: 10.1021/jm400266t
+    error: 2.6
+    type: ki
+    unit: nM
+    value: 8.5
+  name: lig_jmc_28
+  smiles: '[H]c1c(c(c(c(c1[H])Cl)C(=O)N([H])c2c(c(nc(c2[H])N([H])C(=O)[C@@]3([C@](C3([H])[H])([H])C([H])([H])[H])[H])[H])[H])Cl)[H]'
