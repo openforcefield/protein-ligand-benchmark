@@ -27,7 +27,7 @@ $SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -filll
 $SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 3L9H.pdb EG5-3L9H.maegz
 $SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 5E89.pdb galectin-5E89.maegz
 $SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3  5TBM.pdb HIF2a-5TBM.maegz
-$SCHRODINGER/utilities/prepwizard -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4HW3.pdb MCL1-4HW3.maegz
+$SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4HW3.pdb MCL1-4HW3.maegz
 $SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 3FLY.pdb P38-3FLY.maegz
 $SCHRODINGER/utilities/prepwizard -captermini -disulfides -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 4D08.pdb PDE2-4D08.maegz
 $SCHRODINGER/utilities/prepwizard -captermini -fillsidechains -fillloops -samplewater -propka_pH 7.4 -epik_pH 7.4 -epik_pHt 0.0 -delwater_hbond_cutoff 2 -rmsd 0.3 -f 3 6HVI.pdb PFKFB3-6HVI.maegz
