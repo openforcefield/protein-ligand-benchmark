@@ -89,22 +89,6 @@ data
 ```
 ## Description of meta data YAML files
 
-#### `targets.yml`
-
-This file lists all the registered targets in the benchmark set. Each entry denotes one target and contains the following information:
-
-```
-mcl1_sample:
-  name:     mcl1_sample
-  date:     2020-08-26
-  dir:      2020-08-26_mcl1_sample
-```
-
-`mcl1_sample` is the entry name and each entry has three sub-entries: 
-- `name` is the target name, which is usually the same as the entry name of the target. 
-- `date` is the date when the target was initially added to the benchmark set.
-- `dir` is the directory name where all the data for the target is found. Usually it is the `date` and the `name` field, connected by a underscore `_`. 
-
 #### `target.yml`
 
 This file is found in the meta data directory of each target: `<date>_<target_name>/00_data/target.yml`. It contains additionally information about the target:

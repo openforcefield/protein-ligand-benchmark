@@ -4,46 +4,17 @@ Functions and classes for handling the target data.
 """
 
 import os
+import pathlib
 import yaml
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import networkx as nx
 
-from . import __path__, ligands, edges, utils
+from . import ligands, edges, utils
 
 
-data_path = os.path.abspath(os.path.join(os.path.join(__path__[0], "sample_data")))
-file = open(os.path.join(data_path, "targets.yml"))
-target_dict = yaml.full_load(file)
-file.close()
-
-
-def set_data_dir(path=os.path.abspath(os.path.join(__path__[0], "sample_data"))):
-    """
-    Gets the directory name of the target
-
-    :param path: string with path to data directory
-    """
-    global data_path
-    data_path = os.path.abspath(path)
-    file = open(os.path.join(data_path, "targets.yml"))
-    global target_dict
-    target_dict = yaml.full_load(file)
-    file.close()
-
-
-def get_target_dir(target):
-    """
-    Gets the directory name of the target
-
-    :param target: string with target name
-    :return: string with  directory name
-    """
-    if target in target_dict:
-        return target_dict[target]["dir"]
-    else:
-        raise ValueError(f"Directory for target {target} not found.")
+DATA_PATH = pathlib.Path(os.path.dirname(__file__)) / 'data'
 
 
 def get_target_data_path(target):
@@ -54,8 +25,8 @@ def get_target_data_path(target):
     :return: list of directories (have to be joined with '/' to get the file path relative to the plbenchmark repository)
 
     """
-    if target in target_dict:
-        return os.path.join(data_path, target_dict[target]["dir"], "00_data", "")
+    if (DATA_PATH / target).exists():
+        return DATA_PATH / target / "00_data"
     else:
         raise ValueError(f"Path for target {target} not found.")
 
@@ -76,10 +47,11 @@ class Target:
 
         self._name = name
         path = get_target_data_path(self._name)
-        file = open(os.path.join(path, "target.yml"))
-        data = yaml.full_load(file)
+
+        with open(path /"target.yml", 'r') as f:
+            data = yaml.full_load(f)
+
         self._data = pd.Series(data)
-        file.close()
 
         self.ligand_data = None
         self.html_data = None
@@ -106,7 +78,8 @@ class Target:
 
     def add_ligand_data(self):
         """
-        Adds data from ligands to :py:class:`plbenchmark.targets.target`. Molecule images and the minimum and maximum affinity are added.
+        Adds data from ligands to :py:class:`plbenchmark.targets.target`.
+        Molecule images and the minimum and maximum affinity are added.
 
         :return: None
         """
@@ -286,8 +259,8 @@ class TargetSet(dict):
         :param kw: keywords for :py:class:`dict` (base class)
         """
         super(TargetSet, self).__init__(*arg, **kw)
-        for name in target_dict.keys():
-            target = Target(name)
+        for path in DATA_PATH.iterdir():
+            target = Target(path.name)
             self[target.get_name()] = target
         self._df = None
 
