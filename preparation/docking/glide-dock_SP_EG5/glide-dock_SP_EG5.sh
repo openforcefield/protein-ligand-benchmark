@@ -1,0 +1,1 @@
+"${SCHRODINGER}/glide" glide-dock_SP_EG5.in -OVERWRITE -adjust -HOST localhost:4 -TMPLAUNCHDIR

@@ -1,0 +1,27 @@
+﻿SMILES,Title,Ki (uM),Error
+c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)F)[NH3+],lig_1a,3.99,2.12
+c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Cl)[NH3+],lig_1b,0.18,0.14
+c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Br)[NH3+],lig_1c,0.56,0.147
+c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)I)[NH3+],lig_1d,0.54,0.23
+O=C(N1CCC[C@H]1C(NCc2cc(C(F)(F)F)ccc2)=O)[C@H]([NH3+])Cc3ccccc3,lig_2a,15.09,3.28
+O=C(N1CCC[C@H]1C(NCc2cc(OC)ccc2)=O)[C@H]([NH3+])Cc3ccccc3,lig_2b,4.83,0.52
+O=C(N1CCC[C@H]1C(NCc2cc(O)ccc2)=O)[C@H]([NH3+])Cc3ccccc3,lig_2c,4.91,0.35
+O=C(N1CCC[C@H]1C(NCc2cc(N)ccc2)=O)[C@H]([NH3+])Cc3ccccc3,lig_2d,14.73,1.95
+O=C(N1CCC[C@H]1C(NCc2cc([N+]([O-])=O)ccc2)=O)[C@H]([NH3+])Cc3ccccc3,lig_2e,8.7,1.88
+Cc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+],lig_3a,1.21,0.21
+CCc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+],lig_3b,5.17,0.96
+CC(C)c1cc(CNC([C@@H]2CCCN2C([C@H]([NH3+])Cc3ccccc3)=O)=O)ccc1,lig_3c,185,69
+CC(C)(C)c1cc(CNC([C@@H]2CCCN2C([C@H]([NH3+])Cc3ccccc3)=O)=O)ccc1,lig_3d,> 1000,
+O=C([C@@H]1CCCN1C([C@H]([NH3+])Cc2ccccc2)=O)NCc3ccc(C(N)=N)cc3,lig_4,0.004,0.0012
+c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3ccccc3)[NH3+],lig_5,11.21,6.7
+c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3Cl)Cl)[NH3+],lig_6a,0.06,0.02
+Cc1ccc(cc1CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])Cl,lig_6b,0.26,0.09
+O=C([C@@H]1CCCN1C([C@H]([NH3+])Cc2ccccc2)=O)NCc3c(OC)ccc(Cl)c3,lig_6c,0.27,0.08
+Oc1c(CNC([C@@H]2CCCN2C([C@H]([NH3+])Cc3ccccc3)=O)=O)cc(Cl)cc1,lig_6d,0.433,0.206
+c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3F)Cl)[NH3+],lig_6e,0.5,0.028
+Cc1ccc(c(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])C,lig_7a,2.78,0.17
+O=C([C@@H]1CCCN1C([C@H]([NH3+])Cc2ccccc2)=O)NCc3ccc(Cl)cc3,lig_7b,3.99,1.75
+O=C([C@@H]1CCCN1C([C@H]([NH3+])Cc2ccccc2)=O)NCc3c(Cl)cccc3,lig_7c,1.46,0.33
+O=C(N1CCC[C@H]1C(NCC2CCCC(N)C2)=O)[C@H]([NH3+])Cc3ccccc3,lig_7d,7.6,1.35
+O=C([C@@H]1CCCN1C([C@H]([NH3+])Cc2ccccc2)=O)NCc3cc(CO)ccc3,lig_7e,75.77,36
+O=C([C@@H]1CCCN1C([C@H]([NH3+])Cc2ccccc2)=O)NCc3ccc(CO)cc3,lig_7f,34.55,15

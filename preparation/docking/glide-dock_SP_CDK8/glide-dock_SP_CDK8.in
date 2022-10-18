@@ -1,0 +1,10 @@
+CORE_DEFINITION   mcssmarts
+CORE_POS_MAX_RMSD   0.25
+CORE_RESTRAIN   True
+FORCEFIELD   OPLS_2005
+GRIDFILE   /Users/bobym/Documents/Schrodinger/plbenchmark.prj/grids/glide-grid_CDK8-5HNB.zip
+LIGANDFILE   /Users/bobym/Documents/Schrodinger/plbenchmark.prj/prepped_ligs/ligands/ligprep_cdk8-out.sdf
+POSE_OUTTYPE   ligandlib
+PRECISION   SP
+REF_LIGAND_FILE   glide-dock_SP_CDK8.reflig.maegz
+USE_REF_LIGAND   True
