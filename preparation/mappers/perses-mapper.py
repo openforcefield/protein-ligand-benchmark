@@ -6,6 +6,7 @@ from openfe.setup.ligand_network_planning import minimal_spanning_graph
 from openfe.setup.atom_mapping.perses_mapper import PersesAtomMapper
 from openfe.setup.atom_mapping.perses_scorers import default_perses_scorer
 from openmm import unit
+from collections import OrderedDict
 
 # load ligands
 ligands_supp = Chem.SDMolSupplier('../02_ligands/ligands.sdf', removeHs=False)
@@ -30,18 +31,18 @@ output = {}
 output['mapper'] = "Perses 0.10.1 (allow_ring_breaking=False, preserve_chirality=True, use_positions=True, coordinate_tolerance=0.2), default non geometric scorer"
 output['planner'] = "openfe v0.4 minimal_spanning_graph"
 
-edges_dict = {}
+edges_dict = dict()
 
 for edge in network.edges:
     edge_name = f'edge_{edge.componentA.name}_{edge.componentB.name}'
-    mapping = list(edge.componentA_to_componentB.items())
+    mapping = [list(i) for i in edge.componentA_to_componentB.items()]
     edges_dict[edge_name] = {
         'ligand_a': edge.componentA.name,
         'ligand_b': edge.componentB.name,
-        'atom mapping': ' '.join(str(i) for i in mapping),
+        'atom mapping': edge.componentA_to_componentB,
         'score': f"{edge.annotations['score']:.3f}",}
 
 output['edges'] = edges_dict
 
-with open('01_perses_openfe.yaml', 'w') as yaml_file:
-    yaml.dump(output, yaml_file, default_flow_style=False, sort_keys=False)
+with open('01_perses_openfe.yml', 'w') as yaml_file:
+    yaml.dump(output, yaml_file, default_flow_style=None, sort_keys=False)
