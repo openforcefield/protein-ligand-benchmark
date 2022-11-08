@@ -208,16 +208,6 @@ lig_52:
     value: 0.024
   name: lig_52
   smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
-lig_53:
-  charge: 0
-  measurement:
-    doi: 10.1002/cmdc.201800569
-    error: -1
-    type: ic50
-    unit: uM
-    value: 7.425
-  name: lig_53
-  smiles: '[H][C]1=[N][C]2=[C]([N]=[C]1[H])[C]([C]1=[C]([H])[C]([H])=[C]3[C]([H])=[C]([H])[N]([C]([H])([H])[C]([H])([H])[C]([H])([H])[H])[C]3=[C]1[H])=[C]([H])[C]([N]([H])[C]1=[C]([H])[N]=[C]([H])[C]([H])=[C]1[S](=[O])(=[O])[C]([H])([H])[H])=[C]2[H]'
 lig_55:
   charge: 0
   measurement:
