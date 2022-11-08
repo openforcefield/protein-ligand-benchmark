@@ -75,6 +75,17 @@ lig_CHEMBL3264999:
     value: 4.3
   name: lig_CHEMBL3264999
   smiles: '[H][C]1=[C]([H])[N]2[C](=[N]1)[C]([N]([H])[c]1[c]([H])[c]([H])[c]([O][C]([H])([H])[H])[c]([O][C]([H])([H])[H])[c]1[H])=[N][C]([c]1[c]([H])[c]([H])[c]([H])[c]([C](=[O])[N]([H])[c]3[c]([H])[c]([H])[c]([C](=[O])[N]([H])[H])[c]([H])[c]3[H])[c]1[H])=[C]2[H]'
+lig_CHEMBL3265000:
+  charge: -1.0
+  measurement:
+    doi:
+    - 10.1021/jm500228a
+    error: -1
+    type: ic50
+    unit: nM
+    value: 2.2
+  name: lig_CHEMBL3265000
+  smiles: '[H][C]1=[C]([H])[N]2[C](=[N]1)[C]([N]([H])[c]1[c]([H])[c]([H])[c]([O][C]([H])([H])[H])[c]([O][C]([H])([H])[H])[c]1[H])=[N][C]([c]1[c]([H])[c]([H])[c]([H])[c]([C](=[O])[N]([H])[c]3[c]([H])[c]([H])[c]([C](=[O])[N-][S](=[O])(=[O])[C]([H])([H])[H])[c]([H])[c]3[H])[c]1[H])=[C]2[H]'
 lig_CHEMBL3265001:
   charge: -1.0
   measurement:
