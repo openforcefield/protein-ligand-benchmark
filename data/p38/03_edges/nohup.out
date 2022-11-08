@@ -1,0 +1,39 @@
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:500: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:500: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+WARNING:root:Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+lig_p38a_3flw_lig_p38a_2gg exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2j exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_3fmh_lig_p38a_2g exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2i exceeds 1 A pairwise distance
+lig_p38a_2z_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2p exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2ff exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2ff exceeds 1 A pairwise distance
+lig_p38a_2v_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_3fmk_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2t exceeds 1 A pairwise distance
+lig_p38a_3fmh_lig_p38a_2k exceeds 1 A pairwise distance
+lig_p38a_3fmh_lig_p38a_3fln exceeds 1 A pairwise distance
+lig_p38a_3fmh_lig_p38a_2e exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2n exceeds 1 A pairwise distance
+lig_p38a_2s_lig_p38a_3flw exceeds 1 A pairwise distance
+lig_p38a_2x_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_2y_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_3fly_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2r exceeds 1 A pairwise distance
+lig_p38a_3fmh_lig_p38a_2f exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2o exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2ee exceeds 1 A pairwise distance
+lig_p38a_3flw_lig_p38a_2l exceeds 1 A pairwise distance
+lig_p38a_3fmh_lig_p38a_2h exceeds 1 A pairwise distance
+lig_p38a_2bb_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_2aa_lig_p38a_2m exceeds 1 A pairwise distance
+lig_p38a_3fmh_lig_p38a_3flz exceeds 1 A pairwise distance
+lig_p38a_3fmh_lig_p38a_2m exceeds 1 A pairwise distance

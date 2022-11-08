@@ -1,0 +1,22 @@
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:500: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:500: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+WARNING:root:Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+lig_5f_lig_8a exceeds 1 A pairwise distance
+lig_5o_lig_8a exceeds 1 A pairwise distance
+lig_5k_lig_8a exceeds 1 A pairwise distance
+lig_8d_lig_5p exceeds 1 A pairwise distance
+lig_5h_lig_8a exceeds 1 A pairwise distance
+lig_5d_lig_8e exceeds 1 A pairwise distance
+lig_8e_lig_7 exceeds 1 A pairwise distance
+lig_5a_lig_8e exceeds 1 A pairwise distance
+lig_3a_lig_8e exceeds 1 A pairwise distance
+lig_5c_lig_8e exceeds 1 A pairwise distance
+lig_5m_lig_8a exceeds 1 A pairwise distance
+lig_8c_lig_5p exceeds 1 A pairwise distance
+lig_5p_lig_8b exceeds 1 A pairwise distance

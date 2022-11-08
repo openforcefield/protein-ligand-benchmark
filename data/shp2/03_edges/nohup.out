@@ -1,0 +1,29 @@
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:500: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:500: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/biggin/b131/bioc1523/software/anaconda/python3.6/2019.7/envs/openfe-new/lib/python3.9/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+WARNING:root:Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+lig_7_lig_E28 exceeds 1 A pairwise distance
+lig_SHP836-2_lig_E28 exceeds 1 A pairwise distance
+lig_E14_lig_E26 exceeds 1 A pairwise distance
+lig_E14_lig_E23 exceeds 1 A pairwise distance
+lig_E14_lig_E24 exceeds 1 A pairwise distance
+lig_E14_lig_SHP099-1 exceeds 1 A pairwise distance
+lig_E28_lig_E5 exceeds 1 A pairwise distance
+lig_E14_lig_E30 exceeds 1 A pairwise distance
+lig_E14_lig_E1 exceeds 1 A pairwise distance
+lig_E14_lig_E25 exceeds 1 A pairwise distance
+lig_E14_lig_11 exceeds 1 A pairwise distance
+lig_E4_lig_E27 exceeds 1 A pairwise distance
+lig_3_lig_E28 exceeds 1 A pairwise distance
+lig_E14_lig_E2 exceeds 1 A pairwise distance
+lig_E14_lig_10 exceeds 1 A pairwise distance
+lig_E8_lig_E14 exceeds 1 A pairwise distance
+lig_E14_lig_E22 exceeds 1 A pairwise distance
+lig_6_lig_E14 exceeds 1 A pairwise distance
+lig_E9_lig_E14 exceeds 1 A pairwise distance
+lig_E14_lig_E6 exceeds 1 A pairwise distance
