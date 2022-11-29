@@ -99,7 +99,7 @@ def test_target_class():
         for kk, ii in item.items():
             if kk != "Mol1" and kk != "Mol2":
                 assert ii == dict2[key][kk]
-    #assert tgt.get_edge_set_html() == edge_set.get_html()
+    assert tgt.get_edge_set_html() == edge_set.get_html()
 
     # TODO: this actually does not test anything, only checks if it works
     tgt.find_links()
