@@ -1,0 +1,10 @@
+INPUT_FILE_NAME   ligprep_thrombin_recurated.csv
+OUT_SD   ligprep_thrombin_recurated-out.sdf
+MAX_ATOMS   500
+FORCE_FIELD   16
+PH   7.8
+PH_THRESHOLD   0.0
+EPIK   yes
+DETERMINE_CHIRALITIES   no
+IGNORE_CHIRALITIES   no
+NUM_STEREOISOMERS   32

@@ -1,0 +1,1 @@
+"${SCHRODINGER}/ligprep" -inp ligprep_thrombin_recurated.inp -HOST localhost:10 -NJOBS 1 -TMPLAUNCHDIR

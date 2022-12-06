@@ -21,7 +21,7 @@ dependencies:
   - networkx
   - openff-units
   - scipy
-  - openff-toolkit
+  - openff-toolkit<=0.11
   - requests
   - git-lfs
   - nbsphinx     
