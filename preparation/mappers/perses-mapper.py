@@ -29,7 +29,7 @@ for i, edge in enumerate(edges):
 
 output = {}
 output['mapper'] = "Perses 0.10.1 (allow_ring_breaking=False, preserve_chirality=True, use_positions=True, coordinate_tolerance=0.2), default non geometric scorer"
-output['planner'] = "openfe v0.4 minimal_spanning_graph"
+output['planner'] = "openfe v0.5 minimal_spanning_graph"
 
 edges_dict = dict()
 
