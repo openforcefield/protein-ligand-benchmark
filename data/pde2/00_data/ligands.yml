@@ -98,6 +98,16 @@ lig_49175828:
     value: 8.75
   name: lig_49175828
   smiles: Cc1c2nnc(n2c3cc(ccc3n1)CN4CCOCC4)c5cc(ccc5Cl)OC(C)C
+lig_49220392:
+  measurement:
+    comment: table 1 cmpd 11
+    doi: 10.1038/s41598-018-23039-5
+    error: 0.21
+    type: pic50
+    unit: ''
+    value: 8.21
+  name: lig_49220392
+  smiles: CCOc1ccc(c(c1)c2nnc3n2c4cc(ccc4nc3C)CN5CCOCC5)Cl
 lig_49220548:
   measurement:
     comment: table 1 cmpd 13

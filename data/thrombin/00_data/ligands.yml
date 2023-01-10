@@ -1,6 +1,10 @@
 lig_1a:
   measurement:
     additional:
+    - error: 0.2
+      type: dg
+      unit: kilojoules / mole
+      value: -31.3
     - error: 0.9
       type: dh
       unit: kilojoules / mole
@@ -9,17 +13,21 @@ lig_1a:
       type: tds
       unit: kilojoules / mole
       value: -18.2
-    comment: Table 1 cmpd 1a
+    comment: Figure 1 cmpd 1a
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.2
-    type: dg
-    unit: kilojoules / mole
-    value: -31.3
+    error: 2.12
+    type: ki
+    unit: uM
+    value: 3.99
   name: lig_1a
-  smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)F)[NH3+]
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cccc(F)c1
 lig_1b:
   measurement:
     additional:
+    - error: 0.8
+      type: dg
+      unit: kilojoules / mole
+      value: -35.4
     - error: 1.1
       type: dh
       unit: kilojoules / mole
@@ -28,17 +36,21 @@ lig_1b:
       type: tds
       unit: kilojoules / mole
       value: 1.7
-    comment: Table 1 cmpd 1b
+    comment: Figure 1 cmpd 1b
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.8
-    type: dg
-    unit: kilojoules / mole
-    value: -35.4
+    error: 140
+    type: ki
+    unit: nM
+    value: 180
   name: lig_1b
-  smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Cl)[NH3+]
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cccc(Cl)c1
 lig_1c:
   measurement:
     additional:
+    - error: 0.7
+      type: dg
+      unit: kilojoules / mol
+      value: -35.8
     - error: 0.4
       type: dh
       unit: kilojoules / mole
@@ -47,17 +59,21 @@ lig_1c:
       type: tds
       unit: kilojoules / mole
       value: -1.3
-    comment: Table 1 cmpd 1c
+    comment: Figure 1 cmpd 1c
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.7
-    type: dg
-    unit: kilojoules / mole
-    value: -35.8
+    error: 147
+    type: ki
+    unit: nM
+    value: 560
   name: lig_1c
-  smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)Br)[NH3+]
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cccc(Br)c1
 lig_1d:
   measurement:
     additional:
+    - error: 0.3
+      type: dg
+      unit: kilojoules / mole
+      value: -34.5
     - error: 1.1
       type: dh
       unit: kilojoules / mole
@@ -66,17 +82,71 @@ lig_1d:
       type: tds
       unit: kilojoules / mole
       value: -3.5
-    comment: Table 1 cmpd 1d
+    comment: Figure 1 cmpd 1d
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.3
-    type: dg
-    unit: kilojoules / mole
-    value: -34.5
+    error: 230
+    type: ki
+    unit: nM
+    value: 540
   name: lig_1d
-  smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cccc(c3)I)[NH3+]
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cccc(I)c1
+lig_2a:
+  measurement:
+    comment: Figure 1 cmpd 2a
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 3.28
+    type: ki
+    unit: uM
+    value: 15.09
+  name: lig_2a
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cccc(C(F)(F)F)c1
+lig_2b:
+  measurement:
+    comment: Figure 1 cmpd 2b
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 0.52
+    type: ki
+    unit: uM
+    value: 4.83
+  name: lig_2b
+  smiles: COc1cccc(CNC(=O)[C@@H]2CCCN2C(=O)[C@H](N)Cc2ccccc2)c1
+lig_2c:
+  measurement:
+    comment: Figure 1 cmpd 2c
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 0.35
+    type: ki
+    unit: uM
+    value: 4.91
+  name: lig_2c
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cccc(O)c1
+lig_2d:
+  measurement:
+    comment: Figure 1 cmpd 2d
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 1.95
+    type: ki
+    unit: uM
+    value: 14.73
+  name: lig_2d
+  smiles: Nc1cccc(CNC(=O)[C@@H]2CCCN2C(=O)[C@H](N)Cc2ccccc2)c1
+lig_2e:
+  measurement:
+    comment: Figure 1 cmpd 2e
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 1.88
+    type: ki
+    unit: uM
+    value: 8.70
+  name: lig_2e
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cccc([N+](=O)[O-])c1
 lig_3a:
   measurement:
     additional:
+    - error: 0.6
+      type: dg
+      unit: kilojoules / mole
+      value: -34.8
     - error: 0.7
       type: dh
       unit: kilojoules / mole
@@ -85,17 +155,21 @@ lig_3a:
       type: tds
       unit: kilojoules / mole
       value: -6.3
-    comment: Table 1 cmpd 3a
+    comment: Figure 1 cmpd 3a
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.6
-    type: dg
-    unit: kilojoules / mole
-    value: -34.8
+    error: 0.21
+    type: ki
+    unit: uM
+    value: 1.21
   name: lig_3a
-  smiles: Cc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+]
+  smiles: Cc1cccc(CNC(=O)[C@@H]2CCCN2C(=O)[C@H](N)Cc2ccccc2)c1
 lig_3b:
   measurement:
     additional:
+    - error: 0.5
+      type: dg
+      unit: kilojoules / mole
+      value: -32.9
     - error: 0.9
       type: dh
       unit: kilojoules / mole
@@ -104,17 +178,31 @@ lig_3b:
       type: tds
       unit: kilojoules / mole
       value: -16.4
-    comment: Table 1 cmpd 3b
+    comment: Figure 1 cmpd 3b
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.5
-    type: dg
-    unit: kilojoules / mole
-    value: -32.9
+    error: 0.96
+    type: ki
+    unit: uM
+    value: 5.17
   name: lig_3b
-  smiles: CCc1cccc(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+]
+  smiles: CCc1cccc(CNC(=O)[C@@H]2CCCN2C(=O)[C@H](N)Cc2ccccc2)c1
+lig_4:
+  measurement:
+    comment: Figure 1 cmpd 4
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 1.2
+    type: ki
+    unit: nM
+    value: 4
+  name: lig_4
+  smiles: NC(=[NH2+])c1ccc(CNC(=O)[C@@H]2CCCN2C(=O)[C@H](N)Cc2ccccc2)cc1
 lig_5:
   measurement:
     additional:
+    - error: -1
+      type: dg
+      unit: kilojoules / mole
+      value: -31.7
     - error: -1
       type: dh
       unit: kilojoules / mole
@@ -123,17 +211,21 @@ lig_5:
       type: tds
       unit: kilojoules / mole
       value: -18.1
-    comment: Table 1 cmpd 5
+    comment: Figure 1 cmpd 5
     doi: 10.1016/j.jmb.2009.04.051
-    error: -1
-    type: dg
-    unit: kilojoules / mole
-    value: -31.7
+    error: 6.70
+    type: ki
+    unit: uM
+    value: 11.21
   name: lig_5
-  smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3ccccc3)[NH3+]
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1ccccc1
 lig_6a:
   measurement:
     additional:
+    - error: 0.2
+      type: dg
+      unit: kilojoules / mole
+      value: -38.4
     - error: 0.4
       type: dh
       unit: kilojoules / mole
@@ -142,17 +234,21 @@ lig_6a:
       type: tds
       unit: kilojoules / mole
       value: 2.9
-    comment: Table 1 cmpd 6a
+    comment: Figure 1 cmpd 6a
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.2
-    type: dg
-    unit: kilojoules / mole
-    value: -38.4
+    error: 20
+    type: ki
+    unit: nM
+    value: 60
   name: lig_6a
-  smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3Cl)Cl)[NH3+]
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cc(Cl)ccc1Cl
 lig_6b:
   measurement:
     additional:
+    - error: 0.5
+      type: dg
+      unit: kilojoules / mole
+      value: -37.2
     - error: 1.7
       type: dh
       unit: kilojoules / mole
@@ -161,17 +257,41 @@ lig_6b:
       type: tds
       unit: kilojoules / mole
       value: -3.7
-    comment: Table 1 cmpd 6b
+    comment: Figure 1 cmpd 6b
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.5
-    type: dg
-    unit: kilojoules / mole
-    value: -37.2
+    error: 90
+    type: ki
+    unit: nM
+    value: 260
   name: lig_6b
-  smiles: Cc1ccc(cc1CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])Cl
+  smiles: Cc1ccc(Cl)cc1CNC(=O)[C@@H]1CCCN1C(=O)[C@H](N)Cc1ccccc1
+lig_6c:
+  measurement:
+    comment: Figure 1 cmpd 6c
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 80
+    type: ki
+    unit: nM
+    value: 270
+  name: lig_6c
+  smiles: COc1ccc(Cl)cc1CNC(=O)[C@@H]1CCCN1C(=O)[C@H](N)Cc1ccccc1
+lig_6d:
+  measurement:
+    comment: Figure 1 cmpd 6d
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 206
+    type: ki
+    unit: nM
+    value: 433
+  name: lig_6d
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cc(Cl)ccc1O
 lig_6e:
   measurement:
     additional:
+    - error: 0.3
+      type: dg
+      unit: kilojoules / mole
+      value: -37.3
     - error: 2.1
       type: dh
       unit: kilojoules / mole
@@ -180,30 +300,61 @@ lig_6e:
       type: tds
       unit: kilojoules / mole
       value: 3.8
-    comment: Table 1 cmpd 6e
+    comment: Figure 1 cmpd 6e
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.3
-    type: dg
-    unit: kilojoules / mole
-    value: -37.3
+    error: 28
+    type: ki
+    unit: nM
+    value: 500
   name: lig_6e
-  smiles: c1ccc(cc1)C[C@H](C(=O)N2CCC[C@H]2C(=O)NCc3cc(ccc3F)Cl)[NH3+]
-lig_7a:
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cc(Cl)ccc1F
+lig_7b:
   measurement:
-    additional:
-    - error: 1.3
-      type: dh
-      unit: kilojoules / mole
-      value: -31.9
-    - error: 1.3
-      type: tds
-      unit: kilojoules / mole
-      value: -2.5
-    comment: Table 1 cmpd 7a
+    comment: Figure 1 cmpd 7b
     doi: 10.1016/j.jmb.2009.04.051
-    error: 0.1
-    type: dg
-    unit: kilojoules / mole
-    value: -34.4
-  name: lig_7a
-  smiles: Cc1ccc(c(c1)CNC(=O)[C@@H]2CCCN2C(=O)[C@@H](Cc3ccccc3)[NH3+])C
+    error: 1.75
+    type: ki
+    unit: uM
+    value: 3.99
+  name: lig_7b
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1ccc(Cl)cc1
+lig_7c:
+  measurement:
+    comment: Figure 1 cmpd 7c
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 0.33
+    type: ki
+    unit: uM
+    value: 1.46
+  name: lig_7c
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1ccccc1Cl
+lig_7d:
+  measurement:
+   comment: Figure 1 cmpd 7d
+   doi: 10.1016/j.jmb.2009.04.051
+   error: 1.35
+   type: ki
+   unit: uM
+   value: 7.60
+  name: lig_7d
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NC[C@@H]1CCC[C@@H]([NH3+])C1
+lig_7e:
+  measurement:
+    comment: Figure 1 cmpd 7e
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 36
+    type: ki
+    unit: uM
+    value: 75.77
+  name: lig_7e
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1cccc(CO)c1
+lig_7f:
+  measurement:
+    comment: Figure 1 cmpd 7f
+    doi: 10.1016/j.jmb.2009.04.051
+    error: 15
+    type: ki
+    unit: uM
+    value: 34.55
+  name: lig_7f
+  smiles: N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1ccc(CO)cc1
