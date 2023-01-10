@@ -33,10 +33,10 @@ SEQRES  16 H  260  GLY LYS ARG GLY ASP ALA CYS GLU GLY ASP SER GLY GLY
 SEQRES  17 H  260  PRO PHE VAL MET LYS SER PRO PHE ASN ASN ARG TRP TYR
 SEQRES  18 H  260  GLN MET GLY ILE VAL SER TRP GLY GLU GLY CYS ASP ARG
 SEQRES  19 H  260  ASP GLY LYS TYR GLY PHE TYR THR HIS VAL PHE ARG LEU
-SEQRES  20 H  260  LYS LYS TRP ILE GLN LYS VAL ILE ASP GLN PHE GLY NMA
+SEQRES  20 H  260  LYS LYS TRP ILE GLN LYS VAL ILE ASP GLN PHE GLY NME
 SEQRES   1 L   30  ACE GLU ALA ASP CYS GLY LEU ARG PRO LEU PHE GLU LYS
 SEQRES   2 L   30  LYS SER LEU GLU ASP LYS THR GLU ARG GLU LEU LEU GLU
-SEQRES   3 L   30  SER TYR ILE NMA
+SEQRES   3 L   30  SER TYR ILE NME
 FORMUL   3  HOH   *3(H2 0)
 HELIX    1   1 ARG H  126  ARG H  126  1
 HELIX    2   2 GLU H  127  GLU H  127  1
@@ -332,9 +332,9 @@ CRYST1   70.100   71.500   72.500  90.00 100.30  90.00 C 1 2 1       4
 HETATM    1  CH3 ACE H  15       4.831  -7.726  15.518  1.00  0.00           C  
 HETATM    2  C   ACE H  15       4.031  -8.076  16.728  1.00  0.00           C  
 HETATM    3  O   ACE H  15       2.829  -8.237  16.600  1.00  0.00           O  
-HETATM    4 1H   ACE H  15       4.475  -8.304  14.674  1.00  0.00           H  
-HETATM    5 2H   ACE H  15       4.737  -6.667  15.291  1.00  0.00           H  
-HETATM    6 3H   ACE H  15       5.863  -7.964  15.733  1.00  0.00           H  
+HETATM    4  H1  ACE H  15       4.475  -8.304  14.674  1.00  0.00           H  
+HETATM    5  H2  ACE H  15       4.737  -6.667  15.291  1.00  0.00           H  
+HETATM    6  H3  ACE H  15       5.863  -7.964  15.733  1.00  0.00           H  
 ATOM      7  N   ILE H  16       4.710  -8.132  17.881  1.00 15.91           N  
 ATOM      8  CA  ILE H  16       4.170  -7.972  19.225  1.00 14.62           C  
 ATOM      9  C   ILE H  16       3.100  -9.022  19.585  1.00 17.37           C  
@@ -4477,19 +4477,19 @@ ATOM   4145  O   GLY H 246      25.249  15.341  12.810  1.00 68.53           O
 ATOM   4146  H   GLY H 246      28.549  13.772  14.870  1.00 48.33           H  
 ATOM   4147  HA3 GLY H 246      28.007  15.514  12.683  1.00 46.39           H  
 ATOM   4148  HA2 GLY H 246      27.341  15.582  14.286  1.00 46.39           H  
-HETATM 4149  N   NMA H 247      25.927  13.233  12.456  1.00  0.00           N  
-HETATM 4150  CA  NMA H 247      24.688  12.817  11.795  1.00  0.00           C  
-HETATM 4151  H   NMA H 247      26.666  12.551  12.548  1.00  0.00           H  
-HETATM 4152 1HA  NMA H 247      24.697  13.083  10.740  1.00  0.00           H  
-HETATM 4153 2HA  NMA H 247      24.553  11.739  11.862  1.00  0.00           H  
-HETATM 4154 3HA  NMA H 247      23.803  13.284  12.231  1.00  0.00           H  
-TER    4155      NMA H 247 
+HETATM 4149  N   NME H 247      25.927  13.233  12.456  1.00  0.00           N  
+HETATM 4150  C   NME H 247      24.688  12.817  11.795  1.00  0.00           C  
+HETATM 4151  H   NME H 247      26.666  12.551  12.548  1.00  0.00           H  
+HETATM 4152  H1  NME H 247      24.697  13.083  10.740  1.00  0.00           H  
+HETATM 4153  H2  NME H 247      24.553  11.739  11.862  1.00  0.00           H  
+HETATM 4154  H3  NME H 247      23.803  13.284  12.231  1.00  0.00           H  
+TER    4155      NME H 247 
 HETATM 4156  CH3 ACE L   0      16.213  15.066  20.194  1.00  0.00           C  
 HETATM 4157  C   ACE L   0      16.188  16.578  20.108  1.00  0.00           C  
 HETATM 4158  O   ACE L   0      16.468  17.251  21.099  1.00  0.00           O  
-HETATM 4159 1H   ACE L   0      15.736  14.738  21.118  1.00  0.00           H  
-HETATM 4160 2H   ACE L   0      15.675  14.621  19.356  1.00  0.00           H  
-HETATM 4161 3H   ACE L   0      17.242  14.707  20.183  1.00  0.00           H  
+HETATM 4159  H1  ACE L   0      15.736  14.738  21.118  1.00  0.00           H  
+HETATM 4160  H2  ACE L   0      15.675  14.621  19.356  1.00  0.00           H  
+HETATM 4161  H3  ACE L   0      17.242  14.707  20.183  1.00  0.00           H  
 ATOM   4162  N   GLU L   1C     15.823  17.094  18.925  1.00 60.00           N  
 ATOM   4163  CA  GLU L   1C     15.623  18.518  18.652  1.00 60.53           C  
 ATOM   4164  C   GLU L   1C     14.471  19.133  19.465  1.00 57.87           C  
@@ -4950,13 +4950,13 @@ ATOM   4618 HG23 ILE L  14K      1.766   5.841  43.275  1.00 41.15           H
 ATOM   4619 HD11 ILE L  14K     -1.649   4.159  40.070  1.00 31.82           H  
 ATOM   4620 HD12 ILE L  14K     -1.272   5.838  39.714  1.00 31.82           H  
 ATOM   4621 HD13 ILE L  14K     -0.195   4.556  39.168  1.00 31.82           H  
-HETATM 4622  N   NMA L  14L      1.601   8.548  42.255  1.00  0.00           N  
-HETATM 4623  CA  NMA L  14L      2.192   9.481  43.205  1.00  0.00           C  
-HETATM 4624  H   NMA L  14L      0.601   8.416  42.312  1.00  0.00           H  
-HETATM 4625 1HA  NMA L  14L      3.277   9.560  43.118  1.00  0.00           H  
-HETATM 4626 2HA  NMA L  14L      1.770  10.475  43.056  1.00  0.00           H  
-HETATM 4627 3HA  NMA L  14L      1.960   9.166  44.222  1.00  0.00           H  
-TER    4628      NMA L  14L
+HETATM 4622  N   NME L  14L      1.601   8.548  42.255  1.00  0.00           N  
+HETATM 4623  C   NME L  14L      2.192   9.481  43.205  1.00  0.00           C  
+HETATM 4624  H   NME L  14L      0.601   8.416  42.312  1.00  0.00           H  
+HETATM 4625  H1  NME L  14L      3.277   9.560  43.118  1.00  0.00           H  
+HETATM 4626  H2  NME L  14L      1.770  10.475  43.056  1.00  0.00           H  
+HETATM 4627  H3  NME L  14L      1.960   9.166  44.222  1.00  0.00           H  
+TER    4628      NME L  14L
 HETATM 4629  O   HOH H3071      25.415 -14.928  23.030  1.00 26.49           O  
 HETATM 4630  H1  HOH H3071      25.972 -14.146  22.736  1.00 26.49           H  
 HETATM 4631  H2  HOH H3071      25.883 -15.393  23.784  1.00 26.49           H  
