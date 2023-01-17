@@ -2682,8 +2682,4 @@ HETATM 2445  H   NME B 322      64.955 -43.234   2.508  1.00  0.00           H
 HETATM 2446  H1  NME B 322      65.490 -43.444  -0.377  1.00  0.00           H  
 HETATM 2447  H2  NME B 322      65.471 -44.983   0.503  1.00  0.00           H  
 HETATM 2448  H3  NME B 322      64.043 -43.943   0.499  1.00  0.00           H  
-CONECT    1    4    5    6
-CONECT    4    1
-CONECT    5    1
-CONECT    6    1
 END   
