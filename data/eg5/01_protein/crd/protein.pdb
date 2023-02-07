@@ -47,7 +47,7 @@ SEQRES  23 A  349  ALA LEU VAL GLU ARG THR PRO HIS VAL PRO TYR ARG GLU
 SEQRES  24 A  349  SER LYS LEU THR ARG ILE LEU GLN ASP SER LEU GLY GLY
 SEQRES  25 A  349  ARG THR ARG THR SER ILE ILE ALA THR ILE SER PRO ALA
 SEQRES  26 A  349  SER LEU ASN LEU GLU GLU THR LEU SER THR LEU GLU TYR
-SEQRES  27 A  349  ALA HIS ARG ALA LYS ASN ILE LEU ASN LYS NMA
+SEQRES  27 A  349  ALA HIS ARG ALA LYS ASN ILE LEU ASN LYS NME
 FORMUL   2  HOH   *7(H2 0)
 HELIX    1   1 LEU A   30  LEU A   30  1
 HELIX    2   2 ALA A   31  ALA A   31  1
@@ -397,17 +397,17 @@ SHEET    1  82 1 LEU A 263  LEU A 263  0
 SHEET    1  83 1 VAL A 264  VAL A 264  0
 SHEET    1  84 1 ASP A 265  ASP A 265  0
 CRYST1  160.950   79.718   69.513  90.00  96.88  90.00 C 1 2 1       8
-ATOM      1  CH3 ACE A  15      24.431 -17.877 -11.476  1.00  0.00           C  
-ATOM      2  C   ACE A  15      24.674 -16.414 -11.124  1.00  0.00           C  
-ATOM      3  O   ACE A  15      25.798 -15.931 -11.253  1.00  0.00           O  
-ATOM      4 1H   ACE A  15      25.311 -18.475 -11.239  1.00  0.00           H  
-ATOM      5 2H   ACE A  15      23.585 -18.282 -10.919  1.00  0.00           H  
-ATOM      6 3H   ACE A  15      24.223 -17.978 -12.542  1.00  0.00           H  
+HETATM    1  CH3 ACE A  15      24.431 -17.877 -11.476  1.00  0.00           C  
+HETATM    2  C   ACE A  15      24.674 -16.414 -11.124  1.00  0.00           C  
+HETATM    3  O   ACE A  15      25.798 -15.931 -11.253  1.00  0.00           O  
+HETATM    4  H1  ACE A  15      25.311 -18.475 -11.239  1.00  0.00           H  
+HETATM    5  H2  ACE A  15      23.585 -18.282 -10.919  1.00  0.00           H  
+HETATM    6  H3  ACE A  15      24.223 -17.978 -12.542  1.00  0.00           H  
 ATOM      7  N   GLY A  16      23.614 -15.724 -10.670  1.00 56.82           N  
 ATOM      8  CA  GLY A  16      23.646 -14.323 -10.247  1.00 57.15           C  
 ATOM      9  C   GLY A  16      24.213 -14.203  -8.825  1.00 56.24           C  
 ATOM     10  O   GLY A  16      25.151 -14.910  -8.454  1.00 56.63           O  
-ATOM     11  H1  GLY A  16      22.728 -16.199 -10.583  1.00 56.82           H  
+ATOM     11  H   GLY A  16      22.728 -16.199 -10.583  1.00 56.82           H  
 ATOM     12  HA3 GLY A  16      22.635 -13.918 -10.293  1.00 57.15           H  
 ATOM     13  HA2 GLY A  16      24.256 -13.729 -10.929  1.00 57.15           H  
 ATOM     14  N   LYS A  17      23.662 -13.267  -8.040  1.00 53.91           N  
@@ -5865,13 +5865,13 @@ ATOM   5465  HE2 LYS A 362      18.567  -8.327 -12.480  1.00 55.16           H
 ATOM   5466  HZ1 LYS A 362      17.768  -7.355 -14.460  1.00 55.37           H  
 ATOM   5467  HZ2 LYS A 362      18.883  -8.146 -15.391  1.00 55.37           H  
 ATOM   5468  HZ3 LYS A 362      17.708  -8.995 -14.604  1.00 55.37           H  
-ATOM   5469  N   NMA A 362A     24.687  -7.866  -9.462  1.00  0.00           N  
-ATOM   5470  CA  NMA A 362A     25.822  -6.985  -9.210  1.00  0.00           C  
-ATOM   5471  H   NMA A 362A     24.395  -8.463  -8.702  1.00  0.00           H  
-ATOM   5472 1HA  NMA A 362A     26.066  -6.336 -10.052  1.00  0.00           H  
-ATOM   5473 2HA  NMA A 362A     25.607  -6.348  -8.351  1.00  0.00           H  
-ATOM   5474 3HA  NMA A 362A     26.705  -7.577  -8.974  1.00  0.00           H  
-TER    5475      NMA A 362A
+HETATM 5469  N   NME A 363      24.687  -7.866  -9.462  1.00  0.00           N  
+HETATM 5470  C   NME A 363      25.822  -6.985  -9.210  1.00  0.00           C  
+HETATM 5471  H   NME A 363      24.395  -8.463  -8.702  1.00  0.00           H  
+HETATM 5472  H1  NME A 363      26.066  -6.336 -10.052  1.00  0.00           H  
+HETATM 5473  H2  NME A 363      25.607  -6.348  -8.351  1.00  0.00           H  
+HETATM 5474  H3  NME A 363      26.705  -7.577  -8.974  1.00  0.00           H  
+TER    5475      NME A 363 
 HETATM 5476  O   HOH A 372      14.127   2.495  15.237  1.00 20.25           O  
 HETATM 5477  H1  HOH A 372      13.297   2.286  15.760  1.00 20.25           H  
 HETATM 5478  H2  HOH A 372      14.921   2.463  15.861  1.00 20.25           H  
@@ -5893,10 +5893,6 @@ HETATM 5493  H2  HOH A 484      27.781  -7.031  21.842  1.00 38.37           H
 HETATM 5494  O   HOH A 499      22.332   5.193   9.602  1.00 41.21           O  
 HETATM 5495  H1  HOH A 499      22.732   5.985  10.074  1.00 41.21           H  
 HETATM 5496  H2  HOH A 499      21.557   4.857  10.143  1.00 41.21           H  
-CONECT    1    4    5    6
-CONECT    4    1
-CONECT    5    1
-CONECT    6    1
 CONECT 5476 5477 5478
 CONECT 5477 5476
 CONECT 5478 5476
