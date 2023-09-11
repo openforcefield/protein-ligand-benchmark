@@ -1,0 +1,325 @@
+remarks: Lomap network graph, Lomap mapper, Lomap scorer
+planner: openfe v0.12.0 lomap network
+edges:
+  edge_lig_8d_lig_8b:
+    ligand_a: lig_8d
+    ligand_b: lig_8b
+    atom mapping: {0: 26, 1: 25, 2: 23, 3: 24, 4: 4, 21: 2, 22: 3, 23: 1, 24: 0, 25: 27,
+      26: 28, 27: 29, 28: 30, 29: 31, 30: 32, 31: 33, 32: 34, 33: 35, 34: 36, 35: 37,
+      36: 38, 37: 39, 38: 40, 39: 41, 40: 42, 41: 43, 42: 44, 43: 45, 44: 46}
+    score: {value: '0.727', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5i_lig_5m:
+    ligand_a: lig_5i
+    ligand_b: lig_5m
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36, 37: 37, 38: 38, 39: 39}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5a_lig_1b:
+    ligand_a: lig_5a
+    ligand_b: lig_1b
+    atom mapping: {3: 17, 4: 23, 5: 24, 6: 25, 7: 26, 8: 12, 9: 11, 10: 10, 11: 7,
+      12: 8, 13: 9, 14: 1, 15: 0, 16: 2, 17: 3, 18: 4, 19: 5, 20: 6, 21: 29, 22: 30,
+      23: 27, 24: 28, 25: 13, 26: 14, 27: 15, 28: 16}
+    score: {value: '0.451', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_3a_lig_5a:
+    ligand_a: lig_3a
+    ligand_b: lig_5a
+    atom mapping: {0: 15, 1: 14, 2: 16, 3: 17, 4: 18, 5: 19, 6: 20, 7: 11, 8: 12,
+      9: 13, 10: 10, 11: 9, 12: 8, 13: 25, 14: 26, 15: 27, 16: 28, 17: 3, 18: 2, 19: 33,
+      20: 35, 21: 34, 22: 36, 27: 29, 28: 32, 29: 31, 30: 30, 31: 4, 32: 5, 33: 6,
+      34: 7, 35: 23, 36: 24, 37: 21, 38: 22}
+    score: {value: '0.181', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5a_lig_1a:
+    ligand_a: lig_5a
+    ligand_b: lig_1a
+    atom mapping: {3: 1, 4: 25, 5: 26, 6: 23, 7: 24, 8: 6, 9: 7, 10: 8, 11: 9, 12: 10,
+      13: 11, 14: 12, 15: 13, 16: 14, 17: 15, 18: 16, 19: 17, 20: 18, 21: 19, 22: 20,
+      23: 21, 24: 22, 25: 4, 26: 5, 27: 2, 28: 3}
+    score: {value: '0.330', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_8c_lig_8e:
+    ligand_a: lig_8c
+    ligand_b: lig_8e
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 22, 22: 21, 23: 23, 24: 25, 25: 24, 26: 26, 28: 31, 29: 33, 30: 32, 31: 34,
+      32: 36, 33: 35, 34: 37, 35: 38, 36: 39, 37: 40, 38: 41, 39: 42, 40: 43, 41: 44,
+      42: 45}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5a_lig_5b:
+    ligand_a: lig_5a
+    ligand_b: lig_5b
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5h_lig_5a:
+    ligand_a: lig_5h
+    ligand_b: lig_5a
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 18: 14, 19: 15, 20: 16, 21: 17, 22: 18, 23: 19, 24: 20, 25: 21,
+      26: 22, 27: 23, 28: 24, 29: 25, 30: 26, 31: 27, 32: 28, 33: 29, 34: 30, 35: 31,
+      36: 32, 37: 33, 38: 34, 39: 35, 40: 36}
+    score: {value: '0.181', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_3b_lig_5d:
+    ligand_a: lig_3b
+    ligand_b: lig_5d
+    atom mapping: {0: 15, 1: 14, 2: 12, 3: 13, 4: 11, 5: 20, 6: 18, 7: 19, 8: 16,
+      9: 17, 10: 21, 11: 22, 12: 23, 13: 24, 14: 9, 15: 8, 16: 25, 17: 26, 18: 27,
+      19: 28, 20: 3, 21: 2, 22: 33, 23: 35, 24: 34, 25: 36, 30: 29, 31: 32, 32: 31,
+      33: 30, 34: 4, 35: 5, 36: 6, 37: 7, 38: 10}
+    score: {value: '0.181', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5o_lig_5m:
+    ligand_a: lig_5o
+    ligand_b: lig_5m
+    atom mapping: {8: 1, 9: 2, 10: 3, 11: 4, 12: 5, 13: 6, 14: 7, 15: 8, 16: 9, 17: 10,
+      18: 11, 19: 12, 20: 13, 21: 14, 22: 15, 23: 16, 24: 17, 25: 18, 26: 19, 27: 20,
+      28: 21, 29: 22, 30: 23, 31: 24, 32: 25, 33: 26, 34: 27, 35: 28, 36: 29, 37: 30,
+      38: 31, 39: 32, 40: 33, 41: 35, 42: 34, 43: 36, 44: 37, 45: 38, 46: 39}
+    score: {value: '0.259', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5j_lig_5b:
+    ligand_a: lig_5j
+    ligand_b: lig_5b
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5g_lig_5c:
+    ligand_a: lig_5g
+    ligand_b: lig_5c
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 20: 20, 21: 21, 22: 22,
+      23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 32: 32,
+      33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.181', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_3a_lig_3b:
+    ligand_a: lig_3a
+    ligand_b: lig_3b
+    atom mapping: {0: 0, 1: 1, 2: 8, 4: 6, 5: 7, 6: 5, 7: 4, 8: 2, 9: 3, 10: 38, 11: 14,
+      12: 15, 13: 16, 14: 17, 15: 18, 16: 19, 17: 20, 18: 21, 19: 22, 20: 23, 21: 24,
+      22: 25, 23: 26, 24: 27, 25: 28, 26: 29, 27: 30, 28: 31, 29: 32, 30: 33, 31: 34,
+      32: 35, 33: 36, 34: 37, 35: 12, 36: 13, 37: 10, 38: 11}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5d_lig_5p:
+    ligand_a: lig_5d
+    ligand_b: lig_5p
+    atom mapping: {1: 22, 2: 21, 3: 20, 4: 42, 5: 43, 6: 44, 7: 45, 8: 15, 9: 14,
+      10: 46, 11: 4, 12: 2, 13: 3, 14: 1, 15: 0, 16: 8, 17: 9, 18: 6, 19: 7, 20: 5,
+      21: 10, 22: 11, 23: 12, 24: 13, 25: 16, 26: 17, 27: 18, 28: 19, 29: 38, 30: 39,
+      31: 41, 32: 40, 33: 34, 34: 35, 35: 36, 36: 37}
+    score: {value: '0.330', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5i_lig_5a:
+    ligand_a: lig_5i
+    ligand_b: lig_5a
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 20, 13: 18, 14: 19, 15: 16, 16: 17, 17: 14, 18: 15, 19: 12, 24: 21,
+      25: 22, 26: 23, 27: 24, 28: 25, 29: 26, 30: 27, 31: 28, 32: 29, 33: 30, 34: 31,
+      35: 32, 36: 33, 37: 34, 38: 35, 39: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5o_lig_5n:
+    ligand_a: lig_5o
+    ligand_b: lig_5n
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 34, 12: 35, 13: 32, 14: 33, 15: 15, 16: 16, 17: 17, 18: 18, 19: 27, 20: 25,
+      21: 26, 22: 23, 23: 24, 24: 21, 25: 22, 26: 19, 31: 28, 32: 29, 33: 30, 34: 31,
+      35: 13, 36: 14, 37: 11, 38: 12, 39: 36, 40: 37, 41: 38, 42: 39, 43: 40, 44: 41,
+      45: 42, 46: 43}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_8b_lig_8a:
+    ligand_a: lig_8b
+    ligand_b: lig_8a
+    atom mapping: {0: 17, 1: 16, 2: 18, 3: 19, 4: 20, 5: 21, 6: 36, 7: 38, 8: 37,
+      9: 33, 10: 34, 11: 35, 12: 28, 13: 29, 14: 30, 15: 31, 16: 32, 17: 25, 18: 26,
+      19: 27, 20: 22, 21: 24, 22: 23, 23: 39, 24: 40, 25: 41, 26: 42, 27: 15, 28: 14,
+      29: 43, 30: 4, 31: 5, 32: 6, 33: 7, 34: 8, 35: 9, 36: 1, 37: 0, 38: 2, 43: 10,
+      44: 11, 45: 12, 46: 13, 47: 44}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5n_lig_5p:
+    ligand_a: lig_5n
+    ligand_b: lig_5p
+    atom mapping: {2: 26, 3: 28, 4: 27, 5: 23, 6: 24, 7: 25, 8: 22, 9: 21, 10: 20,
+      11: 18, 12: 19, 13: 16, 14: 17, 15: 15, 16: 14, 17: 46, 18: 4, 19: 2, 20: 3,
+      21: 1, 22: 0, 23: 8, 24: 9, 25: 6, 26: 7, 27: 5, 28: 10, 29: 11, 30: 12, 31: 13,
+      32: 44, 33: 45, 34: 42, 35: 43, 36: 38, 37: 39, 38: 40, 39: 41, 40: 34, 41: 35,
+      42: 36, 43: 37}
+    score: {value: '0.259', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_1a_lig_1b:
+    ligand_a: lig_1a
+    ligand_b: lig_1b
+    atom mapping: {1: 17, 2: 15, 3: 16, 4: 13, 5: 14, 6: 12, 7: 11, 8: 10, 9: 7, 10: 8,
+      11: 9, 12: 1, 13: 0, 14: 2, 15: 3, 16: 4, 17: 5, 18: 6, 19: 29, 20: 30, 21: 27,
+      22: 28, 23: 25, 24: 26, 25: 23, 26: 24}
+    score: {value: '0.181', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5h_lig_5c:
+    ligand_a: lig_5h
+    ligand_b: lig_5c
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 18: 14, 19: 15, 20: 16, 21: 17, 22: 18, 24: 20, 25: 21, 26: 22,
+      27: 23, 28: 24, 29: 25, 30: 26, 31: 27, 32: 28, 33: 29, 34: 30, 35: 31, 36: 32,
+      37: 33, 38: 34, 39: 35, 40: 36}
+    score: {value: '0.259', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5f_lig_5k:
+    ligand_a: lig_5f
+    ligand_b: lig_5k
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5g_lig_5a:
+    ligand_a: lig_5g
+    ligand_b: lig_5a
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5a_lig_5e:
+    ligand_a: lig_5a
+    ligand_b: lig_5e
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_8d_lig_8f:
+    ligand_a: lig_8d
+    ligand_b: lig_8f
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 15: 18, 16: 19, 17: 20, 18: 21, 19: 22, 20: 23, 21: 24,
+      22: 25, 23: 26, 24: 27, 25: 28, 26: 29, 27: 30, 28: 31, 29: 32, 30: 33, 31: 34,
+      32: 35, 33: 36, 34: 37, 35: 38, 36: 39, 37: 40, 38: 41, 39: 42, 40: 43, 41: 44,
+      42: 45, 43: 46, 44: 47, 45: 48}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_8c_lig_8d:
+    ligand_a: lig_8c
+    ligand_b: lig_8d
+    atom mapping: {0: 35, 1: 34, 2: 32, 3: 33, 4: 30, 5: 31, 6: 29, 7: 28, 8: 36,
+      10: 27, 11: 26, 12: 25, 13: 23, 14: 24, 15: 21, 16: 22, 17: 4, 18: 5, 19: 6,
+      20: 7, 21: 8, 22: 9, 23: 10, 24: 11, 25: 12, 26: 13, 27: 14, 28: 15, 29: 16,
+      30: 17, 31: 18, 32: 19, 33: 20, 34: 2, 35: 3, 36: 1, 37: 0, 38: 43, 39: 44,
+      40: 41, 41: 42, 42: 45}
+    score: {value: '0.181', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5f_lig_5l:
+    ligand_a: lig_5f
+    ligand_b: lig_5l
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5j_lig_5d:
+    ligand_a: lig_5j
+    ligand_b: lig_5d
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5k_lig_5d:
+    ligand_a: lig_5k
+    ligand_b: lig_5d
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5e_lig_5c:
+    ligand_a: lig_5e
+    ligand_b: lig_5c
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 18: 18, 20: 20, 21: 21, 22: 22,
+      23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 32: 32,
+      33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.181', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_8e_lig_8f:
+    ligand_a: lig_8e
+    ligand_b: lig_8f
+    atom mapping: {0: 38, 1: 37, 2: 35, 3: 36, 4: 33, 5: 34, 6: 32, 7: 31, 8: 39,
+      10: 30, 11: 29, 12: 28, 13: 26, 14: 27, 15: 24, 16: 25, 17: 4, 18: 5, 19: 6,
+      20: 7, 21: 9, 22: 8, 23: 10, 24: 12, 25: 11, 26: 13, 27: 14, 28: 15, 29: 16,
+      30: 17, 31: 18, 32: 20, 33: 19, 34: 21, 35: 23, 36: 22, 37: 2, 38: 3, 39: 1,
+      40: 0, 41: 46, 42: 47, 43: 44, 44: 45, 45: 48}
+    score: {value: '0.181', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_5l_lig_5b:
+    ligand_a: lig_5l
+    ligand_b: lig_5b
+    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+      32: 32, 33: 33, 34: 34, 35: 35, 36: 36}
+    score: {value: '0.095', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
+  edge_lig_8c_lig_8a:
+    ligand_a: lig_8c
+    ligand_b: lig_8a
+    atom mapping: {0: 0, 1: 1, 2: 8, 3: 9, 4: 6, 5: 7, 6: 5, 7: 4, 8: 2, 10: 43, 11: 14,
+      12: 15, 13: 16, 14: 17, 15: 18, 16: 19, 17: 20, 34: 39, 35: 40, 36: 41, 37: 42,
+      38: 12, 39: 13, 40: 10, 41: 11}
+    score: {value: '0.753', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
