@@ -1,0 +1,44 @@
+remarks: Kartograph mapper, Lomap scorer, MST network
+planner: openfe v0.11 lomap network
+edges:
+  edge_lig_CHEMBL3402745_200_5_lig_CHEMBL3402744_300_4:
+    ligand_a: lig_CHEMBL3402745_200_5
+    ligand_b: lig_CHEMBL3402744_300_4
+    atom mapping: {0: 0, 3: 3, 19: 19, 20: 20, 23: 23, 25: 25, 27: 27, 30: 30, 35: 36,
+      36: 37, 37: 35, 42: 39, 1: 1, 2: 2, 4: 4, 16: 16, 17: 17, 18: 18, 21: 21, 22: 22,
+      24: 24, 26: 26, 28: 28, 29: 29, 31: 31, 32: 32, 33: 33, 34: 34, 41: 38, 43: 40,
+      44: 41}
+    score: {value: '0.817', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3402745_200_5_lig_CHEMBL3402749_500_9:
+    ligand_a: lig_CHEMBL3402745_200_5
+    ligand_b: lig_CHEMBL3402749_500_9
+    atom mapping: {0: 37, 3: 35, 7: 25, 11: 29, 15: 33, 19: 18, 20: 19, 23: 15, 25: 13,
+      27: 11, 42: 41, 1: 36, 2: 34, 4: 22, 5: 23, 6: 24, 8: 26, 9: 27, 10: 28, 12: 30,
+      13: 31, 14: 32, 16: 21, 17: 20, 18: 17, 21: 16, 22: 14, 24: 12, 26: 10, 28: 9,
+      41: 40, 43: 38, 44: 39}
+    score: {value: '0.889', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3402754_40_14_lig_CHEMBL3402761_1_21:
+    ligand_a: lig_CHEMBL3402754_40_14
+    ligand_b: lig_CHEMBL3402761_1_21
+    atom mapping: {0: 0, 3: 3, 7: 7, 9: 9, 11: 11, 15: 16, 19: 21, 20: 20, 23: 24,
+      25: 26, 27: 28, 32: 57, 35: 36, 39: 33, 42: 60, 1: 1, 2: 2, 4: 4, 5: 5, 6: 6,
+      8: 8, 10: 10, 12: 12, 13: 13, 14: 15, 16: 17, 17: 18, 18: 19, 21: 22, 22: 23,
+      24: 25, 26: 27, 28: 29, 29: 30, 30: 58, 31: 56, 33: 34, 34: 35, 38: 32, 40: 31,
+      41: 59, 43: 61, 44: 62}
+    score: {value: '0.713', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3402745_200_5_lig_CHEMBL3402754_40_14:
+    ligand_a: lig_CHEMBL3402745_200_5
+    ligand_b: lig_CHEMBL3402754_40_14
+    atom mapping: {0: 0, 3: 3, 7: 7, 11: 11, 15: 15, 19: 19, 20: 20, 23: 23, 25: 25,
+      27: 27, 42: 42, 1: 1, 2: 2, 4: 4, 5: 5, 6: 6, 8: 8, 9: 9, 10: 10, 12: 12, 13: 13,
+      14: 14, 16: 16, 17: 17, 18: 18, 21: 21, 22: 22, 24: 24, 26: 26, 28: 28, 41: 41,
+      43: 43, 44: 44}
+    score: {value: '0.900', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
