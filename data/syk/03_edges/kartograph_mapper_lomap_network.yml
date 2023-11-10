@@ -1,0 +1,668 @@
+remarks: Kartograph mapper, Lomap scorer, Lomap network, allow element changes
+planner: openfe v0.14 lomap network
+edges:
+  edge_lig_CHEMBL3265037_lig_CHEMBL3265031:
+    ligand_a: lig_CHEMBL3265037
+    ligand_b: lig_CHEMBL3265031
+    atom mapping: {26: 41, 33: 48, 34: 47, 35: 46, 36: 49, 37: 50, 38: 51, 39: 43,
+      40: 52, 41: 53, 42: 54, 43: 55, 44: 57, 45: 56, 46: 37, 47: 38, 48: 40, 49: 39,
+      53: 42, 54: 44, 55: 45, 0: 22, 1: 21, 2: 20, 3: 18, 4: 19, 5: 14, 6: 13, 7: 23,
+      8: 24, 9: 25, 10: 26, 11: 27, 12: 28, 13: 11, 14: 10, 15: 9, 16: 29, 17: 30,
+      18: 6, 19: 5, 20: 31, 21: 32, 22: 1, 23: 3, 24: 4, 25: 7, 28: 8, 29: 12, 30: 15,
+      31: 16, 32: 17}
+    score: {value: '0.638', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265037_lig_CHEMBL3265032:
+    ligand_a: lig_CHEMBL3265037
+    ligand_b: lig_CHEMBL3265032
+    atom mapping: {26: 39, 33: 31, 34: 32, 35: 33, 36: 34, 37: 35, 38: 36, 39: 37,
+      40: 49, 41: 48, 42: 46, 43: 47, 44: 45, 45: 44, 46: 43, 47: 42, 48: 40, 49: 41,
+      53: 38, 54: 50, 55: 51, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8,
+      9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 26, 17: 25, 18: 18,
+      19: 19, 20: 24, 21: 23, 22: 22, 23: 21, 24: 20, 25: 17, 28: 16, 29: 27, 30: 28,
+      31: 29, 32: 30}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265002_lig_CHEMBL3265003:
+    ligand_a: lig_CHEMBL3265002
+    ligand_b: lig_CHEMBL3265003
+    atom mapping: {0: 1, 1: 0, 2: 39, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30,
+      31: 31, 32: 32, 33: 33, 34: 34, 35: 35, 36: 36, 37: 37, 38: 38, 39: 2}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3259820_lig_CHEMBL3265015:
+    ligand_a: lig_CHEMBL3259820
+    ligand_b: lig_CHEMBL3265015
+    atom mapping: {29: 30, 30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37,
+      37: 38, 38: 39, 39: 40, 40: 41, 41: 28, 42: 46, 45: 43, 46: 42, 47: 50, 0: 0,
+      1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12,
+      13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 27, 21: 26, 22: 22,
+      23: 23, 24: 25, 25: 24, 26: 21, 27: 20, 28: 29}
+    score: {value: '0.607', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265013_lig_CHEMBL3265015:
+    ligand_a: lig_CHEMBL3265013
+    ligand_b: lig_CHEMBL3265015
+    atom mapping: {27: 46, 30: 30, 31: 31, 32: 32, 33: 33, 34: 34, 35: 35, 36: 36,
+      37: 37, 38: 38, 39: 39, 40: 40, 41: 41, 42: 42, 43: 43, 44: 44, 45: 45, 49: 28,
+      50: 50, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 28: 27, 29: 29}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265005_lig_CHEMBL3264999:
+    ligand_a: lig_CHEMBL3265005
+    ligand_b: lig_CHEMBL3264999
+    atom mapping: {29: 38, 30: 39, 31: 40, 32: 41, 33: 42, 34: 43, 35: 44, 36: 45,
+      37: 46, 38: 47, 39: 48, 40: 49, 41: 50, 42: 51, 43: 52, 45: 53, 46: 60, 47: 61,
+      0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11,
+      12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 36, 28: 37}
+    score: {value: '0.407', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3264998_lig_CHEMBL3264997:
+    ligand_a: lig_CHEMBL3264998
+    ligand_b: lig_CHEMBL3264997
+    atom mapping: {31: 56, 39: 38, 40: 39, 41: 40, 42: 41, 43: 42, 44: 43, 45: 44,
+      46: 45, 47: 46, 48: 47, 49: 48, 50: 49, 51: 50, 52: 51, 53: 52, 54: 53, 55: 57,
+      56: 32, 59: 55, 60: 54, 61: 58, 62: 59, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16,
+      17: 17, 18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26,
+      27: 27, 28: 35, 29: 31, 30: 30, 35: 29, 36: 28, 37: 36, 38: 37}
+    score: {value: '0.497', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265005_lig_CHEMBL3265026:
+    ligand_a: lig_CHEMBL3265005
+    ligand_b: lig_CHEMBL3265026
+    atom mapping: {29: 30, 30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37,
+      37: 38, 38: 39, 39: 40, 40: 41, 41: 42, 42: 43, 46: 44, 47: 50, 0: 0, 1: 1,
+      2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13,
+      14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23,
+      27: 24, 28: 29}
+    score: {value: '0.273', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3264995_lig_CHEMBL3264994:
+    ligand_a: lig_CHEMBL3264995
+    ligand_b: lig_CHEMBL3264994
+    atom mapping: {14: 42, 38: 38, 39: 39, 40: 40, 41: 53, 42: 52, 43: 49, 44: 51,
+      49: 41, 50: 54, 51: 55, 52: 56, 58: 62, 59: 63, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4,
+      5: 5, 6: 6, 7: 7, 8: 16, 9: 15, 10: 10, 11: 11, 12: 14, 13: 9, 16: 8, 17: 17,
+      18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 36: 36, 37: 37}
+    score: {value: '0.058', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265011_lig_CHEMBL3265006:
+    ligand_a: lig_CHEMBL3265011
+    ligand_b: lig_CHEMBL3265006
+    atom mapping: {28: 42, 30: 30, 31: 31, 32: 32, 33: 33, 34: 34, 35: 35, 36: 36,
+      37: 37, 38: 38, 39: 39, 40: 40, 41: 41, 42: 49, 43: 27, 44: 45, 45: 44, 46: 43,
+      50: 50, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 28,
+      21: 23, 22: 24, 23: 25, 24: 26, 25: 22, 26: 21, 27: 20, 29: 29}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265028_lig_CHEMBL3265030_n:
+    ligand_a: lig_CHEMBL3265028
+    ligand_b: lig_CHEMBL3265030_n
+    atom mapping: {20: 49, 27: 44, 28: 43, 29: 42, 30: 45, 31: 46, 32: 47, 33: 39,
+      34: 38, 35: 37, 40: 48, 41: 40, 42: 41, 0: 21, 1: 20, 2: 19, 3: 17, 4: 18, 5: 13,
+      6: 12, 7: 22, 8: 23, 9: 24, 10: 25, 11: 26, 12: 27, 13: 10, 14: 9, 15: 8, 16: 7,
+      17: 6, 18: 5, 19: 29, 22: 28, 23: 11, 24: 14, 25: 15, 26: 16}
+    score: {value: '0.449', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265004_lig_CHEMBL3265005:
+    ligand_a: lig_CHEMBL3265004
+    ligand_b: lig_CHEMBL3265005
+    atom mapping: {9: 26, 10: 24, 11: 25, 12: 23, 13: 22, 14: 21, 15: 20, 16: 19,
+      17: 18, 18: 28, 19: 2, 20: 3, 21: 4, 22: 0, 23: 1, 24: 5, 25: 6, 26: 7, 27: 8,
+      28: 9, 29: 10, 30: 11, 31: 12, 32: 13, 33: 14, 34: 15, 35: 16, 36: 17, 37: 27}
+    score: {value: '0.223', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265003_lig_CHEMBL3265004:
+    ligand_a: lig_CHEMBL3265003
+    ligand_b: lig_CHEMBL3265004
+    atom mapping: {0: 2, 1: 1, 2: 0, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 10, 10: 11,
+      11: 12, 12: 13, 13: 14, 14: 15, 15: 16, 16: 17, 17: 18, 18: 19, 19: 20, 20: 21,
+      21: 22, 22: 23, 23: 24, 24: 25, 25: 26, 26: 27, 27: 28, 28: 29, 29: 30, 30: 31,
+      31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37, 37: 38, 38: 39, 39: 3}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3264995_lig_CHEMBL3264997:
+    ligand_a: lig_CHEMBL3264995
+    ligand_b: lig_CHEMBL3264997
+    atom mapping: {31: 56, 38: 38, 39: 39, 40: 40, 41: 41, 42: 42, 43: 43, 44: 44,
+      45: 45, 46: 46, 47: 47, 48: 48, 49: 49, 50: 50, 51: 51, 52: 52, 53: 53, 54: 57,
+      55: 32, 56: 55, 57: 54, 58: 58, 59: 59, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16,
+      17: 17, 18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26,
+      27: 27, 28: 35, 29: 31, 30: 30, 34: 29, 35: 28, 36: 36, 37: 37}
+    score: {value: '0.549', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265005_lig_CHEMBL3265023:
+    ligand_a: lig_CHEMBL3265005
+    ligand_b: lig_CHEMBL3265023
+    atom mapping: {24: 34, 29: 37, 30: 38, 31: 39, 32: 40, 33: 41, 34: 42, 35: 43,
+      36: 44, 37: 45, 38: 46, 39: 47, 40: 48, 41: 49, 46: 35, 47: 36, 0: 13, 1: 14,
+      2: 10, 3: 11, 4: 12, 5: 15, 6: 16, 7: 17, 8: 18, 9: 19, 10: 20, 11: 21, 12: 22,
+      13: 23, 14: 24, 15: 25, 16: 26, 17: 27, 18: 8, 19: 7, 20: 28, 21: 29, 22: 4,
+      23: 5, 27: 6, 28: 9}
+    score: {value: '0.497', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3264996_lig_CHEMBL3264999:
+    ligand_a: lig_CHEMBL3264996
+    ligand_b: lig_CHEMBL3264999
+    atom mapping: {34: 56, 39: 38, 40: 39, 41: 40, 42: 41, 43: 42, 44: 43, 45: 44,
+      46: 45, 47: 46, 48: 47, 49: 48, 50: 49, 51: 50, 52: 51, 53: 52, 54: 53, 55: 59,
+      56: 58, 60: 55, 61: 54, 62: 60, 63: 61, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16,
+      17: 17, 18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26,
+      27: 27, 28: 35, 29: 34, 30: 30, 31: 31, 32: 32, 33: 33, 35: 29, 36: 28, 37: 36,
+      38: 37}
+    score: {value: '0.861', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265026_lig_CHEMBL3265025:
+    ligand_a: lig_CHEMBL3265026
+    ligand_b: lig_CHEMBL3265025
+    atom mapping: {30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37, 37: 38,
+      38: 39, 39: 40, 40: 41, 41: 42, 42: 43, 43: 44, 44: 45, 46: 46, 47: 47, 49: 28,
+      50: 49, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 29, 29: 30}
+    score: {value: '0.705', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265017_lig_CHEMBL3265029:
+    ligand_a: lig_CHEMBL3265017
+    ligand_b: lig_CHEMBL3265029
+    atom mapping: {22: 39, 29: 27, 30: 28, 31: 29, 32: 30, 33: 31, 34: 32, 35: 33,
+      36: 34, 37: 35, 38: 36, 39: 37, 40: 38, 44: 40, 45: 41, 46: 42, 0: 0, 1: 1,
+      2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13,
+      14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21, 24: 22, 25: 23,
+      26: 24, 27: 25, 28: 26}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3264996_lig_CHEMBL3265005:
+    ligand_a: lig_CHEMBL3264996
+    ligand_b: lig_CHEMBL3265005
+    atom mapping: {39: 29, 40: 30, 41: 31, 42: 32, 43: 33, 44: 34, 45: 35, 46: 36,
+      47: 37, 48: 38, 49: 39, 50: 40, 51: 41, 52: 42, 53: 43, 54: 45, 62: 46, 63: 47,
+      0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11,
+      12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 37: 27, 38: 28}
+    score: {value: '0.368', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265005_lig_CHEMBL3259820:
+    ligand_a: lig_CHEMBL3265005
+    ligand_b: lig_CHEMBL3259820
+    atom mapping: {24: 42, 29: 29, 30: 30, 31: 31, 32: 32, 33: 33, 34: 34, 35: 35,
+      36: 36, 37: 37, 38: 38, 39: 39, 40: 40, 41: 46, 42: 45, 43: 23, 46: 41, 47: 47,
+      0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11,
+      12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 27, 21: 26,
+      22: 22, 23: 21, 27: 20, 28: 28}
+    score: {value: '0.549', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3259820_lig_CHEMBL3265014:
+    ligand_a: lig_CHEMBL3259820
+    ligand_b: lig_CHEMBL3265014
+    atom mapping: {29: 31, 30: 32, 31: 33, 32: 34, 33: 35, 34: 36, 35: 37, 36: 38,
+      37: 39, 38: 40, 39: 41, 40: 42, 41: 50, 42: 27, 43: 45, 44: 46, 45: 44, 46: 43,
+      47: 51, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 29,
+      21: 26, 22: 22, 23: 23, 24: 24, 25: 25, 26: 21, 27: 20, 28: 30}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265009_lig_CHEMBL3265010:
+    ligand_a: lig_CHEMBL3265009
+    ligand_b: lig_CHEMBL3265010
+    atom mapping: {30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37, 37: 38,
+      38: 39, 39: 40, 40: 41, 41: 42, 42: 43, 43: 44, 46: 24, 47: 48, 48: 49, 49: 50,
+      50: 51, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 23: 23, 24: 25, 25: 26, 26: 27, 27: 28, 28: 29, 29: 30}
+    score: {value: '0.861', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265020_lig_CHEMBL3265021:
+    ligand_a: lig_CHEMBL3265020
+    ligand_b: lig_CHEMBL3265021
+    atom mapping: {29: 34, 30: 35, 31: 36, 32: 37, 33: 38, 34: 39, 35: 40, 36: 41,
+      37: 42, 38: 43, 39: 44, 40: 45, 41: 32, 42: 31, 43: 46, 44: 29, 46: 30, 47: 33,
+      0: 12, 1: 13, 2: 9, 3: 10, 4: 11, 5: 14, 6: 15, 7: 16, 8: 17, 9: 18, 10: 19,
+      11: 20, 12: 21, 13: 22, 14: 23, 15: 24, 16: 25, 17: 26, 18: 7, 19: 6, 20: 5,
+      21: 4, 22: 3, 23: 28, 24: 27, 25: 0, 26: 1, 27: 2, 28: 8}
+    score: {value: '0.951', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265019_lig_CHEMBL3265021:
+    ligand_a: lig_CHEMBL3265019
+    ligand_b: lig_CHEMBL3265021
+    atom mapping: {29: 34, 30: 35, 31: 36, 32: 37, 33: 38, 34: 39, 35: 40, 36: 41,
+      37: 42, 38: 43, 39: 44, 40: 45, 41: 32, 42: 31, 43: 46, 45: 33, 0: 12, 1: 13,
+      2: 9, 3: 10, 4: 11, 5: 14, 6: 15, 7: 16, 8: 17, 9: 18, 10: 19, 11: 20, 12: 21,
+      13: 22, 14: 23, 15: 24, 16: 25, 17: 26, 18: 7, 19: 6, 20: 5, 21: 4, 22: 3, 23: 28,
+      24: 27, 25: 0, 26: 1, 27: 2, 28: 8}
+    score: {value: '0.951', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265027_lig_CHEMBL3265035:
+    ligand_a: lig_CHEMBL3265027
+    ligand_b: lig_CHEMBL3265035
+    atom mapping: {25: 42, 26: 41, 27: 40, 28: 43, 29: 44, 30: 45, 31: 37, 32: 36,
+      33: 35, 34: 3, 35: 47, 36: 46, 37: 38, 38: 39, 0: 20, 1: 19, 2: 18, 3: 16, 4: 17,
+      5: 12, 6: 11, 7: 21, 8: 22, 9: 23, 10: 24, 11: 25, 12: 26, 13: 9, 14: 8, 15: 7,
+      16: 6, 17: 5, 18: 4, 19: 28, 20: 27, 21: 10, 22: 13, 23: 14, 24: 15}
+    score: {value: '0.607', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265028_lig_CHEMBL3265017:
+    ligand_a: lig_CHEMBL3265028
+    ligand_b: lig_CHEMBL3265017
+    atom mapping: {27: 29, 28: 30, 29: 31, 30: 32, 31: 33, 32: 34, 33: 35, 34: 36,
+      35: 37, 36: 19, 37: 41, 38: 42, 39: 43, 40: 44, 41: 45, 42: 46, 0: 0, 1: 1,
+      2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13,
+      14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 21, 20: 22, 21: 23, 22: 24, 23: 25,
+      24: 26, 25: 27, 26: 28}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3259820_lig_CHEMBL3265013:
+    ligand_a: lig_CHEMBL3259820
+    ligand_b: lig_CHEMBL3265013
+    atom mapping: {29: 30, 30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37,
+      37: 38, 38: 39, 39: 40, 40: 41, 41: 49, 42: 27, 45: 43, 46: 42, 47: 50, 0: 0,
+      1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12,
+      13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 28, 21: 26, 22: 22,
+      23: 23, 24: 25, 25: 24, 26: 21, 27: 20, 28: 29}
+    score: {value: '0.607', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265005_lig_CHEMBL3265006:
+    ligand_a: lig_CHEMBL3265005
+    ligand_b: lig_CHEMBL3265006
+    atom mapping: {29: 30, 30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37,
+      37: 38, 38: 39, 39: 40, 40: 41, 41: 42, 42: 43, 43: 44, 44: 27, 45: 45, 46: 49,
+      47: 50, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 28, 28: 29}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265034_lig_CHEMBL3265027:
+    ligand_a: lig_CHEMBL3265034
+    ligand_b: lig_CHEMBL3265027
+    atom mapping: {31: 25, 32: 26, 33: 27, 34: 28, 35: 29, 36: 30, 37: 31, 38: 32,
+      39: 33, 49: 35, 50: 36, 51: 37, 52: 38, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16,
+      17: 17, 18: 18, 25: 19, 26: 20, 27: 21, 28: 22, 29: 23, 30: 24}
+    score: {value: '0.549', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265001_lig_CHEMBL3264995:
+    ligand_a: lig_CHEMBL3265001
+    ligand_b: lig_CHEMBL3264995
+    atom mapping: {40: 38, 41: 39, 42: 40, 43: 41, 44: 42, 45: 43, 46: 44, 47: 45,
+      48: 46, 49: 47, 50: 48, 51: 49, 52: 50, 53: 51, 54: 52, 55: 53, 56: 54, 57: 55,
+      58: 56, 59: 57, 60: 58, 61: 59, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7,
+      8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17,
+      18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27,
+      28: 28, 29: 29, 30: 30, 36: 34, 37: 35, 38: 36, 39: 37}
+    score: {value: '0.165', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265023_lig_CHEMBL3265020:
+    ligand_a: lig_CHEMBL3265023
+    ligand_b: lig_CHEMBL3265020
+    atom mapping: {35: 43, 36: 47, 37: 29, 38: 30, 39: 31, 40: 32, 41: 33, 42: 34,
+      43: 35, 44: 36, 45: 37, 46: 38, 47: 39, 48: 40, 49: 41, 4: 22, 5: 23, 6: 24,
+      7: 19, 8: 18, 9: 28, 10: 2, 11: 3, 12: 4, 13: 0, 14: 1, 15: 5, 16: 6, 17: 7,
+      18: 8, 19: 9, 20: 10, 21: 11, 22: 12, 23: 13, 24: 14, 25: 15, 26: 16, 27: 17,
+      28: 20, 29: 21}
+    score: {value: '0.497', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265026_lig_CHEMBL3259820:
+    ligand_a: lig_CHEMBL3265026
+    ligand_b: lig_CHEMBL3259820
+    atom mapping: {30: 29, 31: 30, 32: 31, 33: 32, 34: 33, 35: 34, 36: 35, 37: 36,
+      38: 37, 39: 38, 40: 39, 41: 40, 42: 46, 43: 45, 44: 41, 50: 47, 0: 0, 1: 1,
+      2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13,
+      14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 27, 21: 26, 22: 22, 23: 21,
+      24: 20, 29: 28}
+    score: {value: '0.273', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265016_lig_CHEMBL3265018:
+    ligand_a: lig_CHEMBL3265016
+    ligand_b: lig_CHEMBL3265018
+    atom mapping: {29: 33, 30: 34, 31: 35, 32: 36, 33: 37, 34: 38, 35: 39, 36: 40,
+      37: 41, 38: 42, 39: 43, 40: 44, 41: 31, 42: 30, 43: 45, 44: 46, 45: 29, 47: 32,
+      0: 11, 1: 12, 2: 8, 3: 9, 4: 10, 5: 13, 6: 14, 7: 15, 8: 16, 9: 17, 10: 18,
+      11: 19, 12: 20, 13: 21, 14: 22, 15: 23, 16: 24, 17: 25, 18: 6, 19: 5, 20: 4,
+      21: 3, 22: 2, 23: 27, 24: 26, 25: 28, 26: 0, 27: 1, 28: 7}
+    score: {value: '0.951', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265009_lig_CHEMBL3259820:
+    ligand_a: lig_CHEMBL3265009
+    ligand_b: lig_CHEMBL3259820
+    atom mapping: {25: 42, 30: 29, 31: 30, 32: 31, 33: 32, 34: 33, 35: 34, 36: 35,
+      37: 36, 38: 37, 39: 38, 40: 39, 41: 40, 42: 46, 43: 45, 46: 24, 49: 41, 50: 47,
+      0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11,
+      12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 27, 21: 26,
+      22: 22, 23: 23, 24: 21, 28: 20, 29: 28}
+    score: {value: '0.522', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265017_lig_CHEMBL3265019:
+    ligand_a: lig_CHEMBL3265017
+    ligand_b: lig_CHEMBL3265019
+    atom mapping: {31: 43, 32: 45, 33: 29, 34: 30, 35: 31, 36: 32, 37: 33, 38: 34,
+      39: 35, 40: 36, 41: 37, 42: 38, 43: 39, 44: 40, 45: 41, 46: 42, 0: 27, 1: 26,
+      2: 25, 3: 23, 4: 24, 5: 19, 6: 18, 7: 28, 8: 2, 9: 3, 10: 4, 11: 0, 12: 1, 13: 5,
+      14: 6, 15: 7, 16: 8, 17: 9, 18: 10, 19: 11, 20: 12, 21: 13, 22: 14, 23: 15,
+      24: 16, 25: 17, 26: 20, 27: 21, 28: 22}
+    score: {value: '0.951', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265032_lig_CHEMBL3265031:
+    ligand_a: lig_CHEMBL3265032
+    ligand_b: lig_CHEMBL3265031
+    atom mapping: {31: 48, 32: 47, 33: 46, 34: 49, 35: 50, 36: 51, 37: 43, 38: 42,
+      39: 41, 40: 40, 41: 39, 42: 38, 43: 37, 44: 56, 45: 57, 46: 54, 47: 55, 48: 53,
+      49: 52, 50: 44, 51: 45, 0: 22, 1: 21, 2: 20, 3: 18, 4: 19, 5: 14, 6: 13, 7: 23,
+      8: 24, 9: 25, 10: 26, 11: 27, 12: 28, 13: 11, 14: 10, 15: 9, 16: 8, 17: 7, 18: 6,
+      19: 5, 20: 4, 21: 3, 22: 1, 23: 32, 24: 31, 25: 30, 26: 29, 27: 12, 28: 15,
+      29: 16, 30: 17}
+    score: {value: '0.779', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265033_lig_CHEMBL3265027:
+    ligand_a: lig_CHEMBL3265033
+    ligand_b: lig_CHEMBL3265027
+    atom mapping: {33: 25, 34: 26, 35: 27, 36: 28, 37: 29, 38: 30, 39: 31, 40: 32,
+      41: 33, 50: 35, 51: 36, 52: 37, 53: 38, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16,
+      17: 17, 18: 18, 27: 19, 28: 20, 29: 21, 30: 22, 31: 23, 32: 24}
+    score: {value: '0.449', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265002_lig_CHEMBL3265004:
+    ligand_a: lig_CHEMBL3265002
+    ligand_b: lig_CHEMBL3265004
+    atom mapping: {0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 10, 10: 11,
+      11: 12, 12: 13, 13: 14, 14: 15, 15: 16, 16: 17, 17: 18, 18: 19, 19: 20, 20: 21,
+      21: 22, 22: 23, 23: 24, 24: 25, 25: 26, 26: 27, 27: 28, 28: 29, 29: 30, 30: 31,
+      31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37, 37: 38, 38: 39, 39: 0}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265024_lig_CHEMBL3265026:
+    ligand_a: lig_CHEMBL3265024
+    ligand_b: lig_CHEMBL3265026
+    atom mapping: {27: 46, 31: 30, 32: 31, 33: 32, 34: 33, 35: 34, 36: 35, 37: 36,
+      38: 37, 39: 38, 40: 39, 41: 40, 42: 41, 43: 42, 44: 43, 45: 44, 47: 48, 48: 49,
+      49: 50, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 28: 27, 29: 28, 30: 29}
+    score: {value: '0.779', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265016_lig_CHEMBL3265022:
+    ligand_a: lig_CHEMBL3265016
+    ligand_b: lig_CHEMBL3265022
+    atom mapping: {29: 36, 30: 37, 31: 38, 32: 39, 33: 40, 34: 41, 35: 42, 36: 43,
+      37: 44, 38: 45, 39: 46, 40: 47, 41: 48, 42: 49, 43: 34, 44: 3, 46: 30, 47: 35,
+      0: 12, 1: 13, 2: 9, 3: 10, 4: 11, 5: 14, 6: 15, 7: 16, 8: 17, 9: 18, 10: 19,
+      11: 20, 12: 21, 13: 22, 14: 23, 15: 24, 16: 25, 17: 26, 18: 7, 19: 6, 20: 27,
+      21: 28, 22: 29, 23: 4, 24: 5, 25: 2, 26: 1, 27: 0, 28: 8}
+    score: {value: '0.861', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265027_lig_CHEMBL3265030_n:
+    ligand_a: lig_CHEMBL3265027
+    ligand_b: lig_CHEMBL3265030_n
+    atom mapping: {25: 44, 26: 43, 27: 42, 28: 45, 29: 46, 30: 47, 31: 39, 32: 48,
+      33: 49, 35: 37, 36: 38, 37: 40, 38: 41, 0: 21, 1: 20, 2: 19, 3: 17, 4: 18, 5: 13,
+      6: 12, 7: 22, 8: 23, 9: 24, 10: 25, 11: 26, 12: 27, 13: 10, 14: 9, 15: 8, 16: 28,
+      17: 29, 18: 5, 19: 6, 20: 7, 21: 11, 22: 14, 23: 15, 24: 16}
+    score: {value: '0.549', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265012_lig_CHEMBL3259820:
+    ligand_a: lig_CHEMBL3265012
+    ligand_b: lig_CHEMBL3259820
+    atom mapping: {27: 45, 30: 29, 31: 30, 32: 31, 33: 32, 34: 33, 35: 34, 36: 35,
+      37: 36, 38: 37, 39: 38, 40: 39, 41: 40, 42: 41, 43: 42, 44: 43, 45: 44, 46: 46,
+      47: 47, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 28: 27, 29: 28}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265000_lig_CHEMBL3264999:
+    ligand_a: lig_CHEMBL3265000
+    ligand_b: lig_CHEMBL3264999
+    atom mapping: {34: 56, 42: 38, 43: 39, 44: 40, 45: 41, 46: 42, 47: 43, 48: 44,
+      49: 45, 50: 46, 51: 47, 52: 48, 53: 49, 54: 50, 55: 51, 56: 52, 57: 53, 58: 54,
+      59: 55, 60: 57, 64: 58, 65: 59, 66: 60, 67: 61, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4,
+      5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15,
+      16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 25: 25,
+      26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 32: 32, 33: 33, 38: 34, 39: 35,
+      40: 36, 41: 37}
+    score: {value: '0.670', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265033_lig_CHEMBL3265028:
+    ligand_a: lig_CHEMBL3265033
+    ligand_b: lig_CHEMBL3265028
+    atom mapping: {33: 27, 34: 28, 35: 29, 36: 30, 37: 31, 38: 32, 39: 33, 40: 40,
+      41: 20, 50: 35, 51: 34, 52: 41, 53: 42, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 22,
+      17: 19, 18: 18, 27: 17, 28: 16, 29: 23, 30: 24, 31: 25, 32: 26}
+    score: {value: '0.368', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265005_lig_CHEMBL3265011:
+    ligand_a: lig_CHEMBL3265005
+    ligand_b: lig_CHEMBL3265011
+    atom mapping: {29: 30, 30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37,
+      37: 38, 38: 39, 39: 40, 40: 41, 41: 28, 42: 46, 43: 45, 44: 43, 45: 44, 46: 42,
+      47: 50, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 27,
+      21: 26, 22: 25, 23: 21, 24: 22, 25: 23, 26: 24, 27: 20, 28: 29}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265011_lig_CHEMBL3265023:
+    ligand_a: lig_CHEMBL3265011
+    ligand_b: lig_CHEMBL3265023
+    atom mapping: {22: 34, 28: 49, 30: 37, 31: 38, 32: 39, 33: 40, 34: 41, 35: 42,
+      36: 43, 37: 44, 38: 45, 39: 46, 40: 47, 41: 48, 42: 35, 50: 36, 0: 13, 1: 14,
+      2: 10, 3: 11, 4: 12, 5: 15, 6: 16, 7: 17, 8: 18, 9: 19, 10: 20, 11: 21, 12: 22,
+      13: 23, 14: 24, 15: 25, 16: 26, 17: 27, 18: 8, 19: 7, 20: 6, 21: 5, 25: 4, 26: 29,
+      27: 28, 29: 9}
+    score: {value: '0.449', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265028_lig_CHEMBL3265027:
+    ligand_a: lig_CHEMBL3265028
+    ligand_b: lig_CHEMBL3265027
+    atom mapping: {20: 33, 27: 25, 28: 26, 29: 27, 30: 28, 31: 29, 32: 30, 33: 31,
+      34: 36, 35: 35, 36: 34, 40: 32, 41: 37, 42: 38, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4,
+      5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15,
+      16: 20, 17: 19, 18: 18, 19: 17, 22: 16, 23: 21, 24: 22, 25: 23, 26: 24}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265009_lig_CHEMBL3265005:
+    ligand_a: lig_CHEMBL3265009
+    ligand_b: lig_CHEMBL3265005
+    atom mapping: {23: 43, 30: 29, 31: 30, 32: 31, 33: 32, 34: 33, 35: 34, 36: 35,
+      37: 36, 38: 37, 39: 38, 40: 39, 41: 40, 42: 41, 43: 42, 47: 44, 48: 45, 49: 46,
+      50: 47, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 24: 23, 25: 24, 26: 25, 27: 26, 28: 27, 29: 28}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265008_lig_CHEMBL3265010:
+    ligand_a: lig_CHEMBL3265008
+    ligand_b: lig_CHEMBL3265010
+    atom mapping: {30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37, 37: 38,
+      38: 39, 39: 40, 40: 41, 41: 42, 42: 43, 43: 44, 44: 48, 45: 49, 46: 50, 47: 51,
+      0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11,
+      12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21,
+      22: 22, 23: 23, 24: 25, 25: 26, 26: 27, 27: 28, 28: 29, 29: 30}
+    score: {value: '0.861', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265012_lig_CHEMBL3265014:
+    ligand_a: lig_CHEMBL3265012
+    ligand_b: lig_CHEMBL3265014
+    atom mapping: {27: 44, 30: 31, 31: 32, 32: 33, 33: 34, 34: 35, 35: 36, 36: 37,
+      37: 38, 38: 39, 39: 40, 40: 41, 41: 42, 42: 50, 43: 27, 44: 45, 45: 46, 46: 43,
+      47: 51, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 29,
+      21: 26, 22: 22, 23: 23, 24: 24, 25: 25, 26: 21, 28: 20, 29: 30}
+    score: {value: '0.741', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265017_lig_CHEMBL3265022:
+    ligand_a: lig_CHEMBL3265017
+    ligand_b: lig_CHEMBL3265022
+    atom mapping: {29: 30, 30: 3, 31: 34, 32: 35, 33: 36, 34: 37, 35: 38, 36: 39,
+      37: 40, 38: 41, 39: 42, 40: 43, 41: 44, 42: 45, 43: 46, 44: 47, 45: 48, 46: 49,
+      0: 0, 1: 1, 2: 2, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 10, 10: 11, 11: 12,
+      12: 13, 13: 14, 14: 15, 15: 16, 16: 17, 17: 18, 18: 19, 19: 20, 20: 21, 21: 22,
+      22: 23, 23: 24, 24: 25, 25: 26, 26: 27, 27: 28, 28: 29}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265032_lig_CHEMBL3265027:
+    ligand_a: lig_CHEMBL3265032
+    ligand_b: lig_CHEMBL3265027
+    atom mapping: {31: 25, 32: 26, 33: 27, 34: 28, 35: 29, 36: 30, 37: 31, 38: 32,
+      39: 33, 48: 35, 49: 36, 50: 37, 51: 38, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16,
+      17: 17, 18: 18, 25: 19, 26: 20, 27: 21, 28: 22, 29: 23, 30: 24}
+    score: {value: '0.549', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265018_lig_CHEMBL3265020:
+    ligand_a: lig_CHEMBL3265018
+    ligand_b: lig_CHEMBL3265020
+    atom mapping: {29: 45, 30: 42, 31: 41, 32: 47, 33: 29, 34: 30, 35: 31, 36: 32,
+      37: 33, 38: 34, 39: 35, 40: 36, 41: 37, 42: 38, 43: 39, 44: 40, 45: 43, 46: 44,
+      0: 26, 1: 27, 2: 22, 3: 21, 4: 20, 5: 19, 6: 18, 7: 28, 8: 2, 9: 3, 10: 4, 11: 0,
+      12: 1, 13: 5, 14: 6, 15: 7, 16: 8, 17: 9, 18: 10, 19: 11, 20: 12, 21: 13, 22: 14,
+      23: 15, 24: 16, 25: 17, 26: 24, 27: 23, 28: 25}
+    score: {value: '0.951', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265028_lig_CHEMBL3265037:
+    ligand_a: lig_CHEMBL3265028
+    ligand_b: lig_CHEMBL3265037
+    atom mapping: {27: 33, 28: 34, 29: 35, 30: 36, 31: 37, 32: 38, 33: 39, 34: 40,
+      35: 41, 37: 50, 38: 51, 39: 52, 40: 53, 41: 54, 42: 55, 0: 0, 1: 1, 2: 2, 3: 3,
+      4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14,
+      15: 15, 16: 16, 17: 17, 18: 18, 19: 25, 20: 26, 21: 27, 22: 28, 23: 29, 24: 30,
+      25: 31, 26: 32}
+    score: {value: '0.549', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3264997_lig_CHEMBL3264994:
+    ligand_a: lig_CHEMBL3264997
+    ligand_b: lig_CHEMBL3264994
+    atom mapping: {14: 42, 38: 38, 39: 39, 40: 40, 41: 53, 42: 52, 43: 49, 44: 51,
+      49: 41, 50: 54, 51: 55, 52: 56, 58: 62, 59: 63, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4,
+      5: 5, 6: 6, 7: 7, 8: 16, 9: 15, 10: 10, 11: 11, 12: 14, 13: 9, 16: 8, 17: 17,
+      18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 36: 36, 37: 37}
+    score: {value: '0.058', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265035_lig_CHEMBL3265029:
+    ligand_a: lig_CHEMBL3265035
+    ligand_b: lig_CHEMBL3265029
+    atom mapping: {35: 39, 36: 40, 37: 33, 38: 41, 39: 42, 40: 29, 41: 28, 42: 27,
+      43: 30, 44: 31, 45: 32, 46: 34, 47: 35, 48: 37, 49: 36, 3: 19, 4: 18, 5: 21,
+      6: 22, 7: 15, 8: 14, 9: 13, 10: 23, 11: 6, 12: 5, 13: 24, 14: 25, 15: 26, 16: 3,
+      17: 4, 18: 2, 19: 1, 20: 0, 21: 7, 22: 8, 23: 9, 24: 10, 25: 11, 26: 12, 27: 16,
+      28: 17, 29: 20}
+    score: {value: '0.705', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265002_lig_CHEMBL3265005:
+    ligand_a: lig_CHEMBL3265002
+    ligand_b: lig_CHEMBL3265005
+    atom mapping: {8: 26, 9: 24, 10: 25, 11: 23, 12: 22, 13: 21, 14: 20, 15: 19, 16: 18,
+      17: 28, 18: 2, 19: 3, 20: 4, 21: 0, 22: 1, 23: 5, 24: 6, 25: 7, 26: 8, 27: 9,
+      28: 10, 29: 11, 30: 12, 31: 13, 32: 14, 33: 15, 34: 16, 35: 17, 36: 27}
+    score: {value: '0.223', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3264998_lig_CHEMBL3264995:
+    ligand_a: lig_CHEMBL3264998
+    ligand_b: lig_CHEMBL3264995
+    atom mapping: {39: 38, 40: 39, 41: 40, 42: 41, 43: 42, 44: 43, 45: 44, 46: 45,
+      47: 46, 48: 47, 49: 48, 50: 49, 51: 50, 52: 51, 53: 52, 54: 53, 55: 54, 56: 55,
+      57: 32, 59: 56, 60: 57, 61: 58, 62: 59, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16,
+      17: 17, 18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26,
+      27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 35: 34, 36: 35, 37: 36, 38: 37}
+    score: {value: '0.522', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265036_lig_CHEMBL3265027:
+    ligand_a: lig_CHEMBL3265036
+    ligand_b: lig_CHEMBL3265027
+    atom mapping: {32: 25, 33: 26, 34: 27, 35: 28, 36: 29, 37: 30, 38: 31, 39: 36,
+      40: 35, 51: 33, 52: 32, 53: 37, 54: 38, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+      6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 20,
+      17: 19, 18: 18, 26: 17, 27: 16, 28: 21, 29: 22, 30: 23, 31: 24}
+    score: {value: '0.497', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265001_lig_CHEMBL3264997:
+    ligand_a: lig_CHEMBL3265001
+    ligand_b: lig_CHEMBL3264997
+    atom mapping: {40: 38, 41: 39, 42: 40, 43: 41, 44: 42, 45: 43, 46: 44, 47: 45,
+      48: 46, 49: 47, 50: 48, 51: 49, 52: 50, 53: 51, 54: 52, 55: 53, 56: 57, 57: 32,
+      58: 55, 59: 54, 60: 58, 61: 59, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7,
+      8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17,
+      18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27,
+      28: 35, 29: 31, 30: 30, 36: 29, 37: 28, 38: 36, 39: 37}
+    score: {value: '0.301', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_CHEMBL3265008_lig_CHEMBL3265005:
+    ligand_a: lig_CHEMBL3265008
+    ligand_b: lig_CHEMBL3265005
+    atom mapping: {23: 43, 30: 29, 31: 30, 32: 31, 33: 32, 34: 33, 35: 34, 36: 35,
+      37: 36, 38: 37, 39: 38, 40: 39, 41: 40, 42: 41, 43: 42, 44: 44, 45: 45, 46: 46,
+      47: 47, 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 24: 23, 25: 24, 26: 25, 27: 26, 28: 27, 29: 28}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
