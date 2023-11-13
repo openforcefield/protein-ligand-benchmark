@@ -103,6 +103,17 @@ edges:
     score: {value: '0.549', method: Lomap default scorer}
     mapper: LomapAtomMapper
     remarks: null
+  edge_lig_CHEMBL3265035_lig_CHEMBL3265029:
+    ligand_a: lig_CHEMBL3265035
+    ligand_b: lig_CHEMBL3265029
+    atom mapping: {3: 28, 4: 27, 5: 33, 6: 35, 7: 22, 8: 20, 9: 19, 10: 37, 11: 9,
+      12: 8, 13: 38, 14: 40, 15: 42, 16: 5, 17: 6, 18: 3, 19: 2, 20: 1, 21: 10, 22: 12,
+      23: 13, 24: 14, 25: 15, 26: 17, 27: 23, 28: 25, 29: 29, 35: 34, 36: 36, 37: 21,
+      38: 39, 39: 41, 40: 7, 41: 4, 42: 0, 43: 11, 44: 16, 45: 18, 46: 24, 47: 26,
+      48: 32, 49: 30, 50: 31}
+    score: {value: '0.705', method: Lomap default scorer}
+    mapper: LomapAtomMapper
+    remarks: null
   edge_lig_CHEMBL3265033_lig_CHEMBL3265032:
     ligand_a: lig_CHEMBL3265033
     ligand_b: lig_CHEMBL3265032
@@ -113,16 +124,6 @@ edges:
       43: 31, 44: 42, 45: 43, 46: 44, 47: 45, 48: 46, 49: 47, 50: 48, 51: 49, 52: 50,
       53: 51}
     score: {value: '0.670', method: Lomap default scorer}
-    mapper: LomapAtomMapper
-    remarks: null
-  edge_lig_CHEMBL3265030_n_lig_CHEMBL3265035:
-    ligand_a: lig_CHEMBL3265030_n
-    ligand_b: lig_CHEMBL3265035
-    atom mapping: {11: 9, 12: 45, 13: 46, 14: 43, 15: 44, 16: 14, 17: 15, 18: 16,
-      19: 17, 20: 18, 21: 19, 22: 20, 23: 21, 24: 22, 25: 23, 26: 24, 27: 25, 28: 26,
-      29: 27, 30: 28, 31: 29, 32: 30, 33: 31, 34: 32, 35: 33, 36: 34, 37: 35, 38: 36,
-      39: 37, 40: 38, 41: 39, 42: 40, 43: 41, 44: 42, 45: 12, 46: 13, 47: 10, 48: 11}
-    score: {value: '0.183', method: Lomap default scorer}
     mapper: LomapAtomMapper
     remarks: null
   edge_lig_CHEMBL3265032_lig_CHEMBL3265031:
@@ -149,15 +150,14 @@ edges:
     score: {value: '0.549', method: Lomap default scorer}
     mapper: LomapAtomMapper
     remarks: null
-  edge_lig_CHEMBL3265035_lig_CHEMBL3265035:
-    ligand_a: lig_CHEMBL3265035
-    ligand_b: lig_CHEMBL3265035
-    atom mapping: {0: 0, 1: 1, 2: 2, 3: 4, 4: 3, 5: 5, 6: 7, 7: 6, 8: 8, 9: 9, 10: 10,
-      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
-      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30,
-      31: 31, 32: 32, 33: 33, 34: 34, 35: 35, 36: 36, 37: 37, 38: 38, 39: 39, 40: 40,
-      41: 41, 42: 42, 43: 43, 44: 44, 45: 45, 46: 46, 51: 51}
-    score: {value: '0.819', method: Lomap default scorer}
+  edge_lig_CHEMBL3265027_lig_CHEMBL3265030_n:
+    ligand_a: lig_CHEMBL3265027
+    ligand_b: lig_CHEMBL3265030_n
+    atom mapping: {0: 44, 1: 21, 2: 20, 3: 19, 4: 43, 5: 17, 6: 18, 7: 42, 8: 13,
+      9: 12, 10: 22, 11: 45, 12: 23, 13: 24, 14: 25, 15: 26, 16: 46, 17: 27, 18: 47,
+      19: 10, 20: 9, 21: 39, 22: 8, 23: 28, 24: 48, 25: 29, 26: 49, 27: 5, 28: 4,
+      29: 6, 30: 37, 31: 7, 32: 38, 33: 11, 34: 14, 35: 40, 36: 15, 37: 41, 38: 16}
+    score: {value: '0.549', method: Lomap default scorer}
     mapper: LomapAtomMapper
     remarks: null
   edge_lig_CHEMBL3265028_lig_CHEMBL3265027:
@@ -168,18 +168,6 @@ edges:
       21: 21, 22: 22, 23: 31, 24: 32, 25: 29, 26: 30, 27: 27, 28: 28, 29: 25, 30: 26,
       35: 23, 36: 24, 37: 33, 38: 34, 39: 35, 40: 36, 41: 37, 42: 38}
     score: {value: '0.819', method: Lomap default scorer}
-    mapper: LomapAtomMapper
-    remarks: null
-  edge_lig_CHEMBL3265030_n_lig_CHEMBL3265030_n:
-    ligand_a: lig_CHEMBL3265030_n
-    ligand_b: lig_CHEMBL3265030_n
-    atom mapping: {0: 0, 1: 1, 2: 2, 3: 3, 4: 6, 5: 5, 6: 4, 7: 7, 8: 8, 9: 9, 10: 10,
-      11: 11, 12: 47, 13: 48, 14: 45, 15: 46, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
-      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30,
-      31: 31, 32: 32, 33: 33, 34: 34, 35: 35, 36: 36, 37: 37, 38: 38, 39: 39, 40: 40,
-      41: 41, 42: 42, 43: 43, 44: 44, 45: 14, 46: 15, 47: 12, 48: 13, 49: 49, 50: 51,
-      51: 50, 52: 52}
-    score: {value: '1.000', method: Lomap default scorer}
     mapper: LomapAtomMapper
     remarks: null
   edge_lig_CHEMBL3265005_lig_CHEMBL3265011:
@@ -234,16 +222,6 @@ edges:
       31: 31, 32: 32, 33: 33, 34: 34, 35: 35, 36: 36, 37: 37, 38: 38, 39: 39, 40: 40,
       41: 41, 42: 42, 43: 43, 44: 58, 45: 59, 46: 60, 47: 61}
     score: {value: '0.407', method: Lomap default scorer}
-    mapper: LomapAtomMapper
-    remarks: null
-  edge_lig_CHEMBL3265002_lig_CHEMBL3265030_n:
-    ligand_a: lig_CHEMBL3265002
-    ligand_b: lig_CHEMBL3265030_n
-    atom mapping: {17: 28, 18: 27, 19: 34, 20: 25, 21: 26, 22: 23, 23: 24, 24: 22,
-      25: 21, 26: 36, 27: 37, 28: 38, 29: 39, 30: 40, 31: 41, 32: 42, 33: 43, 34: 44,
-      35: 19, 36: 17, 37: 18, 38: 16, 39: 14, 40: 15, 41: 12, 42: 13, 43: 11, 49: 47,
-      50: 48, 55: 45, 56: 46, 57: 20, 58: 29, 59: 30}
-    score: {value: '0.000', method: Lomap default scorer}
     mapper: LomapAtomMapper
     remarks: null
   edge_lig_CHEMBL3265018_lig_CHEMBL3265020:
