@@ -4,7 +4,8 @@ alternate:
   pdb: 6C7E
 associated_sets:
 - Janssen
-comments: null
+comments: 
+- Some ligands are not well aligned
 dpi: 0.07
 id: 2
 iridium_classifier: MT
