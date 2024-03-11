@@ -4,7 +4,9 @@ alternate:
   pdb: 6SFI
 associated_sets:
 - Schrodinger JACS
-comments: inversion of a stereocenter in one mutation
+comments: 
+- inversion of a stereocenter in one mutation
+- Some ligands are not well aligned
 date: 2019-12-09
 dpi: 0.12
 id: 4

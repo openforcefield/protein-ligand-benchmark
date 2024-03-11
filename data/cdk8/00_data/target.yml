@@ -4,7 +4,8 @@ alternate:
   pdb: 5XS2
 associated_sets: 
   - Merck KGgA fep-benchmark
-comments: null
+comments: 
+- ligands with different net charges
 date: 2020-07-01
 dpi: 0.22
 id: 15

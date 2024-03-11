@@ -6,6 +6,8 @@ associated_sets:
 - Schrodinger JACS
 comments:
 - expulsion of a single water molecule from the active site contributing to binding
+- ligands with different net charges
+- Protonation state uncertainty for some ligands (primary amine)
 date: 2019-09-23
 dpi: 0.15
 id: 3

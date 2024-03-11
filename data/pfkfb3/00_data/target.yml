@@ -4,7 +4,8 @@ alternate:
   pdb: 6HVH
 associated_sets:
   - Merck KGgA fep-benchmark
-comments: null
+comments:
+- cofactor
 date: 2020-07-06
 dpi: 0.11
 id: 17

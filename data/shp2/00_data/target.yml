@@ -4,7 +4,8 @@ alternate:
   pdb: 5EHP
 associated_sets:
   - Merck KGgA fep-benchmark
-comments: null
+comments:
+- Some ligands are not well aligned
 date: 2020-07-30
 dpi: 0.1
 id: 19

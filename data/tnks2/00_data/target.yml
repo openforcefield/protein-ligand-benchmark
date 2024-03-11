@@ -4,7 +4,9 @@ alternate:
   pdb: 4PC9
 associated_sets: 
   - Merck KGgA fep-benchmark
-comments: null
+comments: 
+- ligands with different net charges
+- Protonation state uncertainty (lig_7)
 date: 2020-08-12
 dpi: 0.08
 id: 21

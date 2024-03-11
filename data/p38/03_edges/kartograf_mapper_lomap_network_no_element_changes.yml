@@ -1,0 +1,464 @@
+remarks: Kartograph mapper, Lomap scorer, Lomap network, no element changes
+planner: openfe v0.14 lomap network
+edges:
+  edge_lig_p38a_3fln_lig_p38a_2gg:
+    ligand_a: lig_p38a_3fln
+    ligand_b: lig_p38a_2gg
+    atom mapping: {0: 0, 5: 5, 25: 27, 32: 34, 36: 38, 38: 40, 43: 45, 44: 46, 45: 47,
+      1: 1, 2: 2, 3: 3, 4: 4, 21: 23, 22: 24, 23: 25, 24: 26, 26: 28, 27: 29, 28: 30,
+      29: 31, 30: 32, 31: 33, 33: 35, 34: 36, 35: 37, 37: 39, 39: 41, 40: 42, 41: 43,
+      42: 44}
+    score: {value: '0.247', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2x_lig_p38a_2v:
+    ligand_a: lig_p38a_2x
+    ligand_b: lig_p38a_2v
+    atom mapping: {0: 0, 5: 5, 22: 14, 29: 21, 33: 25, 35: 27, 40: 34, 41: 32, 42: 33,
+      1: 1, 2: 2, 3: 3, 4: 4, 18: 10, 19: 11, 20: 12, 21: 13, 23: 15, 24: 16, 25: 17,
+      26: 18, 27: 19, 28: 20, 30: 22, 31: 23, 32: 24, 34: 26, 36: 28, 37: 29, 38: 30,
+      39: 31}
+    score: {value: '0.301', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2ee_lig_p38a_2v:
+    ligand_a: lig_p38a_2ee
+    ligand_b: lig_p38a_2v
+    atom mapping: {0: 0, 5: 5, 31: 14, 38: 21, 42: 25, 44: 27, 49: 32, 50: 33, 51: 34,
+      1: 1, 2: 2, 3: 3, 4: 4, 27: 10, 28: 11, 29: 12, 30: 13, 32: 15, 33: 16, 34: 17,
+      35: 18, 36: 19, 37: 20, 39: 22, 40: 23, 41: 24, 43: 26, 45: 28, 46: 29, 47: 30,
+      48: 31}
+    score: {value: '0.202', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fmh_lig_p38a_2v:
+    ligand_a: lig_p38a_3fmh
+    ligand_b: lig_p38a_2v
+    atom mapping: {8: 8, 10: 5, 14: 0, 20: 32, 21: 33, 22: 34, 31: 21, 35: 25, 37: 27,
+      39: 14, 7: 6, 9: 4, 11: 3, 12: 2, 13: 1, 15: 12, 16: 11, 17: 10, 18: 30, 19: 31,
+      23: 28, 24: 29, 25: 15, 26: 16, 27: 17, 28: 18, 29: 19, 30: 20, 32: 22, 33: 23,
+      34: 24, 36: 26, 38: 13}
+    score: {value: '0.333', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2e_lig_p38a_3flz:
+    ligand_a: lig_p38a_2e
+    ligand_b: lig_p38a_3flz
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 30: 30, 32: 32, 36: 36, 38: 38, 43: 43, 44: 44, 45: 45,
+      1: 1, 2: 2, 3: 3, 4: 4, 6: 6, 8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21,
+      22: 22, 23: 23, 24: 24, 26: 26, 27: 27, 28: 28, 29: 29, 31: 31, 33: 33, 35: 35,
+      37: 37, 39: 39, 40: 40, 41: 41, 42: 42}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fmh_lig_p38a_3fly:
+    ligand_a: lig_p38a_3fmh
+    ligand_b: lig_p38a_3fly
+    atom mapping: {5: 15, 6: 14, 8: 7, 10: 5, 14: 0, 20: 38, 21: 39, 22: 40, 31: 27,
+      35: 31, 37: 33, 39: 20, 41: 9, 42: 11, 43: 10, 4: 12, 7: 6, 9: 4, 11: 3, 12: 2,
+      13: 1, 15: 18, 16: 17, 17: 16, 18: 36, 19: 37, 23: 34, 24: 35, 25: 21, 26: 22,
+      27: 23, 28: 24, 29: 25, 30: 26, 32: 28, 33: 29, 34: 30, 36: 32, 38: 19, 40: 8}
+    score: {value: '0.407', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2g_lig_p38a_3flz:
+    ligand_a: lig_p38a_2g
+    ligand_b: lig_p38a_3flz
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 32: 36, 34: 34, 36: 32, 38: 30, 43: 44, 44: 45, 45: 43,
+      1: 1, 2: 2, 3: 3, 4: 4, 6: 6, 8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21,
+      22: 22, 23: 23, 24: 24, 26: 26, 27: 27, 28: 28, 29: 37, 31: 35, 33: 33, 35: 31,
+      37: 29, 39: 39, 40: 40, 41: 41, 42: 42}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fln_lig_p38a_2ee:
+    ligand_a: lig_p38a_3fln
+    ligand_b: lig_p38a_2ee
+    atom mapping: {0: 0, 5: 5, 25: 31, 32: 38, 36: 42, 38: 44, 43: 51, 44: 49, 45: 50,
+      1: 1, 2: 2, 3: 3, 4: 4, 21: 27, 22: 28, 23: 29, 24: 30, 26: 32, 27: 33, 28: 34,
+      29: 35, 30: 36, 31: 37, 33: 39, 34: 40, 35: 41, 37: 43, 39: 45, 40: 46, 41: 47,
+      42: 48}
+    score: {value: '0.223', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2e_lig_p38a_2h:
+    ligand_a: lig_p38a_2e
+    ligand_b: lig_p38a_2h
+    atom mapping: {0: 0, 5: 5, 25: 25, 43: 43, 44: 44, 45: 45, 1: 1, 2: 2, 3: 3, 4: 4,
+      21: 21, 22: 22, 23: 23, 24: 24, 26: 26, 39: 39, 40: 40, 41: 41, 42: 42}
+    score: {value: '0.061', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2m_lig_p38a_2f:
+    ligand_a: lig_p38a_2m
+    ligand_b: lig_p38a_2f
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 32: 32, 38: 38, 1: 1, 2: 2, 3: 3, 4: 4, 6: 6, 8: 8,
+      11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23, 24: 24, 26: 26, 27: 27,
+      28: 28, 29: 29, 31: 31, 33: 33, 35: 35, 37: 37, 39: 39, 40: 40, 41: 41}
+    score: {value: '0.273', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fln_lig_p38a_2k:
+    ligand_a: lig_p38a_3fln
+    ligand_b: lig_p38a_2k
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 10, 10: 9, 12: 13, 13: 12, 16: 17, 17: 16,
+      19: 20, 20: 19, 25: 25, 32: 32, 36: 36, 38: 38, 1: 1, 2: 2, 3: 3, 4: 4, 6: 6,
+      8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23, 24: 24, 26: 26,
+      27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 33: 33, 34: 34, 35: 35, 37: 37, 39: 39,
+      40: 40, 41: 41}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fly_lig_p38a_2bb:
+    ligand_a: lig_p38a_3fly
+    ligand_b: lig_p38a_2bb
+    atom mapping: {0: 0, 5: 5, 7: 7, 14: 11, 15: 10, 20: 23, 27: 30, 31: 34, 33: 36,
+      38: 41, 39: 42, 40: 43, 1: 1, 2: 2, 3: 3, 4: 4, 6: 6, 12: 9, 16: 19, 17: 20,
+      18: 21, 19: 22, 21: 24, 22: 25, 23: 26, 24: 27, 25: 28, 26: 29, 28: 31, 29: 32,
+      30: 33, 32: 35, 34: 37, 35: 38, 36: 39, 37: 40}
+    score: {value: '0.607', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3flz_lig_p38a_2h:
+    ligand_a: lig_p38a_3flz
+    ligand_b: lig_p38a_2h
+    atom mapping: {0: 0, 5: 5, 25: 25, 43: 43, 44: 44, 45: 45, 1: 1, 2: 2, 3: 3, 4: 4,
+      21: 21, 22: 22, 23: 23, 24: 24, 26: 26, 39: 39, 40: 40, 41: 41, 42: 42}
+    score: {value: '0.067', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fln_lig_p38a_2ff:
+    ligand_a: lig_p38a_3fln
+    ligand_b: lig_p38a_2ff
+    atom mapping: {0: 19, 5: 13, 25: 22, 32: 29, 36: 33, 38: 35, 43: 41, 44: 42, 45: 40,
+      1: 18, 2: 20, 3: 14, 4: 12, 21: 15, 22: 16, 23: 17, 24: 21, 26: 23, 27: 24,
+      28: 25, 29: 26, 30: 27, 31: 28, 33: 30, 34: 31, 35: 32, 37: 34, 39: 36, 40: 37,
+      41: 38, 42: 39}
+    score: {value: '0.273', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2k_lig_p38a_2g:
+    ligand_a: lig_p38a_2k
+    ligand_b: lig_p38a_2g
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 10, 10: 9, 12: 13, 13: 12, 16: 17, 17: 16,
+      19: 20, 20: 19, 25: 25, 32: 32, 36: 36, 38: 38, 1: 1, 2: 2, 3: 3, 4: 4, 6: 6,
+      8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23, 24: 24, 26: 26,
+      27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 33: 33, 35: 35, 37: 37, 39: 39, 40: 40,
+      41: 41}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2r_lig_p38a_2l:
+    ligand_a: lig_p38a_2r
+    ligand_b: lig_p38a_2l
+    atom mapping: {12: 43, 13: 44, 23: 32, 27: 36, 29: 38, 31: 25, 37: 5, 39: 7, 41: 9,
+      42: 10, 44: 12, 45: 13, 48: 16, 49: 17, 51: 19, 52: 20, 55: 0, 2: 45, 11: 42,
+      14: 41, 15: 39, 16: 40, 17: 26, 18: 27, 19: 28, 20: 29, 21: 30, 22: 31, 24: 33,
+      25: 34, 26: 35, 28: 37, 30: 24, 32: 23, 33: 22, 34: 21, 35: 3, 36: 4, 38: 6,
+      40: 8, 43: 11, 46: 14, 47: 15, 50: 18, 53: 2, 54: 1}
+    score: {value: '0.741', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2aa_lig_p38a_2z:
+    ligand_a: lig_p38a_2aa
+    ligand_b: lig_p38a_2z
+    atom mapping: {0: 0, 3: 3, 4: 4, 8: 7, 14: 13, 17: 16, 24: 23, 28: 27, 30: 29,
+      35: 34, 36: 35, 37: 36, 39: 43, 40: 44, 1: 1, 2: 2, 5: 5, 7: 6, 9: 8, 10: 9,
+      11: 10, 12: 11, 13: 12, 15: 14, 16: 15, 18: 17, 19: 18, 20: 19, 21: 20, 22: 21,
+      23: 22, 25: 24, 26: 25, 27: 26, 29: 28, 31: 30, 32: 31, 33: 32, 34: 33, 38: 41}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fly_lig_p38a_2z:
+    ligand_a: lig_p38a_3fly
+    ligand_b: lig_p38a_2z
+    atom mapping: {0: 13, 5: 7, 9: 42, 10: 44, 11: 43, 14: 4, 15: 3, 20: 16, 27: 23,
+      31: 27, 33: 29, 38: 34, 39: 35, 40: 36, 1: 12, 2: 14, 3: 8, 4: 6, 6: 5, 8: 41,
+      12: 2, 16: 9, 17: 10, 18: 11, 19: 15, 21: 17, 22: 18, 23: 19, 24: 20, 25: 21,
+      26: 22, 28: 24, 29: 25, 30: 26, 32: 28, 34: 30, 35: 31, 36: 32, 37: 33}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2p_lig_p38a_2f:
+    ligand_a: lig_p38a_2p
+    ligand_b: lig_p38a_2f
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 32: 32, 38: 38, 43: 43, 44: 44, 1: 1, 2: 2, 3: 3, 4: 4,
+      6: 6, 8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23, 24: 24,
+      26: 26, 27: 27, 28: 28, 29: 29, 31: 31, 33: 33, 35: 35, 37: 37, 39: 39, 40: 40,
+      41: 41, 42: 42}
+    score: {value: '0.407', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2bb_lig_p38a_2v:
+    ligand_a: lig_p38a_2bb
+    ligand_b: lig_p38a_2v
+    atom mapping: {0: 0, 5: 5, 7: 8, 8: 9, 23: 14, 30: 21, 34: 25, 36: 27, 41: 32,
+      42: 33, 43: 34, 1: 1, 2: 2, 3: 3, 4: 4, 6: 6, 19: 10, 20: 11, 21: 12, 22: 13,
+      24: 15, 25: 16, 26: 17, 27: 18, 28: 19, 29: 20, 31: 22, 32: 23, 33: 24, 35: 26,
+      37: 28, 38: 29, 39: 30, 40: 31}
+    score: {value: '0.607', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2x_lig_p38a_3fly:
+    ligand_a: lig_p38a_2x
+    ligand_b: lig_p38a_3fly
+    atom mapping: {0: 0, 5: 5, 22: 20, 29: 27, 33: 31, 35: 33, 40: 40, 41: 38, 42: 39,
+      1: 1, 2: 2, 3: 3, 4: 4, 18: 16, 19: 17, 20: 18, 21: 19, 23: 21, 24: 22, 25: 23,
+      26: 24, 27: 25, 28: 26, 30: 28, 31: 29, 32: 30, 34: 32, 36: 34, 37: 35, 38: 36,
+      39: 37}
+    score: {value: '0.247', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fln_lig_p38a_2t:
+    ligand_a: lig_p38a_3fln
+    ligand_b: lig_p38a_2t
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 32: 32, 36: 36, 38: 38, 43: 43, 44: 44, 1: 1, 2: 2,
+      3: 3, 4: 4, 6: 6, 8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23,
+      24: 24, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 33: 33, 34: 34, 35: 35,
+      37: 37, 39: 39, 40: 40, 41: 41, 42: 42}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2s_lig_p38a_2f:
+    ligand_a: lig_p38a_2s
+    ligand_b: lig_p38a_2f
+    atom mapping: {10: 44, 11: 45, 19: 38, 25: 32, 29: 25, 35: 5, 37: 7, 39: 9, 40: 10,
+      42: 12, 43: 13, 46: 16, 47: 17, 49: 19, 50: 20, 53: 0, 9: 42, 12: 41, 13: 39,
+      14: 40, 15: 26, 16: 27, 17: 28, 18: 37, 20: 35, 22: 33, 24: 31, 26: 29, 28: 24,
+      30: 23, 31: 22, 32: 21, 33: 3, 34: 4, 36: 6, 38: 8, 41: 11, 44: 14, 45: 15,
+      48: 18, 51: 2, 52: 1}
+    score: {value: '0.497', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fly_lig_p38a_2aa:
+    ligand_a: lig_p38a_3fly
+    ligand_b: lig_p38a_2aa
+    atom mapping: {0: 14, 5: 8, 7: 6, 10: 40, 11: 39, 14: 4, 15: 3, 20: 17, 27: 24,
+      31: 28, 33: 30, 38: 35, 39: 36, 40: 37, 1: 13, 2: 15, 3: 9, 4: 7, 6: 5, 8: 38,
+      12: 2, 16: 10, 17: 11, 18: 12, 19: 16, 21: 18, 22: 19, 23: 20, 24: 21, 25: 22,
+      26: 23, 28: 25, 29: 26, 30: 27, 32: 29, 34: 31, 35: 32, 36: 33, 37: 34}
+    score: {value: '0.819', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2l_lig_p38a_2gg:
+    ligand_a: lig_p38a_2l
+    ligand_b: lig_p38a_2gg
+    atom mapping: {0: 0, 5: 5, 25: 27, 32: 34, 36: 38, 38: 40, 43: 45, 44: 46, 1: 1,
+      2: 2, 3: 3, 4: 4, 21: 23, 22: 24, 23: 25, 24: 26, 26: 28, 27: 29, 28: 30, 29: 31,
+      30: 32, 31: 33, 33: 35, 34: 36, 35: 37, 37: 39, 39: 41, 40: 42, 41: 43, 42: 44}
+    score: {value: '0.223', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2l_lig_p38a_2ff:
+    ligand_a: lig_p38a_2l
+    ligand_b: lig_p38a_2ff
+    atom mapping: {0: 19, 5: 13, 25: 22, 32: 29, 36: 33, 38: 35, 43: 41, 44: 42, 1: 18,
+      2: 20, 3: 14, 4: 12, 21: 15, 22: 16, 23: 17, 24: 21, 26: 23, 27: 24, 28: 25,
+      29: 26, 30: 27, 31: 28, 33: 30, 34: 31, 35: 32, 37: 34, 39: 36, 40: 37, 41: 38,
+      42: 39}
+    score: {value: '0.247', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2n_lig_p38a_2o:
+    ligand_a: lig_p38a_2n
+    ligand_b: lig_p38a_2o
+    atom mapping: {6: 46, 7: 47, 9: 43, 10: 44, 18: 38, 20: 36, 24: 32, 28: 25, 34: 5,
+      36: 7, 38: 9, 39: 10, 41: 12, 42: 13, 45: 16, 46: 17, 48: 19, 49: 20, 52: 0,
+      5: 45, 8: 42, 11: 41, 12: 39, 13: 40, 14: 26, 15: 27, 16: 28, 17: 37, 19: 35,
+      21: 33, 22: 34, 23: 31, 25: 29, 26: 30, 27: 24, 29: 23, 30: 22, 31: 21, 32: 3,
+      33: 4, 35: 6, 37: 8, 40: 11, 43: 14, 44: 15, 47: 18, 50: 2, 51: 1}
+    score: {value: '0.549', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2n_lig_p38a_2p:
+    ligand_a: lig_p38a_2n
+    ligand_b: lig_p38a_2p
+    atom mapping: {9: 43, 10: 44, 18: 38, 20: 36, 24: 32, 28: 25, 34: 5, 36: 7, 38: 9,
+      39: 10, 41: 12, 42: 13, 45: 16, 46: 17, 48: 19, 49: 20, 52: 0, 8: 42, 11: 41,
+      12: 39, 13: 40, 14: 26, 15: 27, 16: 28, 17: 37, 19: 35, 21: 33, 22: 34, 23: 31,
+      25: 29, 26: 30, 27: 24, 29: 23, 30: 22, 31: 21, 32: 3, 33: 4, 35: 6, 37: 8,
+      40: 11, 43: 14, 44: 15, 47: 18, 50: 2, 51: 1}
+    score: {value: '0.407', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2s_lig_p38a_2o:
+    ligand_a: lig_p38a_2s
+    ligand_b: lig_p38a_2o
+    atom mapping: {6: 47, 10: 43, 11: 44, 19: 38, 21: 36, 25: 32, 29: 25, 35: 5, 37: 7,
+      39: 9, 40: 10, 42: 12, 43: 13, 46: 16, 47: 17, 49: 19, 50: 20, 53: 0, 5: 45,
+      9: 42, 12: 41, 13: 39, 14: 40, 15: 26, 16: 27, 17: 28, 18: 37, 20: 35, 22: 33,
+      23: 34, 24: 31, 26: 29, 27: 30, 28: 24, 30: 23, 31: 22, 32: 21, 33: 3, 34: 4,
+      36: 6, 38: 8, 41: 11, 44: 14, 45: 15, 48: 18, 51: 2, 52: 1}
+    score: {value: '0.497', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2y_lig_p38a_2v:
+    ligand_a: lig_p38a_2y
+    ligand_b: lig_p38a_2v
+    atom mapping: {12: 8, 13: 9, 15: 5, 21: 0, 24: 14, 31: 21, 35: 25, 37: 27, 42: 32,
+      43: 33, 44: 34, 11: 6, 14: 4, 16: 3, 17: 10, 18: 11, 19: 12, 20: 1, 22: 2, 23: 13,
+      25: 15, 26: 16, 27: 17, 28: 18, 29: 19, 30: 20, 32: 22, 33: 23, 34: 24, 36: 26,
+      38: 28, 39: 29, 40: 30, 41: 31}
+    score: {value: '0.670', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fln_lig_p38a_2v:
+    ligand_a: lig_p38a_3fln
+    ligand_b: lig_p38a_2v
+    atom mapping: {0: 0, 5: 5, 25: 14, 32: 21, 36: 25, 38: 27, 43: 34, 44: 32, 45: 33,
+      1: 1, 2: 2, 3: 3, 4: 4, 21: 10, 22: 11, 23: 12, 24: 13, 26: 15, 27: 16, 28: 17,
+      29: 18, 30: 19, 31: 20, 33: 22, 34: 23, 35: 24, 37: 26, 39: 28, 40: 29, 41: 30,
+      42: 31}
+    score: {value: '0.273', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2n_lig_p38a_2l:
+    ligand_a: lig_p38a_2n
+    ligand_b: lig_p38a_2l
+    atom mapping: {6: 47, 7: 48, 9: 43, 10: 44, 18: 38, 20: 36, 24: 32, 28: 25, 34: 5,
+      52: 0, 5: 45, 8: 42, 11: 41, 12: 39, 13: 40, 14: 26, 15: 27, 16: 28, 17: 37,
+      19: 35, 21: 33, 22: 34, 23: 31, 25: 29, 26: 30, 27: 24, 29: 23, 30: 22, 31: 21,
+      32: 3, 33: 4, 50: 2, 51: 1}
+    score: {value: '0.247', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2n_lig_p38a_2f:
+    ligand_a: lig_p38a_2n
+    ligand_b: lig_p38a_2f
+    atom mapping: {9: 44, 10: 45, 18: 38, 24: 32, 28: 25, 34: 5, 36: 7, 38: 9, 39: 10,
+      41: 12, 42: 13, 45: 16, 46: 17, 48: 19, 49: 20, 52: 0, 8: 42, 11: 41, 12: 39,
+      13: 40, 14: 26, 15: 27, 16: 28, 17: 37, 19: 35, 21: 33, 23: 31, 25: 29, 27: 24,
+      29: 23, 30: 22, 31: 21, 32: 3, 33: 4, 35: 6, 37: 8, 40: 11, 43: 14, 44: 15,
+      47: 18, 50: 2, 51: 1}
+    score: {value: '0.549', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2t_lig_p38a_2l:
+    ligand_a: lig_p38a_2t
+    ligand_b: lig_p38a_2l
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 32: 32, 36: 36, 38: 38, 43: 43, 44: 44, 1: 1, 2: 2,
+      3: 3, 4: 4, 6: 6, 8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23,
+      24: 24, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 33: 33, 34: 34, 35: 35,
+      37: 37, 39: 39, 40: 40, 41: 41, 42: 42, 45: 45}
+    score: {value: '0.779', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3flz_lig_p38a_2f:
+    ligand_a: lig_p38a_3flz
+    ligand_b: lig_p38a_2f
+    atom mapping: {0: 0, 5: 5, 25: 25, 30: 38, 34: 34, 36: 32, 38: 30, 43: 43, 44: 44,
+      45: 45, 1: 1, 2: 2, 3: 3, 4: 4, 21: 21, 22: 22, 23: 23, 24: 24, 26: 26, 27: 27,
+      28: 28, 29: 37, 31: 35, 33: 33, 35: 31, 37: 29, 39: 39, 40: 40, 41: 41, 42: 42}
+    score: {value: '0.273', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2f_lig_p38a_2j:
+    ligand_a: lig_p38a_2f
+    ligand_b: lig_p38a_2j
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 43: 45, 44: 46, 45: 47, 1: 1, 2: 2, 3: 3, 4: 4, 6: 6,
+      8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23, 24: 24, 26: 26,
+      39: 41, 40: 42, 41: 43, 42: 44}
+    score: {value: '0.183', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3flw_lig_p38a_3fly:
+    ligand_a: lig_p38a_3flw
+    ligand_b: lig_p38a_3fly
+    atom mapping: {6: 13, 7: 15, 9: 7, 11: 5, 15: 0, 21: 38, 22: 39, 23: 40, 32: 27,
+      36: 31, 38: 33, 40: 20, 42: 9, 43: 11, 5: 12, 8: 6, 10: 4, 12: 3, 13: 2, 14: 1,
+      16: 18, 17: 17, 18: 16, 19: 36, 20: 37, 24: 34, 25: 35, 26: 21, 27: 22, 28: 23,
+      29: 24, 30: 25, 31: 26, 33: 28, 34: 29, 35: 30, 37: 32, 39: 19, 41: 8}
+    score: {value: '0.670', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2n_lig_p38a_2m:
+    ligand_a: lig_p38a_2n
+    ligand_b: lig_p38a_2m
+    atom mapping: {18: 38, 20: 36, 24: 32, 28: 25, 34: 5, 36: 7, 38: 9, 39: 10, 41: 12,
+      42: 13, 45: 16, 46: 17, 48: 19, 49: 20, 52: 0, 11: 41, 12: 39, 13: 40, 14: 26,
+      15: 27, 16: 28, 17: 37, 19: 35, 21: 33, 22: 34, 23: 31, 25: 29, 26: 30, 27: 24,
+      29: 23, 30: 22, 31: 21, 32: 3, 33: 4, 35: 6, 37: 8, 40: 11, 43: 14, 44: 15,
+      47: 18, 50: 2, 51: 1}
+    score: {value: '0.273', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2i_lig_p38a_2j:
+    ligand_a: lig_p38a_2i
+    ligand_b: lig_p38a_2j
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 28: 28, 29: 29, 45: 45, 46: 46, 47: 47, 1: 1, 2: 2,
+      3: 3, 4: 4, 6: 6, 8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23,
+      24: 24, 26: 26, 27: 27, 41: 41, 42: 42, 43: 43, 44: 44}
+    score: {value: '0.223', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fln_lig_p38a_2e:
+    ligand_a: lig_p38a_3fln
+    ligand_b: lig_p38a_2e
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 32: 36, 36: 32, 38: 30, 43: 44, 44: 45, 45: 43, 1: 1,
+      2: 2, 3: 3, 4: 4, 6: 6, 8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22,
+      23: 23, 24: 24, 26: 26, 27: 27, 28: 28, 29: 37, 31: 35, 33: 33, 34: 34, 35: 31,
+      37: 29, 39: 39, 40: 40, 41: 41, 42: 42}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2f_lig_p38a_2i:
+    ligand_a: lig_p38a_2f
+    ligand_b: lig_p38a_2i
+    atom mapping: {0: 0, 5: 5, 7: 7, 9: 9, 10: 10, 12: 12, 13: 13, 16: 16, 17: 17,
+      19: 19, 20: 20, 25: 25, 43: 45, 44: 46, 45: 47, 1: 1, 2: 2, 3: 3, 4: 4, 6: 6,
+      8: 8, 11: 11, 14: 14, 15: 15, 18: 18, 21: 21, 22: 22, 23: 23, 24: 24, 26: 26,
+      39: 41, 40: 42, 41: 43, 42: 44}
+    score: {value: '0.202', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2r_lig_p38a_3fln:
+    ligand_a: lig_p38a_2r
+    ligand_b: lig_p38a_3fln
+    atom mapping: {12: 43, 13: 44, 23: 32, 27: 36, 29: 38, 31: 25, 37: 5, 39: 7, 41: 9,
+      42: 10, 44: 12, 45: 13, 48: 16, 49: 17, 51: 19, 52: 20, 55: 0, 11: 42, 14: 41,
+      15: 39, 16: 40, 17: 26, 18: 27, 19: 28, 20: 29, 21: 30, 22: 31, 24: 33, 25: 34,
+      26: 35, 28: 37, 30: 24, 32: 23, 33: 22, 34: 21, 35: 3, 36: 4, 38: 6, 40: 8,
+      43: 11, 46: 14, 47: 15, 50: 18, 53: 2, 54: 1}
+    score: {value: '0.670', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_3fly_lig_p38a_2y:
+    ligand_a: lig_p38a_3fly
+    ligand_b: lig_p38a_2y
+    atom mapping: {0: 21, 5: 15, 7: 12, 20: 24, 27: 31, 31: 35, 33: 37, 38: 42, 39: 43,
+      40: 44, 1: 20, 2: 22, 3: 16, 4: 14, 6: 11, 12: 2, 16: 17, 17: 18, 18: 19, 19: 23,
+      21: 25, 22: 26, 23: 27, 24: 28, 25: 29, 26: 30, 28: 32, 29: 33, 30: 34, 32: 36,
+      34: 38, 35: 39, 36: 40, 37: 41}
+    score: {value: '0.670', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2s_lig_p38a_2n:
+    ligand_a: lig_p38a_2s
+    ligand_b: lig_p38a_2n
+    atom mapping: {0: 0, 3: 3, 4: 4, 6: 7, 10: 9, 11: 10, 19: 18, 21: 20, 25: 24,
+      29: 28, 35: 34, 37: 36, 39: 38, 40: 39, 42: 41, 43: 42, 46: 45, 47: 46, 49: 48,
+      50: 49, 53: 52, 1: 1, 2: 2, 5: 5, 9: 8, 12: 11, 13: 12, 14: 13, 15: 14, 16: 15,
+      17: 16, 18: 17, 20: 19, 22: 21, 23: 22, 24: 23, 26: 25, 27: 26, 28: 27, 30: 29,
+      31: 30, 32: 31, 33: 32, 34: 33, 36: 35, 38: 37, 41: 40, 44: 43, 45: 44, 48: 47,
+      51: 50, 52: 51}
+    score: {value: '0.905', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_p38a_2l_lig_p38a_2v:
+    ligand_a: lig_p38a_2l
+    ligand_b: lig_p38a_2v
+    atom mapping: {0: 0, 5: 5, 25: 14, 32: 21, 36: 25, 38: 27, 43: 34, 44: 32, 1: 1,
+      2: 2, 3: 3, 4: 4, 21: 10, 22: 11, 23: 12, 24: 13, 26: 15, 27: 16, 28: 17, 29: 18,
+      30: 19, 31: 20, 33: 22, 34: 23, 35: 24, 37: 26, 39: 28, 40: 29, 41: 30, 42: 31}
+    score: {value: '0.247', method: Lomap default scorer}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null

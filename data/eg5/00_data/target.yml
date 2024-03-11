@@ -5,6 +5,9 @@ alternate:
 associated_sets: 
  - Merck KGgA fep-benchmark
 comments: 
+- ligands with different net charges
+- cofactor
+- stereocenter uncertainty (tetravalent nitrogen for lig_CHEMBL1084935)
 date: 2020-06-19
 dpi: 0.18
 id: 14
