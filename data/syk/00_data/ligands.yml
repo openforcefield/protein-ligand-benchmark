@@ -424,7 +424,7 @@ lig_CHEMBL3265032:
     error: -1
     type: ic50
     unit: nM
-    value: 10000
+    value: 7.7
   name: lig_CHEMBL3265032
   smiles: '[H][C]1=[N][N]([H])[c]2[c]([H])[c]([C]3=[C]([H])[N]4[C](=[N][C]([H])=[C]4[H])[C]([N]([H])[c]4[c]([H])[c]([H])[c]([N]5[C]([H])([H])[C]([H])([H])[O][C]([H])([H])[C]5([H])[H])[c]([H])[c]4[H])=[N]3)[c]([H])[c]([H])[c]21'
 lig_CHEMBL3265033:
