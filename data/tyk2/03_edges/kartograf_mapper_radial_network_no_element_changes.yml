@@ -1,6 +1,22 @@
-remarks: Kartograf mapper, Lomap scorer, Radial network, element changes
+remarks: Kartograf mapper, Lomap scorer, Radial network, no element changes
 planner: openfe v0.14 radial network
 edges:
+  edge_lig_ejm_31_lig_ejm_55:
+    ligand_a: lig_ejm_31
+    ligand_b: lig_ejm_55
+    atom mapping: {0: 0, 7: 32, 12: 12, 19: 19, 21: 21, 28: 29, 29: 30, 31: 7, 1: 1,
+      2: 6, 3: 5, 4: 4, 5: 3, 6: 2, 8: 31, 9: 9, 10: 10, 11: 11, 13: 13, 14: 14, 15: 15,
+      16: 16, 17: 17, 18: 18, 20: 20, 22: 22, 23: 23, 30: 8}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_ejm_31_lig_ejm_54:
+    ligand_a: lig_ejm_31
+    ligand_b: lig_ejm_54
+    atom mapping: {0: 0, 7: 36, 12: 12, 19: 19, 21: 21, 28: 33, 29: 34, 31: 7, 1: 1,
+      2: 6, 3: 5, 4: 4, 5: 3, 6: 2, 8: 35, 9: 9, 10: 10, 11: 11, 13: 13, 14: 14, 15: 15,
+      16: 16, 17: 17, 18: 18, 20: 20, 22: 22, 23: 23, 30: 8}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
   edge_lig_ejm_31_lig_ejm_46:
     ligand_a: lig_ejm_31
     ligand_b: lig_ejm_46
@@ -15,14 +31,6 @@ edges:
     atom mapping: {0: 0, 7: 38, 12: 12, 19: 19, 21: 21, 28: 35, 29: 36, 31: 7, 1: 1,
       2: 6, 3: 5, 4: 4, 5: 3, 6: 2, 8: 37, 9: 9, 10: 10, 11: 11, 13: 13, 14: 14, 15: 15,
       16: 16, 17: 17, 18: 18, 20: 20, 22: 22, 23: 23, 30: 8}
-    mapper: Kartograf (atom_map_hydrogens=True)
-    remarks: null
-  edge_lig_ejm_31_lig_ejm_55:
-    ligand_a: lig_ejm_31
-    ligand_b: lig_ejm_55
-    atom mapping: {0: 0, 7: 32, 12: 12, 19: 19, 21: 21, 26: 25, 28: 29, 29: 30, 31: 7,
-      1: 1, 2: 6, 3: 5, 4: 4, 5: 3, 6: 2, 8: 31, 9: 9, 10: 10, 11: 11, 13: 13, 14: 14,
-      15: 15, 16: 16, 17: 17, 18: 18, 20: 20, 22: 22, 23: 23, 24: 24, 30: 8}
     mapper: Kartograf (atom_map_hydrogens=True)
     remarks: null
   edge_lig_ejm_31_lig_jmc_23:
@@ -87,13 +95,5 @@ edges:
     atom mapping: {0: 0, 7: 7, 12: 12, 19: 19, 21: 21, 28: 35, 29: 36, 31: 38, 1: 1,
       2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 8: 8, 9: 9, 10: 10, 11: 11, 13: 13, 14: 14, 15: 15,
       16: 16, 17: 17, 18: 18, 20: 20, 22: 22, 23: 23, 30: 37}
-    mapper: Kartograf (atom_map_hydrogens=True)
-    remarks: null
-  edge_lig_ejm_31_lig_ejm_54:
-    ligand_a: lig_ejm_31
-    ligand_b: lig_ejm_54
-    atom mapping: {0: 0, 7: 36, 12: 12, 19: 19, 21: 21, 26: 26, 28: 33, 29: 34, 31: 7,
-      1: 1, 2: 6, 3: 5, 4: 4, 5: 3, 6: 2, 8: 35, 9: 9, 10: 10, 11: 11, 13: 13, 14: 14,
-      15: 15, 16: 16, 17: 17, 18: 18, 20: 20, 22: 22, 23: 23, 24: 24, 30: 8}
     mapper: Kartograf (atom_map_hydrogens=True)
     remarks: null
