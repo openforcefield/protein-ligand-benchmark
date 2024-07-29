@@ -4,7 +4,9 @@ alternate:
   pdb: 2HB1
 associated_sets:
 - Schrodinger JACS
-comments: Charges in binding site; electrostatic interactions contribute to binding
+comments: 
+- Charges in binding site; electrostatic interactions contribute to binding
+- Some ligands are not well aligned
 date: 2019-12-12
 dpi: 0.15
 id: 5

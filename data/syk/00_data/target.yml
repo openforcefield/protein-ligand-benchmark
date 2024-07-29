@@ -4,7 +4,9 @@ alternate:
   pdb: 4PX6
 associated_sets:
   - Merck KGgA fep-benchmark
-comments: null
+comments: 
+- ligands with different net charges
+- Protonation state uncertainty for some ligands (lig_CHEMBL3265030_n and lig_CHEMBL3265035)
 date: 2020-08-11
 dpi: null
 id: 20

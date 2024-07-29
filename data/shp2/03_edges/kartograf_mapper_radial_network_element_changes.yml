@@ -1,0 +1,196 @@
+remarks: Kartograf mapper, Lomap scorer, Radial network, element changes
+planner: openfe v0.14 radial network
+edges:
+  edge_lig_E3_lig_E28:
+    ligand_a: lig_E3
+    ligand_b: lig_E28
+    atom mapping: {13: 40, 14: 39, 16: 36, 17: 37, 20: 31, 21: 29, 22: 30, 24: 46,
+      25: 33, 27: 25, 28: 26, 30: 23, 31: 22, 35: 44, 36: 45, 39: 34, 6: 15, 7: 16,
+      9: 17, 10: 19, 11: 20, 12: 38, 15: 35, 18: 27, 19: 28, 23: 32, 26: 24, 29: 21,
+      32: 41, 33: 42, 34: 43}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_SHP836-2:
+    ligand_a: lig_E3
+    ligand_b: lig_SHP836-2
+    atom mapping: {8: 0, 35: 28, 36: 29, 6: 30, 7: 1, 9: 2, 10: 3, 32: 25, 33: 26,
+      34: 27}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_11:
+    ligand_a: lig_E3
+    ligand_b: lig_11
+    atom mapping: {13: 26, 14: 27, 16: 29, 17: 30, 20: 33, 21: 34, 22: 35, 24: 37,
+      25: 38, 27: 40, 28: 41, 30: 43, 31: 44, 35: 17, 39: 45, 6: 3, 7: 2, 9: 1, 10: 23,
+      11: 24, 12: 25, 15: 28, 18: 31, 19: 32, 23: 36, 26: 39, 29: 42, 32: 22, 33: 15,
+      34: 16}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E30:
+    ligand_a: lig_E3
+    ligand_b: lig_E30
+    atom mapping: {13: 15, 14: 16, 16: 18, 17: 19, 20: 22, 21: 23, 22: 24, 24: 26,
+      25: 27, 27: 29, 28: 30, 30: 32, 31: 33, 35: 37, 36: 38, 39: 41, 6: 9, 7: 10,
+      9: 11, 10: 12, 11: 13, 12: 14, 15: 17, 18: 20, 19: 21, 23: 25, 26: 28, 29: 31,
+      32: 34, 33: 35, 34: 36}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E24:
+    ligand_a: lig_E3
+    ligand_b: lig_E24
+    atom mapping: {13: 37, 14: 36, 16: 33, 17: 34, 20: 28, 21: 26, 22: 27, 24: 45,
+      25: 30, 27: 22, 28: 23, 30: 20, 31: 19, 35: 41, 36: 42, 39: 31, 6: 9, 7: 10,
+      9: 11, 10: 16, 11: 17, 12: 35, 15: 32, 18: 24, 19: 25, 23: 29, 26: 21, 29: 18,
+      32: 38, 33: 39, 34: 40}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E14:
+    ligand_a: lig_E3
+    ligand_b: lig_E14
+    atom mapping: {35: 17, 36: 18, 6: 3, 7: 2, 9: 1, 10: 20, 32: 19, 33: 15, 34: 16}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E27:
+    ligand_a: lig_E3
+    ligand_b: lig_E27
+    atom mapping: {35: 17, 36: 18, 6: 3, 7: 2, 9: 1, 10: 20, 32: 19, 33: 15, 34: 16}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E9:
+    ligand_a: lig_E3
+    ligand_b: lig_E9
+    atom mapping: {13: 23, 14: 24, 16: 26, 17: 27, 20: 32, 22: 31, 23: 29, 27: 37,
+      28: 38, 30: 40, 31: 41, 35: 17, 36: 18, 6: 3, 7: 2, 9: 1, 10: 20, 11: 21, 12: 22,
+      15: 25, 18: 28, 19: 30, 26: 36, 29: 39, 32: 19, 33: 15, 34: 16}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E22:
+    ligand_a: lig_E3
+    ligand_b: lig_E22
+    atom mapping: {13: 34, 14: 33, 16: 30, 17: 31, 20: 25, 21: 23, 22: 24, 24: 42,
+      25: 27, 27: 19, 28: 20, 30: 17, 31: 16, 35: 38, 36: 39, 39: 28, 6: 9, 7: 10,
+      9: 11, 10: 13, 11: 14, 12: 32, 15: 29, 18: 21, 19: 22, 23: 26, 26: 18, 29: 15,
+      32: 35, 33: 36, 34: 37}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E2:
+    ligand_a: lig_E3
+    ligand_b: lig_E2
+    atom mapping: {8: 0, 13: 7, 14: 6, 16: 10, 17: 9, 20: 15, 21: 14, 22: 13, 24: 17,
+      25: 18, 27: 21, 28: 20, 30: 23, 31: 24, 35: 28, 36: 29, 39: 45, 6: 30, 7: 1,
+      9: 2, 10: 3, 11: 4, 12: 5, 15: 8, 18: 11, 19: 12, 23: 16, 26: 19, 29: 22, 32: 25,
+      33: 26, 34: 27}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E4:
+    ligand_a: lig_E3
+    ligand_b: lig_E4
+    atom mapping: {0: 41, 8: 5, 13: 11, 14: 10, 16: 14, 17: 13, 20: 19, 21: 18, 22: 17,
+      24: 21, 25: 22, 27: 25, 28: 24, 30: 27, 31: 28, 35: 32, 36: 33, 38: 0, 39: 42,
+      1: 40, 2: 35, 3: 36, 4: 34, 5: 2, 6: 3, 7: 4, 9: 6, 10: 7, 11: 8, 12: 9, 15: 12,
+      18: 15, 19: 16, 23: 20, 26: 23, 29: 26, 32: 29, 33: 30, 34: 31, 37: 1}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_6:
+    ligand_a: lig_E3
+    ligand_b: lig_6
+    atom mapping: {8: 0, 13: 21, 14: 20, 16: 18, 17: 17, 19: 12, 24: 14, 25: 15, 27: 10,
+      28: 9, 30: 6, 31: 7, 35: 25, 36: 26, 39: 39, 6: 27, 7: 1, 9: 2, 10: 3, 11: 4,
+      12: 19, 15: 16, 18: 11, 23: 13, 26: 8, 29: 5, 32: 22, 33: 23, 34: 24}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E8:
+    ligand_a: lig_E3
+    ligand_b: lig_E8
+    atom mapping: {13: 44, 14: 43, 16: 40, 17: 41, 20: 30, 21: 32, 22: 31, 24: 36,
+      25: 35, 27: 26, 28: 27, 30: 24, 31: 23, 35: 17, 36: 18, 39: 34, 6: 3, 7: 2,
+      9: 1, 10: 20, 11: 21, 12: 42, 15: 39, 18: 28, 19: 29, 23: 33, 26: 25, 29: 22,
+      32: 19, 33: 15, 34: 16}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_10:
+    ligand_a: lig_E3
+    ligand_b: lig_10
+    atom mapping: {13: 6, 14: 7, 16: 9, 17: 10, 20: 13, 21: 14, 22: 15, 24: 17, 25: 18,
+      27: 20, 28: 21, 30: 23, 31: 24, 34: 0, 39: 40, 6: 28, 7: 27, 9: 25, 10: 3, 11: 4,
+      12: 5, 15: 8, 18: 11, 19: 12, 23: 16, 26: 19, 29: 22, 32: 2, 33: 1}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E25:
+    ligand_a: lig_E3
+    ligand_b: lig_E25
+    atom mapping: {13: 35, 14: 34, 16: 31, 17: 32, 20: 26, 21: 24, 22: 25, 24: 43,
+      25: 28, 27: 20, 28: 21, 30: 18, 31: 17, 35: 39, 36: 40, 39: 29, 6: 9, 7: 10,
+      9: 11, 10: 14, 11: 15, 12: 33, 15: 30, 18: 22, 19: 23, 23: 27, 26: 19, 29: 16,
+      32: 36, 33: 37, 34: 38}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_3:
+    ligand_a: lig_E3
+    ligand_b: lig_3
+    atom mapping: {8: 0, 35: 28, 36: 29, 6: 30, 7: 1, 9: 2, 10: 3, 32: 25, 33: 26,
+      34: 27}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E23:
+    ligand_a: lig_E3
+    ligand_b: lig_E23
+    atom mapping: {13: 34, 14: 33, 16: 30, 17: 31, 20: 25, 21: 23, 22: 24, 24: 42,
+      25: 27, 27: 19, 28: 20, 30: 17, 31: 16, 35: 38, 36: 39, 39: 28, 6: 9, 7: 10,
+      9: 11, 10: 13, 11: 14, 12: 32, 15: 29, 18: 21, 19: 22, 23: 26, 26: 18, 29: 15,
+      32: 35, 33: 36, 34: 37}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E29:
+    ligand_a: lig_E3
+    ligand_b: lig_E29
+    atom mapping: {13: 10, 14: 11, 16: 13, 17: 14, 20: 17, 21: 18, 22: 19, 24: 21,
+      25: 22, 27: 24, 28: 25, 30: 27, 31: 28, 35: 32, 36: 33, 39: 46, 6: 3, 7: 4,
+      9: 5, 10: 7, 11: 8, 12: 9, 15: 12, 18: 15, 19: 16, 23: 20, 26: 23, 29: 26, 32: 29,
+      33: 30, 34: 31}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E5:
+    ligand_a: lig_E3
+    ligand_b: lig_E5
+    atom mapping: {8: 0, 13: 24, 14: 23, 16: 20, 17: 21, 20: 15, 21: 13, 22: 14, 24: 46,
+      25: 17, 27: 9, 28: 10, 30: 7, 31: 6, 35: 28, 36: 29, 39: 18, 6: 30, 7: 1, 9: 2,
+      10: 3, 11: 4, 12: 22, 15: 19, 18: 11, 19: 12, 23: 16, 26: 8, 29: 5, 32: 25,
+      33: 26, 34: 27}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_SHP099-1:
+    ligand_a: lig_E3
+    ligand_b: lig_SHP099-1
+    atom mapping: {13: 23, 14: 24, 16: 26, 17: 27, 20: 30, 21: 31, 22: 32, 24: 34,
+      25: 35, 27: 37, 28: 38, 30: 40, 31: 41, 35: 17, 36: 18, 39: 42, 6: 3, 7: 2,
+      9: 1, 10: 20, 11: 21, 12: 22, 15: 25, 18: 28, 19: 29, 23: 33, 26: 36, 29: 39,
+      32: 19, 33: 15, 34: 16}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E1:
+    ligand_a: lig_E3
+    ligand_b: lig_E1
+    atom mapping: {8: 0, 13: 6, 14: 7, 16: 9, 17: 10, 20: 13, 21: 14, 22: 15, 24: 17,
+      25: 18, 27: 20, 28: 21, 30: 23, 31: 24, 35: 28, 36: 29, 39: 42, 6: 30, 7: 1,
+      9: 2, 10: 3, 11: 4, 12: 5, 15: 8, 18: 11, 19: 12, 23: 16, 26: 19, 29: 22, 32: 25,
+      33: 26, 34: 27}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_E6:
+    ligand_a: lig_E3
+    ligand_b: lig_E6
+    atom mapping: {8: 12, 13: 17, 14: 18, 16: 20, 17: 21, 20: 24, 21: 25, 22: 26,
+      24: 28, 25: 29, 27: 31, 28: 32, 30: 34, 31: 35, 35: 39, 36: 40, 39: 43, 6: 10,
+      7: 11, 9: 13, 10: 14, 11: 15, 12: 16, 15: 19, 18: 22, 19: 23, 23: 27, 26: 30,
+      29: 33, 32: 36, 33: 37, 34: 38}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
+  edge_lig_E3_lig_7:
+    ligand_a: lig_E3
+    ligand_b: lig_7
+    atom mapping: {8: 30, 13: 27, 14: 26, 16: 23, 17: 24, 19: 12, 23: 13, 24: 20,
+      25: 45, 27: 9, 28: 10, 30: 7, 31: 6, 34: 0, 39: 18, 6: 33, 7: 29, 9: 28, 10: 3,
+      11: 4, 12: 25, 15: 22, 18: 11, 26: 8, 29: 5, 32: 2, 33: 1}
+    mapper: Kartograf (atom_map_hydrogens=True)
+    remarks: null
